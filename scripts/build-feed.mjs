@@ -11,8 +11,16 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const issuesDir = join(root, 'content', 'issues');
 const checkOnly = process.argv.includes('--check');
 
-// In rotation order: issue 1 is History, issue 2 Psychology, and so on.
-const TOPICS = ['History', 'Psychology', 'Literature', 'Self-Improvement', "Gentleman's Pursuits"];
+// Issues 1–5 were the launch set. From issue 6, topics follow CYCLE in order:
+// issue 6 is Science, issue 7 History, and so on, repeating every 15 issues.
+const LAUNCH = ['History', 'Psychology', 'Literature', 'Self-Improvement', "Gentleman's Pursuits"];
+const CYCLE = [
+  'Science', 'History', 'Philosophy', 'Psychology', 'Nature', 'Literature', 'Economics',
+  'Self-Improvement', 'Art & Music', 'Mathematics', "Gentleman's Pursuits", 'Society',
+  'Technology', 'Language', 'Health & Medicine',
+];
+const TOPICS = CYCLE;
+const topicFor = (id) => (id <= LAUNCH.length ? LAUNCH[id - 1] : CYCLE[(id - LAUNCH.length - 1) % CYCLE.length]);
 const errors = [];
 const fail = (file, msg) => errors.push(`${file}: ${msg}`);
 
@@ -60,7 +68,14 @@ for (const file of files) {
     if (r.url !== undefined && !isUrl(r.url)) fail(file, `furtherReading ${i + 1} url must be https`);
   });
 
-  const expectedTopic = TOPICS[(id - 1) % TOPICS.length];
+  const lg = issue.lookingGlass ?? {};
+  if (!['counter', 'none', 'myth'].includes(lg.kind)) fail(file, 'lookingGlass.kind must be counter, none or myth');
+  if (!isStr(lg.heading) || !isStrArr(lg.body) || !isStr(lg.verdict)) fail(file, 'lookingGlass needs heading, body and verdict');
+  if (!['Shaky', 'Contested', 'Well supported', 'Settled'].includes(lg.confidence)) fail(file, 'lookingGlass.confidence must be Shaky, Contested, Well supported or Settled');
+  const lgWords = (lg.body ?? []).join(' ').split(/\s+/).length;
+  if (lgWords < 60 || lgWords > 200) fail(file, `lookingGlass body is ${lgWords} words; aim for 80–160`);
+
+  const expectedTopic = topicFor(id);
   if (issue.topic !== expectedTopic) fail(file, `topic should be "${expectedTopic}" in the rotation (see CONTENT_GUIDE.md)`);
 
   if (!Array.isArray(issue.sources) || issue.sources.length < 3) fail(file, 'needs at least 3 sources');

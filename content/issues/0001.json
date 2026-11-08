@@ -60,12 +60,44 @@
       }
     ]
   },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Targets work, most of the time",
+    "body": [
+      "Before blaming every target for tail-farming, look at the other half of the evidence. Goal-setting theory, developed by the psychologists Edwin Locke and Gary Latham over more than three decades, rests on studies of well over 100 different tasks involving more than 40,000 people in at least eight countries. Its central finding is that specific, difficult goals produce better performance than being told to 'do your best'.",
+      "Their own review also lists when goals go wrong. On complex tasks a hard performance target can cause anxiety and scattered effort, and bonuses paid only for hitting a very difficult goal can reduce performance. Goals motivate. They rot when the number is a loose stand-in for the real aim, and cheaper to game than to earn."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Set targets, but keep checking that hitting the number still means doing the thing you care about."
+  },
   "sources": [
-    { "title": "Interview with Michael Vann on the Great Hanoi Rat Hunt, World History Connected", "url": "https://worldhistoryconnected.press.uillinois.edu/15.2/vann_interview.html" },
-    { "title": "Great Hanoi Rat Massacre, Wikipedia", "url": "https://en.wikipedia.org/wiki/Great_Hanoi_Rat_Massacre" },
-    { "title": "Goodhart's law, Wikipedia", "url": "https://en.wikipedia.org/wiki/Goodhart%27s_law" },
-    { "title": "Campbell's law, Wikipedia", "url": "https://en.wikipedia.org/wiki/Campbell%27s_law" },
-    { "title": "Perverse incentive (the cobra effect), Wikipedia", "url": "https://en.wikipedia.org/wiki/Perverse_incentive" },
-    { "title": "Renewable Heat Incentive scandal, Wikipedia", "url": "https://en.wikipedia.org/wiki/Renewable_Heat_Incentive_scandal" }
+    {
+      "title": "Interview with Michael Vann on the Great Hanoi Rat Hunt, World History Connected",
+      "url": "https://worldhistoryconnected.press.uillinois.edu/15.2/vann_interview.html"
+    },
+    {
+      "title": "Great Hanoi Rat Massacre, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Great_Hanoi_Rat_Massacre"
+    },
+    {
+      "title": "Goodhart's law, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Goodhart%27s_law"
+    },
+    {
+      "title": "Campbell's law, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Campbell%27s_law"
+    },
+    {
+      "title": "Perverse incentive (the cobra effect), Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Perverse_incentive"
+    },
+    {
+      "title": "Renewable Heat Incentive scandal, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Renewable_Heat_Incentive_scandal"
+    },
+    {
+      "title": "Locke and Latham (2002), Building a practically useful theory of goal setting and task motivation, American Psychologist",
+      "url": "https://goal-lab.psych.umn.edu/orgpsych/2020/readings/5.%20Motivation/Locke%20&%20Latham%20(2002).pdf"
+    }
   ]
 }

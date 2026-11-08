@@ -21,7 +21,7 @@
   },
   "rabbitHole": {
     "title": "The art of hiding art",
-    "intro": "Castiglione didn't invent the idea of concealed effort, and the modern world can't decide whether it admires ease or effort. Follow the thread down.",
+    "intro": "Castiglione didn't invent the idea of concealed effort, and psychology has since found out when a little imperfection helps. Follow the thread down.",
     "levels": [
       {
         "heading": "Ovid's statue",
@@ -31,10 +31,10 @@
         ]
       },
       {
-        "heading": "We admire ease, but we pay for effort",
+        "heading": "The coffee that made him likeable",
         "body": [
-          "In 2004 the psychologist Justin Kruger and colleagues showed people the same poem, telling some that it had taken the poet 4 hours to write and others that it had taken 18. The 18-hour poem was rated better and judged to be worth more. The same happened with paintings, even among people who described themselves as art experts, and with a suit of armour: the more hours people were told it took, the more they valued it. The effect was strongest when the picture of the armour was blurry and people had less else to go on.",
-          "They called this the effort heuristic: when quality is hard to judge, we use effort as a stand-in. Later attempts to repeat the first two studies have had mixed results. But it points to a tension Castiglione would have enjoyed. We admire effortlessness in people, yet we prize visible effort in the things they make."
+          "In 1966 Elliot Aronson and colleagues played students a tape of a man trying out for a college quiz team. In one version he was brilliant, answering 92 per cent of the questions correctly; in another he was average, managing 30 per cent. In half the tapes, near the end, he could be heard spilling coffee over himself.",
+          "The brilliant candidate who spilled his coffee was rated the most attractive of all, and the average one who spilled it the least. Psychologists call it the pratfall effect: a small blunder can make a highly competent person more likeable, but it doesn't help someone whose competence is in doubt. Castiglione would have recognised it. Studied carelessness only charms when the skill underneath is obvious."
         ]
       },
       {
@@ -53,9 +53,9 @@
         "url": "https://publicdomainreview.org/collection/baldassare-castiglione-the-book-of-the-courtier/"
       },
       {
-        "title": "The effort heuristic",
-        "author": "Justin Kruger, Derrick Wirtz, Leaf Van Boven and T. William Altermatt, Journal of Experimental Social Psychology (2004)",
-        "note": "The poem, painting and armour studies."
+        "title": "The effect of a pratfall on increasing interpersonal attractiveness",
+        "author": "Elliot Aronson, Ben Willerman and Joanne Floyd, Psychonomic Science (1966)",
+        "note": "Two pages long, and the original coffee-spilling study."
       },
       {
         "title": "Metamorphoses, Book 10",
@@ -64,12 +64,44 @@
       }
     ]
   },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Sometimes we want to see the sweat",
+    "body": [
+      "In 2004 the psychologist Justin Kruger and colleagues showed people the same poem, telling some it had taken 4 hours to write and others 18. The 18-hour poem was rated better and judged to be worth more. The same happened with paintings, even among self-described art experts, and with a suit of armour, especially when the picture was too blurry to judge the workmanship.",
+      "When quality is hard to judge, we treat effort as a stand-in for it. In the things people make, visible effort can be the selling point. Later attempts to repeat the first two studies had mixed results, so treat this as suggestive."
+    ],
+    "confidence": "Contested",
+    "verdict": "Hide the effort in how you carry yourself; let it show in the work."
+  },
   "sources": [
-    { "title": "The Book of the Courtier, Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Book_of_the_Courtier" },
-    { "title": "Sprezzatura, Wikipedia", "url": "https://en.wikipedia.org/wiki/Sprezzatura" },
-    { "title": "On Sprezzatura: Castiglione's The Book of the Courtier, The Public Domain Review", "url": "https://publicdomainreview.org/collection/baldassare-castiglione-the-book-of-the-courtier/" },
-    { "title": "Effort heuristic, Wikipedia", "url": "https://en.wikipedia.org/wiki/Effort_heuristic" },
-    { "title": "Ars adeo latet (Ovid, Metamorphoses 10.252), The Classical Quarterly", "url": "https://resolve.cambridge.org/core/journals/classical-quarterly/article/ars-adeo-latet-ovid-metamorphoses-10252/BF67E7A667573A2DC36CEA0FAD5E410F" },
-    { "title": "Why Mr Gianni Agnelli was the most stylish man in the boardroom, MR PORTER", "url": "https://www.mrporter.com/en-at/journal/fashion/why-mr-gianni-agnelli-was-the-most-stylish-man-in-the-boardroom-507752" }
+    {
+      "title": "The Book of the Courtier, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Book_of_the_Courtier"
+    },
+    {
+      "title": "Sprezzatura, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sprezzatura"
+    },
+    {
+      "title": "On Sprezzatura: Castiglione's The Book of the Courtier, The Public Domain Review",
+      "url": "https://publicdomainreview.org/collection/baldassare-castiglione-the-book-of-the-courtier/"
+    },
+    {
+      "title": "Effort heuristic, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Effort_heuristic"
+    },
+    {
+      "title": "Ars adeo latet (Ovid, Metamorphoses 10.252), The Classical Quarterly",
+      "url": "https://resolve.cambridge.org/core/journals/classical-quarterly/article/ars-adeo-latet-ovid-metamorphoses-10252/BF67E7A667573A2DC36CEA0FAD5E410F"
+    },
+    {
+      "title": "Why Mr Gianni Agnelli was the most stylish man in the boardroom, MR PORTER",
+      "url": "https://www.mrporter.com/en-at/journal/fashion/why-mr-gianni-agnelli-was-the-most-stylish-man-in-the-boardroom-507752"
+    },
+    {
+      "title": "Aronson, Willerman and Floyd (1966), The effect of a pratfall on increasing interpersonal attractiveness, Psychonomic Science",
+      "url": "https://paperity.org/p/59814503/the-effect-of-a-pratfall-on-increasing-interpersonal-attractiveness"
+    }
   ]
 }

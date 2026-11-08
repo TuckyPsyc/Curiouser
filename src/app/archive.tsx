@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Platform, Pressable, StyleSheet, Switch, Text, View } from 'react-native';
+import { Platform, Pressable, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 import { Screen } from '../components/Screen';
 import { Rule, TextButton, TopicChip, topicLabel } from '../components/bits';
 import { formatDate, useFeed } from '../lib/feed';
@@ -72,12 +72,17 @@ export default function Archive() {
       <TextButton title="← Today" colour={p.muted} onPress={goBack} />
       <Text style={[styles.title, { color: p.ink }]}>Past stories</Text>
 
-      <View style={styles.filters}>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.filterScroll}
+        contentContainerStyle={styles.filters}
+      >
         <FilterChip label="All" active={topic === null} onPress={() => setTopic(null)} />
-        {TOPICS.map((t) => (
+        {TOPICS.filter((t) => issues.some((i) => i.topic === t)).map((t) => (
           <FilterChip key={t} label={topicLabel(t)} active={topic === t} onPress={() => setTopic(t)} />
         ))}
-      </View>
+      </ScrollView>
 
       {shown.length === 0 ? (
         <Text style={[styles.empty, { color: p.muted }]}>Nothing here yet.</Text>
@@ -102,8 +107,9 @@ export default function Archive() {
         </View>
       ) : null}
       <Text style={[styles.about, { color: p.muted }]}>
-        Get curiouser before breakfast. One idea a day, told as a story: psychology, literature,
-        history, self-improvement and gentleman’s pursuits. Every story lists its sources.
+        Get curiouser before breakfast. One idea a day, told as a true story, ranging across
+        fifteen subjects from science and philosophy to art, money and medicine. Every story lists
+        its sources, and the Looking-Glass gives the other side.
       </Text>
     </Screen>
   );
@@ -111,7 +117,8 @@ export default function Archive() {
 
 const styles = StyleSheet.create({
   title: { fontFamily: fonts.display, fontSize: 30, marginTop: 8, marginBottom: 16 },
-  filters: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 16 },
+  filterScroll: { marginHorizontal: -20, marginBottom: 16, flexGrow: 0 },
+  filters: { flexDirection: 'row', gap: 8, paddingHorizontal: 20 },
   filter: { borderWidth: 1, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 6 },
   filterText: { fontFamily: fonts.label, fontSize: 13 },
   row: { borderBottomWidth: StyleSheet.hairlineWidth, paddingVertical: 18, gap: 6 },

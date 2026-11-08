@@ -64,12 +64,44 @@
       }
     ]
   },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Counting can spoil the fun",
+    "body": [
+      "Tracking helps you change a habit, but it can backfire on the things you do for pleasure. In experiments published in the Journal of Consumer Research in 2016, Jordan Etkin of Duke University let some people see a running count of what they were doing: steps walked, shapes coloured, pages read. They did more, but enjoyed it less, because it started to feel like work. People whose reading had been counted read less once the counting stopped, and were less likely to carry on when offered the chance.",
+      "The effect disappeared when reading was framed as useful and educational. Measurement suits work you're trying to get done better than pleasures you want to keep."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Track the habits you are trying to build, not the hobbies you already love."
+  },
   "sources": [
-    { "title": "Franklin's Autobiography, the moral perfection project, ushistory.org", "url": "https://ushistory.org/franklin/autobiography/page38.htm" },
-    { "title": "Franklin's Autobiography, Order and the speckled axe, ushistory.org", "url": "https://ushistory.org/franklin/autobiography/page41.htm" },
-    { "title": "Benjamin Franklin: The Thirteen Virtues, Fordham University Modern History Sourcebook", "url": "https://sourcebooks.web.fordham.edu/mod/franklin-virtue.asp" },
-    { "title": "Tracking goal progress, American Psychological Association press release on Harkin et al.", "url": "https://www.apa.org/news/press/releases/2015/10/progress-goals" },
-    { "title": "Gollwitzer and Sheeran (2006), Implementation intentions and goal achievement, University of Konstanz", "url": "https://kops.uni-konstanz.de/entities/publication/2e749bfb-8533-437c-8203-7e788c910c5f" },
-    { "title": "Exercise: review your progress (Seneca on the evening review), What Is Stoicism?", "url": "https://whatisstoicism.com/stoicism-resources/exercise-review-your-progress/" }
+    {
+      "title": "Franklin's Autobiography, the moral perfection project, ushistory.org",
+      "url": "https://ushistory.org/franklin/autobiography/page38.htm"
+    },
+    {
+      "title": "Franklin's Autobiography, Order and the speckled axe, ushistory.org",
+      "url": "https://ushistory.org/franklin/autobiography/page41.htm"
+    },
+    {
+      "title": "Benjamin Franklin: The Thirteen Virtues, Fordham University Modern History Sourcebook",
+      "url": "https://sourcebooks.web.fordham.edu/mod/franklin-virtue.asp"
+    },
+    {
+      "title": "Tracking goal progress, American Psychological Association press release on Harkin et al.",
+      "url": "https://www.apa.org/news/press/releases/2015/10/progress-goals"
+    },
+    {
+      "title": "Gollwitzer and Sheeran (2006), Implementation intentions and goal achievement, University of Konstanz",
+      "url": "https://kops.uni-konstanz.de/entities/publication/2e749bfb-8533-437c-8203-7e788c910c5f"
+    },
+    {
+      "title": "Exercise: review your progress (Seneca on the evening review), What Is Stoicism?",
+      "url": "https://whatisstoicism.com/stoicism-resources/exercise-review-your-progress/"
+    },
+    {
+      "title": "Why counting your steps could make you unhappier, Duke Fuqua School of Business",
+      "url": "https://www.fuqua.duke.edu/duke-fuqua-insights/etkin-counting-steps"
+    }
   ]
 }

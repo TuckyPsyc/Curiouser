@@ -40,11 +40,21 @@ export function usePalette(): Palette {
 }
 
 const topicColours: Record<Topic, { light: string; dark: string }> = {
-  Psychology: { light: '#4F5D8C', dark: '#9AA7D6' },
-  Literature: { light: '#8A3B2E', dark: '#D9846B' },
   History: { light: '#8C6A2F', dark: '#D1AE6E' },
+  Psychology: { light: '#4F5D8C', dark: '#9AA7D6' },
+  Science: { light: '#2F6E8C', dark: '#7FBEDB' },
+  Literature: { light: '#8A3B2E', dark: '#D9846B' },
+  Philosophy: { light: '#6B4C7A', dark: '#B79CC7' },
+  Nature: { light: '#4F6B2F', dark: '#A6C47E' },
+  Economics: { light: '#7A6A1F', dark: '#CDBB62' },
   'Self-Improvement': { light: '#3F6B4F', dark: '#8FC2A0' },
+  'Art & Music': { light: '#9A3F6A', dark: '#DD8AB3' },
+  Mathematics: { light: '#3D5A6B', dark: '#93B3C6' },
   "Gentleman's Pursuits": { light: '#5B4636', dark: '#C4A58C' },
+  Society: { light: '#6E5A4E', dark: '#BFA99A' },
+  Technology: { light: '#44627A', dark: '#8FB1CC' },
+  Language: { light: '#8A5A2E', dark: '#D9A36B' },
+  'Health & Medicine': { light: '#2F7A6A', dark: '#7FCDBB' },
 };
 
 export function useTopicColour(topic: Topic): string {

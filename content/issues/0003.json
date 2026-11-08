@@ -64,11 +64,44 @@
       }
     ]
   },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Great writers tell all the time",
+    "body": [
+      "Hemingway's iceberg hardened into a rule that writing classes still repeat: show, don't tell. But plenty of great fiction tells, openly and at length. Henry Fielding and George Eliot speak directly to their readers about the characters, and Laurence Sterne's Tristram Shandy barely stops telling.",
+      "In 1961 the critic Wayne Booth's The Rhetoric of Fiction challenged the idea that showing is always better, and gave us the term 'implied author' for the guiding presence a reader senses behind a story. Leaving things out is one tool among several. It suits the stories where what's missing is the point."
+    ],
+    "confidence": "Contested",
+    "verdict": "Leave things out when the gap does the work; when the reader needs guiding, tell them."
+  },
   "sources": [
-    { "title": "Iceberg theory, Wikipedia", "url": "https://en.wikipedia.org/wiki/Iceberg_theory" },
-    { "title": "Out of Season (short story), Wikipedia", "url": "https://en.wikipedia.org/wiki/Out_of_Season_(short_story)" },
-    { "title": "Don't tell me the moon is shining, Quote Investigator", "url": "https://quoteinvestigator.com/2013/07/30/moon-glint/" },
-    { "title": "Two Raymond Carvers, The New York Review of Books", "url": "https://www.nybooks.com/articles/2010/05/27/two-raymond-carvers/" },
-    { "title": "For sale, baby shoes, never worn, Quote Investigator", "url": "https://quoteinvestigator.com/2013/01/28/baby-shoes/" }
+    {
+      "title": "Iceberg theory, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Iceberg_theory"
+    },
+    {
+      "title": "Out of Season (short story), Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Out_of_Season_(short_story)"
+    },
+    {
+      "title": "Don't tell me the moon is shining, Quote Investigator",
+      "url": "https://quoteinvestigator.com/2013/07/30/moon-glint/"
+    },
+    {
+      "title": "Two Raymond Carvers, The New York Review of Books",
+      "url": "https://www.nybooks.com/articles/2010/05/27/two-raymond-carvers/"
+    },
+    {
+      "title": "For sale, baby shoes, never worn, Quote Investigator",
+      "url": "https://quoteinvestigator.com/2013/01/28/baby-shoes/"
+    },
+    {
+      "title": "Scott Bane, In defense of telling, Cleaver Magazine",
+      "url": "https://cleavermagazine.com/in-defense-of-telling-a-craft-essay-by-scott-bane"
+    },
+    {
+      "title": "Wayne C. Booth, The Rhetoric of Fiction, University of Chicago Press",
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/R/bo5965941.html"
+    }
   ]
 }

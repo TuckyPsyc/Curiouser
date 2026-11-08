@@ -2,10 +2,11 @@
 
 *Get curiouser before breakfast.*
 
-Curiouser is a small Android app that delivers one idea a day, told as a true story, at 7am. The topics rotate through psychology, literature, history, self-improvement and gentleman's pursuits.
+Curiouser is a small Android app that delivers one idea a day, told as a true story, at 7am. It ranges across fifteen topics, from science and history to art, money, language and medicine, so it widens what you know rather than feeding a bubble.
 
 - **Drink Me** shrinks the day's story to its one-line idea.
 - **Eat Me** grows it back, and from the full story takes you down the rabbit hole into a deeper dive.
+- **Through the Looking-Glass** gives the other side of the idea: its strongest objection, an honest "there isn't one", or a myth debunked.
 - **Before you begin**: each story opens with a question about an earlier one, because trying to recall something fixes it in memory better than rereading.
 
 ## Install (Android)

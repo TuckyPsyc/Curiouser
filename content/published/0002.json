@@ -65,6 +65,16 @@
       }
     ]
   },
+  "lookingGlass": {
+    "kind": "none",
+    "heading": "Nothing much to see on the other side",
+    "body": [
+      "The Clever Hans effect is about as solid as psychology gets. It is the reason trials of new medicines are run double-blind, so that neither the patients nor the people assessing them know who received the real treatment. It is also why the detection-dog study in the rabbit hole surprised nobody who knew the history.",
+      "The caution runs the other way: don’t stretch it. Expectations leaking into an observation is well established. Expectations transforming someone’s abilities is a much bigger claim, and in classrooms the best review found such effects real but usually small."
+    ],
+    "confidence": "Settled",
+    "verdict": "When you’re judging something you have hopes for, find a way to check it blind."
+  },
   "sources": [
     {
       "title": "Lessons from Clever Hans, in Gray and Bjorklund, Psychology (Macmillan)",

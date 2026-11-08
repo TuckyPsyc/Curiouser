@@ -13,6 +13,7 @@ Each morning's story ("Before Breakfast") teaches one named idea through a true 
 | `takeaway` | The idea in a sip: what Drink Me shows | 1–2 sentences |
 | `recall` | A question about an earlier issue, asked before reading | see below |
 | `rabbitHole` | The Eat Me deep dive: title, intro, 3–5 levels, further reading | 120–200 words per level |
+| `lookingGlass` | Through the Looking-Glass: the other side of the idea | 80–160 words |
 | `sources` | Where every claim came from | at least 3 |
 
 ## Voice
@@ -23,17 +24,31 @@ Each morning's story ("Before Breakfast") teaches one named idea through a true 
 - **Write in British English.** Short sentences, concrete detail, no exclamation marks.
 - **No invented dialogue or detail.** Quote only words you have found in a source. Say "reportedly" or "the story goes" when a source does, and prefer telling the debunked version of a famous myth over repeating it.
 
-## Topic rotation
+## Topics
 
-Topics follow the issue number: `(id - 1) % 5` picks from
+Curiouser is deliberately broad. The point is to take readers outside their own bubble, not to feed it (see DECISIONS.md, D-007). There are fifteen topics, and from issue 6 they rotate in this order, repeating every 15 issues. The topic for issue `id` is position `(id - 6) % 15`:
 
-0. History
-1. Psychology
-2. Literature
-3. Self-Improvement
-4. Gentleman's Pursuits
+| # | Topic | Covers |
+|---|---|---|
+| 0 | Science | Physics, chemistry, biology, astronomy, and how discoveries were actually made |
+| 1 | History | Events, people and turning points from any era and any part of the world, not just Europe |
+| 2 | Philosophy | Arguments, thought experiments and ethics, from every tradition |
+| 3 | Psychology | Mind, behaviour, development and social psychology |
+| 4 | Nature | Animals, plants, ecology, geology, oceans and weather |
+| 5 | Literature | Books, poetry, drama and storytelling, from any language or tradition |
+| 6 | Economics | Money, markets, trade, incentives, and how economies work and fail |
+| 7 | Self-Improvement | Habits, learning, character and wellbeing, backed by evidence |
+| 8 | Art & Music | Painting, sculpture, architecture, design, music and film |
+| 9 | Mathematics | Numbers, probability, statistics, logic, and the people behind them |
+| 10 | Gentleman's Pursuits | The crafts and pleasures of a well-lived life: tailoring, shaving, whisky and wine, watches, pens and letters, fishing and the outdoors, woodcraft, cookery, etiquette, games and sport. Never glamorise heavy drinking or smoking |
+| 11 | Society | Law, politics, religion, anthropology and how communities organise. Describe positions even-handedly; never take sides on contested questions |
+| 12 | Technology | Inventions, engineering, computing, and their consequences |
+| 13 | Language | Words, etymology, grammar, rhetoric, and how languages change |
+| 14 | Health & Medicine | The body, medicine, public health and medical discoveries |
 
-**Gentleman's Pursuits** covers the crafts and pleasures of a well-lived life: tailoring and dress, shaving, whisky, wine and beer, watches, pens and letters, fly fishing and the outdoors, woodcraft, cookery, etiquette, games such as chess and cards, and sport. Avoid anything that glamorises heavy drinking or smoking.
+Issues 1–5 were the launch set (History, Psychology, Literature, Self-Improvement, Gentleman's Pursuits) and sit outside the rotation. `scripts/build-feed.mjs` checks the topic.
+
+**Range within every topic.** Move across centuries, continents and cultures. Over a cycle, no more than about half the stories should come from Britain, Europe or North America. Include people and ideas the reader may disagree with, presented fairly.
 
 ## The recall question
 
@@ -50,6 +65,23 @@ Each level goes deeper or sideways, not just longer. A good pattern is:
 3. a surprising modern case
 
 The `title` is its own headline. The `intro` is one or two sentences inviting the reader down. `furtherReading` lists 2–4 real books or papers with author and year; add a `url` only if you have checked it works.
+
+## Through the Looking-Glass
+
+Every issue has one. It gives the other side of the day's idea, and it must never invent a controversy. Choose the `kind` honestly:
+
+- **`counter`**: there's a real objection, limit or competing finding. Give its strongest version, with evidence, then say where it leaves the idea.
+- **`none`**: there's no serious case against the idea. Say so plainly, explain briefly why it's well established, and, if useful, warn against stretching it too far.
+- **`myth`**: there's a popular "counter" that doesn't hold up, such as a widely repeated debunking that is itself wrong. Debunk it with evidence.
+
+Other fields:
+
+- **`heading`**: a short headline for the other side.
+- **`body`**: 1–2 paragraphs, 80–160 words.
+- **`confidence`**: how well supported the day's idea is, after weighing the other side. It is one of `Shaky`, `Contested`, `Well supported` or `Settled`. Be conservative: `Settled` is for findings virtually no expert disputes.
+- **`verdict`**: one sentence starting from "where that leaves you", giving practical, even-handed advice.
+
+The Looking-Glass's sources go in the issue's `sources` list like everything else. Don't repeat material already used in the rabbit hole.
 
 ## Accuracy
 

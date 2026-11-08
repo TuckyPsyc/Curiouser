@@ -64,6 +64,16 @@
       }
     ]
   },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Counting can spoil the fun",
+    "body": [
+      "Tracking helps you change a habit, but it can backfire on the things you do for pleasure. In experiments published in the Journal of Consumer Research in 2016, Jordan Etkin of Duke University let some people see a running count of what they were doing: steps walked, shapes coloured, pages read. They did more, but enjoyed it less, because it started to feel like work. People whose reading had been counted read less once the counting stopped, and were less likely to carry on when offered the chance.",
+      "The effect disappeared when reading was framed as useful and educational. Measurement suits work you’re trying to get done better than pleasures you want to keep."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Track the habits you are trying to build, not the hobbies you already love."
+  },
   "sources": [
     {
       "title": "Franklin’s Autobiography, the moral perfection project, ushistory.org",
@@ -88,6 +98,10 @@
     {
       "title": "Exercise: review your progress (Seneca on the evening review), What Is Stoicism?",
       "url": "https://whatisstoicism.com/stoicism-resources/exercise-review-your-progress/"
+    },
+    {
+      "title": "Why counting your steps could make you unhappier, Duke Fuqua School of Business",
+      "url": "https://www.fuqua.duke.edu/duke-fuqua-insights/etkin-counting-steps"
     }
   ]
 }

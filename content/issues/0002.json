@@ -65,11 +65,36 @@
       }
     ]
   },
+  "lookingGlass": {
+    "kind": "none",
+    "heading": "Nothing much to see on the other side",
+    "body": [
+      "The Clever Hans effect is about as solid as psychology gets. It is the reason trials of new medicines are run double-blind, so that neither the patients nor the people assessing them know who received the real treatment. It is also why the detection-dog study in the rabbit hole surprised nobody who knew the history.",
+      "The caution runs the other way: don't stretch it. Expectations leaking into an observation is well established. Expectations transforming someone's abilities is a much bigger claim, and in classrooms the best review found such effects real but usually small."
+    ],
+    "confidence": "Settled",
+    "verdict": "When you're judging something you have hopes for, find a way to check it blind."
+  },
   "sources": [
-    { "title": "Lessons from Clever Hans, in Gray and Bjorklund, Psychology (Macmillan)", "url": "https://digfir-published.macmillanusa.com/gray7e/gray7e_ch2_2.html" },
-    { "title": "How Clever Hans challenged what we know about horse intelligence, Horse Journals", "url": "https://www.horsejournals.com/popular/history-heritage/clever-hans" },
-    { "title": "Robert Rosenthal, On the social psychology of the psychological experiment, American Scientist (1963)", "url": "https://pages.ucsd.edu/~cmckenzie/Rosenthal1963AmScientist.pdf" },
-    { "title": "Jussim and Harber (2005), Teacher expectations and self-fulfilling prophecies", "url": "https://journals.sagepub.com/doi/10.1207/s15327957pspr0902_3" },
-    { "title": "Lit, Schweitzer and Oberbauer (2011), Handler beliefs affect scent detection dog outcomes", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3078300" }
+    {
+      "title": "Lessons from Clever Hans, in Gray and Bjorklund, Psychology (Macmillan)",
+      "url": "https://digfir-published.macmillanusa.com/gray7e/gray7e_ch2_2.html"
+    },
+    {
+      "title": "How Clever Hans challenged what we know about horse intelligence, Horse Journals",
+      "url": "https://www.horsejournals.com/popular/history-heritage/clever-hans"
+    },
+    {
+      "title": "Robert Rosenthal, On the social psychology of the psychological experiment, American Scientist (1963)",
+      "url": "https://pages.ucsd.edu/~cmckenzie/Rosenthal1963AmScientist.pdf"
+    },
+    {
+      "title": "Jussim and Harber (2005), Teacher expectations and self-fulfilling prophecies",
+      "url": "https://journals.sagepub.com/doi/10.1207/s15327957pspr0902_3"
+    },
+    {
+      "title": "Lit, Schweitzer and Oberbauer (2011), Handler beliefs affect scent detection dog outcomes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3078300"
+    }
   ]
 }

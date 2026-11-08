@@ -5,6 +5,7 @@ import { formatDate } from '../lib/feed';
 import { DOWNLOAD_URL, fonts, usePalette, useTopicColour } from '../lib/theme';
 import type { Issue } from '../lib/types';
 import { Label, Rule, TextButton, TopicChip } from './bits';
+import { LookingGlassPanel } from './LookingGlassPanel';
 import { RabbitHoleButton } from './RabbitHoleButton';
 import { RecallCard } from './RecallCard';
 import { SizeShifter, type Size } from './SizeShifter';
@@ -85,6 +86,8 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
             <Label colour={topicColour}>The idea</Label>
             <Text style={[styles.takeawayText, { color: p.ink }]}>{issue.takeaway}</Text>
           </View>
+
+          {issue.lookingGlass ? <LookingGlassPanel glass={issue.lookingGlass} /> : null}
 
           <RabbitHoleButton issue={issue} />
 

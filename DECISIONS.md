@@ -31,6 +31,11 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **Decided:** 8 November 2026.
 **What:** The app has no sign-in and no tracking. The 7am reminder is scheduled on the phone itself; nothing is sent to a server except requests for the public story files.
 
+## D-007 · Broad topics, on purpose
+**Decided:** 8 November 2026, by Carl.
+**What:** Curiouser covers fifteen topics, from science and philosophy to art, money, language and medicine, rather than only the subjects Carl already likes. Within each topic, stories range across eras, cultures and viewpoints, and every story has a Looking-Glass panel giving the other side (or saying honestly that there isn't one).
+**Why:** A learning app that only serves its readers' existing interests becomes a bubble. The aim is to widen what readers know, not to confirm it.
+
 ## D-006 · Web version for iPhone friends
 **Decided:** 8 November 2026, as a backup.
 **What:** The same app builds for the web (`.github/workflows/web.yml`) and can be published to GitHub Pages, where it can be added to an iPhone home screen. It has no 7am reminder.
