@@ -1,0 +1,75 @@
+{
+  "id": 4,
+  "date": "2026-11-08",
+  "topic": "Self-Improvement",
+  "title": "The Speckled Axe",
+  "concept": "Self-monitoring",
+  "teaser": "Benjamin Franklin tried to make himself morally perfect with a notebook and some red ink. He failed, and was glad he tried.",
+  "readingMinutes": 3,
+  "story": [
+    "As a young printer in Philadelphia, Benjamin Franklin set himself what he called 'the bold and arduous project of arriving at moral perfection'. It was harder than he expected. While he was guarding against one fault, another would catch him out.",
+    "So he got methodical. He drew up a list of thirteen virtues: Temperance, Silence, Order, Resolution, Frugality, Industry, Sincerity, Justice, Moderation, Cleanliness, Tranquillity, Chastity and Humility. He made a little book with a page for each, ruled in red ink into seven columns, one for each day of the week, and marked every lapse with a little black spot. And instead of fighting on every front at once, he 'determined to give a week's strict attention to each of the virtues successively', like a gardener who doesn't try to pull every weed at once but works on one bed at a time. That way he could go through the whole course in thirteen weeks, and four times a year.",
+    "Order gave him the most trouble. A journeyman printer can keep a tidy routine, he noted, but a master has to deal with customers at their hours, not his. He was tempted to give up, and he told a story to explain the temptation. A man buying an axe asked the smith to grind the whole face as bright as the edge. The smith agreed, if the man would turn the grindstone. The turning was hard work, and the man kept stopping to check on progress. Eventually he said he'd take the axe as it was. 'No,' said the smith, 'turn on, turn on: we shall have it bright by and by; as yet, it is only speckled.' 'Yes,' says the man, 'but I think I like a speckled ax best.'",
+    "Franklin admitted he never reached perfection, or anything close. But, he wrote, 'I was, by the endeavor, a better and a happier man than I otherwise should have been.'",
+    "Psychologists now call what he was doing self-monitoring: keeping a regular, honest record of how you're getting on. It's one of the better-supported tools for changing a habit, and Franklin's habit of fixing set times for his review has a modern name too. You may never get the axe bright all over. The turning still sharpens it."
+  ],
+  "takeaway": "Work on one habit at a time and keep an honest record of how you're doing. You may never reach perfection, but the effort of trying still makes you better than you were.",
+  "recall": {
+    "question": "What did Hemingway mean by his 'iceberg theory'?",
+    "answer": "A writer who truly knows the subject can leave things out, and the reader will still feel them, like the seven-eighths of an iceberg below the water. But omitting things you don't know only leaves hollow places.",
+    "fromIssue": 3
+  },
+  "rabbitHole": {
+    "title": "Keeping score",
+    "intro": "Franklin's notebook looks quaint, but nearly everything in it has an ancestor in ancient philosophy and a descendant in modern psychology. Here's the family tree.",
+    "levels": [
+      {
+        "heading": "Franklin wasn't the first",
+        "body": [
+          "Roman philosophers were doing something similar more than 1,600 years earlier. In his essay On Anger, Seneca describes the philosopher Sextius ending each day by questioning himself: which fault had he corrected, which had he resisted, in what way was he better?",
+          "Seneca adopted the habit himself. When the lamp was taken away and his wife, long used to the routine, had fallen silent, he went back over the whole day, retracing everything he had done and said. Franklin built the same review into his own daily timetable, which opened with a morning question, 'What good shall I do this day?', and closed with an evening one: 'What good have I done to-day?'"
+        ]
+      },
+      {
+        "heading": "Does writing it down actually work?",
+        "body": [
+          "A 2016 analysis in Psychological Bulletin pulled together 138 studies involving nearly 20,000 people. Prompting people to monitor their progress made them more likely to reach their goals, and the more often they checked, the better they did. The effect was strongest when progress was physically recorded, as in Franklin's black spots, or reported publicly.",
+          "There was a catch that would have interested Franklin. What you monitor is what changes. Tracking a behaviour changed the behaviour; tracking an outcome, such as your weight, changed the outcome. If that sounds like Goodhart's law, it is its friendlier cousin: choose your measure carefully, because it's the one that will move."
+        ]
+      },
+      {
+        "heading": "If this, then that",
+        "body": [
+          "Franklin's other trick was deciding in advance when he would act: a set time each morning and evening. The psychologist Peter Gollwitzer calls plans like this implementation intentions. They take an if–then form: 'If it's 7am and the kettle's on, then I'll read for ten minutes.'",
+          "A 2006 review by Gollwitzer and Paschal Sheeran pooled 94 tests and found that making if–then plans had a medium-to-large effect on whether people reached their goals. Good intentions on their own often fail; tying them to a specific moment gives them somewhere to land."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Autobiography of Benjamin Franklin",
+        "author": "Benjamin Franklin (written 1771–1790)",
+        "note": "Out of copyright and free online. The virtues project is in Part Two."
+      },
+      {
+        "title": "Does monitoring goal progress promote goal attainment?",
+        "author": "Benjamin Harkin and colleagues, Psychological Bulletin (2016)",
+        "note": "The meta-analysis behind level two.",
+        "url": "https://eprints.whiterose.ac.uk/id/eprint/87431/1/bul%20harkin%20raw%20final.pdf"
+      },
+      {
+        "title": "On Anger, Book Three",
+        "author": "Seneca (first century AD)",
+        "note": "The evening review, in Seneca's own words."
+      }
+    ]
+  },
+  "sources": [
+    { "title": "Franklin's Autobiography, the moral perfection project, ushistory.org", "url": "https://ushistory.org/franklin/autobiography/page38.htm" },
+    { "title": "Franklin's Autobiography, Order and the speckled axe, ushistory.org", "url": "https://ushistory.org/franklin/autobiography/page41.htm" },
+    { "title": "Benjamin Franklin: The Thirteen Virtues, Fordham University Modern History Sourcebook", "url": "https://sourcebooks.web.fordham.edu/mod/franklin-virtue.asp" },
+    { "title": "Tracking goal progress, American Psychological Association press release on Harkin et al.", "url": "https://www.apa.org/news/press/releases/2015/10/progress-goals" },
+    { "title": "Gollwitzer and Sheeran (2006), Implementation intentions and goal achievement, University of Konstanz", "url": "https://kops.uni-konstanz.de/entities/publication/2e749bfb-8533-437c-8203-7e788c910c5f" },
+    { "title": "Exercise: review your progress (Seneca on the evening review), What Is Stoicism?", "url": "https://whatisstoicism.com/stoicism-resources/exercise-review-your-progress/" }
+  ]
+}

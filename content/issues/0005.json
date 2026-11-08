@@ -1,0 +1,75 @@
+{
+  "id": 5,
+  "date": "2026-11-08",
+  "topic": "Gentleman's Pursuits",
+  "title": "The Art of Not Trying",
+  "concept": "Sprezzatura",
+  "teaser": "A Renaissance parlour game at the court of Urbino gave the world its rule for elegance: never let them see you try.",
+  "readingMinutes": 3,
+  "story": [
+    "Over four evenings in 1507, at the court of Urbino in the hills of central Italy, a group of courtiers are said to have gathered with their duchess, Elisabetta Gonzaga, to play a game: describe the perfect courtier. Baldassare Castiglione, who served at that court, later turned their conversations into a book. He spent some twenty years on it.",
+    "The courtiers covered what you'd expect a Renaissance gentleman to need: arms and horsemanship, conversation, music and much else. Then Count Ludovico da Canossa offered a rule that he said applied to all of it. Whatever you do, do it with sprezzatura: in one modern translation, 'a certain nonchalance, so as to conceal all art', making whatever is done or said appear to come without effort and almost without thought.",
+    "It's a paradox, and a deliberate one. Grace, the count argued, comes from doing difficult things as if they were easy. The opposite of sprezzatura isn't clumsiness but affectation: effort on display, the strain of trying to impress. The moment people can see you working at it, the spell is broken.",
+    "The Book of the Courtier was published in Venice in 1528. Sir Thomas Hoby's English translation of 1561 did much to shape the Elizabethan idea of what an English gentleman should be, and by the early twentieth century the book had gone through more than 140 editions in almost a dozen languages. The Oxford English Dictionary now defines sprezzatura in two words: 'studied carelessness'.",
+    "The key word is studied. Sprezzatura isn't not caring; it's caring so thoroughly that the care disappears. The easy conversation was rehearsed, the casual shot was practised a thousand times, the jacket that looks thrown on was cut to fit. Ease is the last thing to arrive, not the first."
+  ],
+  "takeaway": "Sprezzatura: do difficult things so well they look easy. The ease has to be earned, and the moment the effort to look effortless shows, the spell breaks.",
+  "recall": {
+    "question": "Clever Hans the horse answered correctly 89 per cent of the time when his questioner knew the answer. How often was he right when they didn't, and why?",
+    "answer": "Only 6 per cent of the time. He wasn't counting; he was reading the questioner's tiny, unconscious cues. That's the Clever Hans effect.",
+    "fromIssue": 2
+  },
+  "rabbitHole": {
+    "title": "The art of hiding art",
+    "intro": "Castiglione didn't invent the idea of concealed effort, and the modern world can't decide whether it admires ease or effort. Follow the thread down.",
+    "levels": [
+      {
+        "heading": "Ovid's statue",
+        "body": [
+          "There's an old Latin tag, ars est celare artem, 'true art is to conceal art'. Dictionaries often credit it to Ovid, but that exact phrase isn't his.",
+          "What Ovid did write, in the Metamorphoses, is the story of Pygmalion, the sculptor who carved a woman from ivory so lifelike that he fell in love with her. Describing the statue, Ovid says ars adeo latet arte sua: so completely is the art hidden by its own art. That's sprezzatura 1,500 years early. And yes, by way of Bernard Shaw's play, it's the same Pygmalion who lent his name to the classroom study in No. 2."
+        ]
+      },
+      {
+        "heading": "We admire ease, but we pay for effort",
+        "body": [
+          "In 2004 the psychologist Justin Kruger and colleagues showed people the same poem, telling some that it had taken the poet 4 hours to write and others that it had taken 18. The 18-hour poem was rated better and judged to be worth more. The same happened with paintings, even among people who described themselves as art experts, and with a suit of armour: the more hours people were told it took, the more they valued it. The effect was strongest when the picture of the armour was blurry and people had less else to go on.",
+          "They called this the effort heuristic: when quality is hard to judge, we use effort as a stand-in. Later attempts to repeat the first two studies have had mixed results. But it points to a tension Castiglione would have enjoyed. We admire effortlessness in people, yet we prize visible effort in the things they make."
+        ]
+      },
+      {
+        "heading": "The wardrobe version",
+        "body": [
+          "In menswear, sprezzatura now means clothes worn slightly off, as if put on in a hurry. Its patron saint is Gianni Agnelli, the head of Fiat, who died in 2003. He wore his wristwatch over his shirt cuff, a habit the designer Valentino admitted copying, and left the thin back blade of his tie longer than the front.",
+          "After a car crash shattered his leg, he wore supportive boots with his suits. That's the Courtier's lesson in miniature. On anyone else the boots might look careless. On a man known for his tailoring, they looked like a choice."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Book of the Courtier",
+        "author": "Baldassare Castiglione (1528)",
+        "note": "Leonard Opdycke's English translation of 1902 is out of copyright. The Public Domain Review has a good introduction.",
+        "url": "https://publicdomainreview.org/collection/baldassare-castiglione-the-book-of-the-courtier/"
+      },
+      {
+        "title": "The effort heuristic",
+        "author": "Justin Kruger, Derrick Wirtz, Leaf Van Boven and T. William Altermatt, Journal of Experimental Social Psychology (2004)",
+        "note": "The poem, painting and armour studies."
+      },
+      {
+        "title": "Metamorphoses, Book 10",
+        "author": "Ovid (AD 8)",
+        "note": "Pygmalion's story, and the line about art hiding art."
+      }
+    ]
+  },
+  "sources": [
+    { "title": "The Book of the Courtier, Wikipedia", "url": "https://en.wikipedia.org/wiki/The_Book_of_the_Courtier" },
+    { "title": "Sprezzatura, Wikipedia", "url": "https://en.wikipedia.org/wiki/Sprezzatura" },
+    { "title": "On Sprezzatura: Castiglione's The Book of the Courtier, The Public Domain Review", "url": "https://publicdomainreview.org/collection/baldassare-castiglione-the-book-of-the-courtier/" },
+    { "title": "Effort heuristic, Wikipedia", "url": "https://en.wikipedia.org/wiki/Effort_heuristic" },
+    { "title": "Ars adeo latet (Ovid, Metamorphoses 10.252), The Classical Quarterly", "url": "https://resolve.cambridge.org/core/journals/classical-quarterly/article/ars-adeo-latet-ovid-metamorphoses-10252/BF67E7A667573A2DC36CEA0FAD5E410F" },
+    { "title": "Why Mr Gianni Agnelli was the most stylish man in the boardroom, MR PORTER", "url": "https://www.mrporter.com/en-at/journal/fashion/why-mr-gianni-agnelli-was-the-most-stylish-man-in-the-boardroom-507752" }
+  ]
+}

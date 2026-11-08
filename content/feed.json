@@ -1,6 +1,24 @@
 {
-  "updated": "2026-11-08T21:52:51.191Z",
+  "updated": "2026-11-08T21:56:14.824Z",
   "issues": [
+    {
+      "id": 5,
+      "date": "2026-11-08",
+      "topic": "Gentleman's Pursuits",
+      "title": "The Art of Not Trying",
+      "concept": "Sprezzatura",
+      "teaser": "A Renaissance parlour game at the court of Urbino gave the world its rule for elegance: never let them see you try.",
+      "readingMinutes": 3
+    },
+    {
+      "id": 4,
+      "date": "2026-11-08",
+      "topic": "Self-Improvement",
+      "title": "The Speckled Axe",
+      "concept": "Self-monitoring",
+      "teaser": "Benjamin Franklin tried to make himself morally perfect with a notebook and some red ink. He failed, and was glad he tried.",
+      "readingMinutes": 3
+    },
     {
       "id": 3,
       "date": "2026-11-08",
