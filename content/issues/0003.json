@@ -1,0 +1,74 @@
+{
+  "id": 3,
+  "date": "2026-11-08",
+  "topic": "Literature",
+  "title": "The Ending Hemingway Left Out",
+  "concept": "The iceberg theory",
+  "teaser": "Why Hemingway cut the most dramatic thing in a story, and why it made the story stronger.",
+  "readingMinutes": 3,
+  "story": [
+    "In 1923 Ernest Hemingway was a young American newspaper correspondent based in Paris, not yet famous and determined to write fiction. One of his early stories, 'Out of Season', follows a young couple staying in Cortina d'Ampezzo in the Italian Alps. The husband hires the hotel's drunken gardener, Peduzzi, as a fishing guide. Nothing goes right. Peduzzi wants money for drink, the wife is fed up, they've forgotten the lead weights and can't fish. They agree to try again early next morning. On the way back Peduzzi asks for more money, and the husband pays, knowing he won't see him again.",
+    "That's all. But Hemingway knew something the reader doesn't. Years later, in A Moveable Feast, he explained that he had 'omitted the real end', which was that the old man hanged himself. He cut it, he said, on his 'new theory that you could omit anything if you knew that you omitted and the omitted part would strengthen the story and make people feel something more than they understood.'",
+    "In 1932, in Death in the Afternoon, he gave the idea the image that stuck: 'The dignity of movement of an ice-berg is due to only one-eighth of it being above water.' A writer who truly knows his subject can leave things out, and the reader will still feel them. But he added a warning people tend to forget: 'A writer who omits things because he does not know them only makes hollow places in his writing.'",
+    "He put the theory to work. 'Big Two-Hearted River' follows a young man, Nick Adams, alone on a fishing trip: walking, making camp, cooking, casting. Hemingway said the story was about a boy coming home from the war, yet the war is never mentioned. In 'Hills Like White Elephants', a couple wait for a train in Spain and talk around an 'operation' that is never named. Readers have argued for nearly a century about what lies beneath both, and that is the point.",
+    "The iceberg is a bargain between writer and reader. The writer does the knowing; the reader does the feeling. Spell everything out and the reader has nothing to do. Leave the right thing unsaid and they supply it themselves."
+  ],
+  "takeaway": "Leave out what you know, never what you don't. A truth the writer fully understands but doesn't state can be felt more strongly than one spelled out, because the reader has to supply it.",
+  "recall": {
+    "question": "How did Clever Hans the horse know when to stop tapping his hoof?",
+    "answer": "He read tiny, unconscious cues from the questioner, such as a slight lift of the head as the right count was reached. When nobody he could see knew the answer, he failed. That's the Clever Hans effect.",
+    "fromIssue": 2
+  },
+  "rabbitHole": {
+    "title": "Beneath the waterline",
+    "intro": "Omission is a powerful tool, and powerful tools get misused and misremembered. Here's where the idea came from, what happened when someone else held the knife, and the most famous example Hemingway never wrote.",
+    "levels": [
+      {
+        "heading": "The moon in a broken bottle",
+        "body": [
+          "Writers are often told 'show, don't tell', usually with a line credited to Anton Chekhov: 'Don't tell me the moon is shining; show me the glint of light on broken glass.' Chekhov never wrote it. The researchers at Quote Investigator could find no sign of that compressed version before 2002.",
+          "What he did write, in a letter to his brother Alexander in May 1886, was advice on describing nature through small details. You get the full effect of a moonlit night, he said, if you write that on the mill dam a piece of glass from a broken bottle glittered like a bright little star. It's the same instinct as the iceberg: choose the one detail that lets the reader build the rest."
+        ]
+      },
+      {
+        "heading": "The editor with the knife",
+        "body": [
+          "Raymond Carver became famous in 1981 for a collection of startlingly spare stories, What We Talk About When We Talk About Love. Much of that spareness came from his editor, Gordon Lish. Lish cut the book by more than half. Three stories lost at least 70 per cent of their length, ten got new titles and fourteen got new endings.",
+          "On 8 July 1980 Carver wrote begging Lish to stop production, saying he was 'mortally afraid' the edited book might stop him writing another story. Less than a week later he wrote that he was thrilled about it. After Carver's death, his original versions were published under the title Beginners. Read side by side, they raise Hemingway's question: if someone else does the leaving out, whose iceberg is it?"
+        ]
+      },
+      {
+        "heading": "Six words Hemingway never wrote",
+        "body": [
+          "'For sale: baby shoes, never worn.' The story goes that Hemingway wrote it to win a bet, and it is often called the perfect iceberg. There's no evidence he wrote it.",
+          "Quote Investigator traced its ancestors to small ads in American newspapers: 'For sale, baby carriage; never been used' appeared in 1906. Writers spotted the story hiding in such ads well before the Hemingway version was in print. The anecdote attaching it to him appears in the 1980s and 1990s, long after he died in 1961. The best example of his theory is one where the author himself was left out."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Death in the Afternoon",
+        "author": "Ernest Hemingway (1932)",
+        "note": "Nominally a book about bullfighting, but full of opinions on writing, including the iceberg passage."
+      },
+      {
+        "title": "In Our Time",
+        "author": "Ernest Hemingway (1925)",
+        "note": "Contains both 'Out of Season' and 'Big Two-Hearted River'. Read them and look for what's missing."
+      },
+      {
+        "title": "Two Raymond Carvers",
+        "author": "The New York Review of Books (2010)",
+        "note": "A clear account of what Lish changed and why it matters.",
+        "url": "https://www.nybooks.com/articles/2010/05/27/two-raymond-carvers/"
+      }
+    ]
+  },
+  "sources": [
+    { "title": "Iceberg theory, Wikipedia", "url": "https://en.wikipedia.org/wiki/Iceberg_theory" },
+    { "title": "Out of Season (short story), Wikipedia", "url": "https://en.wikipedia.org/wiki/Out_of_Season_(short_story)" },
+    { "title": "Don't tell me the moon is shining, Quote Investigator", "url": "https://quoteinvestigator.com/2013/07/30/moon-glint/" },
+    { "title": "Two Raymond Carvers, The New York Review of Books", "url": "https://www.nybooks.com/articles/2010/05/27/two-raymond-carvers/" },
+    { "title": "For sale, baby shoes, never worn, Quote Investigator", "url": "https://quoteinvestigator.com/2013/01/28/baby-shoes/" }
+  ]
+}

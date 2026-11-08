@@ -1,0 +1,32 @@
+{
+  "updated": "2026-11-08T21:52:51.191Z",
+  "issues": [
+    {
+      "id": 3,
+      "date": "2026-11-08",
+      "topic": "Literature",
+      "title": "The Ending Hemingway Left Out",
+      "concept": "The iceberg theory",
+      "teaser": "Why Hemingway cut the most dramatic thing in a story, and why it made the story stronger.",
+      "readingMinutes": 3
+    },
+    {
+      "id": 2,
+      "date": "2026-11-08",
+      "topic": "Psychology",
+      "title": "The Horse Who Could Count",
+      "concept": "The Clever Hans effect",
+      "teaser": "A Berlin horse who did arithmetic, a panel of experts who were fooled, and the student who worked out what was really going on.",
+      "readingMinutes": 3
+    },
+    {
+      "id": 1,
+      "date": "2026-11-08",
+      "topic": "History",
+      "title": "The Great Hanoi Rat Hunt",
+      "concept": "Goodhart’s law",
+      "teaser": "How a bounty on rat tails left colonial Hanoi with more rats, not fewer.",
+      "readingMinutes": 3
+    }
+  ]
+}

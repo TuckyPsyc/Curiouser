@@ -1,0 +1,90 @@
+{
+  "id": 2,
+  "date": "2026-11-08",
+  "topic": "Psychology",
+  "title": "The Horse Who Could Count",
+  "concept": "The Clever Hans effect",
+  "teaser": "A Berlin horse who did arithmetic, a panel of experts who were fooled, and the student who worked out what was really going on.",
+  "readingMinutes": 3,
+  "story": [
+    "In the early 1900s, crowds in Berlin gathered to watch a horse do sums. His owner, Wilhelm von Osten, was a mathematics teacher who had spent years schooling him. Ask Hans a question and he would tap out the answer with his hoof. He could, apparently, add, subtract, multiply and divide, work with fractions, tell the time and spell out words.",
+    "In 1904 a panel of thirteen experts led by the psychologist Carl Stumpf examined Hans and found no sign of trickery. That wasn’t surprising. Von Osten wasn’t a showman; he sought no profit and sincerely believed he had taught his horse to think.",
+    "Stumpf passed the case to a psychologist named Oskar Pfungst, who ran a series of careful tests. The crucial one was simple: ask questions to which the questioner didn’t know the answer. Hans fell apart. When the person asking knew the answer and Hans could see them, he was right 89 per cent of the time. When they didn’t, he was right 6 per cent of the time. With blinkers on, he couldn’t answer at all.",
+    "Hans wasn’t counting. He was reading people. As a questioner bent forward to watch the hoof, Hans began to tap. When the count reached the right number, the questioner relaxed and lifted their head ever so slightly, and Hans stopped. Nobody was doing it on purpose: not von Osten, not the experts, not the crowd. Even Pfungst, once he knew exactly what to look for, had to make a conscious effort not to send the signals himself.",
+    "Psychologists now call this the Clever Hans effect. Our expectations leak out in signals too small for us to notice, and those signals shape the very thing we’re observing. It’s why careful experiments are run ‘blind’, so that whoever takes the measurements doesn’t know which result they’re hoping for. Hans really was clever, just not at arithmetic."
+  ],
+  "takeaway": "What we expect leaks out in signals too small to notice, and those signals shape what we then see. To find out what’s really there, make sure whoever is checking doesn’t know what they’re hoping to find.",
+  "recall": {
+    "question": "Why did paying a bounty for rat tails leave colonial Hanoi with more rats?",
+    "answer": "Hunters cut off the tails and released the rats to breed, and some farmed rats purely for their tails. It’s Goodhart’s law: when a measure becomes a target, it ceases to be a good measure.",
+    "fromIssue": 1
+  },
+  "rabbitHole": {
+    "title": "Expectations that leak",
+    "intro": "Pfungst’s horse became one of psychology’s most useful warnings. Follow it down and it leads to laboratories, classrooms and police dogs.",
+    "levels": [
+      {
+        "heading": "Bright rats, dull rats",
+        "body": [
+          "In the early 1960s the psychologist Robert Rosenthal handed students some laboratory rats. Half the students were told their rats had been bred for brightness; the other half were told theirs had been bred for dullness. In reality there was no difference between the rats.",
+          "The students who believed they had bright rats got better learning out of them in mazes and Skinner boxes. Their own reports suggested they handled their animals more, and more gently. When the ‘dull’ group were told the truth, some insisted that their rat really was dull."
+        ]
+      },
+      {
+        "heading": "Pygmalion in the classroom",
+        "body": [
+          "Rosenthal then took the idea into a school. With the principal Lenore Jacobson he told teachers that about a fifth of their pupils, actually picked at random, were about to bloom intellectually. A year later those pupils had gained about 12 IQ points on average, against about 8 for the rest. The effect showed up mainly in the youngest classes. The 1968 book Pygmalion in the Classroom made it famous.",
+          "It also drew decades of criticism. A major 2005 review by Lee Jussim and Kent Harber concluded that self-fulfilling prophecies in classrooms are real but usually small, and that teachers’ expectations mostly predict results because they are accurate rather than because they cause them. The most interesting exception: the effects may be larger for low-achieving pupils from poorer backgrounds and for stigmatised groups. That finding still needs replicating, but it suggests expectations may matter most for the pupils who are easiest to underestimate."
+        ]
+      },
+      {
+        "heading": "The dogs that read their handlers",
+        "body": [
+          "In 2011 researchers at the University of California, Davis tested 18 certified police detection-dog teams. Handlers were told some of the search rooms contained target scent marked with a piece of red paper. In fact there was no target scent anywhere, so every alert was false.",
+          "The handlers called 225 alerts, and 85 per cent of runs included at least one. The alerts clustered where the red paper was, not where the researchers had hidden sausages and a tennis ball to tempt the dogs. The handlers’ beliefs shaped the result more than the dogs’ own noses. Pfungst would have recognised it at once."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Clever Hans (The Horse of Mr. von Osten)",
+        "author": "Oskar Pfungst (1907; English translation 1911)",
+        "note": "Pfungst’s own account. Now out of copyright and free to read online."
+      },
+      {
+        "title": "Teacher expectations and self-fulfilling prophecies",
+        "author": "Lee Jussim and Kent Harber, Personality and Social Psychology Review (2005)",
+        "note": "The balanced review of fifty years of Pygmalion research.",
+        "url": "https://journals.sagepub.com/doi/10.1207/s15327957pspr0902_3"
+      },
+      {
+        "title": "Handler beliefs affect scent detection dog outcomes",
+        "author": "Lisa Lit, Julie Schweitzer and Anita Oberbauer, Animal Cognition (2011)",
+        "note": "The red-paper study in full.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3078300"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "Lessons from Clever Hans, in Gray and Bjorklund, Psychology (Macmillan)",
+      "url": "https://digfir-published.macmillanusa.com/gray7e/gray7e_ch2_2.html"
+    },
+    {
+      "title": "How Clever Hans challenged what we know about horse intelligence, Horse Journals",
+      "url": "https://www.horsejournals.com/popular/history-heritage/clever-hans"
+    },
+    {
+      "title": "Robert Rosenthal, On the social psychology of the psychological experiment, American Scientist (1963)",
+      "url": "https://pages.ucsd.edu/~cmckenzie/Rosenthal1963AmScientist.pdf"
+    },
+    {
+      "title": "Jussim and Harber (2005), Teacher expectations and self-fulfilling prophecies",
+      "url": "https://journals.sagepub.com/doi/10.1207/s15327957pspr0902_3"
+    },
+    {
+      "title": "Lit, Schweitzer and Oberbauer (2011), Handler beliefs affect scent detection dog outcomes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3078300"
+    }
+  ]
+}

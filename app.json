@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Curiouser",
+    "slug": "curiouser",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#14112A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.tuckypsyc.curiouser"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single",
+      "name": "Curiouser",
+      "shortName": "Curiouser",
+      "themeColor": "#14112A",
+      "backgroundColor": "#F5EFE3"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain",
+          "backgroundColor": "#14112A"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#D4B06A"
+        }
+      ]
+    ],
+    "scheme": "curiouser",
+    "experiments": {
+      "baseUrl": "/curiouser"
+    }
+  }
+}

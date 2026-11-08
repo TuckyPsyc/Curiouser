@@ -1,0 +1,37 @@
+# Decisions log
+
+Choices made for the proof of concept (a gift for a few friends), and what to revisit before Curiouser grows beyond that. Entries marked **Known weak point** are deliberate shortcuts, not oversights.
+
+## D-001 · Public repository · Known weak point
+**Decided:** 8 November 2026, by Carl.
+**What:** This repository is public. The app fetches stories from it at runtime (`raw.githubusercontent.com`), and friends download the APK from its Releases page.
+**Why:** Free hosting, free automatic builds and one download link, with no server to run.
+**Risk:** Anyone can read the code, stories, build logs and commit history. Anything committed here, including by mistake, is public and stays in history. GitHub can see the IP addresses of phones fetching stories.
+**Rules while public:** No secrets, API keys, personal data or friends' details in the repo, ever.
+**Before expanding:** Move stories to a proper content host (for example a small API or a private bucket behind a CDN), make the repository private, and add a privacy notice.
+
+## D-002 · APK signed with the shared React Native debug key · Known weak point
+**Decided:** 8 November 2026.
+**What:** Builds are signed with the standard debug keystore that ships with the React Native template, so every build has the same signature and installs over the previous one.
+**Risk:** That key is public. Anyone could sign an app that Android would treat as an update to Curiouser. It also can't be used for Google Play.
+**Before expanding:** Generate a private upload key, store it as a GitHub Actions secret, and use Play App Signing. Changing key means friends must uninstall and reinstall once.
+
+## D-003 · Installed directly from GitHub, not Google Play
+**Decided:** 8 November 2026.
+**What:** Friends install the APK from the Releases page and must allow their browser to install unknown apps.
+**Risk:** Google plans to require developer verification even for apps installed outside Play, expanding globally in 2027. A free limited-distribution option (up to 20 devices) has been announced for hobbyists.
+**Before expanding:** Register a Play developer account ($25 one-off). New personal accounts must run a closed test with at least 12 testers for 14 consecutive days before going public.
+
+## D-004 · Stories written by Claude on a daily schedule
+**Decided:** 8 November 2026.
+**What:** A scheduled task researches and writes one story each morning, following `CONTENT_GUIDE.md`, checks every claim against sources and lists them, then commits it here.
+**Risk:** Errors can still get through. Corrections are made by editing the story's JSON file; the app picks up the fix automatically.
+
+## D-005 · No accounts, analytics or personal data
+**Decided:** 8 November 2026.
+**What:** The app has no sign-in and no tracking. The 7am reminder is scheduled on the phone itself; nothing is sent to a server except requests for the public story files.
+
+## D-006 · Web version for iPhone friends
+**Decided:** 8 November 2026, as a backup.
+**What:** The same app builds for the web (`.github/workflows/web.yml`) and can be published to GitHub Pages, where it can be added to an iPhone home screen. It has no 7am reminder.
+**Status:** Waiting for Pages to be switched on (Settings → Pages → Source: GitHub Actions).

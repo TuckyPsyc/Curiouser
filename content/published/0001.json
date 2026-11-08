@@ -1,0 +1,89 @@
+{
+  "id": 1,
+  "date": "2026-11-08",
+  "topic": "History",
+  "title": "The Great Hanoi Rat Hunt",
+  "concept": "Goodhart’s law",
+  "teaser": "How a bounty on rat tails left colonial Hanoi with more rats, not fewer.",
+  "readingMinutes": 3,
+  "story": [
+    "In 1902 the French colonial government in Hanoi had a problem it had partly made for itself. The new sewers beneath the European quarter were meant to show off modern hygiene, but they had become ideal places for rats to breed: dark, sheltered and free of predators. Plague was moving through the region, and rats carried the fleas that spread it. The rats had to go.",
+    "In April the city hired Vietnamese rat-catchers to go down into the tunnels. The daily counts climbed into the thousands, and on one day in June more than 20,000 rats were reported killed. It still wasn’t enough. So the authorities opened the hunt to everyone, paying a small bounty for each rat. To spare officials from handling the bodies, a severed tail counted as proof.",
+    "Before long, people noticed rats running about with no tails. Hunters were catching rats, cutting off the tails and letting the animals go, so they would breed more rats and more bounties. Investigators later found rat farms in villages outside the city, raised purely for their tails, and tails were being brought in from across the region. The bounty was abandoned. The rats stayed.",
+    "In 1975 the economist Charles Goodhart, writing about British monetary policy, described the pattern underneath: ‘Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.’ The anthropologist Marilyn Strathern later gave it the form most people quote: when a measure becomes a target, it ceases to be a good measure. A tail was a decent sign of a dead rat right up until people were paid per tail.",
+    "Once you know it, you see it wherever a number stands in for the thing we actually care about: waiting times, exam results, response times, attendance figures. The number is never the point. Forget that, and someone, somewhere, starts farming tails."
+  ],
+  "takeaway": "When a measure becomes a target, it ceases to be a good measure. Reward a number and people will find the cheapest way to move it, which is rarely the thing you wanted.",
+  "recall": null,
+  "rabbitHole": {
+    "title": "Tails, cobras and cash for ash",
+    "intro": "The rat hunt is the cleanest example of a pattern that turns up wherever people are paid, praised or judged by a number. Here’s how far down it goes.",
+    "levels": [
+      {
+        "heading": "The cobra that probably never was",
+        "body": [
+          "The best-known version of this story isn’t about rats. In the ‘cobra effect’, British officials in Delhi supposedly paid a bounty for dead cobras, locals bred cobras to claim it, the scheme was scrapped, and the breeders released their now-worthless snakes, leaving more cobras than before. The German economist Horst Siebert gave it the name in a 2001 book, Der Kobra-Effekt.",
+          "The trouble is the evidence. No contemporary record of cobra farming for a bounty has turned up, and the tale seems to rest on an unconfirmed allegation. Hanoi is different: the historian Michael Vann found the rat hunt documented in French colonial archives. There’s an irony here. A story about bad evidence spread because it was a good story."
+        ]
+      },
+      {
+        "heading": "Campbell’s law and the classroom",
+        "body": [
+          "Working independently, the American psychologist Donald Campbell reached the same conclusion from the other direction. In a 1979 paper he wrote that ‘the more any quantitative social indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the social processes it is intended to monitor.’",
+          "His example was schools. Achievement tests, he argued, can be useful indicators of how pupils are doing when teaching aims at general competence. But when test scores become the goal of teaching, they lose their value as indicators and distort education itself. Anyone who has watched a school chase a single headline figure will recognise the shape of it."
+        ]
+      },
+      {
+        "heading": "Cash for ash",
+        "body": [
+          "Northern Ireland’s Renewable Heat Incentive, launched in 2012, paid businesses for every unit of heat produced by renewable boilers. The flaw was that the payment was worth more than the fuel. The more you burned, the more you earned.",
+          "Whistleblowers reported buildings that had never been heated being heated for the subsidy, including an empty farm shed. Fears of an overspend of up to £490 million over twenty years, a figure later disputed, fed a political crisis. On 9 January 2017 Martin McGuinness resigned as deputy First Minister, bringing down the Stormont Executive. The public inquiry that followed, chaired by Sir Patrick Coghlin, blamed a long run of errors and a failure of attention."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Great Hanoi Rat Hunt: Empire, Disease, and Modernity in French Colonial Vietnam",
+        "author": "Michael G. Vann, illustrated by Liz Clarke (Oxford University Press, 2018)",
+        "note": "The full story, told as a graphic history by the historian who found the records."
+      },
+      {
+        "title": "Of Rats, Rice, and Race: The Great Hanoi Rat Massacre",
+        "author": "Michael G. Vann, French Colonial History 4 (2003)",
+        "note": "The original academic article.",
+        "url": "https://doi.org/10.1353/fch.2003.0027"
+      },
+      {
+        "title": "The Tyranny of Metrics",
+        "author": "Jerry Z. Muller (Princeton University Press, 2018)",
+        "note": "A short, readable case against managing by numbers alone, with plenty from schools and hospitals."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "title": "Interview with Michael Vann on the Great Hanoi Rat Hunt, World History Connected",
+      "url": "https://worldhistoryconnected.press.uillinois.edu/15.2/vann_interview.html"
+    },
+    {
+      "title": "Great Hanoi Rat Massacre, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Great_Hanoi_Rat_Massacre"
+    },
+    {
+      "title": "Goodhart’s law, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Goodhart%27s_law"
+    },
+    {
+      "title": "Campbell’s law, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Campbell%27s_law"
+    },
+    {
+      "title": "Perverse incentive (the cobra effect), Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Perverse_incentive"
+    },
+    {
+      "title": "Renewable Heat Incentive scandal, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Renewable_Heat_Incentive_scandal"
+    }
+  ]
+}
