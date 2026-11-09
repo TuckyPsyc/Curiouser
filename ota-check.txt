@@ -1,0 +1,89 @@
+== Manifest request (android, runtime 1, channel production) ==
+HTTP/2 200 
+date: Mon, 09 Nov 2026 23:01:21 GMT
+content-type: multipart/mixed; boundary=-----ExpoManifestBoundary-AaHCit0JfiareCjK6zizQw
+content-length: 30116
+vary: Accept-Encoding, Origin
+content-security-policy: default-src 'none';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+expo-protocol-version: 1
+cache-control: no-cache, private, max-age=10
+alt-svc: h3=":443"; ma=86400
+expo-update-id: 01a1c28a-dd09-7e26-ab78-28caeb38b343
+expo-manifest-filters: branchname="production"
+etag: "75a4-PdmCsSmb1cbXHNO5ymKKs02yT6k"
+via: 1.1 google
+strict-transport-security: max-age=31536000; includeSubDomains
+cf-cache-status: DYNAMIC
+server: cloudflare
+cf-ray: a5807058aed222d2-SJC
+
+-------ExpoManifestBoundary-AaHCit0JfiareCjK6zizQw
+Content-Disposition: form-data; name="manifest"
+Content-Type: application/json
+
+{"id":"01a1c28a-dd09-7e26-ab78-28caeb38b343","createdAt":"2026-11-09T23:00:42.889Z","runtimeVersion":"1","launchAsset":{"hash":"06vGm01UG0gzyOq3js7m-fmum_GLGQJ4kwuDCY9YlpY","key":"5c9cb73f416312e5163001e24a66f508","contentType":"application/javascript","url":"https://assets.eascdn.net/ElJMqhb2Zf0WbFMLRQbC3JJ8jRdx5nENq2BQi0_zSeA?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},"assets":[{"hash":"ydmqKSUpkBjswGMnYfvuBJ6z0j8HeJs4e--c3R8HLDQ","key":"2cbb9a3b3bbda5192ffe28bf04d6b29d","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/MNXt3tQwMbW3wKp8sAVp6jPE15JIJvoACVw16mOCwb8?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"zHMXB2hTNrwfLufyTgmp5fgM1NrRzGrPrfOewrSnang","key":"073905a75e6d90aaee9f7fe82157a0b6","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/N55R73iGK8sFttXVuBQzNDQhw0HhU7mB5wHnCtgZ_dk?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"X88SqbWxdcqSR0HApFcUx_WYVmf0na2sH0rTzGPmwPA","key":"5e37aa8e672db18ba0f7c4d6789cf5ef","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/hxYnlZnX3LGdU-AstWk3lLm0z0lXcrg7GlxQLBk_NRI?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"nO3kNQVulus5rFh9V8yVCUhNf6GPuwUy8Unxg68TsU0","key":"d484e2f727663ddd31e7fcebc7cc25ea","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/FPcHvBljBcWzdmAd987AZ7yaaEXQxtb6MR0c2AzmlNY?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"6IJVpO-XY8Ls4g3jzT7iQQZfGKGaeR1NXAKJpPvaGg4","key":"d1acf82088f232372c997dbadbc3f405","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/WeqGwRIG0YRKzEa0TMjvRZv9HdMHdD96tReZGydud00?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"nwPA_nDRZw0i85KhOKwC7O7cXu5fHNjXSGuirthDuKo","key":"e995588822b0867215ce518a9a79175b","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/jTPmEst1yOPnqDcrkEIxxVgfNWtQqvTwH3V28ORsZp4?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"NARxDx-4-MFH8uuOecb2FDnAb0YuhT8LEEppv5zQLWU","key":"0c859ce19af0584bccfc6941addedf34","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/UgPg123KzU7YiM6LZoUhZPcoiAMz8ZUwhkqJSKfwuQs?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"L-1wvSV1C0egpwOxAYlOiMX9q2b1keefkKRKLjt4suU","key":"1fca6eacc1fd7d8bb65c1b3c881d057a","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/Cwhr5giCJeomX7LLSSLNPOy1efq7NLAUfVXBvLDKBkA?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"aIpUHq4ScxZVKtr2AmEQgryxiXVWUT8rDHy0hpEBq7Q","key":"64dd2eb4f9509117d7047543a3b7c46a","contentType":"font/ttf","fileExtension":".ttf","url":"https://assets.eascdn.net/6kJS11lu8dGcOmcoBFvuzD0ZTCur4beoGDcgbyLrYoE?project=5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"},{"hash":"CBNHTgHlT1LC4k46aQBTCPBn89-k0pMPSf8L6PYc5EQ","key":"6b4cab9b1863ed1cbb96c2cdd8276a26","contentType":"font/ttf","fileExtension":
+== Runtime version from app config ==
+{
+  "runtimeVersion": "1",
+  "version": "1.0.1",
+  "updates": {
+    "url": "https://u.expo.dev/5ce3a8f5-68b4-4aea-a712-5a2c456a0f31",
+    "checkAutomatically": "ON_LOAD",
+    "fallbackToCacheTimeout": 0,
+    "requestHeaders": {
+      "expo-channel-name": "production"
+    }
+  }
+}
+== Channel production ==
+
+Channel:
+Name        production
+ID          01a1c28a-82b0-7bfd-97c7-2ea451602ebc
+Status      Active
+Protection  Unprotected
+
+Branches pointed at this channel and their most recent update group:
+{
+  "currentPage": {
+    "id": "01a1c28a-82b0-7bfd-97c7-2ea451602ebc",
+    "isPaused": false,
+    "isProtected": false,
+    "name": "production",
+    "updatedAt": "2026-11-09T23:00:19.760Z",
+    "createdAt": "2026-11-09T23:00:19.760Z",
+    "branchMapping": "{\"data\":[{\"branchId\":\"01a1c28a-8203-7db0-8b1f-323b2ef2efbb\",\"branchMappingLogic\":\"true\"}],\"version\":0}",
+    "updateBranches": [
+      {
+        "id": "01a1c28a-8203-7db0-8b1f-323b2ef2efbb",
+        "name": "production",
+        "updateGroups": [
+          [
+            {
+              "id": "01a1c28a-dd09-7e26-ab78-28caeb38b343",
+              "group": "a44eb979-5741-474d-a13e-6631e563dc3a",
+              "message": "Fail loudly when an over-the-air update doesn't publish",
+              "createdAt": "2026-11-09T23:00:42.889Z",
+              "runtime": {
+                "id": "01a1c28a-dd09-73f1-9e21-ba1526814568",
+                "version": "1"
+              },
+              "platform": "android",
+              "manifestFragment": "{\"extra\":{\"expoClient\":{\"ios\":{\"supportsTablet\":true},\"web\":{\"name\":\"Curiouser\",\"output\":\"single\",\"favicon\":\"./assets/favicon.png\",\"shortName\":\"Curiouser\",\"themeColor\":\"#14112A\",\"backgroundColor\":\"#F5EFE3\"},\"icon\":\"./assets/icon.png\",\"name\":\"Curiouser\",\"slug\":\"curiouser\",\"extra\":{\"eas\":{\"projectId\":\"5ce3a8f5-68b4-4aea-a712-5a2c456a0f31\"},\"router\":{\"asyncRoutes\":{\"web\":true}}},\"scheme\":\"curiouser\",\"android\":{\"package\":\"com.tuckypsyc.curiouser\",\"versionCode\":1,\"adaptiveIcon\":{\"backgroundColor\":\"#14112A\",\"backgroundImage\":\"./assets/android-icon-background.png\",\"foregroundImage\":\"./assets/android-icon-foreground.png\",\"monochromeImage\":\"./assets/android-icon-monochrome.png\"},\"blockedPermissions\":[\"android.permission.SYSTEM_ALERT_WINDOW\",\"android.permission.READ_EXTERNAL_STORAGE\",\"android.permission.WRITE_EXTERNAL_STORAGE\"],\"predictiveBackGestureEnabled\":false},\"plugins\":[\"expo-router\",\"expo-font\",[\"expo-splash-screen\",{\"image\":\"./assets/splash-icon.png\",\"imageWidth\":180,\"resizeMode\":\"contain\",\"backgroundColor\":\"#14112A\"}],[\"expo-notifications\",{\"icon\":\"./assets/notification-icon.png\",\"color\":\"#D4B06A\"}]],\"updates\":{\"url\":\"https://u.expo.dev/5ce3a8f5-68b4-4aea-a712-5a2c456a0f31\",\"requestHeaders\":{\"expo-channel-name\":\"production\"},\"checkAutomatically\":\"ON_LOAD\",\"fallbackToCacheTimeout\":0},\"version\":\"1.0.1\",\"platforms\":[\"ios\",\"android\",\"web\"],\"sdkVersion\":\"58.0.0\",\"experiments\":{\"baseUrl\":\"/curiouser\"},\"orientation\":\"portrait\",\"runtimeVersion\":\"1\",\"userInterfaceStyle\":\"automatic\"}},\"assets\":[{\"bundleKey\":\"2cbb9a3b3bbda5192ffe28bf04d6b29d\",\"fileSHA256\":\"ydmqKSUpkBjswGMnYfvuBJ6z0j8
+== Updates on branch production ==
+{
+  "name": "production",
+  "id": "01a1c28a-8203-7db0-8b1f-323b2ef2efbb",
+  "currentPage": [
+    {
+      "branch": "production",
+      "message": "\"Fail loudly when an over-the-air update doesn't publish\" (44 seconds ago by tuckypsyc)",
+      "runtimeVersion": "1",
+      "isRollBackToEmbedded": false,
+      "group": "a44eb979-5741-474d-a13e-6631e563dc3a",
+      "platforms": "android"
+    }
+  ]
+}
