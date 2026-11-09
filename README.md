@@ -7,7 +7,8 @@ Curiouser is a small Android app that delivers one idea a day, told as a true st
 - **Drink Me** shrinks the day's story to its one-line idea.
 - **Eat Me** grows it back, and from the full story takes you down the rabbit hole into a deeper dive.
 - **Through the Looking-Glass** gives the other side of the idea: its strongest objection, an honest "there isn't one", or a myth debunked.
-- **Before you begin**: each story opens with a question about an earlier one, because trying to recall something fixes it in memory better than rereading.
+- **The Red Queen's race** (before you begin): each story opens with a question about an earlier one, because trying to recall something fixes it in memory better than rereading.
+- **Start here**: new readers begin with No. 0, the true story of how *Alice* was written, with margin notes explaining each feature and where its name comes from.
 
 ## Install (Android)
 
@@ -33,4 +34,4 @@ npx tsc --noEmit              # typecheck
 npx expo start                # run in Expo Go / a dev build
 ```
 
-Stories are written in [Lewis Carroll's](https://en.wikipedia.org/wiki/Lewis_Carroll) spirit but the artwork is original; nothing here uses Disney's designs.
+Illustrations are John Tenniel's original engravings for *Alice's Adventures in Wonderland* (1865) and *Through the Looking-Glass* (1871), which are in the public domain, from [Standard Ebooks](https://standardebooks.org/)' scans. Nothing here uses Disney's designs. The app icon is original.

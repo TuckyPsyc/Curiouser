@@ -27,9 +27,20 @@ export type Source = {
 export type RecallPrompt = {
   question: string;
   answer: string;
-  /** The issue the question looks back to. */
-  fromIssue: number;
+  /** The issue the question looks back to. Absent only in the Start here story's warm-up. */
+  fromIssue?: number;
 };
+
+/** Margin notes explaining each feature, used only in the Start here story. */
+export type GuideNote = { title: string; text: string };
+export type GuideKey =
+  | 'recall'
+  | 'sizes'
+  | 'takeaway'
+  | 'lookingGlass'
+  | 'rabbitHole'
+  | 'sources'
+  | 'shelves';
 
 export type RabbitHoleLevel = {
   heading: string;
@@ -84,6 +95,7 @@ export type Issue = {
   rabbitHole: RabbitHole;
   /** Optional in the type so older cached issues still render. */
   lookingGlass?: LookingGlass;
+  guide?: Partial<Record<GuideKey, GuideNote>>;
   sources: Source[];
 };
 

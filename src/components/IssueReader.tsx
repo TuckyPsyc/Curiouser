@@ -6,6 +6,9 @@ import { DOWNLOAD_URL, fonts, usePalette, useTopicColour } from '../lib/theme';
 import type { Issue } from '../lib/types';
 import { Label, Rule, TextButton, TopicChip } from './bits';
 import { LookingGlassPanel } from './LookingGlassPanel';
+import { MarginNote } from './MarginNote';
+import { Ornament } from './Ornament';
+import { Plate } from './Plate';
 import { RabbitHoleButton } from './RabbitHoleButton';
 import { RecallCard } from './RecallCard';
 import { SizeShifter, type Size } from './SizeShifter';
@@ -29,12 +32,25 @@ async function shareIssue(issue: Issue): Promise<string | null> {
   }
 }
 
+/** The opening words in small capitals, as at the start of a chapter. */
+function LeadParagraph({ text, colour }: { text: string; colour: string }) {
+  const words = text.split(' ');
+  const lead = words.slice(0, 3).join(' ');
+  const rest = words.slice(3).join(' ');
+  return (
+    <Text style={[styles.para, { color: colour }]}>
+      <Text style={styles.lead}>{lead.toUpperCase()}</Text> {rest}
+    </Text>
+  );
+}
+
 export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string }) {
   const p = usePalette();
   const topicColour = useTopicColour(issue.topic);
   const [size, setSize] = useState<Size>('story');
   const [showSources, setShowSources] = useState(false);
   const [shareNote, setShareNote] = useState<string | null>(null);
+  const g = issue.guide;
 
   const share = async () => setShareNote(await shareIssue(issue));
   const goDeeper = () => router.push(`/rabbit-hole/${issue.id}`);
@@ -47,12 +63,13 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
       </View>
 
       <Text style={[styles.kicker, { color: p.muted }]}>
-        {kicker} · {formatDate(issue.date)}
+        {issue.id === 0 ? kicker : `${kicker} · ${formatDate(issue.date)}`}
       </Text>
       <Text style={[styles.title, { color: p.ink }]}>{issue.title}</Text>
       <Text style={[styles.concept, { color: topicColour }]}>{issue.concept}</Text>
 
       <View style={{ height: 22 }} />
+      <MarginNote note={g?.sizes} />
       <SizeShifter
         size={size}
         minutes={issue.readingMinutes}
@@ -62,24 +79,33 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
 
       {size === 'idea' ? (
         <View style={[styles.idea, { borderColor: topicColour, backgroundColor: p.surface }]}>
+          <Plate name="drink-me" width={96} style={styles.ideaPlate} />
           <Label colour={topicColour}>The idea, in a sip</Label>
           <Text style={[styles.ideaText, { color: p.ink }]}>{issue.takeaway}</Text>
           <Text style={[styles.ideaNote, { color: p.muted }]}>
-            Shrunk to fit. Eat Me to grow back to the full story.
+            Shrunk to ten inches high. Eat Me to grow back to the full story.
           </Text>
           <TextButton title="Share this idea" onPress={share} />
           {shareNote ? <Text style={[styles.note, { color: p.muted }]}>{shareNote}</Text> : null}
         </View>
       ) : (
         <>
+          <MarginNote note={g?.recall} />
           {issue.recall ? <RecallCard recall={issue.recall} /> : null}
 
-          {issue.story.map((para, i) => (
-            <Text key={i} style={[styles.para, { color: p.ink }]}>
-              {para}
-            </Text>
-          ))}
+          {issue.story.map((para, i) =>
+            i === 0 ? (
+              <LeadParagraph key={i} text={para} colour={p.ink} />
+            ) : (
+              <Text key={i} style={[styles.para, { color: p.ink }]}>
+                {para}
+              </Text>
+            ),
+          )}
 
+          <Ornament />
+
+          <MarginNote note={g?.takeaway} />
           <View
             style={[styles.takeaway, { borderLeftColor: topicColour, backgroundColor: p.surface }]}
           >
@@ -87,8 +113,10 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
             <Text style={[styles.takeawayText, { color: p.ink }]}>{issue.takeaway}</Text>
           </View>
 
+          <MarginNote note={g?.lookingGlass} />
           {issue.lookingGlass ? <LookingGlassPanel glass={issue.lookingGlass} /> : null}
 
+          <MarginNote note={g?.rabbitHole} />
           <RabbitHoleButton issue={issue} />
 
           <View style={styles.actions}>
@@ -100,6 +128,8 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
             />
           </View>
           {shareNote ? <Text style={[styles.note, { color: p.muted }]}>{shareNote}</Text> : null}
+          {g?.sources ? <View style={{ height: 10 }} /> : null}
+          <MarginNote note={g?.sources} />
 
           {showSources ? (
             <View style={styles.sources}>
@@ -121,7 +151,8 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
       )}
 
       <Rule />
-      <TextButton title="All past stories →" onPress={() => router.push('/archive')} />
+      <MarginNote note={g?.shelves} />
+      <TextButton title="To the Shelves: every past story →" onPress={() => router.push('/archive')} />
     </View>
   );
 }
@@ -138,11 +169,11 @@ const styles = StyleSheet.create({
   title: { fontFamily: fonts.display, fontSize: 32, lineHeight: 38 },
   concept: { fontFamily: fonts.displayItalic, fontSize: 18, marginTop: 6 },
   para: { fontFamily: fonts.body, fontSize: 17, lineHeight: 28, marginBottom: 16 },
+  lead: { fontFamily: fonts.label, fontSize: 14, letterSpacing: 1.4 },
   takeaway: {
     borderLeftWidth: 3,
     borderRadius: 6,
     padding: 16,
-    marginTop: 8,
     marginBottom: 24,
     gap: 8,
   },
@@ -153,6 +184,7 @@ const styles = StyleSheet.create({
     padding: 22,
     gap: 12,
   },
+  ideaPlate: { alignSelf: 'center', marginBottom: 4 },
   ideaText: { fontFamily: fonts.displayItalic, fontSize: 22, lineHeight: 31 },
   ideaNote: { fontFamily: fonts.body, fontSize: 13 },
   actions: {

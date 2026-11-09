@@ -4,9 +4,11 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { fonts, usePalette } from '../lib/theme';
 import type { RecallPrompt } from '../lib/types';
 import { Label, TextButton } from './bits';
+import { Plate } from './Plate';
 
 /**
- * A question about an earlier story, asked before today's one.
+ * The Red Queen's race: a question about an earlier story, asked before today's.
+ * "It takes all the running you can do, to keep in the same place."
  * Trying to recall something strengthens memory more than rereading it.
  */
 export function RecallCard({ recall }: { recall: RecallPrompt }) {
@@ -15,15 +17,23 @@ export function RecallCard({ recall }: { recall: RecallPrompt }) {
 
   return (
     <View style={[styles.card, { backgroundColor: p.surface, borderColor: p.rule }]}>
-      <Label>Before you begin</Label>
+      <View style={styles.head}>
+        <View style={{ flex: 1 }}>
+          <Label>The Red Queen’s race</Label>
+          <Text style={[styles.sub, { color: p.muted }]}>Before you begin</Text>
+        </View>
+        <Plate name="red-queen-race" width={92} />
+      </View>
       <Text style={[styles.question, { color: p.ink }]}>{recall.question}</Text>
       {open ? (
         <>
           <Text style={[styles.answer, { color: p.ink }]}>{recall.answer}</Text>
-          <TextButton
-            title="Re-read that story →"
-            onPress={() => router.push(`/issue/${recall.fromIssue}`)}
-          />
+          {recall.fromIssue != null ? (
+            <TextButton
+              title="Re-read that story →"
+              onPress={() => router.push(`/issue/${recall.fromIssue}`)}
+            />
+          ) : null}
         </>
       ) : (
         <Pressable
@@ -51,6 +61,8 @@ const styles = StyleSheet.create({
     marginBottom: 28,
     gap: 10,
   },
+  head: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  sub: { fontFamily: fonts.displayItalic, fontSize: 14, marginTop: -2 },
   question: {
     fontFamily: fonts.display,
     fontSize: 18,

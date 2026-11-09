@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { Animated, Easing, Pressable, StyleSheet, Text, View, useColorScheme } from 'react-native';
 import { fonts } from '../lib/theme';
 import { CONFIDENCE, type LookingGlass } from '../lib/types';
+import { Plate } from './Plate';
 
 const KIND_LABEL: Record<LookingGlass['kind'], string> = {
   counter: 'The other side',
@@ -47,11 +48,12 @@ export function LookingGlassPanel({ glass }: { glass: LookingGlass }) {
           { backgroundColor: g.bg, borderColor: g.edge, opacity: pressed ? 0.8 : 1 },
         ]}
       >
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, marginRight: 12 }}>
           <Text style={[styles.kicker, { color: g.muted }]}>THROUGH THE LOOKING-GLASS</Text>
           <Text style={[styles.prompt, { color: g.ink }]}>The other side of today’s idea</Text>
+          <Text style={[styles.tap, { color: g.muted }]}>Tap to step through</Text>
         </View>
-        <Text style={[styles.mirror, { color: g.muted }]}>⇄</Text>
+        <Plate name="mirror-this-side" width={58} />
       </Pressable>
     );
   }
@@ -64,6 +66,7 @@ export function LookingGlassPanel({ glass }: { glass: LookingGlass }) {
         { backgroundColor: g.bg, borderColor: g.edge, transform: [{ scaleX: flip }] },
       ]}
     >
+      <Plate name="mirror-other-side" width={120} style={styles.plate} />
       <Text style={[styles.kicker, { color: g.muted }]}>THROUGH THE LOOKING-GLASS</Text>
       <Text style={[styles.kind, { color: g.muted }]}>{KIND_LABEL[glass.kind]}</Text>
       <Text style={[styles.heading, { color: g.ink }]}>{glass.heading}</Text>
@@ -121,8 +124,9 @@ const styles = StyleSheet.create({
   },
   kicker: { fontFamily: fonts.label, fontSize: 10.5, letterSpacing: 1.2, marginBottom: 6 },
   prompt: { fontFamily: fonts.display, fontSize: 18, lineHeight: 23 },
+  tap: { fontFamily: fonts.bodyItalic, fontSize: 13, marginTop: 4 },
   kind: { fontFamily: fonts.displayItalic, fontSize: 14, marginTop: -2, marginBottom: 8 },
-  mirror: { fontFamily: fonts.display, fontSize: 24, marginLeft: 12 },
+  plate: { alignSelf: 'center', marginBottom: 12 },
   heading: { fontFamily: fonts.display, fontSize: 21, lineHeight: 27, marginBottom: 10 },
   body: { fontFamily: fonts.body, fontSize: 16, lineHeight: 26, marginBottom: 12 },
   rule: { height: StyleSheet.hairlineWidth, marginVertical: 12 },

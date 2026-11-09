@@ -42,6 +42,11 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **Rule:** `runtimeVersion` in app.json is fixed by hand. Bump it whenever a change needs native code (a new native library, new permissions, an Expo SDK upgrade), and build a new APK. Otherwise older installs could receive JavaScript they can't run and crash.
 **Dependency:** Relies on Carl's free Expo account (free up to 1,000 monthly users) and the `EXPO_TOKEN` secret in GitHub. If Expo goes away, the app keeps working on its last update.
 
+## D-009 · Tenniel's illustrations and the Carroll theme
+**Decided:** 9 November 2026, by Carl.
+**What:** The app uses John Tenniel's original engravings from both Alice books (public domain; Tenniel died in 1914), taken from Standard Ebooks' scans and converted to tintable line art in `src/art/`. Screens and features use Carroll's names with plain subtitles, so new readers aren't lost. No. 0, "Start here", tells the story of how *Alice* was written and doubles as the tutorial.
+**Rule:** Never use Disney's 1951 designs or any later copyrighted adaptation.
+
 ## D-006 · Web version for iPhone friends
 **Decided:** 8 November 2026, as a backup.
 **What:** The same app builds for the web (`.github/workflows/web.yml`) and can be published to GitHub Pages, where it can be added to an iPhone home screen. It has no 7am reminder.

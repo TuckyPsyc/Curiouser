@@ -1,0 +1,137 @@
+{
+  "id": 0,
+  "date": "2026-11-09",
+  "topic": "Literature",
+  "title": "The Story Told on a Boat",
+  "concept": "Why stories stick",
+  "teaser": "How a tale made up on a picnic trip became Alice in Wonderland, and why Curiouser tells every idea as a story. Start here.",
+  "readingMinutes": 3,
+  "story": [
+    "On 4 July 1862, a young mathematics lecturer at Christ Church, Oxford, called Charles Lutwidge Dodgson set off up the river from Folly Bridge with his friend the Reverend Robinson Duckworth and three daughters of the college's Dean: Lorina, who was 13, Alice, 10, and Edith, 8. They were heading for a picnic at Godstow, and the girls wanted a story.",
+    "Dodgson made one up as they went. A girl called Alice sees a White Rabbit take a watch out of its waistcoat-pocket and, 'burning with curiosity', follows it down a rabbit-hole, 'never once considering how in the world she was to get out again.' Alice Liddell liked it so much that she asked him to write it down.",
+    "He did, adding new episodes and his own drawings, and in November 1864 he gave her a handwritten book, Alice's Adventures Under Ground, inscribed 'A Christmas Gift to a Dear Child in Memory of a Summer's Day'. An expanded version, Alice's Adventures in Wonderland, was published by Macmillan in 1865, with pictures by John Tenniel. Its author's name was a disguise: Dodgson turned his first names, Charles Lutwidge, into Latin as Carolus Ludovicus, swapped them round and turned them back into English as Lewis Carroll.",
+    "The first printing was withdrawn because Tenniel was unhappy with how his pictures had come out; only 23 copies are known to survive. It hardly mattered. A sequel, Through the Looking-Glass, followed at Christmas 1871, and a story first told to three children in a rowing boat is still being read all over the world.",
+    "Carroll's genius is part of the reason. Another part is how memory works. A 2021 analysis of 37 research articles, involving around 33,000 people, found that readers understand and remember stories better than plain explanations. That's why Curiouser tells every idea as a true story, and why its features borrow their names from Carroll's books. The notes in the margins explain each one as you meet it."
+  ],
+  "takeaway": "People understand and remember stories better than plain explanations. Curiouser tells one idea a day as a true story, and names its features after the doors in Carroll's books.",
+  "recall": {
+    "question": "A warm-up: in the story Dodgson told on the river, what does Alice follow down the rabbit-hole?",
+    "answer": "A White Rabbit with a waistcoat-pocket and a watch. In every other story, this question asks about an earlier one, because trying to recall something fixes it better than rereading it."
+  },
+  "rabbitHole": {
+    "title": "Where the names come from",
+    "intro": "Every part of Curiouser borrows a moment from Carroll's two Alice books. Here's which, and why.",
+    "levels": [
+      {
+        "heading": "Burning with curiosity",
+        "body": [
+          "In the first chapter of Wonderland, the White Rabbit hurries past saying 'Oh dear! Oh dear! I shall be late!', takes a watch out of its waistcoat-pocket, and Alice, 'burning with curiosity', runs after it. That rabbit is the 7am reminder, and its watch, set to seven, is the app's icon.",
+          "At the start of chapter two, Alice eats a cake marked 'Eat Me' in currants and begins to grow. 'Curiouser and curiouser!' she cries, so surprised that she forgets how to speak good English, as she opens out 'like the largest telescope that ever was'. That's the feeling the app is named after: curiosity that grows the further you go."
+        ]
+      },
+      {
+        "heading": "Drink Me, Eat Me, and the shelves",
+        "body": [
+          "Before the cake, Alice finds a little bottle with a paper label round its neck, the words 'Drink Me' printed in large letters. Being sensible, she checks it isn't marked 'poison' first. It shrinks her to ten inches high. So Drink Me shrinks a story to its one-line idea, and Eat Me grows it back, or, from the full story, takes you deeper.",
+          "On the way down the rabbit-hole Alice falls so slowly that she can look at the sides of the well, which are 'filled with cupboards and bookshelves'. She takes down a jar labelled 'Orange Marmalade' as she passes, and is disappointed to find it empty. The Shelves are where every past story is kept, and none of the jars are empty."
+        ]
+      },
+      {
+        "heading": "Through the glass, before breakfast",
+        "body": [
+          "In Through the Looking-Glass, Alice climbs up on the chimneypiece and finds the mirror beginning 'to melt away, just like a bright silvery mist'. She steps through into a room where, as she'd guessed, 'the things go the other way'. That's the Looking-Glass panel: the other side of each idea.",
+          "Later the Red Queen runs Alice ragged and tells her, 'it takes all the running you can do, to keep in the same place.' Memory is a bit like that, which is why each story opens with a question about an earlier one. And when Alice says 'one can't believe impossible things', the White Queen replies that she has had more practice: 'Why, sometimes I've believed as many as six impossible things before breakfast.' Hence the daily story's name: Before Breakfast. Most of them sound impossible. All of them are true."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Alice's Adventures in Wonderland and Through the Looking-Glass",
+        "author": "Lewis Carroll, illustrated by John Tenniel (1865 and 1871)",
+        "note": "Both are out of copyright. Standard Ebooks has free editions with every Tenniel picture.",
+        "url": "https://standardebooks.org/ebooks/lewis-carroll/alices-adventures-in-wonderland/john-tenniel"
+      },
+      {
+        "title": "The Annotated Alice",
+        "author": "Martin Gardner (1960, later revised)",
+        "note": "Both books with notes explaining Carroll's jokes, puzzles and Victorian references."
+      },
+      {
+        "title": "Remembering the 4th of July",
+        "author": "The British Library, English and Drama blog",
+        "note": "The boat trip, Dodgson's diary and the journey of the original manuscript.",
+        "url": "https://britishlibrary.typepad.co.uk/english-and-drama/2015/07/remembering-the-4th-of-july.html"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "A good story lowers your guard",
+    "body": [
+      "The power of stories cuts both ways. In a 2000 study, the psychologists Melanie Green and Timothy Brock found that the readers most absorbed in a story spotted fewer 'false notes' in it, and came away holding more of the story's beliefs. Telling them it was fact or fiction made little difference.",
+      "The memory advantage may also be a little smaller than it looks: in that 2021 analysis, the studies of memory showed signs of publication bias, meaning weaker results may have gone unpublished. That's why every Curiouser story lists its sources, and why this panel is here: to check the tale against the evidence."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Enjoy the story, then check the sources."
+  },
+  "guide": {
+    "recall": {
+      "title": "The Red Queen's race",
+      "text": "Every story opens with a question about an earlier one. Trying to remember something fixes it far better than reading it again. Have a go, then tap to check."
+    },
+    "sizes": {
+      "title": "Drink Me and Eat Me",
+      "text": "Drink Me shrinks today's story to its one-line idea, for when you've only got ten seconds. Eat Me grows it back, and from the full story takes you down the rabbit hole."
+    },
+    "takeaway": {
+      "title": "The idea",
+      "text": "The story in a sentence. It's what Drink Me shows, and what Share sends to a friend."
+    },
+    "lookingGlass": {
+      "title": "Through the Looking-Glass",
+      "text": "Tap to see the other side of the idea: the strongest case against it, an honest 'nothing much here', or a myth debunked, with a rating of how sure we can be."
+    },
+    "rabbitHole": {
+      "title": "Down the rabbit hole",
+      "text": "Three levels deeper, ending with books to read next. Unlike Alice, you can always climb back out. This one explains where every name in Curiouser comes from."
+    },
+    "sources": {
+      "title": "Sources",
+      "text": "Every story lists where its facts came from, so you can check them."
+    },
+    "shelves": {
+      "title": "The Shelves",
+      "text": "Every past story, sorted by topic. The White Rabbit will nudge you at 7am when the next one is ready; you can switch him off there."
+    }
+  },
+  "sources": [
+    {
+      "title": "Remembering the 4th of July, British Library English and Drama blog",
+      "url": "https://britishlibrary.typepad.co.uk/english-and-drama/2015/07/remembering-the-4th-of-july.html"
+    },
+    {
+      "title": "Alice Liddell, Wikipedia (archived copy)",
+      "url": "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Alice_Liddel"
+    },
+    {
+      "title": "Publishing of Alice, The Lewis Carroll Society",
+      "url": "https://lewiscarrollsociety.org.uk/publishing-of-alice/"
+    },
+    {
+      "title": "Lewis Carroll: the riddle of Lewis Carroll, Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Lewis-Carroll/The-riddle-of-Lewis-Carroll"
+    },
+    {
+      "title": "Mar and colleagues (2021), Memory and comprehension of narrative versus expository texts: a meta-analysis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8219577/"
+    },
+    {
+      "title": "Green and Brock (2000), The role of transportation in the persuasiveness of public narratives",
+      "url": "https://gwern.net/docs/www/pdfs.semanticscholar.org/39691cee32e52fbfc33f1a0316aa0d008cb699a4.pdf"
+    },
+    {
+      "title": "Alice's Adventures in Wonderland and Through the Looking-Glass, Standard Ebooks",
+      "url": "https://standardebooks.org/ebooks/lewis-carroll/alices-adventures-in-wonderland/john-tenniel"
+    }
+  ]
+}

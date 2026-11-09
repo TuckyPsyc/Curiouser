@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
+import { Plate } from '../components/Plate';
 import { Screen } from '../components/Screen';
 import { Rule, TextButton, TopicChip, topicLabel } from '../components/bits';
 import { formatDate, useFeed } from '../lib/feed';
@@ -70,7 +71,30 @@ export default function Archive() {
   return (
     <Screen refreshing={status === 'loading'} onRefresh={refresh}>
       <TextButton title="← Today" colour={p.muted} onPress={goBack} />
-      <Text style={[styles.title, { color: p.ink }]}>Past stories</Text>
+      <View style={styles.header}>
+        <View style={{ flex: 1 }}>
+          <Text style={[styles.title, { color: p.ink }]}>The Shelves</Text>
+          <Text style={[styles.subtitle, { color: p.muted }]}>Every past story, sorted by topic</Text>
+        </View>
+        <Plate name="herald-rabbit" width={74} />
+      </View>
+
+      <Pressable
+        onPress={() => router.push('/start')}
+        style={({ pressed }) => [
+          styles.start,
+          { borderColor: p.accent, backgroundColor: p.surface, opacity: pressed ? 0.7 : 1 },
+        ]}
+      >
+        <Plate name="little-door" width={56} />
+        <View style={{ flex: 1 }}>
+          <Text style={[styles.startKicker, { color: p.accent }]}>START HERE</Text>
+          <Text style={[styles.startTitle, { color: p.ink }]}>The Story Told on a Boat</Text>
+          <Text style={[styles.rowTeaser, { color: p.muted }]}>
+            How Alice was written, and how Curiouser works.
+          </Text>
+        </View>
+      </Pressable>
 
       <ScrollView
         horizontal
@@ -85,7 +109,10 @@ export default function Archive() {
       </ScrollView>
 
       {shown.length === 0 ? (
-        <Text style={[styles.empty, { color: p.muted }]}>Nothing here yet.</Text>
+        <View style={styles.emptyBox}>
+          <Plate name="cheshire-cat" width={110} />
+          <Text style={[styles.empty, { color: p.muted }]}>Nothing on this shelf yet but a grin.</Text>
+        </View>
       ) : (
         shown.map((item) => <Row key={item.id} item={item} />)
       )}
@@ -93,10 +120,12 @@ export default function Archive() {
       <Rule />
       {Platform.OS !== 'web' ? (
         <View style={styles.setting}>
+          <Plate name="white-rabbit-watch" width={40} />
           <View style={{ flex: 1 }}>
-            <Text style={[styles.settingTitle, { color: p.ink }]}>White Rabbit reminder</Text>
+            <Text style={[styles.settingTitle, { color: p.ink }]}>The White Rabbit</Text>
             <Text style={[styles.settingNote, { color: p.muted }]}>
-              A nudge at {REMINDER_HOUR}:00 each day when Before Breakfast is ready.
+              “Oh dear! Oh dear! I shall be late!” A nudge at {REMINDER_HOUR}:00 when Before
+              Breakfast is ready.
             </Text>
           </View>
           <Switch
@@ -116,7 +145,21 @@ export default function Archive() {
 }
 
 const styles = StyleSheet.create({
-  title: { fontFamily: fonts.display, fontSize: 30, marginTop: 8, marginBottom: 16 },
+  header: { flexDirection: 'row', alignItems: 'flex-end', gap: 12, marginTop: 8, marginBottom: 18 },
+  title: { fontFamily: fonts.display, fontSize: 30 },
+  subtitle: { fontFamily: fonts.displayItalic, fontSize: 14, marginTop: 2 },
+  start: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+    borderWidth: 1,
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 18,
+  },
+  startKicker: { fontFamily: fonts.label, fontSize: 10.5, letterSpacing: 1.3 },
+  startTitle: { fontFamily: fonts.display, fontSize: 18, marginVertical: 2 },
+  emptyBox: { alignItems: 'center', gap: 12, marginTop: 16 },
   filterScroll: { marginHorizontal: -20, marginBottom: 16, flexGrow: 0 },
   filters: { flexDirection: 'row', gap: 8, paddingHorizontal: 20 },
   filter: { borderWidth: 1, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 6 },
@@ -127,7 +170,7 @@ const styles = StyleSheet.create({
   rowTitle: { fontFamily: fonts.display, fontSize: 20, lineHeight: 26, marginTop: 4 },
   rowConcept: { fontFamily: fonts.displayItalic, fontSize: 15 },
   rowTeaser: { fontFamily: fonts.body, fontSize: 14, lineHeight: 21 },
-  empty: { fontFamily: fonts.body, fontSize: 15, marginTop: 12 },
+  empty: { fontFamily: fonts.body, fontSize: 15, textAlign: 'center' },
   setting: { flexDirection: 'row', alignItems: 'center', gap: 16, marginBottom: 20 },
   settingTitle: { fontFamily: fonts.label, fontSize: 16 },
   settingNote: { fontFamily: fonts.body, fontSize: 13, marginTop: 2 },

@@ -10,7 +10,29 @@ import type { FeedIndex, Issue, IssueSummary } from './types';
 export const CONTENT_BASE =
   'https://raw.githubusercontent.com/TuckyPsyc/curiouser/main/content';
 
-const seed = seedData as unknown as { index: FeedIndex; issues: Record<string, Issue> };
+const seed = seedData as unknown as {
+  index: FeedIndex;
+  issues: Record<string, Issue>;
+  start: Issue;
+};
+
+/** No. 0, "Start here": the Alice story that explains the app. */
+export const START_ID = 0;
+const SEEN_START_KEY = 'seen-start-v1';
+
+export async function hasSeenStart(): Promise<boolean> {
+  try {
+    return (await AsyncStorage.getItem(SEEN_START_KEY)) === 'yes';
+  } catch {
+    return true; // If storage fails, don't keep sending readers to Start here.
+  }
+}
+
+export async function markStartSeen(): Promise<void> {
+  try {
+    await AsyncStorage.setItem(SEEN_START_KEY, 'yes');
+  } catch {}
+}
 
 const INDEX_KEY = 'feed-index-v1';
 const issueKey = (id: number) => `issue-v1-${id}`;
@@ -33,7 +55,8 @@ export function formatDate(iso: string): string {
   });
 }
 
-export const issuePath = (id: number) => `published/${String(id).padStart(4, '0')}.json`;
+export const issuePath = (id: number) =>
+  id === START_ID ? 'published/start-here.json' : `published/${String(id).padStart(4, '0')}.json`;
 
 function published(issues: IssueSummary[]): IssueSummary[] {
   const today = todayISO();
@@ -115,6 +138,7 @@ export function useFeed() {
 }
 
 function fromSeed(id: number): Issue | null {
+  if (id === START_ID) return seed.start ?? null;
   return seed.issues[String(id)] ?? null;
 }
 

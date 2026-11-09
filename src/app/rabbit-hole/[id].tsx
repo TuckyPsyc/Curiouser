@@ -1,6 +1,7 @@
 import { useLocalSearchParams } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Plate } from '../../components/Plate';
 import { Screen } from '../../components/Screen';
 import { TextButton } from '../../components/bits';
 import { useIssue } from '../../lib/feed';
@@ -36,9 +37,10 @@ export default function RabbitHole() {
       <TextButton title="↑ Drink Me: back to the story" colour={hole.muted} onPress={goBack} />
 
       {!rh ? (
-        <Text style={styles.body}>{failed ? 'Couldn’t load this rabbit hole.' : 'Falling…'}</Text>
+        <Text style={styles.body}>{failed ? 'Couldn’t load this rabbit hole.' : 'Down, down, down…'}</Text>
       ) : (
         <>
+          <Plate name="white-rabbit-watch" width={92} onDark style={styles.rabbit} />
           <Text style={styles.epigraph}>
             “Down, down, down. Would the fall never come to an end!”
           </Text>
@@ -103,6 +105,7 @@ export default function RabbitHole() {
 }
 
 const styles = StyleSheet.create({
+  rabbit: { alignSelf: 'center', marginTop: 20 },
   epigraph: {
     fontFamily: fonts.displayItalic,
     fontSize: 17,

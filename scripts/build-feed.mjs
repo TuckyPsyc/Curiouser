@@ -102,6 +102,26 @@ for (const issue of issues) {
   concepts.set(key, issue.id);
 }
 
+// No. 0, "Start here": the Alice story that doubles as the app's tutorial.
+// It sits outside the numbered sequence and the topic rotation.
+let start = null;
+try {
+  start = JSON.parse(readFileSync(join(root, 'content', 'start-here.json'), 'utf8'));
+  const f = 'start-here.json';
+  if (start.id !== 0) fail(f, 'id must be 0');
+  for (const k of ['title', 'concept', 'teaser', 'takeaway']) if (!isStr(start[k])) fail(f, `${k} missing`);
+  if (!isStrArr(start.story)) fail(f, 'story missing');
+  if (!start.rabbitHole?.levels?.length) fail(f, 'rabbitHole missing');
+  if (!start.lookingGlass?.heading) fail(f, 'lookingGlass missing');
+  const keys = ['recall', 'sizes', 'takeaway', 'lookingGlass', 'rabbitHole', 'sources', 'shelves'];
+  for (const k of keys) {
+    const n = start.guide?.[k];
+    if (!n || !isStr(n.title) || !isStr(n.text)) fail(f, `guide.${k} needs a title and text`);
+  }
+} catch (e) {
+  fail('start-here.json', `unreadable (${e.message})`);
+}
+
 if (errors.length) {
   console.error(`✗ ${errors.length} problem(s):\n  ` + errors.join('\n  '));
   process.exit(1);
@@ -124,6 +144,7 @@ const smartenDeep = (v, key) =>
         ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, smartenDeep(x, k)]))
         : v;
 for (let i = 0; i < issues.length; i++) issues[i] = smartenDeep(issues[i]);
+start = smartenDeep(start);
 
 const summary = ({ id, date, topic, title, concept, teaser, readingMinutes }) => ({
   id, date, topic, title, concept, teaser, readingMinutes,
@@ -143,8 +164,9 @@ if (!checkOnly) {
       JSON.stringify(issue, null, 2) + '\n',
     );
   }
+  writeFileSync(join(root, 'content', 'published', 'start-here.json'), JSON.stringify(start, null, 2) + '\n');
   mkdirSync(join(root, 'src', 'data'), { recursive: true });
-  const seed = { index, issues: Object.fromEntries(issues.map((i) => [String(i.id), i])) };
+  const seed = { index, start, issues: Object.fromEntries(issues.map((i) => [String(i.id), i])) };
   writeFileSync(join(root, 'src', 'data', 'seed.json'), JSON.stringify(seed) + '\n');
 }
 console.log(`✓ ${issues.length} issue(s) valid${checkOnly ? '' : '; wrote content/feed.json and src/data/seed.json'}`);
