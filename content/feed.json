@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-08T22:14:07.660Z",
+  "updated": "2026-11-09T04:56:19.913Z",
   "issues": [
+    {
+      "id": 6,
+      "date": "2026-11-09",
+      "topic": "Science",
+      "title": "The Man Who Doubted the Sea",
+      "concept": "The Raman effect",
+      "teaser": "On a voyage home from England in 1921, an Indian physicist refused to believe the sea was just reflecting the sky.",
+      "readingMinutes": 3
+    },
     {
       "id": 5,
       "date": "2026-11-08",

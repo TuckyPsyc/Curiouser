@@ -1,0 +1,125 @@
+{
+  "id": 6,
+  "date": "2026-11-09",
+  "topic": "Science",
+  "title": "The Man Who Doubted the Sea",
+  "concept": "The Raman effect",
+  "teaser": "On a voyage home from England in 1921, an Indian physicist refused to believe the sea was just reflecting the sky.",
+  "readingMinutes": 3,
+  "story": [
+    "In September 1921 the Indian physicist C. V. Raman was sailing home from England aboard the SS Narkunda. He had been at a congress of universities in Oxford. Crossing the Mediterranean, he did something few passengers would think of. He studied the sea through a Nicol prism, a crystal that blocks light polarised in a particular direction.",
+    "He was testing a famous answer to a simple question: why is the deep sea blue? Lord Rayleigh, one of the great physicists of the age, had argued that the dark blue of the deep sea ‘has nothing to do with the colour of water’. It was simply the blue sky, reflected. Light reflected off water is polarised, so by turning his prism Raman could cancel out the reflected sky. The blue didn’t go away. He wrote a short letter to the journal Nature, giving his address as the Narkunda in Bombay Harbour. The sea’s colour, he concluded, was ‘a distinct phenomenon in itself, and not merely an effect due to reflected skylight.’",
+    "Back in Calcutta, in the laboratory of the Indian Association for the Cultivation of Science, Raman and his students spent the next seven years on how light scatters off molecules. Early in 1928, working with his colleague K. S. Krishnan, he found something odd. They focused sunlight, filtered to blue-violet, through a seven-inch telescope into liquids, and used coloured filters to examine the light that scattered off them. Some of it had changed colour. Raman later dated the first sighting of its spectrum to 28 February 1928.",
+    "This is the Raman effect. When light strikes a molecule, almost all of it bounces off with its energy unchanged. But about one photon in ten million trades a little energy with the molecule’s vibrations, and leaves at a slightly different colour. How big the shift is depends on how the molecule’s atoms are bonded and how they vibrate, so the scattered light carries a fingerprint of the substance it came from. Raman and Krishnan reported ‘a new type of secondary radiation’ in Nature that year.",
+    "Raman was knighted in 1929 and won the Nobel Prize in Physics in 1930, the first Asian to be honoured with a Nobel in science. India now marks 28 February as National Science Day. The effect itself has become a standard tool for identifying materials, from drugs and pathogens to nanomaterials.",
+    "It began with a man on a ship who didn’t take a great name’s word for it, and checked."
+  ],
+  "takeaway": "The Raman effect: a tiny fraction of scattered light changes colour by trading energy with a molecule’s vibrations, so the light that comes back tells you what the molecule is.",
+  "recall": {
+    "question": "In 1902 Hanoi paid a bounty for every rat tail handed in. Why did it end with more rats, and what’s the name for the pattern?",
+    "answer": "People cut off tails, let the rats go to breed, and even farmed them. When a measure becomes a target, it ceases to be a good measure: Goodhart’s law.",
+    "fromIssue": 1
+  },
+  "rabbitHole": {
+    "title": "Down through the blue",
+    "intro": "Raman was right that the sea is more than a mirror, but the full answer turned out stranger than either he or Rayleigh thought. Follow the light down.",
+    "levels": [
+      {
+        "heading": "So why is the sea blue?",
+        "body": [
+          "Raman argued that water molecules scatter light much as air molecules do, favouring blue. In 1993 the chemists Charles Braun and Sergei Smirnov made a different case in the Journal of Chemical Education. The main reason, they argued, is absorption. Water soaks up a little red light, because red photons have just the right energy to set the bonds in water molecules vibrating hard. One such absorption band sits at 698 nanometres, ‘just at the red edge of the visible spectrum’. Take away some red and what’s left looks blue.",
+          "The effect is weak, so you need several metres of water to see it, which is why a glass of water looks clear. Heavy water, whose vibrations sit at lower energies, looks colourless over the same distance. Scattering still matters, because it sends the blue light back up to your eye. The authors called the sea, as far as they knew, the only example in nature of colour coming from molecular vibrations: the same kind of molecular vibrations the Raman effect reads."
+        ]
+      },
+      {
+        "heading": "Predicted, then caught",
+        "body": [
+          "Raman wasn’t the first to imagine it. In 1923 the physicist Adolf Smekal had reported ideas on ‘inelastic scattering’, in which light exchanges energy with matter as it bounces off. The difficulty was seeing it. With only about one photon in ten million shifted, the new light is drowned out by the ordinary scattered light.",
+          "Raman and Krishnan’s method was simple but thorough. They examined about sixty common liquids. The changed light turned out to be polarised, which showed it wasn’t fluorescence, the familiar glow some substances give off. Raman then measured the exact wavelengths with a spectroscope. Crucially, they showed the effect in solids, liquids and gases alike, which made it a general property of matter rather than a quirk of one material."
+        ]
+      },
+      {
+        "heading": "A Raman spectrometer on Mars",
+        "body": [
+          "The most far-flung Raman instrument sits on the robotic arm of NASA’s Perseverance rover on Mars. It is called SHERLOC, and it fires a deep-ultraviolet laser, at 248.6 nanometres, at Martian rock.",
+          "The light that comes back includes a glow from organic molecules and Raman-scattered light from both organics and minerals. SHERLOC turns these into chemical maps of the rock’s surface, paired with close-up images from a camera called WATSON. The aim is to work out the minerals and chemistry of Martian rock. It’s the same fingerprint Raman and Krishnan saw with sunlight and a telescope, read on another planet."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The colour of the sea",
+        "author": "C. V. Raman, Nature (1921)",
+        "note": "The shipboard letter that started it.",
+        "url": "https://www.nature.com/articles/108367a0"
+      },
+      {
+        "title": "A new type of secondary radiation",
+        "author": "C. V. Raman and K. S. Krishnan, Nature (1928)",
+        "note": "The announcement of the effect, barely a page long."
+      },
+      {
+        "title": "Why is water blue?",
+        "author": "Charles L. Braun and Sergei N. Smirnov, Journal of Chemical Education (1993)",
+        "note": "Readable and short, with the modern answer to Raman’s question.",
+        "url": "https://www.webexhibits.org/causesofcolor/ref/Braun-Smirnov.html"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Moscow saw it a week earlier",
+    "body": [
+      "Nobody doubts the effect. The credit is another matter. In Moscow, Grigory Landsberg and Leonid Mandelstam had been studying how light scatters in quartz since 1925. They observed the same shifted light on 21 February 1928, a week before Raman’s date, and presented it at a colloquium that April.",
+      "The Nobel committee chose Raman alone. Its reasoning was that the Moscow pair worked only on crystals and hadn’t given an independent, complete interpretation, while Raman and Krishnan showed the effect was universal. That’s a defensible call, but it was a judgement, not a foregone conclusion. In Russian the phenomenon is still called ‘combinational scattering of light’, and Krishnan, Raman’s co-author, didn’t share the prize either."
+    ],
+    "confidence": "Settled",
+    "verdict": "Where that leaves you: the physics is beyond dispute, but the name tells only part of the story, so give Landsberg, Mandelstam and Krishnan their share."
+  },
+  "sources": [
+    {
+      "title": "This Month in Physics History: the Raman effect, APS News (2009)",
+      "url": "https://www.aps.org/apsnews/2009/02/this-month-in-physics-history"
+    },
+    {
+      "title": "A Distinct Phenomenon in Itself: C. V. Raman’s Discovery of Why the Sea is Blue (1921), The Public Domain Review",
+      "url": "https://publicdomainreview.org/collection/raman-sea/"
+    },
+    {
+      "title": "C. V. Raman (1921), The colour of the sea, Nature 108, 367",
+      "url": "https://www.nature.com/articles/108367a0"
+    },
+    {
+      "title": "C. V. Raman and K. S. Krishnan (1928), A new type of secondary radiation, Nature 121, 501, Indian Academy of Sciences repository",
+      "url": "https://repository.ias.ac.in/28460"
+    },
+    {
+      "title": "Sir Chandrasekhara Venkata Raman, Biographical, NobelPrize.org",
+      "url": "https://www.nobelprize.org/prizes/physics/1930/raman/biographical/"
+    },
+    {
+      "title": "C. V. Raman, the colour of the sea and the Raman effect, The Wire Science",
+      "url": "https://science.thewire.in/society/history/cv-raman-colour-of-the-sea-ks-krishnan-raman-effect-experimental-physics-nobel-prize/"
+    },
+    {
+      "title": "On the Raman effect, Physics World",
+      "url": "https://physicsworld.com/?p=83361"
+    },
+    {
+      "title": "Leonid Mandelstam, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Leonid_Mandelstam"
+    },
+    {
+      "title": "Braun and Smirnov (1993), Why is water blue?, Journal of Chemical Education, via WebExhibits",
+      "url": "https://www.webexhibits.org/causesofcolor/ref/Braun-Smirnov.html"
+    },
+    {
+      "title": "The SHERLOC investigation on Perseverance (2021), Space Science Reviews 217, 58",
+      "url": "https://ui.adsabs.harvard.edu/abs/2021SSRv..217...58B/abstract"
+    },
+    {
+      "title": "Uckert et al. (2021), Calibration of the SHERLOC deep ultraviolet fluorescence-Raman spectrometer, Applied Spectroscopy, NASA NTRS",
+      "url": "https://ntrs.nasa.gov/citations/20210026488"
+    }
+  ]
+}
