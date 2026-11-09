@@ -2,14 +2,22 @@ name: Build Android app
 
 # Builds an installable APK and publishes it as the latest GitHub release, so
 # https://github.com/TuckyPsyc/curiouser/releases/latest/download/curiouser.apk
-# always points at the newest version. Story-only changes don't trigger a build:
-# the app fetches stories at runtime.
+# always points at the newest version.
+#
+# Only native-level changes need a new APK: dependencies, app config, icons and
+# this workflow. Screen and feature changes in src/ reach phones over the air
+# (update.yml), and stories are fetched at runtime.
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'content/**'
-      - '**.md'
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'app.json'
+      - 'app.config.js'
+      - 'eas.json'
+      - 'assets/**'
+      - '.github/workflows/android.yml'
   workflow_dispatch:
 
 permissions:

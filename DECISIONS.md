@@ -36,6 +36,12 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **What:** Curiouser covers fifteen topics, from science and philosophy to art, money, language and medicine, rather than only the subjects Carl already likes. Within each topic, stories range across eras, cultures and viewpoints, and every story has a Looking-Glass panel giving the other side (or saying honestly that there isn't one).
 **Why:** A learning app that only serves its readers' existing interests becomes a bubble. The aim is to widen what readers know, not to confirm it.
 
+## D-008 · Over-the-air updates through Expo
+**Decided:** 9 November 2026, by Carl.
+**What:** Installed apps check Expo's update service each time they open, and pick up changes to screens, wording, styling and features without a reinstall. `.github/workflows/update.yml` publishes an update whenever `src/` changes; a new APK is built only for native-level changes.
+**Rule:** `runtimeVersion` in app.json is fixed by hand. Bump it whenever a change needs native code (a new native library, new permissions, an Expo SDK upgrade), and build a new APK. Otherwise older installs could receive JavaScript they can't run and crash.
+**Dependency:** Relies on Carl's free Expo account (free up to 1,000 monthly users) and the `EXPO_TOKEN` secret in GitHub. If Expo goes away, the app keeps working on its last update.
+
 ## D-006 · Web version for iPhone friends
 **Decided:** 8 November 2026, as a backup.
 **What:** The same app builds for the web (`.github/workflows/web.yml`) and can be published to GitHub Pages, where it can be added to an iPhone home screen. It has no 7am reminder.

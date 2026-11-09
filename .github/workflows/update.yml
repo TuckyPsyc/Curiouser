@@ -1,0 +1,48 @@
+name: Publish app update
+
+# Sends changes to the app's screens, wording, styling and features straight to
+# installed phones via Expo, with no reinstall. Phones download it the next time
+# the app opens and use it from the launch after that.
+#
+# Changes that touch native code (new native libraries, permissions, Expo SDK
+# upgrades) still need a new APK, and must bump `runtimeVersion` in app.json so
+# older installs never receive code they can't run. See DECISIONS.md, D-008.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - '.github/workflows/update.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ota-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Bundle the current stories
+        run: node scripts/build-feed.mjs
+
+      - name: Publish the update
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          MESSAGE="$(printf '%s' "${COMMIT_MESSAGE:-Manual update}" | head -n 1)"
+          npx --yes eas-cli@27.5.0 update --channel production --platform android --message "$MESSAGE" --non-interactive
