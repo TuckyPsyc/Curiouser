@@ -18,6 +18,11 @@ on:
 permissions:
   contents: write  # only to publish a failure log to the build-logs branch
 
+# bash with pipefail, so a failure inside `... | tee` fails the step.
+defaults:
+  run:
+    shell: bash
+
 concurrency:
   group: ota-update
   cancel-in-progress: false
@@ -38,6 +43,15 @@ jobs:
 
       - name: Bundle the current stories
         run: node scripts/build-feed.mjs
+
+      - name: Check the Expo token is set
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          if [ -z "$EXPO_TOKEN" ]; then
+            echo "::error::The EXPO_TOKEN repository secret is missing. Add it under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
 
       - name: Publish the update
         env:
