@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  # only to publish a failure log to the build-logs branch
 
 concurrency:
   group: ota-update
@@ -45,4 +45,17 @@ jobs:
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
           MESSAGE="$(printf '%s' "${COMMIT_MESSAGE:-Manual update}" | head -n 1)"
-          npx --yes eas-cli@27.5.0 update --channel production --platform android --message "$MESSAGE" --non-interactive
+          npx --yes eas-cli@27.5.0 update --channel production --platform android --message "$MESSAGE" --non-interactive 2>&1 | tee update.log
+
+      - name: Publish the log on failure
+        if: failure()
+        run: |
+          tail -n 200 update.log > /tmp/update-log.txt 2>/dev/null || echo "No log captured" > /tmp/update-log.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan build-logs
+          git rm -rf --cached . > /dev/null
+          cp /tmp/update-log.txt update-log.txt
+          git add update-log.txt
+          git commit -m "Update log for run ${{ github.run_number }}"
+          git push -f origin build-logs

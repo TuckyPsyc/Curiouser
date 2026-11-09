@@ -55,6 +55,20 @@
     "scheme": "curiouser",
     "experiments": {
       "baseUrl": "/curiouser"
+    },
+    "runtimeVersion": "1",
+    "updates": {
+      "url": "https://u.expo.dev/5ce3a8f5-68b4-4aea-a712-5a2c456a0f31",
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0,
+      "requestHeaders": {
+        "expo-channel-name": "production"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5ce3a8f5-68b4-4aea-a712-5a2c456a0f31"
+      }
     }
   }
 }
