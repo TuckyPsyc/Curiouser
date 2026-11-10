@@ -6,7 +6,7 @@ import { Screen } from '../../components/Screen';
 import { TextButton } from '../../components/bits';
 import { useIssue } from '../../lib/feed';
 import { goBack } from '../../lib/nav';
-import { fonts, hole } from '../../lib/theme';
+import { labelSpacing, fonts, hole } from '../../lib/theme';
 
 const DEPTHS = [
   'Deeper',
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   kicker: {
     fontFamily: fonts.label,
     fontSize: 11,
-    letterSpacing: 1.6,
+    letterSpacing: labelSpacing,
     color: hole.gold,
     marginBottom: 8,
   },
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   depth: {
     fontFamily: fonts.label,
     fontSize: 11,
-    letterSpacing: 1.6,
+    letterSpacing: labelSpacing,
     color: hole.gold,
     marginBottom: 8,
   },

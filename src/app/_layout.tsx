@@ -14,7 +14,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { ensureReminder } from '../lib/notifications';
-import { usePalette } from '../lib/theme';
+import { DIRECTION, usePalette } from '../lib/theme';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
@@ -27,6 +27,9 @@ export default function RootLayout() {
     Literata_400Regular,
     Literata_400Regular_Italic,
     Literata_600SemiBold,
+    IMFellEnglish_400Regular: require('../fonts/IMFellEnglish_400Regular.ttf'),
+    IMFellEnglish_400Regular_Italic: require('../fonts/IMFellEnglish_400Regular_Italic.ttf'),
+    IMFellEnglishSC_400Regular: require('../fonts/IMFellEnglishSC_400Regular.ttf'),
   });
 
   useEffect(() => {
@@ -41,7 +44,7 @@ export default function RootLayout() {
 
   return (
     <>
-      <StatusBar style="auto" />
+      <StatusBar style={DIRECTION === 'night' ? 'light' : 'auto'} />
       <Stack
         screenOptions={{
           headerShown: false,

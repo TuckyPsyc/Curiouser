@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { fonts, hole } from '../lib/theme';
+import { labelSpacing, fonts, hole } from '../lib/theme';
 import type { Issue } from '../lib/types';
 import { Plate } from './Plate';
 
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   kicker: {
     fontFamily: fonts.label,
     fontSize: 10.5,
-    letterSpacing: 1,
+    letterSpacing: labelSpacing,
     color: hole.gold,
   },
   title: {

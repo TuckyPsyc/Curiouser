@@ -1,43 +1,72 @@
 import { useColorScheme } from 'react-native';
 import type { Topic } from './types';
 
-const light = {
-  bg: '#F5EFE3',
-  surface: '#FBF7EF',
-  ink: '#2A211C',
-  muted: '#6B5E55',
-  rule: '#DDD2C0',
-  accent: '#8A3B2E',
-  accentSoft: '#EFDDD3',
-  onAccent: '#FBF7EF',
+/**
+ * Design direction (D-010). 'page' is the live design: white paper, black ink,
+ * Red Queen red, IM Fell English. 'current' is the original cream-and-Fraunces
+ * look, kept so it can be restored in one line; 'night' is the always-dark
+ * alternative. Override at build time with EXPO_PUBLIC_DIRECTION.
+ */
+export type Direction = 'current' | 'page' | 'night';
+export const DIRECTION: Direction =
+  (process.env.EXPO_PUBLIC_DIRECTION as Direction | undefined) ?? 'page';
+
+const palettes = {
+  current: {
+    light: {
+      bg: '#F5EFE3', surface: '#FBF7EF', ink: '#2A211C', muted: '#6B5E55', rule: '#DDD2C0',
+      accent: '#8A3B2E', accentSoft: '#EFDDD3', onAccent: '#FBF7EF',
+    },
+    dark: {
+      bg: '#191512', surface: '#231D19', ink: '#EDE4D6', muted: '#A89B8E', rule: '#3A312A',
+      accent: '#D9846B', accentSoft: '#3A2620', onAccent: '#191512',
+    },
+  },
+  // The printed page: black ink and Queen-of-Hearts red on white paper.
+  page: {
+    light: {
+      bg: '#FBFAF7', surface: '#FFFFFF', ink: '#141210', muted: '#5C5852', rule: '#D9D5CC',
+      accent: '#B3122E', accentSoft: '#F6DDE1', onAccent: '#FFFFFF',
+    },
+    dark: {
+      bg: '#111113', surface: '#1B1B1E', ink: '#F2EFE8', muted: '#A19C93', rule: '#34343A',
+      accent: '#EC5A6F', accentSoft: '#3A1D23', onAccent: '#111113',
+    },
+  },
+  // Wonderland at night: deep indigo and gold, whatever the phone's setting.
+  night: {
+    light: {
+      bg: '#14112A', surface: '#1E1A3A', ink: '#ECE6F7', muted: '#A79FC2', rule: '#363062',
+      accent: '#D4B06A', accentSoft: '#2C2650', onAccent: '#14112A',
+    },
+    dark: {
+      bg: '#14112A', surface: '#1E1A3A', ink: '#ECE6F7', muted: '#A79FC2', rule: '#363062',
+      accent: '#D4B06A', accentSoft: '#2C2650', onAccent: '#14112A',
+    },
+  },
 };
 
-const dark: typeof light = {
-  bg: '#191512',
-  surface: '#231D19',
-  ink: '#EDE4D6',
-  muted: '#A89B8E',
-  rule: '#3A312A',
-  accent: '#D9846B',
-  accentSoft: '#3A2620',
-  onAccent: '#191512',
-};
+export type Palette = (typeof palettes)['current']['light'];
+
+/** True when the background is dark, so engravings go on paper plates. */
+export function useIsDark(): boolean {
+  const scheme = useColorScheme();
+  return DIRECTION === 'night' || scheme === 'dark';
+}
+
+export function usePalette(): Palette {
+  return useIsDark() ? palettes[DIRECTION].dark : palettes[DIRECTION].light;
+}
 
 /** The rabbit hole keeps its own palette whatever the system theme. */
 export const hole = {
-  bg: '#14112A',
+  bg: DIRECTION === 'night' ? '#0C0A1C' : '#14112A',
   ink: '#E9E3F5',
   muted: '#A79FC2',
   gold: '#D4B06A',
   thread: '#5A4F86',
   levels: ['#221E3D', '#1D1936', '#18152E', '#131026', '#0F0D20'],
 };
-
-export type Palette = typeof light;
-
-export function usePalette(): Palette {
-  return useColorScheme() === 'dark' ? dark : light;
-}
 
 const topicColours: Record<Topic, { light: string; dark: string }> = {
   History: { light: '#8C6A2F', dark: '#D1AE6E' },
@@ -58,19 +87,52 @@ const topicColours: Record<Topic, { light: string; dark: string }> = {
 };
 
 export function useTopicColour(topic: Topic): string {
-  const scheme = useColorScheme();
+  const dark = useIsDark();
   const c = topicColours[topic] ?? topicColours.History;
-  return scheme === 'dark' ? c.dark : c.light;
+  return dark ? c.dark : c.light;
 }
 
+/**
+ * The italic line under each headline. The original design tinted it by topic,
+ * which put gold italics on History days (too close to Honeyletter). The new
+ * directions keep topic colour to the chip and use the house colour here.
+ */
+export function useConceptColour(topic: Topic): string {
+  const p = usePalette();
+  const t = useTopicColour(topic);
+  if (DIRECTION === 'current') return t;
+  return DIRECTION === 'page' ? p.accent : '#C3B6E8';
+}
+
+const fontSets = {
+  current: {
+    display: 'Fraunces_600SemiBold',
+    displayItalic: 'Fraunces_500Medium_Italic',
+    label: 'Fraunces_500Medium',
+  },
+  // IM Fell: 17th-century types collected by Bishop John Fell for the Oxford
+  // press, revived by Igino Marini. Antique and irregular, unlike the usual app serif.
+  page: {
+    display: 'IMFellEnglish_400Regular',
+    displayItalic: 'IMFellEnglish_400Regular_Italic',
+    label: 'IMFellEnglishSC_400Regular',
+  },
+  night: {
+    display: 'IMFellEnglish_400Regular',
+    displayItalic: 'IMFellEnglish_400Regular_Italic',
+    label: 'IMFellEnglishSC_400Regular',
+  },
+};
+
 export const fonts = {
-  display: 'Fraunces_600SemiBold',
-  displayItalic: 'Fraunces_500Medium_Italic',
-  label: 'Fraunces_500Medium',
+  ...fontSets[DIRECTION],
   body: 'Literata_400Regular',
   bodyItalic: 'Literata_400Regular_Italic',
   bodyBold: 'Literata_600SemiBold',
 };
+
+/** Small capitals are built into IM Fell SC, so it needs far less spacing. */
+export const labelSpacing = DIRECTION === 'current' ? 1.6 : 0.4;
 
 export const DOWNLOAD_URL =
   'https://github.com/TuckyPsyc/curiouser/releases/latest/download/curiouser.apk';

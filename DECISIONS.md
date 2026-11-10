@@ -51,3 +51,9 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **Decided:** 8 November 2026, as a backup.
 **What:** The same app builds for the web (`.github/workflows/web.yml`) and can be published to GitHub Pages, where it can be added to an iPhone home screen. It has no 7am reminder.
 **Status:** Waiting for Pages to be switched on (Settings → Pages → Source: GitHub Actions).
+
+## D-010 · A look of our own: "The Page"
+**Decided:** 10 November 2026, by Carl.
+**What:** White paper, black ink and Red Queen red, set in IM Fell English (the 17th-century Fell types of Oxford, digitised by Igino Marini, SIL Open Font Licence) with Literata for reading. A chessboard strip under the masthead nods to the chess game in *Through the Looking-Glass*. Follows the phone's dark mode; the rabbit hole stays night-blue in both.
+**Why:** The first design (cream paper, brown ink, Fraunces with gold italics, widely spaced capitals) closely matched Honeyletter, another AI-built app. It is the default look such tools produce, so Curiouser needed a look that is clearly its own.
+**Rule:** Avoid cream-and-brown palettes, Fraunces and gold italic accents. The old look and an always-dark "Night" alternative remain in `src/lib/theme.ts`, selectable with `EXPO_PUBLIC_DIRECTION`.

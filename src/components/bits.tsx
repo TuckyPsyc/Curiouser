@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text, View, type PressableProps } from 'react-native';
-import { fonts, usePalette, useTopicColour } from '../lib/theme';
+import { fonts, labelSpacing, usePalette, useTopicColour } from '../lib/theme';
 import type { Topic } from '../lib/types';
 
 /** Topics are stored with a straight apostrophe; display them with a curly one. */
@@ -52,13 +52,13 @@ const styles = StyleSheet.create({
   },
   chipText: {
     fontFamily: fonts.label,
-    fontSize: 11,
-    letterSpacing: 1.2,
+    fontSize: 11.5,
+    letterSpacing: Math.min(1.2, labelSpacing),
   },
   label: {
     fontFamily: fonts.label,
-    fontSize: 12,
-    letterSpacing: 1.6,
+    fontSize: 13,
+    letterSpacing: labelSpacing,
   },
   textButton: {
     paddingVertical: 6,
