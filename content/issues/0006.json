@@ -76,6 +76,30 @@
     "confidence": "Settled",
     "verdict": "Where that leaves you: the physics is beyond dispute, but the name tells only part of the story, so give Landsberg, Mandelstam and Krishnan their share."
   },
+  "quiz": [
+    {
+      "question": "What was C. V. Raman testing when he looked at the Mediterranean through a prism in 1921?",
+      "options": [
+        "Lord Rayleigh's claim that the deep sea is blue because it reflects the sky",
+        "Whether sea water bends light more than fresh water",
+        "How far sunlight reaches below the surface",
+        "Whether the sea changes colour as it warms"
+      ],
+      "answer": 0,
+      "explain": "His Nicol prism cancelled out the reflected skylight, and the blue stayed. The sea's colour was 'a distinct phenomenon in itself'."
+    },
+    {
+      "question": "What happens in the Raman effect?",
+      "options": [
+        "A tiny fraction of scattered light changes colour by trading energy with a molecule's vibrations",
+        "All light that strikes a molecule changes colour slightly",
+        "Light reflected off water becomes polarised",
+        "A molecule absorbs light and gives it off later as heat"
+      ],
+      "answer": 0,
+      "explain": "About one photon in ten million leaves at a slightly different colour. The shift depends on how the molecule is bonded, so the light carries its fingerprint."
+    }
+  ],
   "sources": [
     {
       "title": "This Month in Physics History: the Raman effect, APS News (2009)",

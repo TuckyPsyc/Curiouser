@@ -70,6 +70,30 @@
     "confidence": "Well supported",
     "verdict": "Set targets, but keep checking that hitting the number still means doing the thing you care about."
   },
+  "quiz": [
+    {
+      "question": "Why did Hanoi’s rat bounty make the problem worse?",
+      "options": [
+        "Hunters cut off the tails, let the rats go to breed, and some farmed rats for their tails",
+        "The rats grew resistant to the poison laid in the sewers",
+        "The rat-catchers went on strike over the bounty’s low pay",
+        "The bounty was paid in rice, which drew more rats into the city"
+      ],
+      "answer": 0,
+      "explain": "A tail was good proof of a dead rat only until tails were worth money. Then people freed tailless rats to breed and set up rat farms outside the city."
+    },
+    {
+      "question": "Which line is the form of Goodhart’s law most people quote?",
+      "options": [
+        "When a measure becomes a target, it ceases to be a good measure",
+        "What gets measured gets managed",
+        "Work expands to fill the time available for its completion",
+        "Anything that can go wrong will go wrong"
+      ],
+      "answer": 0,
+      "explain": "It’s the anthropologist Marilyn Strathern’s wording of the economist Charles Goodhart’s 1975 point about monetary policy."
+    }
+  ],
   "sources": [
     {
       "title": "Interview with Michael Vann on the Great Hanoi Rat Hunt, World History Connected",

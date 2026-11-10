@@ -75,6 +75,30 @@
     "confidence": "Well supported",
     "verdict": "Where that leaves you: take Ashoka's remorse seriously, since few rulers have put anything like it in writing, but read conquest by dhamma as statecraft as well as conscience."
   },
+  "quiz": [
+    {
+      "question": "How do we know the human cost of Ashoka's conquest of Kalinga?",
+      "options": [
+        "Ashoka published the figures himself, carved in stone with his remorse",
+        "Greek ambassadors at his court wrote them down",
+        "The kings of Kalinga recorded them on their own pillars",
+        "Archaeologists counted the graves on the battlefield"
+      ],
+      "answer": 0,
+      "explain": "His thirteenth Major Rock Edict counts 150,000 deported and 100,000 killed. As Patrick Olivelle notes, Ashoka's own words are the only evidence the war happened at all."
+    },
+    {
+      "question": "What did Ashoka mean by 'conquest by dhamma'?",
+      "options": [
+        "Winning people over by example, persuasion and good government instead of by force",
+        "Converting conquered peoples to Buddhism by law",
+        "Fighting only wars approved by priests",
+        "Handing conquered lands back to their former kings"
+      ],
+      "answer": 0,
+      "explain": "Dhamma was a public ethic broader than Buddhism: 'non-injury, restraint and impartiality to all beings'. The best victory, he said, was won by example, not arms."
+    }
+  ],
   "sources": [
     {
       "title": "S. Dhammika, The Edicts of King Asoka (Rock Edicts 5 and 13, Minor Rock Edict 1, Pillar Edict 4, Kalinga Rock Edicts), Access to Insight",

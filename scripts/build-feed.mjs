@@ -75,6 +75,21 @@ for (const file of files) {
   const lgWords = (lg.body ?? []).join(' ').split(/\s+/).length;
   if (lgWords < 60 || lgWords > 200) fail(file, `lookingGlass body is ${lgWords} words; aim for 80–160`);
 
+  // The Caucus-race: Sunday's quiz draws on these. Options are shuffled in the app.
+  if (!Array.isArray(issue.quiz) || issue.quiz.length < 2 || issue.quiz.length > 3) fail(file, 'quiz needs 2–3 questions');
+  else issue.quiz.forEach((q, i) => {
+    const n = `quiz ${i + 1}`;
+    if (!isStr(q.question)) fail(file, `${n} needs a question`);
+    if (!isStrArr(q.options) || q.options.length < 3 || q.options.length > 4) fail(file, `${n} needs 3–4 options`);
+    else {
+      if (new Set(q.options.map((o) => o.trim().toLowerCase())).size !== q.options.length) fail(file, `${n} has duplicate options`);
+      if (q.options.some((o) => /\b(all|none|both) of (the|these) above\b|of the above/i.test(o))) fail(file, `${n}: options are shuffled, so don't refer to other options`);
+      if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer >= q.options.length) fail(file, `${n}: answer must be the index of the right option`);
+    }
+    if (!isStr(q.explain)) fail(file, `${n} needs an explain line`);
+    else if (q.explain.split(/\s+/).length > 45) fail(file, `${n}: keep explain under 45 words`);
+  });
+
   const expectedTopic = topicFor(id);
   if (issue.topic !== expectedTopic) fail(file, `topic should be "${expectedTopic}" in the rotation (see CONTENT_GUIDE.md)`);
 

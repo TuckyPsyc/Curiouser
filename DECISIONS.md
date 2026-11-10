@@ -57,3 +57,10 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **What:** White paper, black ink and Red Queen red, set in IM Fell English (the 17th-century Fell types of Oxford, digitised by Igino Marini, SIL Open Font Licence) with Literata for reading. A chessboard strip under the masthead nods to the chess game in *Through the Looking-Glass*. Follows the phone's dark mode; the rabbit hole stays night-blue in both.
 **Why:** The first design (cream paper, brown ink, Fraunces with gold italics, widely spaced capitals) closely matched Honeyletter, another AI-built app. It is the default look such tools produce, so Curiouser needed a look that is clearly its own.
 **Rule:** Avoid cream-and-brown palettes, Fraunces and gold italic accents. The old look and an always-dark "Night" alternative remain in `src/lib/theme.ts`, selectable with `EXPO_PUBLIC_DIRECTION`.
+
+## D-011 · Streaks, Jars and quiz results stay on the phone
+**Decided:** 10 November 2026, by Carl.
+**What:** The Hatter's watch (streak and weekly Hatter's Hour), Jars and the Caucus-race all run on the phone alone, stored in the app's local storage. There are no accounts and nothing is sent anywhere, consistent with D-005. Every reader gets the same five Caucus-race questions each week, picked with the race's Sunday as the seed, so friends can compare answers in conversation.
+**Consequence:** Deleting the app or clearing its data loses streaks, jars and comfits, and they don't move to a new phone.
+**To revisit:** A friends leaderboard, the Looking-Glass vote, Un-birthday presents and subscriptions all need accounts and a server. That means changing D-005, and moving stories out of the public repo (D-001) before anything is paid.
+

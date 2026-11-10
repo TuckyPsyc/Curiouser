@@ -14,6 +14,7 @@ Each morning's story ("Before Breakfast") teaches one named idea through a true 
 | `recall` | A question about an earlier issue, asked before reading | see below |
 | `rabbitHole` | The Eat Me deep dive: title, intro, 3–5 levels, further reading | 120–200 words per level |
 | `lookingGlass` | Through the Looking-Glass: the other side of the idea | 80–160 words |
+| `quiz` | Questions for Sunday's Caucus-race | 2 questions |
 | `sources` | Where every claim came from | at least 3 |
 
 ## Voice
@@ -82,6 +83,26 @@ Other fields:
 - **`verdict`**: one sentence starting from "where that leaves you", giving practical, even-handed advice.
 
 The Looking-Glass's sources go in the issue's `sources` list like everything else. Don't repeat material already used in the rabbit hole.
+
+## The Caucus-race questions
+
+Every Sunday the app runs the Caucus-race, a five-question quiz on the week's stories, drawn from each issue's `quiz`. Write two questions per issue:
+
+- **One on the story** (what happened, who found what) and **one on the idea** (what the concept means, or which example fits it). Recall of the idea matters more than trivia.
+- **Answerable from the story alone.** Don't ask about the rabbit hole or the Looking-Glass.
+- **`options`**: 3 or 4, with the right one at `answer` (counting from 0). Put it first if you like; the app shuffles them. Wrong options should be plausible, clearly wrong to someone who read the story, and never partly true. Never write "all of the above" or similar.
+- **`explain`**: one or two sentences, under 45 words, saying why the answer is right, with a detail from the story.
+
+```json
+"quiz": [
+  {
+    "question": "Why did Hanoi's rat bounty make the problem worse?",
+    "options": ["Hunters cut off the tails and let the rats go to breed", "The rats grew resistant to poison", "The rat-catchers went on strike"],
+    "answer": 0,
+    "explain": "A tail was good proof of a dead rat only until tails were worth money."
+  }
+]
+```
 
 ## Accuracy
 

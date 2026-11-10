@@ -74,6 +74,30 @@
     "confidence": "Contested",
     "verdict": "Leave things out when the gap does the work; when the reader needs guiding, tell them."
   },
+  "quiz": [
+    {
+      "question": "What did Hemingway later say he had left out of his story 'Out of Season'?",
+      "options": [
+        "That the old guide, Peduzzi, hanged himself",
+        "That the couple were on their honeymoon",
+        "That the husband had been wounded in the war",
+        "That the hotel burned down that night"
+      ],
+      "answer": 0,
+      "explain": "In A Moveable Feast he said he had 'omitted the real end', on his theory that the omitted part would make readers feel more than they understood."
+    },
+    {
+      "question": "What was Hemingway's warning about leaving things out?",
+      "options": [
+        "Leave out only what you know; leaving out what you don't know makes hollow places",
+        "Never leave out the ending of a story",
+        "Leave out no more than one-eighth of what you know",
+        "Leave things out of short stories, but never out of novels"
+      ],
+      "answer": 0,
+      "explain": "'A writer who omits things because he does not know them only makes hollow places in his writing.' The iceberg works because the writer knows what's underwater."
+    }
+  ],
   "sources": [
     {
       "title": "Iceberg theory, Wikipedia",
