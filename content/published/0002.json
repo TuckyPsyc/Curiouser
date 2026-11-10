@@ -75,6 +75,30 @@
     "confidence": "Settled",
     "verdict": "When you’re judging something you have hopes for, find a way to check it blind."
   },
+  "quiz": [
+    {
+      "question": "What was the crucial test Oskar Pfungst ran on Clever Hans?",
+      "options": [
+        "Asking questions to which the questioner didn’t know the answer",
+        "Setting harder sums with much larger numbers",
+        "Testing Hans in a different city, away from his stable",
+        "Rewarding Hans only when he got an answer wrong"
+      ],
+      "answer": 0,
+      "explain": "When the questioner knew the answer, Hans was right 89 per cent of the time; when they didn’t, 6 per cent. He was reading tiny movements of their head."
+    },
+    {
+      "question": "Why are trials of new medicines run double-blind?",
+      "options": [
+        "So the hopes of the people involved can’t leak into the results",
+        "So patients can’t compare notes about side effects",
+        "Because it’s cheaper than telling everyone what they’re taking",
+        "So the drug company can’t pick which patients take part"
+      ],
+      "answer": 0,
+      "explain": "That’s the Clever Hans effect: expectations leak out in signals too small to notice. If nobody knows who got the real treatment, nobody can send them."
+    }
+  ],
   "sources": [
     {
       "title": "Lessons from Clever Hans, in Gray and Bjorklund, Psychology (Macmillan)",

@@ -74,6 +74,30 @@
     "confidence": "Well supported",
     "verdict": "Track the habits you are trying to build, not the hobbies you already love."
   },
+  "quiz": [
+    {
+      "question": "How did Benjamin Franklin work through his thirteen virtues?",
+      "options": [
+        "He gave each one a week's strict attention in turn, marking every lapse with a black spot",
+        "He tackled all thirteen at once, every day",
+        "He paid himself a penny for every day without a fault",
+        "He spent a year on each, starting with the hardest"
+      ],
+      "answer": 0,
+      "explain": "One virtue a week meant the whole course took thirteen weeks, four times a year, recorded in a little book with a red-ruled page for each virtue."
+    },
+    {
+      "question": "In Franklin's story, what does the speckled axe stand for?",
+      "options": [
+        "Settling for 'good enough' because the work of improving is hard",
+        "Owning up to a fault in public",
+        "A tool that works better rough than polished",
+        "Doing several jobs badly instead of one well"
+      ],
+      "answer": 0,
+      "explain": "The buyer tires of turning the grindstone and decides he likes a speckled axe best. Franklin was tempted the same way with Order, and kept turning."
+    }
+  ],
   "sources": [
     {
       "title": "Franklin's Autobiography, the moral perfection project, ushistory.org",

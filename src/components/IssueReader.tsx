@@ -2,15 +2,18 @@ import { router } from 'expo-router';
 import { useState } from 'react';
 import { Linking, Platform, Pressable, Share, StyleSheet, Text, View } from 'react-native';
 import { formatDate } from '../lib/feed';
+import { markRead } from '../lib/progress';
 import { labelSpacing, DOWNLOAD_URL, fonts, useConceptColour, usePalette, useTopicColour } from '../lib/theme';
 import type { Issue } from '../lib/types';
 import { Label, Rule, TextButton, TopicChip } from './bits';
 import { LookingGlassPanel } from './LookingGlassPanel';
 import { MarginNote } from './MarginNote';
+import { JarButton } from './Jars';
 import { Ornament } from './Ornament';
 import { Plate } from './Plate';
 import { RabbitHoleButton } from './RabbitHoleButton';
 import { RecallCard } from './RecallCard';
+import { SeenMarker } from './Screen';
 import { SizeShifter, type Size } from './SizeShifter';
 
 async function shareIssue(issue: Issue): Promise<string | null> {
@@ -74,7 +77,10 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
       <SizeShifter
         size={size}
         minutes={issue.readingMinutes}
-        onDrink={() => setSize('idea')}
+        onDrink={() => {
+          setSize('idea');
+          markRead();
+        }}
         onEat={() => (size === 'idea' ? setSize('story') : goDeeper())}
       />
 
@@ -86,7 +92,10 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
           <Text style={[styles.ideaNote, { color: p.muted }]}>
             Shrunk to ten inches high. Eat Me to grow back to the full story.
           </Text>
-          <TextButton title="Share this idea" onPress={share} />
+          <View style={styles.actions}>
+            <JarButton issue={issue} />
+            <TextButton title="Share this idea" onPress={share} />
+          </View>
           {shareNote ? <Text style={[styles.note, { color: p.muted }]}>{shareNote}</Text> : null}
         </View>
       ) : (
@@ -104,6 +113,8 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
             ),
           )}
 
+          {/* Reaching the end of the story counts the day for the streak. */}
+          <SeenMarker onSeen={markRead} />
           <Ornament />
 
           <MarginNote note={g?.takeaway} />
@@ -121,13 +132,14 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
           <RabbitHoleButton issue={issue} />
 
           <View style={styles.actions}>
+            <JarButton issue={issue} />
             <TextButton title="Share this story" onPress={share} />
-            <TextButton
-              title={showSources ? 'Hide sources' : `Sources (${issue.sources.length})`}
-              colour={p.muted}
-              onPress={() => setShowSources((s) => !s)}
-            />
           </View>
+          <TextButton
+            title={showSources ? 'Hide sources' : `Sources (${issue.sources.length})`}
+            colour={p.muted}
+            onPress={() => setShowSources((s) => !s)}
+          />
           {shareNote ? <Text style={[styles.note, { color: p.muted }]}>{shareNote}</Text> : null}
           {g?.sources ? <View style={{ height: 10 }} /> : null}
           <MarginNote note={g?.sources} />

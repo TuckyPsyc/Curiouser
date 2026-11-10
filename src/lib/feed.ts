@@ -142,6 +142,26 @@ function fromSeed(id: number): Issue | null {
   return seed.issues[String(id)] ?? null;
 }
 
+/**
+ * One issue, freshest copy first: this session's memory, then the network,
+ * then the bundled seed, then the phone's cache. Used where several issues are
+ * needed at once, such as the Caucus-race.
+ */
+export async function loadIssue(id: number): Promise<Issue | null> {
+  const inMemory = memory.get(id);
+  if (inMemory) return inMemory;
+  try {
+    const remote = await fetchJSON<Issue>(issuePath(id));
+    memory.set(id, remote);
+    await writeJSON(issueKey(id), remote);
+    return remote;
+  } catch {
+    const seeded = fromSeed(id);
+    if (seeded?.quiz) return seeded;
+    return (await readJSON<Issue>(issueKey(id))) ?? seeded;
+  }
+}
+
 export function useIssue(id: number | null) {
   const [issue, setIssue] = useState<Issue | null>(() =>
     id == null ? null : memory.get(id) ?? fromSeed(id),

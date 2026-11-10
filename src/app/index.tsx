@@ -3,10 +3,14 @@ import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { IssueReader } from '../components/IssueReader';
 import { ChessRule } from '../components/ChessRule';
+import { RaceCard } from '../components/RaceCard';
+import { StreakStrip } from '../components/StreakStrip';
 import { Plate } from '../components/Plate';
 import { Screen } from '../components/Screen';
 import { TextButton } from '../components/bits';
-import { hasSeenStart, todayISO, useFeed, useIssue } from '../lib/feed';
+import { hasSeenStart, useFeed, useIssue } from '../lib/feed';
+import { useToday } from '../lib/progress';
+import { currentRace, useRaceResults } from '../lib/race';
 import { DIRECTION, fonts, usePalette } from '../lib/theme';
 
 export default function Today() {
@@ -14,6 +18,10 @@ export default function Today() {
   const { issues, status, refresh } = useFeed();
   const latest = issues[0];
   const { issue } = useIssue(latest?.id ?? null);
+  const today = useToday();
+  const race = currentRace(today, issues);
+  const results = useRaceResults();
+  const raceOpen = race && !results[race.date];
 
   // First launch: send new readers to Start here, which explains everything.
   useEffect(() => {
@@ -48,6 +56,9 @@ export default function Today() {
         </View>
       </View>
 
+      <StreakStrip />
+      {raceOpen ? <RaceCard race={race} today={today} /> : null}
+
       {status === 'offline' ? (
         <Text style={[styles.note, { color: p.muted }]}>
           You’ve wandered out of signal. Showing the stories saved on this phone.
@@ -57,7 +68,7 @@ export default function Today() {
       {issue ? (
         <IssueReader
           issue={issue}
-          kicker={issue.date === todayISO() ? 'Before Breakfast' : 'Previously'}
+          kicker={issue.date === today ? 'Before Breakfast' : 'Previously'}
         />
       ) : (
         <View style={styles.empty}>

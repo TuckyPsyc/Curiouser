@@ -74,6 +74,30 @@
     "confidence": "Contested",
     "verdict": "Hide the effort in how you carry yourself; let it show in the work."
   },
+  "quiz": [
+    {
+      "question": "According to Castiglione's courtiers, what is the opposite of sprezzatura?",
+      "options": [
+        "Affectation: effort put on display to impress",
+        "Clumsiness",
+        "Laziness",
+        "Modesty"
+      ],
+      "answer": 0,
+      "explain": "The opposite isn't clumsiness. Grace breaks the moment people can see you working at it."
+    },
+    {
+      "question": "Which of these is closest to sprezzatura?",
+      "options": [
+        "A pianist who has practised a piece a thousand times and plays it as if it were nothing",
+        "A beginner who doesn't care how he sounds",
+        "A pianist who tells the audience how hard the piece is",
+        "A pianist who sticks to easy pieces so he never looks strained"
+      ],
+      "answer": 0,
+      "explain": "Sprezzatura is doing difficult things as if they were easy. The ease has to be earned: it's caring so thoroughly that the care disappears."
+    }
+  ],
   "sources": [
     {
       "title": "The Book of the Courtier, Wikipedia",

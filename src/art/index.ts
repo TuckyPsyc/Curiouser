@@ -3,9 +3,11 @@
 // and converted to line art (ink as alpha) so the app can tint them.
 export const ART = {
   'cheshire-cat': { source: require('./cheshire-cat.png'), ratio: 0.6929 },
+  'dodo-thimble': { source: require('./dodo-thimble.png'), ratio: 0.8982 },
   'drink-me': { source: require('./drink-me.png'), ratio: 0.6828 },
   'herald-rabbit': { source: require('./herald-rabbit.png'), ratio: 0.7281 },
   'little-door': { source: require('./little-door.png'), ratio: 0.9514 },
+  'mad-tea-party': { source: require('./mad-tea-party.png'), ratio: 1.3158 },
   'mirror-other-side': { source: require('./mirror-other-side.png'), ratio: 0.8614 },
   'mirror-this-side': { source: require('./mirror-this-side.png'), ratio: 0.8971 },
   'red-queen-race': { source: require('./red-queen-race.png'), ratio: 1.6194 },

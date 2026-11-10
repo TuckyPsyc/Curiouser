@@ -5,6 +5,9 @@ import { Plate } from '../components/Plate';
 import { Screen } from '../components/Screen';
 import { Rule, TextButton, TopicChip, topicLabel } from '../components/bits';
 import { formatDate, useFeed } from '../lib/feed';
+import { useJars } from '../lib/jars';
+import { useToday } from '../lib/progress';
+import { currentRace, useRaceResults } from '../lib/race';
 import { goBack } from '../lib/nav';
 import { getReminderPref, REMINDER_HOUR, setReminder } from '../lib/notifications';
 import { labelSpacing, fonts, useConceptColour, usePalette } from '../lib/theme';
@@ -67,6 +70,13 @@ export default function Archive() {
   }, []);
 
   const shown = topic ? issues.filter((i) => i.topic === topic) : issues;
+  const jars = useJars();
+  const saved = jars.reduce((n, j) => n + j.items.length, 0);
+  const today = useToday();
+  const race = currentRace(today, issues);
+  const results = useRaceResults();
+  const comfits = Object.keys(results).length;
+  const ran = race ? results[race.date] : undefined;
 
   return (
     <Screen refreshing={status === 'loading'} onRefresh={refresh}>
@@ -95,6 +105,39 @@ export default function Archive() {
           </Text>
         </View>
       </Pressable>
+
+      <View style={styles.pair}>
+        <Pressable
+          onPress={() => router.push('/jars')}
+          style={({ pressed }) => [
+            styles.tile,
+            { borderColor: p.rule, backgroundColor: p.surface, opacity: pressed ? 0.7 : 1 },
+          ]}
+        >
+          <Text style={[styles.startKicker, { color: p.accent }]}>JARS</Text>
+          <Text style={[styles.tileTitle, { color: p.ink }]}>Ideas you’ve saved</Text>
+          <Text style={[styles.rowTeaser, { color: p.muted }]}>
+            {saved === 0 ? 'Nothing saved yet' : `${saved} idea${saved === 1 ? '' : 's'} in ${jars.length} jar${jars.length === 1 ? '' : 's'}`}
+          </Text>
+        </Pressable>
+        <Pressable
+          onPress={() => router.push('/race')}
+          style={({ pressed }) => [
+            styles.tile,
+            { borderColor: p.rule, backgroundColor: p.surface, opacity: pressed ? 0.7 : 1 },
+          ]}
+        >
+          <Text style={[styles.startKicker, { color: p.accent }]}>THE CAUCUS-RACE</Text>
+          <Text style={[styles.tileTitle, { color: p.ink }]}>Sunday’s quiz</Text>
+          <Text style={[styles.rowTeaser, { color: p.muted }]}>
+            {ran
+              ? `This week: ${ran.score} of ${ran.total} · ${comfits} comfit${comfits === 1 ? '' : 's'}`
+              : race
+                ? 'This week’s race is open'
+                : 'Next race on Sunday'}
+          </Text>
+        </Pressable>
+      </View>
 
       <ScrollView
         horizontal
@@ -159,6 +202,9 @@ const styles = StyleSheet.create({
   },
   startKicker: { fontFamily: fonts.label, fontSize: 10.5, letterSpacing: labelSpacing },
   startTitle: { fontFamily: fonts.display, fontSize: 18, marginVertical: 2 },
+  pair: { flexDirection: 'row', gap: 12, marginBottom: 18 },
+  tile: { flex: 1, borderWidth: 1, borderRadius: 14, padding: 14, gap: 2 },
+  tileTitle: { fontFamily: fonts.display, fontSize: 16, marginBottom: 2 },
   emptyBox: { alignItems: 'center', gap: 12, marginTop: 16 },
   filterScroll: { marginHorizontal: -20, marginBottom: 16, flexGrow: 0 },
   filters: { flexDirection: 'row', gap: 8, paddingHorizontal: 20 },

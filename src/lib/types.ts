@@ -78,6 +78,15 @@ export type LookingGlass = {
   verdict: string;
 };
 
+/** A question for the Caucus-race, Sunday's quiz. Options are shuffled in the app. */
+export type QuizQuestion = {
+  question: string;
+  options: string[];
+  /** Index of the right option in `options`. */
+  answer: number;
+  explain: string;
+};
+
 export type Issue = {
   id: number;
   /** Publication date, YYYY-MM-DD (UK). The app hides issues dated in the future. */
@@ -96,6 +105,8 @@ export type Issue = {
   /** Optional in the type so older cached issues still render. */
   lookingGlass?: LookingGlass;
   guide?: Partial<Record<GuideKey, GuideNote>>;
+  /** Two or three questions for the Caucus-race. Absent in older issues and Start here. */
+  quiz?: QuizQuestion[];
   sources: Source[];
 };
 
