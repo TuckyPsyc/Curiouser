@@ -7,7 +7,7 @@ import { Rule, TextButton, TopicChip, topicLabel } from '../components/bits';
 import { formatDate, useFeed } from '../lib/feed';
 import { goBack } from '../lib/nav';
 import { getReminderPref, REMINDER_HOUR, setReminder } from '../lib/notifications';
-import { fonts, usePalette, useTopicColour } from '../lib/theme';
+import { labelSpacing, fonts, useConceptColour, usePalette } from '../lib/theme';
 import { TOPICS, type IssueSummary, type Topic } from '../lib/types';
 
 function FilterChip({
@@ -37,7 +37,7 @@ function FilterChip({
 
 function Row({ item }: { item: IssueSummary }) {
   const p = usePalette();
-  const colour = useTopicColour(item.topic);
+  const colour = useConceptColour(item.topic);
   return (
     <Pressable
       onPress={() => router.push(`/issue/${item.id}`)}
@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
     padding: 14,
     marginBottom: 18,
   },
-  startKicker: { fontFamily: fonts.label, fontSize: 10.5, letterSpacing: 1.3 },
+  startKicker: { fontFamily: fonts.label, fontSize: 10.5, letterSpacing: labelSpacing },
   startTitle: { fontFamily: fonts.display, fontSize: 18, marginVertical: 2 },
   emptyBox: { alignItems: 'center', gap: 12, marginTop: 16 },
   filterScroll: { marginHorizontal: -20, marginBottom: 16, flexGrow: 0 },

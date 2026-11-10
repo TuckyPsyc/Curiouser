@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
-import { Animated, Easing, Pressable, StyleSheet, Text, View, useColorScheme } from 'react-native';
-import { fonts } from '../lib/theme';
+import { Animated, Easing, Pressable, StyleSheet, Text, View } from 'react-native';
+import { fonts, labelSpacing, useIsDark } from '../lib/theme';
 import { CONFIDENCE, type LookingGlass } from '../lib/types';
 import { Plate } from './Plate';
 
@@ -11,7 +11,7 @@ const KIND_LABEL: Record<LookingGlass['kind'], string> = {
 };
 
 function useGlass() {
-  const dark = useColorScheme() === 'dark';
+  const dark = useIsDark();
   return dark
     ? { bg: '#1D252B', edge: '#3E4B55', ink: '#E3E9EE', muted: '#93A2AD', on: '#B9C9D4', off: '#33404A' }
     : { bg: '#E9EEF1', edge: '#B4C0C8', ink: '#1F2A31', muted: '#5D6C76', on: '#4E6371', off: '#CBD5DB' };
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     padding: 20,
     marginBottom: 12,
   },
-  kicker: { fontFamily: fonts.label, fontSize: 10.5, letterSpacing: 1.2, marginBottom: 6 },
+  kicker: { fontFamily: fonts.label, fontSize: 11.5, letterSpacing: labelSpacing, marginBottom: 6 },
   prompt: { fontFamily: fonts.display, fontSize: 18, lineHeight: 23 },
   tap: { fontFamily: fonts.bodyItalic, fontSize: 13, marginTop: 4 },
   kind: { fontFamily: fonts.displayItalic, fontSize: 14, marginTop: -2, marginBottom: 8 },

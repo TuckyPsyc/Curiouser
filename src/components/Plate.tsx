@@ -1,6 +1,6 @@
-import { Image, StyleSheet, Text, View, useColorScheme, type ViewStyle } from 'react-native';
+import { Image, StyleSheet, Text, View, type ViewStyle } from 'react-native';
 import { ART, type ArtName } from '../art';
-import { fonts } from '../lib/theme';
+import { fonts, useIsDark } from '../lib/theme';
 
 const PAPER = '#EFE6D6';
 const INK = '#2A211C';
@@ -24,7 +24,7 @@ export function Plate({
   onDark?: boolean;
   style?: ViewStyle;
 }) {
-  const dark = useColorScheme() === 'dark' || onDark;
+  const dark = useIsDark() || onDark;
   const art = ART[name];
   const image = (
     <Image

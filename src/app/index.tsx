@@ -2,11 +2,12 @@ import { router } from 'expo-router';
 import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { IssueReader } from '../components/IssueReader';
+import { ChessRule } from '../components/ChessRule';
 import { Plate } from '../components/Plate';
 import { Screen } from '../components/Screen';
 import { TextButton } from '../components/bits';
 import { hasSeenStart, todayISO, useFeed, useIssue } from '../lib/feed';
-import { fonts, usePalette } from '../lib/theme';
+import { DIRECTION, fonts, usePalette } from '../lib/theme';
 
 export default function Today() {
   const p = usePalette();
@@ -33,7 +34,7 @@ export default function Today() {
           <Text style={[styles.shelvesSub, { color: p.muted }]}>past stories</Text>
         </View>
       </View>
-      <View style={[styles.rule, { backgroundColor: p.ink }]} />
+      <ChessRule />
 
       <View style={styles.epigraphRow}>
         <Plate name="white-queen" width={62} />
@@ -78,8 +79,8 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     justifyContent: 'space-between',
   },
-  brand: { fontFamily: fonts.display, fontSize: 32, letterSpacing: 0.3 },
-  tagline: { fontFamily: fonts.displayItalic, fontSize: 13, marginTop: -2 },
+  brand: { fontFamily: fonts.display, fontSize: DIRECTION === 'current' ? 32 : 40, letterSpacing: 0.3 },
+  tagline: { fontFamily: fonts.displayItalic, fontSize: DIRECTION === 'current' ? 13 : 15, marginTop: -2 },
   shelves: { alignItems: 'flex-end' },
   shelvesSub: { fontFamily: fonts.body, fontSize: 11, marginTop: -6 },
   rule: { height: 2, marginTop: 10, marginBottom: 16 },

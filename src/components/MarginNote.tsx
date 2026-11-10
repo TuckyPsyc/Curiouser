@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { fonts, usePalette } from '../lib/theme';
+import { labelSpacing, fonts, usePalette } from '../lib/theme';
 import type { GuideNote } from '../lib/types';
 
 /**
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     transform: [{ rotate: '-0.6deg' }],
   },
-  kicker: { fontFamily: fonts.label, fontSize: 10, letterSpacing: 1.3, marginBottom: 3 },
+  kicker: { fontFamily: fonts.label, fontSize: 10, letterSpacing: labelSpacing, marginBottom: 3 },
   title: { fontFamily: fonts.display, fontSize: 15, marginBottom: 3 },
   text: { fontFamily: fonts.body, fontSize: 14, lineHeight: 21 },
 });

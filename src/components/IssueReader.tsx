@@ -2,7 +2,7 @@ import { router } from 'expo-router';
 import { useState } from 'react';
 import { Linking, Platform, Pressable, Share, StyleSheet, Text, View } from 'react-native';
 import { formatDate } from '../lib/feed';
-import { DOWNLOAD_URL, fonts, usePalette, useTopicColour } from '../lib/theme';
+import { labelSpacing, DOWNLOAD_URL, fonts, useConceptColour, usePalette, useTopicColour } from '../lib/theme';
 import type { Issue } from '../lib/types';
 import { Label, Rule, TextButton, TopicChip } from './bits';
 import { LookingGlassPanel } from './LookingGlassPanel';
@@ -47,6 +47,7 @@ function LeadParagraph({ text, colour }: { text: string; colour: string }) {
 export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string }) {
   const p = usePalette();
   const topicColour = useTopicColour(issue.topic);
+  const conceptColour = useConceptColour(issue.topic);
   const [size, setSize] = useState<Size>('story');
   const [showSources, setShowSources] = useState(false);
   const [shareNote, setShareNote] = useState<string | null>(null);
@@ -66,7 +67,7 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
         {issue.id === 0 ? kicker : `${kicker} · ${formatDate(issue.date)}`}
       </Text>
       <Text style={[styles.title, { color: p.ink }]}>{issue.title}</Text>
-      <Text style={[styles.concept, { color: topicColour }]}>{issue.concept}</Text>
+      <Text style={[styles.concept, { color: conceptColour }]}>{issue.concept}</Text>
 
       <View style={{ height: 22 }} />
       <MarginNote note={g?.sizes} />
@@ -169,7 +170,7 @@ const styles = StyleSheet.create({
   title: { fontFamily: fonts.display, fontSize: 32, lineHeight: 38 },
   concept: { fontFamily: fonts.displayItalic, fontSize: 18, marginTop: 6 },
   para: { fontFamily: fonts.body, fontSize: 17, lineHeight: 28, marginBottom: 16 },
-  lead: { fontFamily: fonts.label, fontSize: 14, letterSpacing: 1.4 },
+  lead: { fontFamily: fonts.label, fontSize: 14, letterSpacing: labelSpacing },
   takeaway: {
     borderLeftWidth: 3,
     borderRadius: 6,

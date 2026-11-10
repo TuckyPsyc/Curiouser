@@ -1,5 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { fonts, usePalette } from '../lib/theme';
+import { fonts, labelSpacing, usePalette } from '../lib/theme';
 
 export type Size = 'idea' | 'story';
 
@@ -100,5 +100,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 7,
   },
-  tagText: { fontFamily: fonts.label, fontSize: 12, letterSpacing: 1.4 },
+  tagText: { fontFamily: fonts.label, fontSize: 12, letterSpacing: Math.min(1.4, labelSpacing) },
 });
