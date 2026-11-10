@@ -1,0 +1,124 @@
+{
+  "id": 7,
+  "date": "2026-11-10",
+  "topic": "History",
+  "title": "The Emperor Who Said Sorry",
+  "concept": "Conquest by dhamma",
+  "teaser": "Around 260 BC an Indian emperor won a brutal war, then had his regret carved into rock across his empire.",
+  "readingMinutes": 3,
+  "story": [
+    "Some time around 260 BC, in the eighth year after his coronation, the Mauryan emperor Ashoka conquered Kalinga, a kingdom on India’s east coast in what is now Odisha. His empire was already vast. Kalinga made it larger. The cost, by his own count, was terrible: ‘One hundred and fifty thousand were deported, one hundred thousand were killed and many more died.’",
+    "We know those numbers only because Ashoka chose to publish them. Ancient kings carved their victories in stone. Ashoka carved his regret. In the text now called his thirteenth Major Rock Edict, cut into rock faces from Girnar in western India to Shahbazgarhi and Mansehra in what is now Pakistan, he said he felt ‘deep remorse’ for the conquest and was ‘deeply pained by the killing, dying and deportation’. As the scholar Patrick Olivelle points out, Ashoka’s own words are the only evidence that the war happened at all.",
+    "The edict doesn’t stop at regret. It proposes a different kind of victory: ‘Now it is conquest by Dhamma that Beloved-of-the-Gods considers to be the best conquest.’ Beloved-of-the-Gods was Ashoka’s title for himself.",
+    "This is conquest by dhamma. Dhamma, the Prakrit form of dharma, meant something broader than Buddhism, which Ashoka had taken up as a lay follower. It was a public ethic: in the edict’s words, ‘non-injury, restraint and impartiality to all beings’. Instead of winning land, a ruler would win people over, by example, persuasion and good government. Thirteen years after his coronation Ashoka appointed a new class of officials, the Dhamma Mahamatras, to spread it. Edict 13 claims it had already won through as far as the Greek king Antiochos, and beyond him to four more kings, Ptolemy, Antigonos, Magas and Alexander. He had the edict written, he said, so that his sons and great-grandsons would not consider making new conquests, or would at least use forbearance and light punishment if they did.",
+    "For centuries nobody could read the script his edicts were written in. Once it was deciphered in the nineteenth century, Ashoka could speak for himself again. On 26 January 1950 the newly independent republic of India adopted as its State Emblem an adaptation of the lion capital from his pillar at Sarnath.",
+    "His idea is still argued over by anyone who wields power: that what you win by example may last longer than what you take by force."
+  ],
+  "takeaway": "Conquest by dhamma: after a bloody war, Ashoka declared that the best victory is won by moral example and persuasion, not by arms, and he published his remorse to prove he meant it.",
+  "recall": {
+    "question": "Benjamin Franklin kept a little book of thirteen virtues, marking each lapse with a black spot. What was his method, and what do psychologists call it?",
+    "answer": "He worked on one virtue a week and kept an honest daily record of his slips. Keeping that kind of regular record is self-monitoring.",
+    "fromIssue": 4
+  },
+  "rabbitHole": {
+    "title": "Reading the rocks",
+    "intro": "For centuries nobody could read a word Ashoka wrote. Follow the inscriptions down, from a mint in Calcutta to a market in Kandahar.",
+    "levels": [
+      {
+        "heading": "The script nobody could read",
+        "body": [
+          "James Prinsep was the assay master at the Calcutta Mint and the founding editor of the Asiatic Society’s journal. He spent years on the strange script carved on pillars and rocks across India. A breakthrough came from Sanchi, where Captain Edward Smith, at Prinsep’s suggestion, copied short inscriptions from the railings of the great stupa. Smith noticed that most of them ended with the same two characters, which he read as ‘danam’, a gift. They were donors’ records, and they gave Prinsep a foothold.",
+          "In 1837 he deciphered an inscription on a pillar in Delhi. The king who issued it called himself Devanampiya Piyadasi, Beloved-of-the-Gods. Prinsep at first took him for a king of Sri Lanka. George Turnour, working on Buddhist texts in Ceylon, identified Piyadasi as a title of Ashoka. The final proof came only in 1915, when an inscription found at Maski, in what is now Karnataka, named Ashoka outright."
+        ]
+      },
+      {
+        "heading": "Not a sudden convert",
+        "body": [
+          "The popular version has Ashoka looking out over the dead of Kalinga and turning Buddhist on the spot. His own words tell a slower story. In his first Minor Rock Edict he admits that for more than two and a half years after becoming a lay disciple he had ‘not been very zealous’. Only after more than a year of visiting the Sangha, the Buddhist monastic community, did he become ‘very zealous’. Olivelle places the war about a year and a half before his turn to Buddhism, and notes that Ashoka never spells out the link.",
+          "Nor was dhamma simply Buddhism under another name. The historian Romila Thapar argued that it was a policy of social responsibility, not merely a demand that everyone favour Buddhism. Olivelle reads it as a kind of civil religion, meant to give a vast and varied empire a shared moral language."
+        ]
+      },
+      {
+        "heading": "Piety in Greek",
+        "body": [
+          "Ashoka’s empire reached into what is now Afghanistan, and there his edicts were put into Greek and Aramaic. In 1958 a rock inscription in Greek and Aramaic was found outside Kandahar. In 1963 a German doctor bought a stone plaque in the Kandahar market, and French archaeologists traced it to Old Kandahar. It carries a Greek version of the end of Edict 12 and the start of Edict 13, Kalinga figures and all.",
+          "Its translator had to find a Greek word for dhamma, and chose eusebeia, piety. The plaque was later offered to the Kabul Museum. After the museum was looted in 1992 to 1994, its whereabouts became unknown. One of the most remarkable apologies in history, translated for Greek speakers in Asia, is now lost."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Edicts of King Asoka",
+        "author": "Ven. S. Dhammika (1993)",
+        "note": "A free, readable English translation of all the edicts, with a short introduction.",
+        "url": "https://accesstoinsight.org/lib/authors/dhammika/wheel386.html"
+      },
+      {
+        "title": "Aśoka and the Decline of the Mauryas",
+        "author": "Romila Thapar (1961)",
+        "note": "The classic study of Ashoka’s reign and his policy of dhamma."
+      },
+      {
+        "title": "Ashoka: Portrait of a Philosopher King",
+        "author": "Patrick Olivelle (2023)",
+        "note": "A recent life that reads Ashoka through his own words."
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "An apology with an army behind it",
+    "body": [
+      "Ashoka’s remorse wasn’t published everywhere. At Dhauli and Jaugada, the two edict sites in Kalinga itself, Rock Edicts 11 to 13 were left out and two separate edicts, addressed to local officials, put in their place. The people who suffered the war weren’t shown the apology, and Kalinga stayed in his empire, run by his officers at Tosali. Even Edict 13 warns the forest peoples of his realm that, despite his remorse, he ‘has the power to punish them if necessary’. Years later he granted condemned prisoners a three-day stay before execution, not an end to the death penalty.",
+      "The historian Upinder Singh, reviewing Olivelle’s book, goes further. A single-minded, state-run ideological programme of preaching and policing is, she argues, ‘a form of authoritarianism, even tyranny’, however benign its aims."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: take Ashoka’s remorse seriously, since few rulers have put anything like it in writing, but read conquest by dhamma as statecraft as well as conscience."
+  },
+  "sources": [
+    {
+      "title": "S. Dhammika, The Edicts of King Asoka (Rock Edicts 5 and 13, Minor Rock Edict 1, Pillar Edict 4, Kalinga Rock Edicts), Access to Insight",
+      "url": "https://accesstoinsight.org/lib/authors/dhammika/wheel386.html"
+    },
+    {
+      "title": "Major Rock Edicts, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Major_Rock_Edicts"
+    },
+    {
+      "title": "Edicts of Ashoka, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Edicts_of_Ashoka"
+    },
+    {
+      "title": "Kalinga War, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kalinga_War"
+    },
+    {
+      "title": "Kandahar Greek Edicts of Ashoka, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kandahar_Greek_Edicts_of_Ashoka"
+    },
+    {
+      "title": "Jahnavi Sen, ‘Ashoka was strong enough to say he was sorry’, interview with Patrick Olivelle, The Wire",
+      "url": "https://m.thewire.in/article/books/full-text-ashoka-was-strong-enough-to-say-he-was-sorry-about-things-hed-done"
+    },
+    {
+      "title": "Upinder Singh, ‘Ashoka: The King Who Said Sorry’, review of Olivelle, Open (2023)",
+      "url": "https://openthemagazine.com/lounge/books/ashoka-the-king-who-said-sorry"
+    },
+    {
+      "title": "Romila Thapar, Aśoka and the Decline of the Mauryas (1961), Internet Archive",
+      "url": "https://archive.org/details/in.ernet.dli.2015.126947"
+    },
+    {
+      "title": "James Prinsep: Decoding Ancient India, LiveHistory India",
+      "url": "https://www.livehistoryindia.com/story/snapshort-histories/james-princep-decoding-ancient-india/"
+    },
+    {
+      "title": "S. Dhammika (2012), Prinsep discovers Ashoka",
+      "url": "https://smallpdfs.buddhistuniversity.net/dhammika_2012_prinsep-discovers-ashoka.pdf"
+    },
+    {
+      "title": "State Emblem, Know India, Government of India",
+      "url": "https://knowindia.india.gov.in/national-identity-elements/state-emblem.php"
+    }
+  ]
+}

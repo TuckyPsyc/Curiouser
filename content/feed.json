@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-09T04:56:19.913Z",
+  "updated": "2026-11-10T05:05:35.974Z",
   "issues": [
+    {
+      "id": 7,
+      "date": "2026-11-10",
+      "topic": "History",
+      "title": "The Emperor Who Said Sorry",
+      "concept": "Conquest by dhamma",
+      "teaser": "Around 260 BC an Indian emperor won a brutal war, then had his regret carved into rock across his empire.",
+      "readingMinutes": 3
+    },
     {
       "id": 6,
       "date": "2026-11-09",
