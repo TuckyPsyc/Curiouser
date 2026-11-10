@@ -35,3 +35,5 @@ npx expo start                # run in Expo Go / a dev build
 ```
 
 Illustrations are John Tenniel's original engravings for *Alice's Adventures in Wonderland* (1865) and *Through the Looking-Glass* (1871), which are in the public domain, from [Standard Ebooks](https://standardebooks.org/)' scans. Nothing here uses Disney's designs. The app icon is original.
+
+Type is IM Fell English, digitised by Igino Marini, and Literata, both under the SIL Open Font Licence.

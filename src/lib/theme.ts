@@ -2,12 +2,14 @@ import { useColorScheme } from 'react-native';
 import type { Topic } from './types';
 
 /**
- * Design direction. 'current' is the original cream-and-Fraunces look;
- * 'page' and 'night' are the mock-up directions (chosen at build time).
+ * Design direction (D-010). 'page' is the live design: white paper, black ink,
+ * Red Queen red, IM Fell English. 'current' is the original cream-and-Fraunces
+ * look, kept so it can be restored in one line; 'night' is the always-dark
+ * alternative. Override at build time with EXPO_PUBLIC_DIRECTION.
  */
 export type Direction = 'current' | 'page' | 'night';
 export const DIRECTION: Direction =
-  (process.env.EXPO_PUBLIC_DIRECTION as Direction | undefined) ?? 'current';
+  (process.env.EXPO_PUBLIC_DIRECTION as Direction | undefined) ?? 'page';
 
 const palettes = {
   current: {
