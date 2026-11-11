@@ -1,0 +1,50 @@
+name: Checks
+
+# Runs on every change to stories, scripts or app code, and on every pull request:
+#   - every story and verdict is valid
+#   - the gate holds: a story with no releasing verdict can't reach readers
+#   - on pull requests, the app still typechecks
+# A failure shows on the editor's desk under "Automation that failed".
+on:
+  push:
+    branches: [main, rehearsal]
+    paths:
+      - 'content/**'
+      - 'scripts/**'
+      - '.github/workflows/checks.yml'
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Stories and verdicts are valid
+        run: node scripts/build-feed.mjs --check
+      - name: The gate holds
+        run: |
+          git config --global user.name "checks"
+          git config --global user.email "checks@example.com"
+          node scripts/test-gate.mjs
+
+  app:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/build-feed.mjs
+      - name: The app typechecks
+        run: npx tsc --noEmit

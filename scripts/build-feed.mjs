@@ -1,26 +1,22 @@
 #!/usr/bin/env node
-// Validates every story in content/issues, then writes:
-//   content/feed.json   – the index the app fetches
-//   src/data/seed.json  – stories bundled into the app so it works offline on first open
+// Validates every story in content/issues and every verdict in content/checks, then writes:
+//   content/feed.json    – the index the app fetches
+//   content/published/   – the stories the app fetches
+//   src/data/seed.json   – stories bundled into the app so it works offline on first open
+//
+// Only released stories go into those three. A story is released when
+// content/checks/NNNN.json holds a releasing verdict (pass, fixed or
+// released-unchecked). A story with no verdict is a draft, and one with the
+// verdict "held" is kept back; readers see neither. See DECISIONS.md, D-012.
+//
 // Usage: node scripts/build-feed.mjs [--check]
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, unlinkSync } from 'node:fs';
+import { join } from 'node:path';
+import { root, issuesDir, loadChecks, statusOf, VERDICTS, CHECKERS, CYCLE, topicFor, pad } from './lib/state.mjs';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const issuesDir = join(root, 'content', 'issues');
 const checkOnly = process.argv.includes('--check');
 
-// Issues 1–5 were the launch set. From issue 6, topics follow CYCLE in order:
-// issue 6 is Science, issue 7 History, and so on, repeating every 15 issues.
-const LAUNCH = ['History', 'Psychology', 'Literature', 'Self-Improvement', "Gentleman's Pursuits"];
-const CYCLE = [
-  'Science', 'History', 'Philosophy', 'Psychology', 'Nature', 'Literature', 'Economics',
-  'Self-Improvement', 'Art & Music', 'Mathematics', "Gentleman's Pursuits", 'Society',
-  'Technology', 'Language', 'Health & Medicine',
-];
 const TOPICS = CYCLE;
-const topicFor = (id) => (id <= LAUNCH.length ? LAUNCH[id - 1] : CYCLE[(id - LAUNCH.length - 1) % CYCLE.length]);
 const errors = [];
 const fail = (file, msg) => errors.push(`${file}: ${msg}`);
 
@@ -102,13 +98,56 @@ for (const file of files) {
   issues.push(issue);
 }
 
+// Fact-check verdicts. These decide what readers see, so their shape is checked too.
+const { checks, problems: unreadableChecks } = loadChecks();
+for (const p of unreadableChecks) errors.push(p);
+const isISOTime = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(v) && !Number.isNaN(Date.parse(v));
+for (const [id, c] of checks) {
+  const f = `checks/${id === 0 ? 'start-here' : pad(id)}.json`;
+  if (c.issue !== id) fail(f, `issue ${c.issue} does not match file name`);
+  if (id !== 0 && !issues.some((i) => i.id === id)) fail(f, `there is no story No. ${id}`);
+  if (!VERDICTS.includes(c.verdict)) fail(f, `verdict must be one of: ${VERDICTS.join(', ')}`);
+  if (!CHECKERS.includes(c.by)) fail(f, `by must be one of: ${CHECKERS.join(', ')}`);
+  if (!isISOTime(c.at)) fail(f, 'at must be an ISO date and time, e.g. 2026-11-12T05:55:00Z');
+  if (!isStr(c.summary)) fail(f, 'summary missing');
+  for (const k of ['changes', 'problems']) if (!Array.isArray(c[k])) fail(f, `${k} must be a list (empty if none)`);
+  (c.changes ?? []).forEach?.((ch, i) => {
+    for (const k of ['where', 'before', 'after', 'why']) if (!isStr(ch?.[k])) fail(f, `change ${i + 1} needs ${k}`);
+  });
+  (c.problems ?? []).forEach?.((pr, i) => {
+    for (const k of ['where', 'problem']) if (!isStr(pr?.[k])) fail(f, `problem ${i + 1} needs ${k}`);
+  });
+  if (c.notes !== undefined && !(Array.isArray(c.notes) && c.notes.every(isStr))) fail(f, 'notes must be a list of sentences');
+  if (c.history !== undefined && !Array.isArray(c.history)) fail(f, 'history must be a list');
+  // The fact-checker's counts, so the weekly report can add them up.
+  if (c.by === 'fact-checker') {
+    const count = (v) => Number.isInteger(v) && v >= 0;
+    if (!count(c.claims?.checked) || c.claims.checked < 1) fail(f, 'claims.checked must say how many claims were checked');
+    if (!count(c.links?.checked)) fail(f, 'links.checked must say how many links were opened');
+  }
+  if (c.verdict === 'fixed' && !c.changes?.length) fail(f, 'verdict "fixed" must list each change made');
+  if (c.verdict === 'pass' && c.changes?.length) fail(f, 'verdict "pass" means nothing was changed; use "fixed" if the story was edited');
+  if (c.verdict === 'held' && !c.problems?.length) fail(f, 'verdict "held" must list the problems');
+}
+const status = (id) => statusOf(id, checks);
+const released = issues.filter((i) => status(i.id) === 'released');
+const waiting = issues.filter((i) => status(i.id) === 'draft');
+const held = issues.filter((i) => status(i.id) === 'held');
+
 // Cross-issue checks
 const ids = issues.map((i) => i.id);
 ids.forEach((id, i) => {
   if (id !== i + 1) fail(`${String(id).padStart(4, '0')}.json`, `ids must run 1, 2, 3… without gaps (expected ${i + 1})`);
 });
 for (const issue of issues) {
-  if (issue.recall && !ids.includes(issue.recall.fromIssue)) fail(`${issue.id}`, `recall points to missing issue ${issue.recall.fromIssue}`);
+  if (!issue.recall) continue;
+  const from = issue.recall.fromIssue;
+  if (!ids.includes(from)) fail(`${issue.id}`, `recall points to missing issue ${from}`);
+  // Readers can only be asked about stories they were shown. Enforced while a story
+  // is still unreleased, so a later hold can never break stories already published.
+  else if (status(issue.id) !== 'released' && status(from) !== 'released') {
+    fail(`${issue.id}`, `recall points to No. ${from}, which readers haven't seen (it is ${status(from)}); ask about a released story`);
+  }
 }
 const concepts = new Map();
 for (const issue of issues) {
@@ -158,30 +197,46 @@ const smartenDeep = (v, key) =>
       : v && typeof v === 'object'
         ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, smartenDeep(x, k)]))
         : v;
-for (let i = 0; i < issues.length; i++) issues[i] = smartenDeep(issues[i]);
+const out = released.map((i) => smartenDeep(i));
 start = smartenDeep(start);
 
 const summary = ({ id, date, topic, title, concept, teaser, readingMinutes }) => ({
   id, date, topic, title, concept, teaser, readingMinutes,
 });
+const feedPath = join(root, 'content', 'feed.json');
+const publishedDir = join(root, 'content', 'published');
 const index = {
   updated: new Date().toISOString(),
-  issues: [...issues].sort((a, b) => b.id - a.id).map(summary),
+  issues: [...out].sort((a, b) => b.id - a.id).map(summary),
 };
+// Keep the old timestamp when the list hasn't changed, so saving a draft or a
+// verdict doesn't touch feed.json and two agents saving at once don't collide.
+try {
+  const old = JSON.parse(readFileSync(feedPath, 'utf8'));
+  if (JSON.stringify(old.issues) === JSON.stringify(index.issues) && typeof old.updated === 'string') index.updated = old.updated;
+} catch {}
 
 if (!checkOnly) {
-  writeFileSync(join(root, 'content', 'feed.json'), JSON.stringify(index, null, 2) + '\n');
+  writeFileSync(feedPath, JSON.stringify(index, null, 2) + '\n');
   // Published copies with curly quotes, which is what the app fetches.
-  mkdirSync(join(root, 'content', 'published'), { recursive: true });
-  for (const issue of issues) {
-    writeFileSync(
-      join(root, 'content', 'published', `${String(issue.id).padStart(4, '0')}.json`),
-      JSON.stringify(issue, null, 2) + '\n',
-    );
+  mkdirSync(publishedDir, { recursive: true });
+  for (const issue of out) {
+    writeFileSync(join(publishedDir, `${pad(issue.id)}.json`), JSON.stringify(issue, null, 2) + '\n');
   }
-  writeFileSync(join(root, 'content', 'published', 'start-here.json'), JSON.stringify(start, null, 2) + '\n');
+  // A draft or held story must not be fetchable, even by guessing its address.
+  const keep = new Set(out.map((i) => `${pad(i.id)}.json`));
+  for (const f of readdirSync(publishedDir)) {
+    if (/^\d{4}\.json$/.test(f) && !keep.has(f)) unlinkSync(join(publishedDir, f));
+  }
+  writeFileSync(join(publishedDir, 'start-here.json'), JSON.stringify(start, null, 2) + '\n');
   mkdirSync(join(root, 'src', 'data'), { recursive: true });
-  const seed = { index, start, issues: Object.fromEntries(issues.map((i) => [String(i.id), i])) };
+  const seed = { index, start, issues: Object.fromEntries(out.map((i) => [String(i.id), i])) };
   writeFileSync(join(root, 'src', 'data', 'seed.json'), JSON.stringify(seed) + '\n');
 }
-console.log(`✓ ${issues.length} issue(s) valid${checkOnly ? '' : '; wrote content/feed.json and src/data/seed.json'}`);
+const list = (xs) => xs.map((i) => `No. ${i.id}`).join(', ');
+console.log(
+  `✓ ${issues.length} issue(s) valid: ${released.length} released` +
+    (waiting.length ? `, ${waiting.length} waiting for the fact-checker (${list(waiting)})` : '') +
+    (held.length ? `, ${held.length} held (${list(held)})` : '') +
+    (checkOnly ? '' : '; wrote content/feed.json, content/published/ and src/data/seed.json'),
+);

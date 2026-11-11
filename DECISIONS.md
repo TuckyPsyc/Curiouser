@@ -64,3 +64,11 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **Consequence:** Deleting the app or clearing its data loses streaks, jars and comfits, and they don't move to a new phone.
 **To revisit:** A friends leaderboard, the Looking-Glass vote, Un-birthday presents and subscriptions all need accounts and a server. That means changing D-005, and moving stories out of the public repo (D-001) before anything is paid.
 
+## D-012 · Stories are drafts until the fact-checker releases them
+**Decided:** 11 November 2026, by Carl.
+**What:** The Editor saves each morning's story as a draft. A second scheduled agent, the fact-checker, checks it independently at 05:40 and writes a verdict to `content/checks/NNNN.json` (`agents/fact-checker.md`). `scripts/build-feed.mjs` puts a story into `content/feed.json`, `content/published/` and the app's bundled copy only when its verdict is `pass`, `fixed` or `released-unchecked`. A story with no verdict is a draft and one with the verdict `held` is kept back; neither appears anywhere the app looks, so apps already installed never see them.
+**Why:** It is what backs up "curated and checked". One agent writing and checking its own work is not a check.
+**Rule:** Whoever writes a story never writes its verdict. `scripts/save.mjs` enforces it: the Editor can save only to `content/issues/`. An unchecked story never releases itself. Only Carl can publish one, by closing its release ticket or running "Release a story" (`.github/workflows/release.yml`), and it is then recorded as `released-unchecked` by the editor-in-chief. `scripts/test-gate.mjs` tests all of this on every change.
+**Consequence:** On a morning when the story is held or unchecked, readers see the previous story, and the 7:00 reminder, which is scheduled on the phone and can't know, still says a new one is waiting.
+**Limits:** A story already bundled into an app update can't be taken back by holding it, only corrected. GitHub starts scheduled workflows late at busy times, so the 06:30 alarm for an unchecked story can arrive up to about 20 minutes late; four slots guard against a missed one.
+

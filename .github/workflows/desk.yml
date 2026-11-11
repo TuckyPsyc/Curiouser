@@ -1,0 +1,61 @@
+name: Editor's desk
+
+# Keeps "The editor's desk" (a pinned issue) showing everything waiting for Carl,
+# and raises a ticket when a story is unchecked, held or missing. It only reads
+# the repository and writes to issues; it never changes a file.
+#
+# It runs whenever something on the desk changes, and four times between 05:35
+# and 06:50 UTC. scripts/desk.mjs works from UK time, so the 06:30 alarm for an
+# unchecked story and the morning note after 06:45 are right in winter and
+# summer. GitHub often starts scheduled runs late, hence several slots.
+#
+# Pushing to the `rehearsal` branch runs the same thing as a practice: tickets
+# are labelled "rehearsal" and nobody is notified.
+on:
+  push:
+    branches: [main, rehearsal]
+    paths:
+      - 'content/**'
+      - 'videos/**'
+      - 'reports/**'
+      - 'support/status.json'
+      - 'scripts/desk.mjs'
+      - 'scripts/lib/**'
+      - '.github/workflows/desk.yml'
+  # _target runs this file from main with main's code; the pull request's own code is never run.
+  pull_request_target:
+    types: [opened, reopened, closed, ready_for_review]
+  schedule:
+    - cron: '35 5 * * *'
+    - cron: '50 5 * * *'
+    - cron: '35 6 * * *'
+    - cron: '50 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+  actions: read
+
+concurrency:
+  group: desk-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  desk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Update the desk and its tickets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DESK_REHEARSAL: ${{ github.ref_name == 'rehearsal' && '1' || '' }}
+          DESK_BRANCH: ${{ github.ref_name == 'rehearsal' && 'rehearsal' || 'main' }}
+        run: node scripts/desk.mjs

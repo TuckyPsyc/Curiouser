@@ -1,0 +1,142 @@
+name: Release a story
+
+# Carl's override as editor-in-chief: publishes a story that hasn't passed the
+# fact-checker. Two ways in:
+#
+#   1. He closes an "unchecked" release ticket as completed (one tap in the
+#      GitHub app). Only the repository owner closing a ticket this workflow's
+#      robot opened counts; anything else is logged and ignored.
+#   2. He runs this workflow by hand: Actions → Release a story → Run workflow.
+#      That is also how to publish a story the fact-checker held.
+#
+# The story is recorded as "released-unchecked" by the editor-in-chief, so the
+# weekly report can count how often this happens. See DECISIONS.md, D-012.
+on:
+  issues:
+    types: [closed]
+  workflow_dispatch:
+    inputs:
+      story:
+        description: 'Story number to publish. Leave blank for the newest story readers can''t yet see.'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: read
+  actions: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  decide:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      go: ${{ steps.decide.outputs.go }}
+      story: ${{ steps.decide.outputs.story }}
+    steps:
+      - id: decide
+        # Values arrive as environment variables, never pasted into the script,
+        # so nothing written in an issue can run as a command.
+        env:
+          EVENT: ${{ github.event_name }}
+          SENDER: ${{ github.event.sender.login }}
+          OWNER: ${{ github.repository_owner }}
+          REASON: ${{ github.event.issue.state_reason }}
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+          BODY: ${{ github.event.issue.body }}
+          INPUT: ${{ inputs.story }}
+        run: |
+          go=false; story=""
+          say() { echo "$1"; echo "$1" >> "$GITHUB_STEP_SUMMARY"; }
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            if [[ "$INPUT" =~ ^[0-9]*$ ]]; then go=true; story="$INPUT"; say "Run by hand by $SENDER for story '${INPUT:-newest unpublished}'."
+            else say "Not releasing: '$INPUT' is not a story number."; fi
+          else
+            marker=$(printf '%s' "$BODY" | grep -oE '<!-- curiouser:ticket kind=[a-z]+ story=[0-9A-Za-z-]+ -->' | head -n 1 || true)
+            kind=$(printf '%s' "$marker" | sed -nE 's/.*kind=([a-z]+).*/\1/p')
+            id=$(printf '%s' "$marker" | sed -nE 's/.*story=([0-9]+) -->.*/\1/p')
+            say "Issue closed by '$SENDER' as '$REASON'. Owner: '$OWNER'. Opened by: '$AUTHOR'. Labels: '$LABELS'. Ticket: kind='$kind' story='$id'."
+            if [[ ",$LABELS," != *",release-ticket,"* ]]; then say "Not a release ticket. Nothing to do."
+            elif [[ ",$LABELS," == *",rehearsal,"* ]]; then say "A rehearsal ticket. Nothing to do."
+            elif [ "$AUTHOR" != "github-actions[bot]" ]; then say "Not releasing: this ticket wasn't opened by the desk."
+            elif [ "$kind" != "unchecked" ] || [ -z "$id" ]; then say "Not releasing: only an 'unchecked' ticket publishes when closed (this one is '$kind')."
+            elif [ "$REASON" != "completed" ]; then say "Not releasing: the ticket was closed as '$REASON', not as completed."
+            elif [ "$SENDER" != "$OWNER" ]; then say "Not releasing: closed by '$SENDER', and only $OWNER can release a story."
+            else go=true; story="$id"; say "Releasing No. $id on $OWNER's say-so."
+            fi
+          fi
+          echo "go=$go" >> "$GITHUB_OUTPUT"
+          echo "story=$story" >> "$GITHUB_OUTPUT"
+
+  release:
+    needs: decide
+    if: needs.decide.outputs.go == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      STORY: ${{ needs.decide.outputs.story }}
+      # By hand it runs on the branch it was started from, so it can be practised on `rehearsal`.
+      BRANCH: ${{ github.event_name == 'workflow_dispatch' && github.ref_name || 'main' }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Release the story
+        id: release
+        run: node scripts/release.mjs $STORY 2>&1 | tee release.log
+
+      - name: Save it
+        id: save
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content
+          if git diff --cached --quiet; then
+            echo "Nothing changed." | tee -a release.log
+            exit 0
+          fi
+          git commit --quiet -m "Release No. ${{ steps.release.outputs.id }} unchecked (editor-in-chief)"
+          for attempt in 1 2 3; do
+            if git push --quiet origin "HEAD:$BRANCH"; then echo "Pushed." | tee -a release.log; exit 0; fi
+            echo "Push $attempt rejected; fetching the latest and trying again."
+            git pull --quiet --rebase origin "$BRANCH"
+          done
+          echo "Could not push after three tries." | tee -a release.log
+          exit 1
+
+      - name: Say what happened on the ticket
+        if: always() && github.event_name == 'issues'
+        env:
+          NUMBER: ${{ github.event.issue.number }}
+          OUTCOME: ${{ job.status }}
+        run: |
+          if [ "$OUTCOME" = "success" ]; then
+            msg="Done. $(tail -n 2 release.log | head -n 1) It reaches readers' phones within about five minutes."
+          else
+            msg="This didn't work, and the story is still unpublished. What the release step said: $(tail -n 3 release.log | tr '\n' ' ') To try again: Actions → Release a story → Run workflow."
+          fi
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body "$msg"
+
+      # A push made by this workflow doesn't start the desk workflow, so update the desk here.
+      - name: Update the desk
+        if: always()
+        env:
+          DESK_REHEARSAL: ${{ env.BRANCH == 'rehearsal' && '1' || '' }}
+          DESK_BRANCH: ${{ env.BRANCH }}
+        run: node scripts/desk.mjs

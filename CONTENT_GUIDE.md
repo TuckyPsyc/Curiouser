@@ -115,10 +115,15 @@ Every Sunday the app runs the Caucus-race, a five-question quiz on the week's st
 
 ## Publishing
 
-1. Write `content/issues/NNNN.json` (four digits, next number in sequence) with `date` set to today's UK date. Copy the structure of an existing issue. Straight quotes are fine; they're curled automatically.
-2. Run `node scripts/build-feed.mjs` and fix anything it reports.
-3. Commit with the message `Before Breakfast No. N: Title` and push to `main`. Story-only changes don't rebuild the app; it fetches new stories itself.
+A story goes through two pairs of hands before readers see it (DECISIONS.md, D-012).
+
+1. **The Editor writes a draft.** Write `content/issues/NNNN.json` (four digits, the next number after the highest in `content/issues/`) with `date` set to today's UK date. Copy the structure of an existing issue. Straight quotes are fine; they're curled automatically.
+2. Run `node scripts/build-feed.mjs` and fix anything it reports. It will list the new story as "waiting for the fact-checker". That is expected: a story with no verdict is a draft, and readers can't see it.
+3. Save with `node scripts/save.mjs --agent editor -m "Before Breakfast No. N: Title"`. It commits the story and pushes it to `main`. Story-only changes don't rebuild the app.
+4. **The fact-checker releases it.** A separate agent checks the draft independently at 05:40 and writes its verdict to `content/checks/NNNN.json` (see `agents/fact-checker.md`). `pass` or `fixed` releases the story; `held` keeps it back. Whoever writes a story never writes its verdict.
+
+Ask recall questions only about stories readers have seen, which are the ones listed in `content/feed.json`.
 
 ## Corrections
 
-Edit the issue's JSON, run the build script, and commit with `Correction to No. N: what changed`. Readers get the fix next time they open the story.
+Edit the issue's JSON, run the build script, and commit with `Correction to No. N: what changed`. Readers get the fix next time they open the story. To have a published story checked again from scratch, start the fact-checker with the message "Re-check No. N".
