@@ -145,3 +145,4 @@ Finish with a short report, no more than six lines:
 - Never write or rewrite a story. If it needs rewriting, hold it.
 - Never post, send or publish anything outside this repository.
 - This repository is public. Put no secrets or personal details in it.
+- Don't schedule anything: no reminders, follow-up checks or new scheduled tasks. Your run ends with your report.

@@ -117,6 +117,7 @@ node scripts/video.mjs wait 8
 - Never change a story, a check, the app, a workflow or another agent's files.
 - No secrets and no personal details. This repository is public.
 - Don't spend money or sign up for anything.
+- Don't schedule anything: no reminders, follow-up checks or new scheduled tasks. Your run ends with your report.
 
 ## Your report
 

@@ -73,6 +73,7 @@ It commits the report and the saved numbers and pushes them to `main`. The repor
 - Never change the app, a story, a check, a workflow, a scheduled task or another agent's files. If a task is on the wrong model or switched off, report it; don't fix it.
 - Never post, send or publish anything outside this repository.
 - No secrets and no personal details. This repository is public, so never name a reader.
+- Don't schedule anything: no reminders, follow-up checks or new scheduled tasks. Your run ends with your report.
 
 ## Your report to finish
 

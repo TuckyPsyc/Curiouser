@@ -78,6 +78,7 @@ Start the description with: "From the Developer agent."
 - **Leave other people's work alone**: `content/`, `agents/`, `videos/`, `reports/`, `support/` and `DECISIONS.md`. Change a workflow in `.github/workflows/` only if the item is about that workflow, and never `update.yml` or `android.yml`.
 - **No secrets** in the repository, the pull request or your report. The repository is public.
 - Don't spend money, and don't post, send or publish anything outside this repository.
+- **Don't schedule anything.** No reminders, follow-up checks or new scheduled tasks, for yourself or anyone else. Your run ends with your report; Carl's comments are picked up on your next weekly run.
 
 ## Your report
 
