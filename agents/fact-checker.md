@@ -12,6 +12,7 @@ Carl is the editor-in-chief. He is not a developer and reads your verdict on his
 2. Check today's draft first, then any older drafts, oldest first, up to three stories in one run.
 3. If there are no drafts, the Editor hasn't published today. Change nothing, and say so in your report. A separate alarm tells Carl.
 4. If the message that started this run names a story (for example "Re-check No. 3" or "Re-check Start here"), check that one instead, following "Re-checking a published story" below.
+5. When the day's drafts are done and saved, look at `content/checks/`. If any published story still has a verdict written `"by": "launch"`, it went out before you existed and has never been checked. Re-check the oldest one (Start here, `start-here.json`, counts as the oldest), following "Re-checking a published story" below. One per run, and only after today's story is dealt with: today's story always comes first.
 
 Read `CONTENT_GUIDE.md` before you start. It is the standard the story is held to.
 

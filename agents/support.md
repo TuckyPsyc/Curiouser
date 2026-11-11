@@ -64,5 +64,5 @@ A few lines for Carl: how many messages were new, how many drafts are waiting, a
 Support needs one thing from Carl: a mailbox that is only for Curiouser, connected to Claude as the Gmail connector.
 
 1. Carl creates a Gmail account used only for Curiouser, and connects it under Connectors in Claude's settings. In the connector's tool permissions, he can switch off sending and forwarding altogether.
-2. A scheduled task only has the connectors it was created with. So, from a conversation where Gmail is connected, create a new scheduled task named "Curiouser: Support" with the same prompt as the old one, daily at 05:20 Europe/London, set its model to `claude-opus-5-5`, confirm the model with the list of scheduled tasks, and delete the old paused one.
+2. A scheduled task only has the connectors it was created with. So, from a conversation where Gmail is connected, create a new scheduled task named "Curiouser: Support" with the same prompt as the old one, daily at 06:15 Europe/London (after the story has been checked, so it never competes with that), set its model to `claude-opus-5-5`, confirm the model with the list of scheduled tasks, and delete the old paused one.
 3. Carl gives the address to the Developer by unblocking "Write to the editor" in `IDEAS.md`.

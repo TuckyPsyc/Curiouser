@@ -72,3 +72,41 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **Consequence:** On a morning when the story is held or unchecked, readers see the previous story, and the 7:00 reminder, which is scheduled on the phone and can't know, still says a new one is waiting.
 **Limits:** A story already bundled into an app update can't be taken back by holding it, only corrected. GitHub starts scheduled workflows late at busy times, so the 06:30 alarm for an unchecked story can arrive up to about 20 minutes late; four slots guard against a missed one.
 
+## D-013 · The editor's desk is a pinned GitHub issue
+**Decided:** 11 November 2026, by Claude under Carl's brief ("pick the simplest thing that works well on Android").
+**What:** One issue, "The editor's desk", pinned to the top of this repository's Issues page. `scripts/desk.mjs` rewrites it whenever something changes: today's story and its verdict, the video to post with its caption, drafted support replies, open pull requests, the weekly report, and any automation that failed. A story that is unchecked, held or missing gets its own ticket, assigned to Carl so the GitHub app notifies him. Closing an "unchecked" ticket as completed is his one-tap release (D-012). One comment a day, after 06:45, is the morning note.
+**Why:** Carl already has GitHub on his phone, it costs nothing, and it needs no new account, app or server.
+**Limit:** Notifications depend on the GitHub app being installed with notifications on. GitHub starts scheduled workflows late at busy times, so the 06:30 alarm can be up to about 20 minutes late.
+
+## D-014 · Videos: the Producer writes, GitHub renders, Carl posts
+**Decided:** 11 November 2026, by Claude under Carl's brief.
+**What:** Each morning at 06:07 the Producer agent writes a script for the previous day's story, but only if the fact-checker passed it (`agents/producer.md`, `videos/NNNN.json`). Saving the script starts `.github/workflows/video.yml`, which renders a 1080×1920 video of up to 60 seconds (`scripts/video/render.py`): narration, captions burned in, and Tenniel's engravings moving gently. The MP4, a captions file and the post caption are attached to a pre-release called "Videos", and the desk links to them. The ten newest are kept.
+**Pictures:** Only Tenniel's engravings (D-009), downloaded from Standard Ebooks' repositories at the commits pinned in `scripts/video/art.json`. Standard Ebooks dedicates its own work on them to the public domain (CC0).
+**Rule:** Nothing is ever posted for Carl. No music, because no track's licence has been checked.
+**Why daily:** The Producer's run is short and the rendering is free on GitHub, so a daily video costs little of Carl's plan. Three a week would save almost nothing.
+
+## D-015 · The narrator: a free AI voice now, swappable later
+**Decided:** 11 November 2026, by Claude under Carl's brief. Carl has not yet chosen a permanent voice.
+**What:** Videos are narrated by **Kokoro v1.0**, voice `bf_emma` (British English), run on GitHub with `kokoro-onnx`. Every video shows "Narrated by an AI voice" on screen, and the post caption says so too.
+**Licence, checked 11 November 2026:** The model's page (huggingface.co/hexgrad/Kokoro-82M) declares `license: apache-2.0` and says "With Apache-licensed weights, Kokoro can be deployed anywhere from production environments to personal projects." Apache-2.0 allows commercial use. The tools used to run it are `kokoro-onnx` (MIT) and eSpeak NG (GPL-3.0, used only as a tool; it places no condition on the audio produced).
+**Is it original?** The model card says it was trained only on public-domain audio, permissively licensed audio and synthetic audio from large providers' speech systems, with no "custom voice clones". No Kokoro voice is presented as a real person. The card does not say exactly what each voice was made from, so this is "not a soundalike of anyone, as far as is documented", not a guarantee. `bm_fable` and the other voices that share a name with another company's product are not used. Piper's British voices were rejected because each is trained on one real speaker's recordings.
+**To change the voice:** edit `videos/voice.json`. `"voice": "bm_george"` is the male alternative; `"provider": "none"` makes captions-only videos. Saving the file remakes the newest video.
+**ElevenLabs:** If a repository secret called `ELEVENLABS_API_KEY` exists, videos use Carl's ElevenLabs voice instead: the voice in the `ELEVENLABS_VOICE_ID` secret if set, otherwise the newest voice in his account made with Voice Design. If ElevenLabs fails, the free voice is used and the desk says so; if that fails too, the video is made with captions only. **Not tested against the real service**, which needs Carl's key; tested against a stand-in (`scripts/video/selftest.py`).
+**Rule:** Never a soundalike of a real person, and always labelled as AI.
+
+## D-016 · When the agents run, and on what
+**Decided:** 11 November 2026, by Claude under Carl's brief.
+**What:** Every scheduled agent runs on `claude-opus-5-5`, never Fable (Carl's rule). Each task's prompt only points at its file in `agents/`, so a job is changed by editing one file. The times (UK): Editor 04:47, Fact-checker 05:40, Producer 06:07, Analyst Mondays 06:23, Developer Saturdays 07:10. Support has no schedule until it has a mailbox.
+**Why these times:** Claude plans allow a fixed amount of use in each five-hour window. On 11 November that limit stopped the fact-checker's re-checks mid-evening. So the work readers depend on (the story, then its check) comes first in a fresh early-morning window, and everything else follows it in the same window, where running out harms nothing that matters.
+**Consequence:** Heavy use of Claude between about midnight and 05:00 can leave too little for the 04:47 and 05:40 runs. If that happens the story stays a draft and the desk raises a ticket (D-012).
+**Also:** A run cut short by the limit is still recorded as "succeeded" in the task list. The Analyst therefore judges each agent by what it produced, not by that list.
+
+## D-017 · Support drafts, and never sends
+**Decided:** 11 November 2026, by Claude under Carl's brief.
+**What:** The Support agent reads a mailbox used only for Curiouser and writes each reply as a draft in that mailbox for Carl to edit and send (`agents/support.md`, `support/TONE.md`, `support/FAQ.md`). Readers' names, addresses and words never enter this public repository; only a count of waiting drafts does. Anything about a reader's data, money, the press, legal threats or someone's safety gets no draft and goes straight to Carl.
+**Status:** Built and rehearsed on invented messages. Switched off until Carl creates the mailbox and connects it.
+
+## D-018 · The weekly report counts only what can be counted
+**Decided:** 11 November 2026, by Claude under Carl's brief.
+**What:** Each Monday the Analyst reports stories written, released and held, fact-check verdicts and corrections, APK downloads, pull requests, mornings that needed Carl, and failed automation (`agents/analyst.md`, `scripts/stats.mjs`, `reports/`). It reports reading, feature use and reader numbers as unknown, because the app sends nothing (D-005, D-011). Repository traffic is visible only to Carl, so it is not in the report.
+**Rule:** No agent adds analytics. `reports/usage-counts-proposal.md` sets out what privacy-respecting counting could look like and what UK GDPR and PECR would require. The decision is Carl's.
