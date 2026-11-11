@@ -1,0 +1,20 @@
+{
+  "issue": 1,
+  "title": "The Great Hanoi Rat Hunt",
+  "lines": [
+    { "text": "Hanoi once paid for rat tails. People started farming rats.", "art": "dodo-thimble" },
+    { "text": "It was 1902, and French colonial Hanoi had new sewers full of breeding rats." },
+    { "text": "Plague was moving through the region, and rats carried the fleas that spread it.", "art": "little-door" },
+    { "text": "So the authorities paid a small bounty for each rat. A severed tail counted as proof.", "art": "footmen-letter" },
+    { "text": "Before long, people noticed rats running about with no tails.", "art": "pig-baby" },
+    { "text": "Hunters were cutting off the tails and letting the rats go, so they would breed more rats and more bounties." },
+    { "text": "Investigators later found rat farms in villages outside the city.", "art": "painting-the-roses" },
+    { "text": "The bounty was abandoned. The rats stayed." },
+    { "text": "This is Goodhart's law. When a measure becomes a target, it ceases to be a good measure.", "art": "caterpillar" },
+    { "text": "A tail was a decent sign of a dead rat, right up until people were paid per tail." },
+    { "text": "Reward a number and people will find the cheapest way to move it." },
+    { "text": "Curiouser: get curiouser before breakfast." }
+  ],
+  "caption": "A bounty meant to wipe out rats ended with people breeding them. That's Goodhart's law: once a number becomes the target, it stops telling you the truth.",
+  "hashtags": ["#goodhartslaw", "#history", "#economics", "#truestory", "#learnontiktok", "#curiouser"]
+}
