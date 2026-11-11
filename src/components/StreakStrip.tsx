@@ -8,6 +8,8 @@ import {
   lastSeven,
   rescuableDay,
   streakLength,
+  totalDays,
+  weekRun,
   type DayState,
 } from '../lib/streak';
 import { fonts, labelSpacing, usePalette } from '../lib/theme';
@@ -52,20 +54,28 @@ export function StreakStrip() {
   const todayDone = dayState(data, today) !== 'missed';
   const rescue = rescuableDay(data, today);
   const hour = hourAvailable(data, today);
+  const weeks = weekRun(data, today);
+  const total = totalDays(data);
 
   const status = todayDone
-    ? `Today counted${run > 1 ? ` · ${run}-day streak` : ''}`
+    ? 'Today counted'
     : run > 0
-      ? `${run}-day streak · read today to keep it going`
+      ? 'Read today to keep the streak going'
       : count > 0
-        ? 'Read today’s story to start a new run'
+        ? 'Read today’s story to start a new streak'
         : 'Finish a story, or Drink Me, to start it';
+
+  const stats = [
+    { n: run, label: run === 1 ? 'day streak' : 'days in a row' },
+    { n: weeks, label: weeks === 1 ? 'week running' : 'weeks in a row' },
+    { n: total, label: total === 1 ? 'day read in all' : 'days read in all' },
+  ];
 
   return (
     <View style={[styles.wrap, { borderColor: p.rule }]}>
       <Pressable
         accessibilityRole="button"
-        accessibilityLabel={`Reading streak: ${count} of the last 7 days. ${status}. Tap for how it works.`}
+        accessibilityLabel={`Reading streak: ${count} of the last 7 days. ${status}. ${run} days in a row, ${weeks} weeks in a row, ${total} days read in all. Tap for how it works.`}
         onPress={() => setOpen((o) => !o)}
         style={({ pressed }) => [styles.row, { opacity: pressed ? 0.7 : 1 }]}
       >
@@ -87,6 +97,20 @@ export function StreakStrip() {
           ))}
         </View>
       </Pressable>
+
+      {total > 0 ? (
+        <View style={styles.stats}>
+          {stats.map((s, i) => (
+            <View
+              key={s.label}
+              style={[styles.stat, i > 0 && { borderLeftWidth: StyleSheet.hairlineWidth, borderColor: p.rule }]}
+            >
+              <Text style={[styles.statN, { color: p.ink }]}>{s.n}</Text>
+              <Text style={[styles.statLabel, { color: p.muted }]}>{s.label}</Text>
+            </View>
+          ))}
+        </View>
+      ) : null}
 
       {rescue ? (
         <View style={[styles.rescue, { backgroundColor: p.surface, borderColor: p.accent }]}>
@@ -121,6 +145,11 @@ export function StreakStrip() {
             clock on one missed day, after the Hatter’s watch: “It’s always six o’clock now.” A
             stopped day shows as a little clock.
           </Text>
+          <Text style={[styles.explainText, { color: p.ink }]}>
+            Days in a row starts again after a missed day. Weeks in a row only starts again if
+            you miss a whole week, Monday to Sunday: one story a week keeps it going. Days read in
+            all never goes down.
+          </Text>
           <Text style={[styles.explainNote, { color: p.muted }]}>
             {hour
               ? 'This week’s Hatter’s Hour is still yours. A new one arrives every Monday.'
@@ -154,6 +183,10 @@ const styles = StyleSheet.create({
   rescueText: { fontFamily: fonts.body, fontSize: 14, lineHeight: 20 },
   rescueButton: { alignSelf: 'flex-start', borderRadius: 999, paddingHorizontal: 16, paddingVertical: 8 },
   rescueButtonText: { fontFamily: fonts.label, fontSize: 14 },
+  stats: { flexDirection: 'row' },
+  stat: { flex: 1, alignItems: 'center', paddingHorizontal: 4 },
+  statN: { fontFamily: fonts.body, fontSize: 22, fontVariant: ['lining-nums'] },
+  statLabel: { fontFamily: fonts.body, fontSize: 11.5, textAlign: 'center' },
   explain: { gap: 10, paddingTop: 4 },
   explainText: { fontFamily: fonts.body, fontSize: 14, lineHeight: 21 },
   explainNote: { fontFamily: fonts.bodyItalic, fontSize: 13, lineHeight: 19 },
