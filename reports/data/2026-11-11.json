@@ -1,0 +1,175 @@
+{
+  "made": "2026-11-11T22:56:50.569Z",
+  "from": "2026-11-02",
+  "to": "2026-11-08",
+  "stories": {
+    "written": 5,
+    "daysExpected": 1,
+    "daysWithNoStory": [],
+    "released": 5,
+    "held": 0,
+    "stillDrafts": 0,
+    "releasedUnchecked": 4,
+    "list": [
+      {
+        "id": 1,
+        "date": "2026-11-08",
+        "title": "The Great Hanoi Rat Hunt",
+        "topic": "History",
+        "status": "released",
+        "verdict": "pass",
+        "by": "fact-checker",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": 46,
+        "linksChecked": 8
+      },
+      {
+        "id": 2,
+        "date": "2026-11-08",
+        "title": "The Horse Who Could Count",
+        "topic": "Psychology",
+        "status": "released",
+        "verdict": "released-unchecked",
+        "by": "launch",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": null,
+        "linksChecked": null
+      },
+      {
+        "id": 3,
+        "date": "2026-11-08",
+        "title": "The Ending Hemingway Left Out",
+        "topic": "Literature",
+        "status": "released",
+        "verdict": "released-unchecked",
+        "by": "launch",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": null,
+        "linksChecked": null
+      },
+      {
+        "id": 4,
+        "date": "2026-11-08",
+        "title": "The Speckled Axe",
+        "topic": "Self-Improvement",
+        "status": "released",
+        "verdict": "released-unchecked",
+        "by": "launch",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": null,
+        "linksChecked": null
+      },
+      {
+        "id": 5,
+        "date": "2026-11-08",
+        "title": "The Art of Not Trying",
+        "topic": "Gentleman's Pursuits",
+        "status": "released",
+        "verdict": "released-unchecked",
+        "by": "launch",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": null,
+        "linksChecked": null
+      }
+    ]
+  },
+  "checks": {
+    "done": 0,
+    "pass": 0,
+    "fixed": 0,
+    "held": 0,
+    "corrections": 0,
+    "claimsChecked": 0,
+    "linksChecked": 0,
+    "openProblems": [],
+    "neverChecked": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "list": []
+  },
+  "videos": {
+    "checkedStoriesThisWeek": 1,
+    "ofThoseWithAScript": 1,
+    "scriptsInAll": 1
+  },
+  "downloads": {
+    "total": 11,
+    "sinceLastReport": null,
+    "lastReport": null,
+    "perRelease": [
+      {
+        "tag": "v1.0.6",
+        "published": "2026-11-09",
+        "downloads": 2,
+        "sinceLastReport": null
+      },
+      {
+        "tag": "v1.0.5",
+        "published": "2026-11-08",
+        "downloads": 1,
+        "sinceLastReport": null
+      },
+      {
+        "tag": "v1.0.4",
+        "published": "2026-11-08",
+        "downloads": 5,
+        "sinceLastReport": null
+      },
+      {
+        "tag": "v1.0.3",
+        "published": "2026-11-08",
+        "downloads": 3,
+        "sinceLastReport": null
+      }
+    ]
+  },
+  "automation": {
+    "runs": 5,
+    "failed": [],
+    "byWorkflow": {
+      "Build Android app": {
+        "runs": 5,
+        "failed": 0
+      }
+    },
+    "truncated": false
+  },
+  "pulls": {
+    "opened": [],
+    "merged": [],
+    "closedUnmerged": [],
+    "openNow": [
+      {
+        "number": 6,
+        "title": "Sunday-morning reminder for the Caucus-race",
+        "openedDaysAgo": 0
+      }
+    ]
+  },
+  "tickets": {
+    "unchecked": 0,
+    "held": 0,
+    "noStory": 0,
+    "releasedByCarl": 0,
+    "list": []
+  },
+  "traffic": null,
+  "support": null,
+  "allTime": {
+    "stories": 8,
+    "released": 8,
+    "checkedByFactChecker": 1
+  },
+  "unavailable": []
+}
