@@ -1,24 +1,6 @@
 {
-  "updated": "2026-11-11T13:24:27.103Z",
+  "updated": "2026-11-11T04:57:18.587Z",
   "issues": [
-    {
-      "id": 10,
-      "date": "2026-11-11",
-      "topic": "Nature",
-      "title": "A Second Practice Story",
-      "concept": "The second rehearsal effect",
-      "teaser": "Another practice story used to rehearse the one-tap release. It is never shown to readers.",
-      "readingMinutes": 3
-    },
-    {
-      "id": 9,
-      "date": "2026-11-11",
-      "topic": "Psychology",
-      "title": "A Practice Story",
-      "concept": "The rehearsal effect",
-      "teaser": "A practice story used to rehearse the fact-check pipeline. It is never shown to readers.",
-      "readingMinutes": 3
-    },
     {
       "id": 8,
       "date": "2026-11-11",
