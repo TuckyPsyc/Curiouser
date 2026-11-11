@@ -393,7 +393,8 @@ async function syncDesk(body, uk, summary) {
       const [o, n] = repo.split('/');
       const q = await api('POST', '/graphql', { query: `query { repository(owner: "${o}", name: "${n}") { issue(number: ${number}) { id isPinned } } }` });
       const issue = q?.data?.repository?.issue;
-      if (!issue || issue.isPinned) return;
+      if (!issue) return console.log(`could not read whether the desk is pinned: ${JSON.stringify(q).slice(0, 200)}`);
+      if (issue.isPinned) return;
       const r = await api('POST', '/graphql', { query: `mutation { pinIssue(input: { issueId: "${issue.id}" }) { issue { number } } }` });
       console.log(r?.errors ? `could not pin the desk: ${r.errors[0].message}` : 'pinned the desk');
     });
@@ -425,7 +426,7 @@ const tickets = await syncTickets(stories, uk);
 const g = await gather(stories, uk, tickets);
 const body = render(stories, uk, tickets, g);
 const waitingCount = (body.match(/^## Waiting for you \((\d+)\)/m) ?? [])[1] ?? '0';
-const first = todayLine(stories, uk, tickets).split('\n')[0].replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/ → what to do/, '');
+const first = todayLine(stories, uk, tickets).split('\n')[0].replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/ → what to do/, '').replace(/ See the check\./, '');
 const summary = `${first} ${waitingCount === '0' ? 'Nothing is waiting for you.' : `${plural(Number(waitingCount), 'thing')} waiting for you above.`}`;
 if (dryRun) console.log(`\n----- desk -----\n${body}\n----- morning note -----\n${summary}\n`);
 await syncDesk(body, uk, summary);
