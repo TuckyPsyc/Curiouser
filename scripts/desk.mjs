@@ -393,7 +393,8 @@ async function syncDesk(body, uk, summary) {
       const [o, n] = repo.split('/');
       const q = await api('POST', '/graphql', { query: `query { repository(owner: "${o}", name: "${n}") { issue(number: ${number}) { id isPinned } } }` });
       const issue = q?.data?.repository?.issue;
-      if (!issue || issue.isPinned) return;
+      if (!issue) return console.log(`could not read whether the desk is pinned: ${JSON.stringify(q).slice(0, 200)}`);
+      if (issue.isPinned) return;
       const r = await api('POST', '/graphql', { query: `mutation { pinIssue(input: { issueId: "${issue.id}" }) { issue { number } } }` });
       console.log(r?.errors ? `could not pin the desk: ${r.errors[0].message}` : 'pinned the desk');
     });
