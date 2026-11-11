@@ -426,7 +426,7 @@ const tickets = await syncTickets(stories, uk);
 const g = await gather(stories, uk, tickets);
 const body = render(stories, uk, tickets, g);
 const waitingCount = (body.match(/^## Waiting for you \((\d+)\)/m) ?? [])[1] ?? '0';
-const first = todayLine(stories, uk, tickets).split('\n')[0].replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/ → what to do/, '');
+const first = todayLine(stories, uk, tickets).split('\n')[0].replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/ → what to do/, '').replace(/ See the check\./, '');
 const summary = `${first} ${waitingCount === '0' ? 'Nothing is waiting for you.' : `${plural(Number(waitingCount), 'thing')} waiting for you above.`}`;
 if (dryRun) console.log(`\n----- desk -----\n${body}\n----- morning note -----\n${summary}\n`);
 await syncDesk(body, uk, summary);
