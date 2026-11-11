@@ -1,0 +1,375 @@
+{
+  "about": "John Tenniel's engravings for Alice's Adventures in Wonderland (1865) and Through the Looking-Glass (1871). Public domain; Tenniel died in 1914. Scanned by Standard Ebooks, whose own work on them is dedicated to the public domain. Never add Disney's designs or any later adaptation (DECISIONS.md, D-009). The renderer downloads each picture from the commit pinned here, so a picture can never change under us.",
+  "books": {
+    "lewis-carroll_alices-adventures-in-wonderland_john-tenniel": {
+      "title": "Alice's Adventures in Wonderland",
+      "commit": "60e942b4f9dba672841470e9b6ec63956bfb8e7d"
+    },
+    "lewis-carroll_through-the-looking-glass_john-tenniel": {
+      "title": "Through the Looking-Glass",
+      "commit": "c85d05c12ff025bca507262729a3bea981f14274"
+    }
+  },
+  "pictures": {
+    "white-rabbit-watch": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 2,
+      "shows": "The White Rabbit checks his pocket watch",
+      "goodFor": "time, clocks, deadlines, hurry"
+    },
+    "little-door": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 3,
+      "shows": "Alice draws back a curtain and finds the little door",
+      "goodFor": "discovery, curiosity, hidden things, beginnings"
+    },
+    "drink-me": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 4,
+      "shows": "Alice holds the bottle labelled Drink Me",
+      "goodFor": "experiments, medicine, risk, temptation"
+    },
+    "pool-of-tears": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 7,
+      "shows": "Alice swims in the pool of her own tears",
+      "goodFor": "consequences, emotion, the sea, being overwhelmed"
+    },
+    "mouse-audience": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 9,
+      "shows": "Birds and animals gather round the Mouse to hear a lecture",
+      "goodFor": "crowds, audiences, teaching, society"
+    },
+    "dodo-thimble": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 10,
+      "shows": "The Dodo solemnly presents Alice with a thimble",
+      "goodFor": "prizes, incentives, rewards, ceremony"
+    },
+    "too-big-for-the-house": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 11,
+      "shows": "Alice, grown huge, is crammed inside the Rabbit's house",
+      "goodFor": "growth, limits, constraints, scale"
+    },
+    "bill-the-lizard": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 13,
+      "shows": "Bill the Lizard shoots out of the chimney",
+      "goodFor": "accidents, failure, launches, things going wrong"
+    },
+    "puppy": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 14,
+      "shows": "A tiny Alice faces an enormous puppy",
+      "goodFor": "animals, nature, scale, play"
+    },
+    "caterpillar": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 15,
+      "shows": "The Caterpillar sits on a mushroom with a hookah, looking down at Alice",
+      "goodFor": "questions, identity, advice, philosophy"
+    },
+    "father-william": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 19,
+      "shows": "Old Father William balances an eel on the end of his nose",
+      "goodFor": "age, skill, practice, showing off"
+    },
+    "footmen-letter": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 20,
+      "shows": "The Fish-Footman hands an enormous letter to the Frog-Footman",
+      "goodFor": "messages, letters, etiquette, bureaucracy"
+    },
+    "duchess-kitchen": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 21,
+      "shows": "The Duchess nurses a baby in a kitchen thick with pepper, while the cook stirs",
+      "goodFor": "chaos, temper, cookery, family"
+    },
+    "pig-baby": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 22,
+      "shows": "Alice carries the baby that has turned into a pig",
+      "goodFor": "change, surprise, things not being what they seem"
+    },
+    "cheshire-cat": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 24,
+      "shows": "The Cheshire Cat grins from the branch of a tree",
+      "goodFor": "ambiguity, paradox, things that vanish, philosophy"
+    },
+    "mad-tea-party": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 25,
+      "shows": "Alice at the tea-table with the March Hare, the Dormouse and the Hatter",
+      "goodFor": "time, habits, conversation, manners"
+    },
+    "hatter": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 26,
+      "shows": "The Hatter, teacup in hand, in full flow",
+      "goodFor": "performance, music, eccentricity, talk"
+    },
+    "painting-the-roses": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 28,
+      "shows": "Three playing-card gardeners paint the white roses red",
+      "goodFor": "covering up mistakes, appearances, fear of the boss, incentives"
+    },
+    "queen-of-hearts": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 29,
+      "shows": "The Queen of Hearts points furiously at Alice in front of the whole court",
+      "goodFor": "power, authority, law, anger"
+    },
+    "flamingo-croquet": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 30,
+      "shows": "Alice tries to play croquet with a flamingo for a mallet and a hedgehog for a ball",
+      "goodFor": "games, sport, the wrong tool, rules"
+    },
+    "cat-and-executioner": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 31,
+      "shows": "The Cheshire Cat's head floats above an argument between the King and the executioner",
+      "goodFor": "logic, arguments, law, paradox"
+    },
+    "mock-turtle": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 34,
+      "shows": "The Mock Turtle weeps on a rock beside the Gryphon and Alice",
+      "goodFor": "school, education, nostalgia, sorrow"
+    },
+    "lobster": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 36,
+      "shows": "A Lobster brushes his hair in front of a looking-glass",
+      "goodFor": "vanity, appearance, grooming, style"
+    },
+    "herald-rabbit": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 37,
+      "shows": "The White Rabbit as herald, blowing a trumpet and holding a scroll",
+      "goodFor": "announcements, news, law, proclamations"
+    },
+    "hatter-running": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 39,
+      "shows": "The Hatter runs off in such a hurry that he leaves his shoes behind",
+      "goodFor": "haste, escape, nerves"
+    },
+    "jury-box": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 40,
+      "shows": "Alice upsets the jury-box and the jurors tumble out",
+      "goodFor": "law, mistakes, clumsiness, upheaval"
+    },
+    "pack-of-cards": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 42,
+      "shows": "The whole pack of cards flies up at Alice",
+      "goodFor": "collapse, endings, illusions exposed, waking up"
+    },
+    "court-of-hearts": {
+      "book": "lewis-carroll_alices-adventures-in-wonderland_john-tenniel",
+      "illustration": 1,
+      "shows": "The King and Queen of Hearts on their thrones in a crowded courtroom",
+      "goodFor": "law, justice, society, ceremony"
+    },
+    "white-knight": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 1,
+      "shows": "The White Knight rides beside Alice through the forest, his horse hung with his inventions",
+      "goodFor": "invention, technology, kindness, eccentric ideas"
+    },
+    "chess-problem": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 2,
+      "shows": "A chess diagram: the game the second book is built on",
+      "goodFor": "strategy, mathematics, games, planning"
+    },
+    "kitten-and-wool": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 3,
+      "shows": "A black kitten tangled in a ball of wool",
+      "goodFor": "play, mischief, tangles, small causes"
+    },
+    "mirror-this-side": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 5,
+      "shows": "Alice climbs onto the mantelpiece and into the looking-glass",
+      "goodFor": "reflection, crossing over, the other side of an idea"
+    },
+    "mirror-other-side": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 6,
+      "shows": "Alice climbs out of the looking-glass on the far side, where the clock has a face",
+      "goodFor": "the other side, reversal, a change of perspective"
+    },
+    "chess-pieces": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 7,
+      "shows": "Chess kings, queens and a bishop walk about among the cinders",
+      "goodFor": "hierarchy, society, small worlds"
+    },
+    "knight-on-the-poker": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 9,
+      "shows": "The White Knight slides down the poker and balances badly",
+      "goodFor": "balance, risk, clumsiness, physics"
+    },
+    "jabberwock": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 11,
+      "shows": "The Jabberwock looms over a small figure with a sword",
+      "goodFor": "fear, monsters, courage, made-up words"
+    },
+    "tiger-lily": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 12,
+      "shows": "Alice talks with the Tiger-lily in the garden of live flowers",
+      "goodFor": "plants, nature, gardens, language"
+    },
+    "red-queen-and-alice": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 13,
+      "shows": "The Red Queen lectures Alice in the wood",
+      "goodFor": "rules, instruction, manners, authority"
+    },
+    "chessboard-country": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 14,
+      "shows": "A countryside laid out in squares like a huge chessboard",
+      "goodFor": "maps, geography, plans, systems, the big picture"
+    },
+    "red-queen-race": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 15,
+      "shows": "The Red Queen drags Alice along at a run",
+      "goodFor": "running to stay in the same place, competition, evolution, arms races"
+    },
+    "railway-carriage": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 16,
+      "shows": "Alice in a railway carriage with a gentleman dressed in white paper and a Goat, as the Guard peers in through the window",
+      "goodFor": "travel, railways, industry, tickets, bureaucracy"
+    },
+    "rocking-horse-fly": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 17,
+      "shows": "A Rocking-horse-fly: a toy horse with wings",
+      "goodFor": "naming, invention, insects, wordplay"
+    },
+    "fawn": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 20,
+      "shows": "Alice walks with her arm round a Fawn in the wood where things have no names",
+      "goodFor": "names, memory, language, trust, nature"
+    },
+    "tweedles": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 21,
+      "shows": "Tweedledum and Tweedledee stand side by side as Alice looks on",
+      "goodFor": "logic, symmetry, twins, arguments, contradiction"
+    },
+    "walrus-and-carpenter": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 22,
+      "shows": "The Walrus and the Carpenter walk along the beach",
+      "goodFor": "persuasion, economics, appetite, ethics"
+    },
+    "oysters": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 23,
+      "shows": "The Walrus and the Carpenter sit among the little Oysters",
+      "goodFor": "exploitation, trust, consumption, markets"
+    },
+    "white-queen": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 28,
+      "shows": "Alice straightens the White Queen's shawl",
+      "goodFor": "memory, belief, muddle, care"
+    },
+    "sheep-shop": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 30,
+      "shows": "A Sheep knits behind a shop counter while Alice looks at the shelves",
+      "goodFor": "shops, money, trade, economics, choice"
+    },
+    "humpty-dumpty": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 32,
+      "shows": "Humpty Dumpty sits on his wall and reaches down to shake Alice's hand",
+      "goodFor": "words, meaning, language, pride, a fall"
+    },
+    "toves": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 33,
+      "shows": "Toves, borogoves and raths gather round a sundial",
+      "goodFor": "invented words, language, nonsense, strange creatures"
+    },
+    "kings-soldiers": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 35,
+      "shows": "The King's soldiers stumble and fall over one another in the wood",
+      "goodFor": "armies, war, chaos, history"
+    },
+    "king-and-messenger": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 36,
+      "shows": "The White King, Alice and Haigha the messenger",
+      "goodFor": "messengers, news, rulers, communication"
+    },
+    "lion-and-unicorn": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 38,
+      "shows": "Alice carries a plum-cake between the Lion and the Unicorn",
+      "goodFor": "rivalry, politics, power, sharing"
+    },
+    "knights-battle": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 40,
+      "shows": "The Red Knight and the White Knight fight on horseback while Alice hides behind a tree",
+      "goodFor": "conflict, duels, rules of battle, chivalry"
+    },
+    "knight-in-the-ditch": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 42,
+      "shows": "The White Knight has fallen head-first into a ditch, and Alice pulls him out by the feet",
+      "goodFor": "failure, perseverance, rescue, experiments gone wrong"
+    },
+    "queen-alice": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 44,
+      "shows": "Alice sits with a crown on her head, feeling it with both hands",
+      "goodFor": "achievement, growing up, status"
+    },
+    "two-queens": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 45,
+      "shows": "Alice sits between the Red Queen and the White Queen, who examine her",
+      "goodFor": "exams, questions, logic, education"
+    },
+    "queens-asleep": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 46,
+      "shows": "The two Queens fall asleep leaning on Alice",
+      "goodFor": "sleep, rest, tiredness"
+    },
+    "queen-alice-door": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 47,
+      "shows": "Alice, crowned, stands at the door marked Queen Alice while an old Frog looks on",
+      "goodFor": "thresholds, status, arrival, entry"
+    },
+    "alice-and-kitten": {
+      "book": "lewis-carroll_through-the-looking-glass_john-tenniel",
+      "illustration": 52,
+      "shows": "Alice kneels to talk to the kitten",
+      "goodFor": "waking, endings, reflection, pets"
+    }
+  }
+}

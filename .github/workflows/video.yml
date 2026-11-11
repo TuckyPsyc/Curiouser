@@ -1,0 +1,165 @@
+name: Make the video
+
+# Turns a video script (videos/NNNN.json, written by the Producer agent) into a
+# 60-second vertical video: narrator, captions burned into the picture, and
+# Tenniel's engravings moving gently. The finished MP4, the captions file and
+# the post caption are attached to the "Videos" release, and the editor's desk
+# links to them. Nothing is posted anywhere: Carl posts.
+#
+# It runs when a script is saved, when the voice (videos/voice.json) is
+# changed, or by hand: Actions → Make the video → Run workflow.
+#
+# The voice: the free Kokoro voice by default. If the ELEVENLABS_API_KEY secret
+# exists, Carl's ElevenLabs voice is used instead. If neither works, the video
+# is made with captions only. See DECISIONS.md, D-013.
+#
+# Pushing to the `rehearsal` branch runs the same thing as a practice, into a
+# separate "Videos (rehearsal)" release.
+on:
+  push:
+    branches: [main, rehearsal]
+    paths:
+      - 'videos/*.json'
+  workflow_dispatch:
+    inputs:
+      story:
+        description: 'Story number to make (or remake) the video for. Leave blank for the newest script.'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: read
+  actions: read
+
+concurrency:
+  group: video-${{ github.ref_name }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RELEASE: ${{ github.ref_name == 'rehearsal' && 'videos-rehearsal' || 'videos' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Choose the script
+        id: which
+        env:
+          INPUT: ${{ inputs.story }}
+        run: |
+          if [ -n "$INPUT" ]; then
+            if ! [[ "$INPUT" =~ ^[0-9]{1,4}$ ]]; then echo "::error::'$INPUT' is not a story number."; exit 1; fi
+            file=$(printf 'videos/%04d.json' "$((10#$INPUT))")
+          else
+            # The script saved in this push. If only the voice changed, remake the newest video.
+            file=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- videos 2>/dev/null | grep -E '^videos/[0-9]{4}\.json$' | sort | tail -n 1 || true)
+            if [ -z "$file" ]; then file=$(ls videos/[0-9][0-9][0-9][0-9].json 2>/dev/null | sort | tail -n 1 || true); fi
+          fi
+          if [ -z "$file" ] || [ ! -f "$file" ]; then
+            echo "There is no video script to render (${file:-none})." | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "file=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Rendering $file"
+          echo "file=$file" >> "$GITHUB_OUTPUT"
+          echo "tag=curiouser-$(basename "$file" .json)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-node@v4
+        if: steps.which.outputs.file != ''
+        with:
+          node-version: 22
+
+      - name: Check the script
+        if: steps.which.outputs.file != ''
+        run: node scripts/video.mjs check "${{ steps.which.outputs.file }}"
+
+      - uses: actions/setup-python@v5
+        if: steps.which.outputs.file != ''
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: scripts/video/requirements.txt
+
+      - name: Install the renderer's tools
+        if: steps.which.outputs.file != ''
+        run: |
+          pip install --quiet -r scripts/video/requirements.txt
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          ffmpeg -version | head -n 1
+
+      # The free voice's model (about 350 MB) and the pictures are kept between runs.
+      - uses: actions/cache@v4
+        if: steps.which.outputs.file != ''
+        with:
+          path: .cache/video/models
+          key: kokoro-v1.0
+      - uses: actions/cache@v4
+        if: steps.which.outputs.file != ''
+        with:
+          path: .cache/video/art
+          key: art-${{ hashFiles('scripts/video/art.json', 'scripts/video/render.py') }}
+
+      - name: Test the renderer
+        if: steps.which.outputs.file != ''
+        run: python scripts/video/selftest.py
+
+      - name: Render
+        if: steps.which.outputs.file != ''
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+        run: |
+          python scripts/video/render.py "${{ steps.which.outputs.file }}" --out out
+          {
+            echo "### ${{ steps.which.outputs.tag }}"
+            echo '```json'
+            cat "out/${{ steps.which.outputs.tag }}.json"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Attach it to the Videos release
+        if: steps.which.outputs.file != ''
+        env:
+          TAG: ${{ steps.which.outputs.tag }}
+        run: |
+          if ! gh release view "$RELEASE" >/dev/null 2>&1; then
+            # A pre-release that is never "latest", so the app's download link still points at the APK.
+            gh release create "$RELEASE" --prerelease --latest=false \
+              --title "${{ github.ref_name == 'rehearsal' && 'Videos (rehearsal)' || 'Videos' }}" \
+              --notes "The Producer's videos for TikTok and Reels, newest last. Made by the 'Make the video' workflow; nothing here is posted for you. This is not the app: the app is under the latest release."
+          fi
+          gh release upload "$RELEASE" "out/$TAG.mp4" "out/$TAG.srt" "out/$TAG-caption.txt" "out/$TAG.json" --clobber
+          # Keep the ten newest videos; older ones have been posted or passed over.
+          gh release view "$RELEASE" --json assets --jq '.assets[].name' \
+            | grep -oE '^curiouser-[0-9]{4}' | sort -u | head -n -10 \
+            | while read -r old; do
+                for name in "$old.mp4" "$old.srt" "$old-caption.txt" "$old.json"; do gh release delete-asset "$RELEASE" "$name" --yes || true; done
+              done
+
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.which.outputs.file != ''
+        with:
+          name: ${{ steps.which.outputs.tag }}
+          path: out/
+          retention-days: 14
+          if-no-files-found: ignore
+
+      # Show the new video on the editor's desk.
+      - name: Update the desk
+        if: always() && steps.which.outputs.file != ''
+        env:
+          DESK_REHEARSAL: ${{ github.ref_name == 'rehearsal' && '1' || '' }}
+          DESK_BRANCH: ${{ github.ref_name == 'rehearsal' && 'rehearsal' || 'main' }}
+        run: node scripts/desk.mjs

@@ -22,7 +22,8 @@ const ALLOWED = {
   editor: ['content/issues/'],
   // The fact-checker corrects stories and writes verdicts.
   'fact-checker': ['content/issues/', 'content/checks/', 'content/start-here.json'],
-  producer: ['videos/'],
+  // The Producer writes one script per story. The voice (videos/voice.json) is Carl's choice, not the Producer's.
+  producer: [/^videos\/\d{4}\.json$/],
   analyst: ['reports/'],
   // Support keeps a count only. Messages and replies never go in this public repo.
   support: ['support/status.json'],
@@ -41,7 +42,8 @@ if (!agent || !ALLOWED[agent] || !message) {
 
 const git = (...a) => execFileSync('git', a, { cwd: repo, encoding: 'utf8' }).trim();
 const tryGit = (...a) => spawnSync('git', a, { cwd: repo, encoding: 'utf8' });
-const under = (path, list) => list.some((p) => (p.endsWith('/') ? path.startsWith(p) : path === p));
+const under = (path, list) => list.some((p) => (p instanceof RegExp ? p.test(path) : p.endsWith('/') ? path.startsWith(p) : path === p));
+const describe = (list) => list.map((p) => (p instanceof RegExp ? 'videos/NNNN.json' : p)).join(', ');
 const build = () => spawnSync(process.execPath, [join(repo, 'scripts', 'build-feed.mjs')], { cwd: repo, stdio: 'inherit' }).status === 0;
 const stop = (msg) => {
   console.error(`✗ Not saved. ${msg}`);
@@ -64,7 +66,7 @@ for (let i = 0; i < entries.length; i++) {
 const outside = changed.filter((p) => !under(p, ALLOWED[agent]) && !under(p, GENERATED));
 if (outside.length) {
   stop(
-    `The ${agent} may only change ${ALLOWED[agent].join(', ')}, but these files were also changed:\n  ` +
+    `The ${agent} may only change ${describe(ALLOWED[agent])}, but these files were also changed:\n  ` +
       outside.join('\n  ') +
       '\nUndo those changes (git checkout -- <file>, or delete new files) and run save again.',
   );
@@ -73,6 +75,13 @@ const mine = changed.filter((p) => under(p, ALLOWED[agent]));
 if (!mine.length) {
   console.log('Nothing to save.');
   process.exit(0);
+}
+// A video script is checked before it is saved, because saving it starts the render.
+if (agent === 'producer') {
+  const scripts = mine.filter((p) => existsSync(join(repo, p)));
+  if (scripts.length && spawnSync(process.execPath, [join(repo, 'scripts', 'video.mjs'), 'check', ...scripts.map((p) => join(repo, p))], { cwd: repo, stdio: 'inherit' }).status !== 0) {
+    stop('Fix the problems above, then run save again.');
+  }
 }
 
 // 2. Keep a copy of the agent's own files, so the work can be replayed on a newer main.

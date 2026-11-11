@@ -256,11 +256,24 @@ async function gather(stories, uk, tickets) {
   const [pulls, failures, videos] = await Promise.all([
     quiet(() => read(`/repos/${repo}/pulls?state=open&per_page=30`), []),
     quiet(() => read(`/repos/${repo}/actions/runs?status=failure&created=${encodeURIComponent(`>${since}`)}&per_page=20`), { workflow_runs: [] }),
-    quiet(() => read(`/repos/${repo}/releases/tags/videos`), null),
+    quiet(() => read(`/repos/${repo}/releases/tags/${rehearsal ? 'videos-rehearsal' : 'videos'}`), null),
   ]);
   const support = existsSync(join(root, 'support', 'status.json')) ? JSON.parse(readFileSync(join(root, 'support', 'status.json'), 'utf8')) : null;
   const report = newestFile('reports', /^\d{4}-\d{2}-\d{2}\.md$/);
-  return { pulls, failures: failures.workflow_runs ?? [], videos, support, report };
+  // The newest video, with the words to paste under it and a note of how it was made.
+  let video = null;
+  const assets = videos?.assets ?? [];
+  const mp4 = assets.filter((a) => /^curiouser-\d{4}\.mp4$/.test(a.name)).sort((a, b) => a.name.localeCompare(b.name)).at(-1);
+  if (mp4) {
+    const stem = mp4.name.replace('.mp4', '');
+    const asset = (suffix) => assets.find((a) => a.name === `${stem}${suffix}`);
+    const text = (a) => (a ? quiet(async () => (await fetch(a.browser_download_url, { headers: { 'user-agent': 'curiouser-desk' } })).text(), null) : null);
+    const [caption, made] = await Promise.all([text(asset('-caption.txt')), text(asset('.json'))]);
+    let meta = null;
+    try { meta = JSON.parse(made); } catch {}
+    video = { id: Number(stem.slice(-4)), mp4, srt: asset('.srt'), captionFile: asset('-caption.txt'), caption: caption?.trim() || null, meta };
+  }
+  return { pulls, failures: failures.workflow_runs ?? [], video, support, report };
 }
 
 function todayLine(stories, uk, tickets) {
@@ -307,21 +320,26 @@ function render(stories, uk, tickets, g) {
   }
 
   // The video to post.
-  const assets = g.videos?.assets ?? [];
-  const mp4 = assets.filter((a) => /^curiouser-\d{4}\.mp4$/.test(a.name)).sort((a, b) => a.name.localeCompare(b.name)).at(-1);
   let video = '🎬 **Video:** none yet.';
-  if (mp4) {
-    const id = Number(/(\d{4})/.exec(mp4.name)[1]);
+  let videoCaption = [];
+  if (g.video) {
+    const { id, mp4, srt, captionFile, caption, meta } = g.video;
     const story = stories.find((s) => s.id === id);
-    const find = (suffix) => assets.find((a) => a.name === `curiouser-${pad(id)}${suffix}`);
     const days = Math.floor((now - new Date(mp4.updated_at)) / 86400000);
+    const how = meta
+      ? ` (${Math.round(meta.seconds)} seconds; ${meta.voice === 'none' ? 'captions only, no voice' : meta.voice === 'elevenlabs' ? 'your ElevenLabs voice' : 'the free AI voice'})`
+      : '';
     const links = [
       `[download the video](${mp4.browser_download_url})`,
-      find('-caption.txt') && `[caption to paste](${find('-caption.txt').browser_download_url})`,
-      find('.srt') && `[captions file](${find('.srt').browser_download_url})`,
+      srt && `[captions file](${srt.browser_download_url})`,
+      captionFile && !caption && `[caption to paste](${captionFile.browser_download_url})`,
     ].filter(Boolean).join(' · ');
-    video = `🎬 **Video** for No. ${id}${story ? ` ${quote(story.title)}` : ''}, made ${days === 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`}: ${links}`;
-    if (days <= 2) waiting.push(`**Video to post** for No. ${id}: ${links}. Nothing is posted for you.`);
+    video = `🎬 **Video** for No. ${id}${story ? ` ${quote(story.title)}` : ''}, made ${days === 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`}${how}: ${links}`;
+    if (days <= 2) {
+      waiting.push(`**Video to post** for No. ${id}${story ? ` ${quote(story.title)}` : ''}${how}: ${links}. The caption to paste is at the bottom of this page. Nothing is posted for you.`);
+      for (const w of meta?.warnings ?? []) waiting.push(`**The video was made with a stand-in:** ${w}`);
+      if (caption) videoCaption = ['', `### Caption to paste under the video for No. ${id}`, '', 'Press and hold to select it, then copy.', '', '```', caption.replace(/```/g, "'''"), '```'];
+    }
   }
 
   // Pull requests: the Developer's work, waiting for approval.
@@ -366,6 +384,7 @@ function render(stories, uk, tickets, g) {
     `- ${support}`,
     `- ${report}`,
     `- 🩺 **Automation that failed in the last day:** ${failed.length ? failed.join(' · ') : 'none.'}`,
+    ...videoCaption,
     '',
     '---',
     `*This page rewrites itself whenever something changes. How the team works: [agents/README.md](${web}/blob/${branch}/agents/README.md). Ideas backlog: [IDEAS.md](${web}/blob/${branch}/IDEAS.md).*`,

@@ -170,6 +170,42 @@ cwrite(clone, checkFile(n), verdict(n, 'pass'));
 r = save(clone, 'fact-checker', `Fact-check No. ${n}: pass`);
 ok('the fact-checker can release a story', r.status === 0 && onMain(checkFile(n)) && onMain(`content/published/${pad(n)}.json`), r.stdout + r.stderr);
 
+// The Producer: one script per checked story, and the voice is not its to change.
+const script = (id, extra = {}) => ({
+  issue: id, title: 'Test',
+  lines: [
+    { text: 'A city once paid for rats by the tail.', art: 'white-rabbit-watch' },
+    { text: 'It was a plan that looked sensible on paper, and for a few weeks the numbers were wonderful to read.', art: 'dodo-thimble' },
+    { text: 'Then the people in charge noticed something odd in the streets, and nobody could quite explain it at first.' },
+    { text: 'The hunters had learned what the reward was really paying for, and they gave the city exactly that and no more.', art: 'painting-the-roses' },
+    { text: 'What gets counted gets gamed. That is the idea, and it turns up wherever a number stands in for a goal.', art: 'cheshire-cat' },
+    { text: 'So before you set a target, ask what the cheapest way to hit it would be, because someone will find it.' },
+    { text: 'Curiouser: get curiouser before breakfast.' },
+  ],
+  caption: 'A test caption that is long enough to pass the check, about a city and its rats and what went wrong.',
+  hashtags: ['#history', '#truestory', '#curiouser'], ...extra,
+});
+git(clone, 'fetch', '--quiet', 'origin', 'main');
+git(clone, 'reset', '--quiet', '--hard', 'origin/main');
+cwrite(clone, 'videos/voice.json', { provider: 'none' });
+r = save(clone, 'producer', 'Producer changes the voice');
+ok('the Producer cannot change the voice', r.status !== 0 && !onMain('videos/voice.json'), r.stdout + r.stderr);
+rmSync(join(clone, 'videos'), { recursive: true, force: true });
+cwrite(clone, `videos/${pad(last)}.json`, script(last));
+cwrite(clone, checkFile(last), { ...verdict(last, 'released-unchecked'), by: 'editor-in-chief' });
+git(clone, 'add', checkFile(last));
+git(clone, ...id, 'commit', '--quiet', '-m', 'an unchecked story');
+git(clone, 'push', '--quiet', 'origin', 'HEAD:main');
+r = save(clone, 'producer', 'Video of an unchecked story');
+ok('a video script for a story the fact-checker has not passed is refused', r.status !== 0 && !onMain(`videos/${pad(last)}.json`), r.stdout + r.stderr);
+cwrite(clone, `videos/${pad(n)}.json`, script(n, { lines: script(n).lines.slice(0, -1) }));
+rmSync(join(clone, `videos/${pad(last)}.json`));
+r = save(clone, 'producer', 'Video with no sign-off');
+ok('a video script without the sign-off is refused', r.status !== 0 && !onMain(`videos/${pad(n)}.json`), r.stdout + r.stderr);
+cwrite(clone, `videos/${pad(n)}.json`, script(n));
+r = save(clone, 'producer', `Video script No. ${n}: Test`);
+ok('the Producer can save a sound script for a checked story', r.status === 0 && onMain(`videos/${pad(n)}.json`), r.stdout + r.stderr);
+
 rmSync(scratch, { recursive: true, force: true });
 rmSync(work, { recursive: true, force: true });
 console.log(failed ? `\n✗ ${failed} test(s) failed` : '\n✓ All gate tests passed');
