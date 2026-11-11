@@ -1,0 +1,6 @@
+{
+  "provider": "kokoro",
+  "kokoro": { "voice": "bf_emma", "speed": 1.0 },
+  "elevenlabs": { "voiceId": "", "model": "eleven_multilingual_v2" },
+  "label": "Narrated by an AI voice"
+}
