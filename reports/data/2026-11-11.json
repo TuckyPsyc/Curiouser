@@ -1,15 +1,15 @@
 {
-  "made": "2026-11-11T22:56:50.569Z",
-  "from": "2026-11-02",
-  "to": "2026-11-08",
+  "made": "2026-11-11T22:57:29.104Z",
+  "from": "2026-11-08",
+  "to": "2026-11-11",
   "stories": {
-    "written": 5,
-    "daysExpected": 1,
+    "written": 8,
+    "daysExpected": 4,
     "daysWithNoStory": [],
-    "released": 5,
+    "released": 8,
     "held": 0,
     "stillDrafts": 0,
-    "releasedUnchecked": 4,
+    "releasedUnchecked": 7,
     "list": [
       {
         "id": 1,
@@ -75,17 +75,56 @@
         "problems": 0,
         "claimsChecked": null,
         "linksChecked": null
+      },
+      {
+        "id": 6,
+        "date": "2026-11-09",
+        "title": "The Man Who Doubted the Sea",
+        "topic": "Science",
+        "status": "released",
+        "verdict": "released-unchecked",
+        "by": "launch",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": null,
+        "linksChecked": null
+      },
+      {
+        "id": 7,
+        "date": "2026-11-10",
+        "title": "The Emperor Who Said Sorry",
+        "topic": "History",
+        "status": "released",
+        "verdict": "released-unchecked",
+        "by": "launch",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": null,
+        "linksChecked": null
+      },
+      {
+        "id": 8,
+        "date": "2026-11-11",
+        "title": "Seven Days Staring at Bamboo",
+        "topic": "Philosophy",
+        "status": "released",
+        "verdict": "released-unchecked",
+        "by": "launch",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": null,
+        "linksChecked": null
       }
     ]
   },
   "checks": {
-    "done": 0,
-    "pass": 0,
+    "done": 1,
+    "pass": 1,
     "fixed": 0,
     "held": 0,
     "corrections": 0,
-    "claimsChecked": 0,
-    "linksChecked": 0,
+    "claimsChecked": 46,
+    "linksChecked": 8,
     "openProblems": [],
     "neverChecked": [
       2,
@@ -96,7 +135,21 @@
       7,
       8
     ],
-    "list": []
+    "list": [
+      {
+        "id": 1,
+        "date": "2026-11-08",
+        "title": "The Great Hanoi Rat Hunt",
+        "topic": "History",
+        "status": "released",
+        "verdict": "pass",
+        "by": "fact-checker",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": 46,
+        "linksChecked": 8
+      }
+    ]
   },
   "videos": {
     "checkedStoriesThisWeek": 1,
@@ -135,18 +188,47 @@
     ]
   },
   "automation": {
-    "runs": 5,
+    "runs": 37,
     "failed": [],
     "byWorkflow": {
+      "Editor's desk": {
+        "runs": 10,
+        "failed": 0
+      },
+      "Checks": {
+        "runs": 9,
+        "failed": 0
+      },
+      "Make the video": {
+        "runs": 2,
+        "failed": 0
+      },
+      "Release a story": {
+        "runs": 2,
+        "failed": 0
+      },
+      "Publish app update": {
+        "runs": 6,
+        "failed": 0
+      },
+      "Check over-the-air updates (diagnostic)": {
+        "runs": 2,
+        "failed": 0
+      },
       "Build Android app": {
-        "runs": 5,
+        "runs": 6,
         "failed": 0
       }
     },
     "truncated": false
   },
   "pulls": {
-    "opened": [],
+    "opened": [
+      {
+        "number": 6,
+        "title": "Sunday-morning reminder for the Caucus-race"
+      }
+    ],
     "merged": [],
     "closedUnmerged": [],
     "openNow": [
