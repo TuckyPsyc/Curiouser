@@ -31,6 +31,11 @@ on:
     - cron: '35 6 * * *'
     - cron: '50 6 * * *'
   workflow_dispatch:
+    inputs:
+      now:
+        description: 'For testing only: pretend it is this time, e.g. 2026-11-12T06:50:00Z. Leave blank.'
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -58,4 +63,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DESK_REHEARSAL: ${{ github.ref_name == 'rehearsal' && '1' || '' }}
           DESK_BRANCH: ${{ github.ref_name == 'rehearsal' && 'rehearsal' || 'main' }}
-        run: node scripts/desk.mjs
+          PRETEND_NOW: ${{ inputs.now }}
+        run: node scripts/desk.mjs ${PRETEND_NOW:+--now "$PRETEND_NOW"}

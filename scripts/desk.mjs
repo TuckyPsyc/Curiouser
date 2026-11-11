@@ -26,6 +26,7 @@ const owner = repo.split('/')[0];
 const branch = process.env.DESK_BRANCH || 'main';
 const web = `https://github.com/${repo}`;
 const tag = rehearsal ? '[Rehearsal] ' : '';
+const banner = rehearsal ? ['> **This is a practice run.** Nothing here is real, readers are not affected, and there is nothing for you to do.', ''] : [];
 
 // When the alarm for an unchecked or missing story goes off (UK time). The
 // fact-checker starts at 05:40 and normally finishes within half an hour.
@@ -130,6 +131,7 @@ function ticketsWanted(stories, uk) {
         title: `${tag}Held: No. ${s.id} ${quote(s.title)}`,
         body: [
           marker('held', s.id),
+          ...banner,
           `The fact-checker held this story back at ${ukClock(c.at)} on ${fmtDate(londonNow(new Date(c.at)).date)}. Readers can't see it, and the last released story stays in place.`,
           '',
           `**Why:** ${c.summary}`,
@@ -153,6 +155,7 @@ function ticketsWanted(stories, uk) {
         title: `${tag}Release No. ${s.id} unchecked? ${quote(s.title)}`,
         body: [
           marker('unchecked', s.id),
+          ...banner,
           `The story for ${fmtDate(s.date)} has **not been fact-checked**: the fact-checker failed or didn't run. Readers can't see it, and the last released story stays in place.`,
           '',
           '**What you can do**',
@@ -178,6 +181,7 @@ function ticketsWanted(stories, uk) {
       title: `${tag}No story for ${fmtDate(uk.date)}`,
       body: [
         marker('missing', uk.date),
+          ...banner,
         `The Editor hasn't written today's story. Readers see the last released story instead.`,
         '',
         '**What you can do**',
@@ -346,6 +350,7 @@ function render(stories, uk, tickets, g) {
 
   return [
     `<!-- curiouser:desk -->`,
+    ...banner,
     `**${fmtDate(uk.date)}**, as of ${uk.clock}.`,
     '',
     todayLine(stories, uk, tickets),
@@ -376,13 +381,22 @@ async function syncDesk(body, uk, summary) {
   if (!found) {
     const made = await write('POST', `/repos/${repo}/issues`, { title: `${tag}The editor's desk`, body, labels: [label] }, 'opened the desk');
     number = made?.number;
-    if (made && !rehearsal) {
-      await quiet(() => api('POST', '/graphql', { query: `mutation { pinIssue(input: { issueId: "${made.node_id}" }) { issue { number } } }` }));
-    }
   } else if (strip(found.body) !== strip(body)) {
     await write('PATCH', `/repos/${repo}/issues/${number}`, { body }, `updated the desk (#${number})`);
   } else {
     console.log('desk unchanged');
+  }
+
+  // Keep the desk pinned to the top of the repository's Issues page.
+  if (number && !rehearsal && !dryRun) {
+    await quiet(async () => {
+      const [o, n] = repo.split('/');
+      const q = await api('POST', '/graphql', { query: `query { repository(owner: "${o}", name: "${n}") { issue(number: ${number}) { id isPinned } } }` });
+      const issue = q?.data?.repository?.issue;
+      if (!issue || issue.isPinned) return;
+      const r = await api('POST', '/graphql', { query: `mutation { pinIssue(input: { issueId: "${issue.id}" }) { issue { number } } }` });
+      console.log(r?.errors ? `could not pin the desk: ${r.errors[0].message}` : 'pinned the desk');
+    });
   }
 
   // The morning note: one comment a day that mentions Carl, so his phone buzzes once.
