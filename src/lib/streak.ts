@@ -65,11 +65,33 @@ export function rescuableDay(data: StreakData, today: string): string | null {
   return covered(data, addDays(day, -1)) ? day : null;
 }
 
+/** Every day ever read. Never goes down. */
+export const totalDays = (data: StreakData) => data.read.length;
+
+/**
+ * Weeks in a row (Monday to Sunday) with at least one day read or stopped.
+ * Missing a day can't reset it; only a whole week off can. This week counts
+ * once it has a day in it, and the run stays alive until this week is over.
+ */
+export function weekRun(data: StreakData, today: string): number {
+  const hasDay = (monday: string) =>
+    Array.from({ length: 7 }, (_, i) => addDays(monday, i)).some(
+      (d) => d <= today && covered(data, d),
+    );
+  let monday = mondayOf(today);
+  if (!hasDay(monday)) monday = addDays(monday, -7);
+  let n = 0;
+  while (hasDay(monday) && n < 1000) {
+    n++;
+    monday = addDays(monday, -7);
+  }
+  return n;
+}
+
 export function withRead(data: StreakData, today: string): StreakData {
   if (data.read.includes(today)) return data;
-  // Keep about a year and a half: plenty for any streak worth showing.
-  const cutoff = addDays(today, -550);
-  return { ...data, read: [...data.read.filter((d) => d >= cutoff), today] };
+  // Kept in full, so the total never drops (a year of dates is about 4 KB).
+  return { ...data, read: [...data.read, today] };
 }
 
 export function withFrozen(data: StreakData, day: string, today: string): StreakData {

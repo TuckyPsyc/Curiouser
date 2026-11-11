@@ -8,7 +8,7 @@ Curiouser is a small Android app that delivers one idea a day, told as a true st
 - **Eat Me** grows it back, and from the full story takes you down the rabbit hole into a deeper dive.
 - **Through the Looking-Glass** gives the other side of the idea: its strongest objection, an honest "there isn't one", or a myth debunked.
 - **The Red Queen's race** (before you begin): each story opens with a question about an earlier one, because trying to recall something fixes it in memory better than rereading.
-- **The Hatter's watch**: a forgiving reading streak. A day counts when you finish a story or use Drink Me, and once a week a Hatter's Hour stops the clock on a missed day.
+- **The Hatter's watch**: a forgiving reading streak. A day counts when you finish a story or use Drink Me, and once a week a Hatter's Hour stops the clock on a missed day. It also shows weeks in a row (one story a week keeps it going) and the total days read.
 - **Jars**: save ideas into named collections, starting with Orange Marmalade.
 - **The Caucus-race**: a five-question quiz each Sunday on the week's stories. Everyone who finishes gets a prize.
 - **Start here**: new readers begin with No. 0, the true story of how *Alice* was written, with margin notes explaining each feature and where its name comes from.
