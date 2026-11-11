@@ -1,0 +1,15 @@
+{
+  "issue": 1,
+  "title": "Rehearsal",
+  "lines": [
+    { "text": "A city once paid for rats by the tail.", "art": "white-rabbit-watch" },
+    { "text": "It was a plan that looked sensible on paper, and for a few weeks the numbers were wonderful to read.", "art": "dodo-thimble" },
+    { "text": "Then the people in charge noticed something odd in the streets, and nobody could quite explain it at first." },
+    { "text": "The hunters had learned what the reward was really paying for, and they gave the city exactly that and no more.", "art": "painting-the-roses" },
+    { "text": "What gets counted gets gamed. That is the idea, and it turns up wherever a number stands in for a goal.", "art": "cheshire-cat" },
+    { "text": "So before you set a target in 1902 or today, ask what the cheapest way to hit it would be, because someone will find it." },
+    { "text": "Curiouser: get curiouser before breakfast." }
+  ],
+  "caption": "A rehearsal of the video pipeline. Not for posting: this script was written to test the machinery, not to tell the story.",
+  "hashtags": ["#rehearsal", "#history", "#curiouser"]
+}
