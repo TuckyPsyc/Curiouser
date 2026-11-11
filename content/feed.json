@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-10T22:57:13.788Z",
+  "updated": "2026-11-11T04:57:18.587Z",
   "issues": [
+    {
+      "id": 8,
+      "date": "2026-11-11",
+      "topic": "Philosophy",
+      "title": "Seven Days Staring at Bamboo",
+      "concept": "The unity of knowledge and action",
+      "teaser": "A young Chinese scholar tried to find the truth in a bamboo grove, fell ill, and years later found it somewhere else.",
+      "readingMinutes": 3
+    },
     {
       "id": 7,
       "date": "2026-11-10",
