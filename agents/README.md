@@ -32,7 +32,9 @@ All of them run on `claude-opus-5-5`. Why these times: DECISIONS.md, D-016.
 
 ## Asking an agent for something
 
-Each task can be run by hand with a message, from any Claude conversation in this project. Say, for example: "Run the Curiouser fact-checker with the message: Re-check No. 5", "Run the Curiouser Producer with the message: Remake No. 9, the hook is weak", or "Run the Curiouser Developer with the message: Build item 11 this week".
+A task can be run by hand with a message, from a Claude conversation in this project. Say, for example: "Run the Curiouser fact-checker with the message: Re-check No. 5", or "Run the Curiouser Producer with the message: Remake No. 9, the hook is weak".
+
+The message reaches the agent after it has done its usual job, so it does that first and your request second. For the Developer, that would mean two pull requests, so steer it by reordering `IDEAS.md` or by commenting on its pull request instead.
 
 ## Practising without readers noticing
 
