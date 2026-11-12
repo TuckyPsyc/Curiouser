@@ -15,10 +15,6 @@ To unblock an item, change its status to **Ready** (and say what you decided), o
 
 ## The list
 
-### 1. Caucus-race reminder on Sunday mornings
-**Status:** Ready
-A second reminder on Sunday mornings, telling readers the week's Caucus-race is open. It uses the notification library already in the app and is scheduled on the phone, like the 7:00 reminder, with its own on/off switch.
-
 ### 2. Web version on GitHub Pages
 **Status:** Blocked: needs a decision
 The same app in a browser, for friends on iPhone (D-006). The workflow exists (`web.yml`) but only runs by hand. **What's needed from Carl:** in the repository's Settings → Pages, set Source to "GitHub Actions". After that the Developer can make it publish on every change and add a link to the README.
@@ -69,4 +65,8 @@ A link in the app that opens an email to Curiouser. **What's needed from Carl:**
 
 ## Done
 
-Nothing yet. The Developer moves an item here in the pull request that builds it.
+The Developer moves an item here in the pull request that builds it.
+
+### Caucus-race reminder on Sunday mornings
+**Done:** 11 November 2026.
+A second reminder at 9:00 on Sunday mornings, telling readers the week's Caucus-race is open. It uses the notification library already in the app and is scheduled on the phone, like the 7:00 reminder, with its own switch (the Dodo) on the Shelves.
