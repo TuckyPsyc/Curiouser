@@ -18,6 +18,7 @@ on:
       - 'content/**'
       - 'videos/**'
       - 'reports/**'
+      - 'marketing/**'
       - 'support/status.json'
       - 'scripts/desk.mjs'
       - 'scripts/lib/**'

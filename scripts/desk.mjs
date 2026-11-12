@@ -244,6 +244,8 @@ async function syncTickets(stories, uk) {
 }
 
 // ---------- The desk ----------
+// The issue where Carl reports how each video did, read by the Marketing agent (agents/marketing.md).
+const RESULTS_ISSUE = 8;
 function newestFile(dir, pattern) {
   const d = join(root, dir);
   if (!existsSync(d)) return null;
@@ -260,6 +262,7 @@ async function gather(stories, uk, tickets) {
   ]);
   const support = existsSync(join(root, 'support', 'status.json')) ? JSON.parse(readFileSync(join(root, 'support', 'status.json'), 'utf8')) : null;
   const report = newestFile('reports', /^\d{4}-\d{2}-\d{2}\.md$/);
+  const brief = newestFile('marketing', /^\d{4}-\d{2}-\d{2}\.md$/);
   // The newest video, with the words to paste under it and a note of how it was made.
   let video = null;
   const assets = videos?.assets ?? [];
@@ -273,7 +276,7 @@ async function gather(stories, uk, tickets) {
     try { meta = JSON.parse(made); } catch {}
     video = { id: Number(stem.slice(-4)), mp4, srt: asset('.srt'), captionFile: asset('-caption.txt'), caption: caption?.trim() || null, meta };
   }
-  return { pulls, failures: failures.workflow_runs ?? [], video, support, report };
+  return { pulls, failures: failures.workflow_runs ?? [], video, support, report, brief };
 }
 
 function todayLine(stories, uk, tickets) {
@@ -364,6 +367,17 @@ function render(stories, uk, tickets, g) {
     if (age <= 2) waiting.push(`**Weekly report** for ${fmtDate(date)}: [read it](${web}/blob/${branch}/reports/${g.report}).`);
   }
 
+  // The Marketing agent's weekly brief, and where Carl reports how posts did.
+  const resultsIssue = `${web}/issues/${RESULTS_ISSUE}`;
+  let brief = `📣 **Marketing:** the first brief arrives on Sunday. Report how posts did in [How the posts did](${resultsIssue}).`;
+  if (g.brief) {
+    const date = g.brief.slice(0, 10);
+    const age = Math.floor((new Date(`${uk.date}T12:00:00Z`) - new Date(`${date}T12:00:00Z`)) / 86400000);
+    const link = `${web}/blob/${branch}/marketing/${g.brief}`;
+    brief = `📣 **Marketing brief:** [${fmtDate(date)}](${link}). Report how posts did, or answer the brief, in [How the posts did](${resultsIssue}).`;
+    if (age <= 2) waiting.push(`**Marketing brief** for ${fmtDate(date)}: [read it](${link}). Answer in [How the posts did](${resultsIssue}); silence means no.`);
+  }
+
   const failed = g.failures.map((r) => `[${r.name}](${r.html_url}) at ${ukClock(r.created_at)}`);
 
   return [
@@ -383,6 +397,7 @@ function render(stories, uk, tickets, g) {
     `- 🔧 **Pull requests:** ${prs.length ? prs.join(' · ') : 'none open.'}`,
     `- ${support}`,
     `- ${report}`,
+    `- ${brief}`,
     `- 🩺 **Automation that failed in the last day:** ${failed.length ? failed.join(' · ') : 'none.'}`,
     ...videoCaption,
     '',

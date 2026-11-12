@@ -110,3 +110,9 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **Decided:** 11 November 2026, by Claude under Carl's brief.
 **What:** Each Monday the Analyst reports stories written, released and held, fact-check verdicts and corrections, APK downloads, pull requests, mornings that needed Carl, and failed automation (`agents/analyst.md`, `scripts/stats.mjs`, `reports/`). It reports reading, feature use and reader numbers as unknown, because the app sends nothing (D-005, D-011). Repository traffic is visible only to Carl, so it is not in the report.
 **Rule:** No agent adds analytics. `reports/usage-counts-proposal.md` sets out what privacy-respecting counting could look like and what UK GDPR and PECR would require. The decision is Carl's.
+
+## D-019 · A Marketing agent sets the videos' style
+**Decided:** 12 November 2026, by Carl. Its instructions and starting playbook were designed by Claude Fable 5.2; the agent runs on `claude-opus-5-5` like the rest (D-016).
+**What:** Every Sunday at 07:37 the Marketing agent studies what earns attention for comparable apps, educational creators and one unrelated field, invents and ranks ideas, and writes a one-screen brief for Carl (`agents/marketing.md`, `marketing/`). It keeps `marketing/playbook.md`, which the Producer follows on style: the hook's form, structure, tone, pictures, caption and hashtags. The playbook can never override the Producer's accuracy or safety rules or its fixed limits, and runs one experiment at a time.
+**Measuring:** Carl reports each post's numbers by commenting on issue #8, "How the posts did". Only his own comments count. That and public pages are all the agent can see; it never adds tracking (D-005).
+**Rule:** It prepares; Carl publishes. It never posts, comments, follows, messages, signs up or spends, and every idea states how many of Carl's minutes it needs.

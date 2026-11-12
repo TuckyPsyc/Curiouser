@@ -206,6 +206,23 @@ cwrite(clone, `videos/${pad(n)}.json`, script(n));
 r = save(clone, 'producer', `Video script No. ${n}: Test`);
 ok('the Producer can save a sound script for a checked story', r.status === 0 && onMain(`videos/${pad(n)}.json`), r.stdout + r.stderr);
 
+// Marketing: its own folder only. It steers the Producer through the playbook, but can't write scripts itself.
+git(clone, 'fetch', '--quiet', 'origin', 'main');
+git(clone, 'reset', '--quiet', '--hard', 'origin/main');
+cwrite(clone, 'marketing/notebook.json', { studied: [] });
+r = save(clone, 'marketing', 'Marketing notebook');
+ok('the Marketing agent can save in marketing/', r.status === 0 && onMain('marketing/notebook.json'), r.stdout + r.stderr);
+cwrite(clone, `videos/${pad(n + 1)}.json`, script(n));
+cwrite(clone, 'marketing/notebook.json', { studied: ['x'] });
+r = save(clone, 'marketing', 'Marketing writes a video script');
+ok('the Marketing agent cannot write a video script', r.status !== 0 && !onMain(`videos/${pad(n + 1)}.json`), r.stdout + r.stderr);
+rmSync(join(clone, 'videos', `${pad(n + 1)}.json`));
+git(clone, 'checkout', '--quiet', '--', '.');
+cwrite(clone, 'videos/voice.json', { provider: 'none' });
+r = save(clone, 'marketing', 'Marketing changes the voice');
+ok('the Marketing agent cannot change the voice', r.status !== 0, r.stdout + r.stderr);
+git(clone, 'checkout', '--quiet', '--', '.');
+
 rmSync(scratch, { recursive: true, force: true });
 rmSync(work, { recursive: true, force: true });
 console.log(failed ? `\n✗ ${failed} test(s) failed` : '\n✓ All gate tests passed');

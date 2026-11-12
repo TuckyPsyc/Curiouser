@@ -26,6 +26,7 @@ Work it out from what was produced, not from what the task list says:
 | Fact-checker | every story checked before 06:30 | "Fact-checks carried out", and "Mornings that needed Carl": each unchecked story was a morning the check didn't finish |
 | Producer | a video script for every checked story | "Videos" |
 | Developer | one pull request opened, if anything in `IDEAS.md` was Ready | "Pull requests" |
+| Marketing | a brief in `marketing/` dated the Sunday of the week | the file names in `marketing/` |
 | Desk and the other automation | no failed runs | "Automation on GitHub" |
 
 ## Write the report

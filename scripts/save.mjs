@@ -25,6 +25,8 @@ const ALLOWED = {
   // The Producer writes one script per story. The voice (videos/voice.json) is Carl's choice, not the Producer's.
   producer: [/^videos\/\d{4}\.json$/],
   analyst: ['reports/'],
+  // The Marketing agent keeps its notebook, results, briefs and the Producer's playbook.
+  marketing: ['marketing/'],
   // Support keeps a count only. Messages and replies never go in this public repo.
   support: ['support/status.json'],
 };
@@ -118,7 +120,7 @@ for (let attempt = 1; attempt <= 4; attempt++) {
       );
     }
     git('reset', '--hard', '--quiet', tip);
-    git('clean', '-fdq', '--', 'content', 'videos', 'reports', 'support');
+    git('clean', '-fdq', '--', 'content', 'videos', 'reports', 'support', 'marketing');
     restore();
   }
   if (!build()) stop('The feed no longer builds on the latest main. Fix the problems above and run save again.');

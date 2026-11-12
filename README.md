@@ -27,6 +27,7 @@ On your phone, open **[the latest release](https://github.com/TuckyPsyc/curiouse
 | `agents/` | Instructions for each scheduled agent. Start with [agents/README.md](agents/README.md). |
 | `videos/` | The Producer's video scripts, one per story, and `voice.json`, which chooses the narrator. The videos themselves are attached to the "Videos" release. |
 | `reports/` | The Analyst's weekly reports, and a proposal on counting use without watching readers. |
+| `marketing/` | The Marketing agent's weekly briefs, its notebook, the post results Carl reports, and `playbook.md`, which sets the Producer's style. |
 | `support/` | How Curiouser writes back to readers: the tone guide and the FAQ. |
 | `IDEAS.md` | The Developer's backlog, in order. |
 | `src/` | The Expo / React Native app. |
