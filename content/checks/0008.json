@@ -1,9 +1,49 @@
 {
   "issue": 8,
-  "verdict": "released-unchecked",
-  "by": "launch",
-  "at": "2026-11-11T07:00:00Z",
-  "summary": "Published before the fact-checker existed. Waiting for its first check.",
-  "changes": [],
-  "problems": []
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-12T07:53:18Z",
+  "summary": "One correction: the bitter melon quotation had been run together from two sentences, so I replaced it with the published wording. Everything else checked out.",
+  "claims": {
+    "checked": 68,
+    "confirmed": 67,
+    "corrected": 1,
+    "removed": 0
+  },
+  "links": {
+    "checked": 10,
+    "working": 10,
+    "replaced": 0,
+    "removed": 0
+  },
+  "lookingGlass": {
+    "rating": "Contested",
+    "fair": true
+  },
+  "quiz": {
+    "sound": true
+  },
+  "changes": [
+    {
+      "where": "rabbit hole, level 2, paragraph 1",
+      "before": "He liked examples you can only learn first-hand: 'If you want to know bitterness, you have to eat a bitter melon yourself.'",
+      "after": "He liked examples you can only learn first-hand, such as a mute person eating a bitter melon: 'If you want to know this bitterness, you will have to eat it for yourself.'",
+      "why": "The quoted words don't appear in this form. In Lederman's translation the passage compares the experience to a mute person eating a bitter melon, then says: 'If you want to know this bitterness, you will have to eat it for yourself.'",
+      "source": "https://philarchive.org/archive/LEDCOG-2"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The two Wang quotations in the story ('No one has ever known but failed to act' and the lovely-sight line) follow Harvey Lederman's translation, not Van Norden's or Chan's. The story doesn't name a translator, so this is fine, and it quotes well under 40 words from any one work.",
+    "'Aged 36' follows Britannica. Wang was born in late 1472, so by Western reckoning he may still have been 35 in 1508. Chinese sources count him as 37.",
+    "The date of the bamboo episode is uncertain, as the rabbit hole already says. Ping Dong puts it at about 16, and Guo Qiyong's article on Aisixiang puts it in Hongzhi 5 (1492), at 21."
+  ],
+  "history": [
+    {
+      "verdict": "released-unchecked",
+      "by": "launch",
+      "at": "2026-11-11T07:00:00Z",
+      "summary": "Published before the fact-checker existed. Waiting for its first check."
+    }
+  ]
 }

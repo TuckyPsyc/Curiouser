@@ -1,9 +1,65 @@
 {
   "issue": 6,
-  "verdict": "released-unchecked",
-  "by": "launch",
-  "at": "2026-11-09T07:00:00Z",
-  "summary": "Published before the fact-checker existed. Waiting for its first check.",
-  "changes": [],
-  "problems": []
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-12T07:53:18Z",
+  "summary": "Three small corrections: Landsberg and Mandelstam began their quartz work in 1926, not 1925; SHERLOC is one of two Raman instruments on Perseverance, so not 'the' most far-flung; and one source had the wrong article title. Everything else checked out, including every quotation, but I couldn't open the Nobel Prize biography link.",
+  "claims": {
+    "checked": 62,
+    "confirmed": 59,
+    "corrected": 3,
+    "removed": 0
+  },
+  "links": {
+    "checked": 10,
+    "working": 10,
+    "replaced": 0,
+    "removed": 0
+  },
+  "lookingGlass": {
+    "rating": "Settled",
+    "fair": true
+  },
+  "quiz": {
+    "sound": true
+  },
+  "changes": [
+    {
+      "where": "Looking-Glass, paragraph 1",
+      "before": "studying how light scatters in quartz since 1925",
+      "after": "studying how light scatters in quartz since 1926",
+      "why": "Fabelinskii's history says 'In 1926, Landsberg began his work on measurement of the total intensity of light scattered by quartz crystals'; Wikipedia's articles on both men also give 1926.",
+      "source": "https://ufn.ru/ufn78/ufn78_12/ufn7812b.pdf"
+    },
+    {
+      "where": "rabbit hole, 'A Raman spectrometer on Mars', paragraph 1",
+      "before": "The most far-flung Raman instrument sits",
+      "after": "One of the most far-flung Raman instruments sits",
+      "why": "Perseverance carries a second Raman spectrometer, in SuperCam on its mast (532 nm), so SHERLOC isn't uniquely the most distant.",
+      "source": "https://en.wikipedia.org/wiki/SuperCam"
+    },
+    {
+      "where": "sources, seventh item (title)",
+      "before": "\"title\": \"On the Raman effect, Physics World\"",
+      "after": "\"title\": \"My favourite Nobel prize: Raman scattering is a universal fingerprint, Physics World (2019)\"",
+      "why": "That is the title of the article at this link (Anna Demming, 30 September 2019).",
+      "source": "https://physicsworld.com/?p=83361"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "I could not open the NobelPrize.org biography link (the site refused my tools every time). Search results confirm the page exists under that title, and NobelPrize.org's laureate page loaded and confirms the 1930 prize, so I kept it, but I haven't seen it support the claims. Everything it is used for is confirmed by other sources.",
+    "The APS News link opened at its older address (aps.org/publications/apsnews/200902/physicshistory.cfm), which shows the same February 2009 'This Month in Physics History' article.",
+    "The fraction of light that is Raman-scattered is given variously as one in a million to one in ten million; 'about one in ten million' matches Physics World and instrument makers.",
+    "Some sources date Raman's first observation differently (Wikipedia gives 16 February), but the story's wording is right: Raman himself wrote that the line spectrum 'was first seen on the 28th February 1928'.",
+    "Braun and Smirnov say heavy water is colourless over metres but didn't test this themselves ('a limited budget'). Their 'only example from nature' line is about water's blueness, which the story calls the sea's."
+  ],
+  "history": [
+    {
+      "verdict": "released-unchecked",
+      "by": "launch",
+      "at": "2026-11-09T07:00:00Z",
+      "summary": "Published before the fact-checker existed. Waiting for its first check."
+    }
+  ]
 }

@@ -1,9 +1,50 @@
 {
   "issue": 4,
-  "verdict": "released-unchecked",
-  "by": "launch",
-  "at": "2026-11-08T07:00:00Z",
-  "summary": "Published before the fact-checker existed. Waiting for its first check.",
-  "changes": [],
-  "problems": []
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-12T07:53:18Z",
+  "summary": "One tiny correction: in the smith's words, 'turn on, turn on' is followed by a semicolon in every edition of Franklin I checked, not a colon. Everything else checked out, including Franklin's other quotations, the Seneca passage, all three studies and every link.",
+  "claims": {
+    "checked": 67,
+    "confirmed": 66,
+    "corrected": 1,
+    "removed": 0
+  },
+  "links": {
+    "checked": 8,
+    "working": 8,
+    "replaced": 0,
+    "removed": 0
+  },
+  "lookingGlass": {
+    "rating": "Well supported",
+    "fair": true
+  },
+  "quiz": {
+    "sound": true
+  },
+  "changes": [
+    {
+      "where": "story, paragraph 3",
+      "before": "turn on, turn on: we shall have it bright",
+      "after": "turn on, turn on; we shall have it bright",
+      "why": "Misquotation: the published text of Franklin's Autobiography has a semicolon here, not a colon.",
+      "source": "https://ushistory.org/franklin/autobiography/page41.htm"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "Franklin's quotations follow the modernised 19th-century editions (as on ushistory.org and Project Gutenberg), not his manuscript spelling. That is fine; the wording matches a published text.",
+    "The Harkin meta-analysis appeared online in October 2015 and in print in 2016; the Etkin study was publicised in December 2015 and printed in the Journal of Consumer Research in April 2016. '2016' is right for both.",
+    "The Seneca passage is paraphrased, not quoted, and matches published translations of On Anger, Book Three, chapter 36.",
+    "The ushistory.org page for the speckled axe has a typing slip ('apeckled ax'); the story's 'speckled ax' matches the other editions."
+  ],
+  "history": [
+    {
+      "verdict": "released-unchecked",
+      "by": "launch",
+      "at": "2026-11-08T07:00:00Z",
+      "summary": "Published before the fact-checker existed. Waiting for its first check."
+    }
+  ]
 }

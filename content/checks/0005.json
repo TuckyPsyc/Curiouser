@@ -1,9 +1,71 @@
 {
   "issue": 5,
-  "verdict": "released-unchecked",
-  "by": "launch",
-  "at": "2026-11-08T07:00:00Z",
-  "summary": "Published before the fact-checker existed. Waiting for its first check.",
-  "changes": [],
-  "problems": []
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-12T07:53:18Z",
+  "summary": "Three small corrections. The quoted translation of Castiglione didn't match any published wording, so it now uses George Bull's; the Oxford English Dictionary's definition is longer than two words; and the recall question had Clever Hans's figures muddled (98 and 8 per cent, as No. 2 now says, not 89 and 6). Everything else checked out.",
+  "claims": {
+    "checked": 52,
+    "confirmed": 49,
+    "corrected": 3,
+    "removed": 0
+  },
+  "links": {
+    "checked": 7,
+    "working": 7,
+    "replaced": 0,
+    "removed": 0
+  },
+  "lookingGlass": {
+    "rating": "Contested",
+    "fair": true
+  },
+  "quiz": {
+    "sound": true
+  },
+  "changes": [
+    {
+      "where": "story, paragraph 2",
+      "before": "'a certain nonchalance, so as to conceal all art'",
+      "after": "'a certain nonchalance which conceals all artistry'",
+      "why": "No published translation has the words as quoted. Singleton's reads 'a certain sprezzatura, so as to conceal all art'; George Bull's modern Penguin translation (1967) reads 'a certain nonchalance which conceals all artistry'.",
+      "source": "https://www.laphamsquarterly.org/node/2280"
+    },
+    {
+      "where": "story, paragraph 4",
+      "before": "The Oxford English Dictionary now defines sprezzatura in two words: 'studied carelessness'.",
+      "after": "The Oxford English Dictionary's definition of sprezzatura includes the phrase 'studied carelessness'.",
+      "why": "The OED definition is longer than two words: 'ease of manner, studied carelessness; the appearance of acting or being done without effort'.",
+      "source": "https://listserv.linguistlist.org/pipermail/ads-l/2002-July/023847.html"
+    },
+    {
+      "where": "recall, question",
+      "before": "Clever Hans the horse answered correctly 89 per cent of the time when his questioner knew the answer.",
+      "after": "Clever Hans the horse answered correctly 98 per cent of the time when his questioner knew the answer.",
+      "why": "Pfungst reports 98% correct when the questioner knew the answer and 8% when they didn't; 89% and 6% are from the blinker test. No. 2 was corrected to these figures on its re-check.",
+      "source": "https://gutenberg.org/files/33936/33936-h/33936-h.htm"
+    },
+    {
+      "where": "recall, answer",
+      "before": "Only 6 per cent of the time.",
+      "after": "Only 8 per cent of the time.",
+      "why": "Same correction, so the recall matches Pfungst and No. 2.",
+      "source": "https://gutenberg.org/files/33936/33936-h/33936-h.htm"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The Opdycke translation in further reading is dated 1902 on its title page (London: Duckworth; New York: Scribner), though it was copyrighted in 1901 and some catalogues list it as 1901. I left 1902.",
+    "Ovid's words 'ars adeo latet arte sua' are genuine, but classicists debate whether the text is sound (Korenjak 2020, Panegyres 2022 in The Classical Quarterly). The story's gloss is a fair reading.",
+    "The Looking-Glass is right that replications of Kruger's poem and painting studies were mixed (Ziano and colleagues, 2023): the painting result replicated once, the poem result didn't.",
+    "Two links opened at a different address showing the same page: the Wikipedia article (via en.wikipedia.org/wiki/The_Courtier) and The Classical Quarterly note (via Cambridge's core-cms address; the cambridge.org address itself was refused to my tools)."
+  ],
+  "history": [
+    {
+      "verdict": "released-unchecked",
+      "by": "launch",
+      "at": "2026-11-08T07:00:00Z",
+      "summary": "Published before the fact-checker existed. Waiting for its first check."
+    }
+  ]
 }

@@ -1,9 +1,42 @@
 {
   "issue": 7,
-  "verdict": "released-unchecked",
-  "by": "launch",
-  "at": "2026-11-10T07:00:00Z",
-  "summary": "Published before the fact-checker existed. Waiting for its first check.",
+  "verdict": "pass",
+  "by": "fact-checker",
+  "at": "2026-11-12T07:53:18Z",
+  "summary": "Re-checked from scratch and everything stands up: the edict quotations match Dhammika's translation word for word, and the dates, names and finds all check out. Nothing needed changing.",
+  "claims": {
+    "checked": 59,
+    "confirmed": 59,
+    "corrected": 0,
+    "removed": 0
+  },
+  "links": {
+    "checked": 11,
+    "working": 11,
+    "replaced": 0,
+    "removed": 0
+  },
+  "lookingGlass": {
+    "rating": "Well supported",
+    "fair": true
+  },
+  "quiz": {
+    "sound": true
+  },
   "changes": [],
-  "problems": []
+  "problems": [],
+  "notes": [
+    "The story quotes about 60 words in total from S. Dhammika's translation, more than the usual 40-word limit, but the Buddhist Publication Society allows the text to be copied and republished in any medium, so this is fine.",
+    "Sources differ slightly on who first linked Piyadasi to Ashoka. LiveHistory India says George Turnour, working from Sri Lankan texts, reported it. Wikipedia says Prinsep made the link using Pali material Turnour sent him. The story's wording is supported.",
+    "The Wire interview link (m.thewire.in/article/books/...) is not the address search turned up. I opened The Wire's page under thewire.in/history/... and read the full interview in Janata Weekly's reprint, which credits The Wire. The story's own address may only work by redirect. The Wire page showed only its title, so I haven't counted that link as working, though the article is real and supports the story.",
+    "For the Thapar book I read the full text from the same Internet Archive item (in.ernet.dli.2015.126947) rather than the details page itself."
+  ],
+  "history": [
+    {
+      "verdict": "released-unchecked",
+      "by": "launch",
+      "at": "2026-11-10T07:00:00Z",
+      "summary": "Published before the fact-checker existed. Waiting for its first check."
+    }
+  ]
 }

@@ -41,7 +41,7 @@
       {
         "heading": "A Raman spectrometer on Mars",
         "body": [
-          "The most far-flung Raman instrument sits on the robotic arm of NASA's Perseverance rover on Mars. It is called SHERLOC, and it fires a deep-ultraviolet laser, at 248.6 nanometres, at Martian rock.",
+          "One of the most far-flung Raman instruments sits on the robotic arm of NASA's Perseverance rover on Mars. It is called SHERLOC, and it fires a deep-ultraviolet laser, at 248.6 nanometres, at Martian rock.",
           "The light that comes back includes a glow from organic molecules and Raman-scattered light from both organics and minerals. SHERLOC turns these into chemical maps of the rock's surface, paired with close-up images from a camera called WATSON. The aim is to work out the minerals and chemistry of Martian rock. It's the same fingerprint Raman and Krishnan saw with sunlight and a telescope, read on another planet."
         ]
       }
@@ -70,7 +70,7 @@
     "kind": "counter",
     "heading": "Moscow saw it a week earlier",
     "body": [
-      "Nobody doubts the effect. The credit is another matter. In Moscow, Grigory Landsberg and Leonid Mandelstam had been studying how light scatters in quartz since 1925. They observed the same shifted light on 21 February 1928, a week before Raman's date, and presented it at a colloquium that April.",
+      "Nobody doubts the effect. The credit is another matter. In Moscow, Grigory Landsberg and Leonid Mandelstam had been studying how light scatters in quartz since 1926. They observed the same shifted light on 21 February 1928, a week before Raman's date, and presented it at a colloquium that April.",
       "The Nobel committee chose Raman alone. Its reasoning was that the Moscow pair worked only on crystals and hadn't given an independent, complete interpretation, while Raman and Krishnan showed the effect was universal. That's a defensible call, but it was a judgement, not a foregone conclusion. In Russian the phenomenon is still called 'combinational scattering of light', and Krishnan, Raman's co-author, didn't share the prize either."
     ],
     "confidence": "Settled",
@@ -126,7 +126,7 @@
       "url": "https://science.thewire.in/society/history/cv-raman-colour-of-the-sea-ks-krishnan-raman-effect-experimental-physics-nobel-prize/"
     },
     {
-      "title": "On the Raman effect, Physics World",
+      "title": "My favourite Nobel prize: Raman scattering is a universal fingerprint, Physics World (2019)",
       "url": "https://physicsworld.com/?p=83361"
     },
     {
