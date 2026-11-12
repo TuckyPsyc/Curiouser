@@ -93,7 +93,7 @@ Keep twenty ideas at most; drop any untouched for eight weeks.
 `marketing/YYYY-MM-DD.md`, dated the day of the run. One phone screen: 150 words at most, no tables, in this order.
 
 - **The posts:** how many reported, the median, the state of the experiment. Or "No numbers yet."
-- **Seen this week:** the one thing worth knowing, with a link.
+- **Seen this week:** the one thing worth knowing, with a link and its grade (Shaky, Contested or Well supported). If it's Shaky, say why in a few words.
 - **Changed for the Producer:** one line, or "Nothing."
 - **One idea for you (N minutes):** what, why, how we'd know. Drafts go in `marketing/drafts/`.
 - **From you:** one request at most.
