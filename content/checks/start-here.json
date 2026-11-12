@@ -1,9 +1,41 @@
 {
   "issue": 0,
-  "verdict": "released-unchecked",
-  "by": "launch",
-  "at": "2026-11-09T07:00:00Z",
-  "summary": "Published before the fact-checker existed. Waiting for its first check.",
-  "changes": [],
-  "problems": []
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-12T06:23:00Z",
+  "summary": "Two small corrections: the manuscript's inscription reads 'in Memory of a Summer Day', not 'a Summer's Day', and Alice eats the Eat Me cake at the end of chapter one, not the start of chapter two. Everything else checked out.",
+  "claims": { "checked": 52, "confirmed": 50, "corrected": 2, "removed": 0 },
+  "links": { "checked": 7, "working": 7, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 3",
+      "before": "inscribed 'A Christmas Gift to a Dear Child in Memory of a Summer's Day'",
+      "after": "inscribed 'A Christmas Gift to a Dear Child in Memory of a Summer Day'",
+      "why": "The British Library's catalogue record and the transcription of the manuscript both give 'a Summer Day'. The British Library blog listed as a source has the slip.",
+      "source": "https://searcharchives.bl.uk/catalog/032-002102746"
+    },
+    {
+      "where": "rabbit hole, 'Burning with curiosity', paragraph 2",
+      "before": "At the start of chapter two, Alice eats a cake",
+      "after": "At the end of chapter one, Alice eats a cake",
+      "why": "Alice finds and eats the Eat Me cake at the close of chapter one; 'Curiouser and curiouser!' opens chapter two.",
+      "source": "https://gutenberg.org/files/28885/28885-h/28885-h.htm"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The 'cupboards and bookshelves' quotation follows the modernised Standard Ebooks spelling; the 1865 text prints 'book-shelves'. Left as is.",
+    "The British Library blog in the sources gives the inscription as 'a Summer's Day'. It still supports the boat trip, so I kept it.",
+    "Details about the app itself (the 7am reminder, the icon) aren't checkable against outside sources and weren't counted."
+  ],
+  "history": [
+    {
+      "verdict": "released-unchecked",
+      "by": "launch",
+      "at": "2026-11-09T07:00:00Z",
+      "summary": "Published before the fact-checker existed. Waiting for its first check."
+    }
+  ]
 }
