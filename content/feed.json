@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-11T04:57:18.587Z",
+  "updated": "2026-11-12T06:05:14.617Z",
   "issues": [
+    {
+      "id": 9,
+      "date": "2026-11-12",
+      "topic": "Psychology",
+      "title": "The Waiter Who Forgot the Bill",
+      "concept": "The Zeigarnik effect",
+      "teaser": "A Berlin waiter reportedly forgot a table’s order once the bill was settled. A Lithuanian student turned the puzzle into a famous effect.",
+      "readingMinutes": 3
+    },
     {
       "id": 8,
       "date": "2026-11-11",

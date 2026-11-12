@@ -9,7 +9,7 @@
   "story": [
     "The story goes that it began in a Berlin restaurant. Kurt Lewin, a psychologist at the University of Berlin, was out with a group, and they asked the waiter for the bill. In the version told by Donald MacKinnon, who was there, the waiter gave each of them exactly what they had ordered. About half an hour later, Lewin asked him to write it out again. The waiter protested that he no longer knew what they had ordered. While the bill was open, he seemed to hold every detail. Once it was settled, it was gone.",
     "One of those working with Lewin was Bluma Zeigarnik. She was born in 1901 in Prienai, in Lithuania, and grew up partly in Minsk. In 1922 she enrolled at the University of Berlin, where she was taught by the Gestalt psychologists. Between 1924 and 1926 she put the question to the test.",
-    "In her first experiment, 32 adults each worked through 22 small tasks: folding paper, drawing a vase, winding thread, multiplying, counting backwards. She let them finish half the tasks. The other half she stopped, choosing the moment when the person was most absorbed. Afterwards she asked each of them to list all the tasks they could remember. On average they recalled the interrupted tasks almost twice as well as the finished ones, and 26 of the 32 remembered the interrupted ones best. Children showed the effect even more strongly. The advantage shrank after a day.",
+    "In her first experiment, 32 adults each worked through 18 to 22 small tasks: folding paper, drawing a vase, winding thread, multiplying, counting backwards. She let them finish half the tasks. The other half she stopped, choosing the moment when the person was most absorbed. Afterwards she asked each of them to list all the tasks they could remember. On average they recalled the interrupted tasks almost twice as well as the finished ones, and 26 of the 32 remembered the interrupted ones best. Children showed the effect even more strongly. The advantage shrank after a day.",
     "She published the results in 1927, and the finding became known as the Zeigarnik effect: a task you have started but not finished stays active in the mind, and so is easier to remember than one you have completed. Her explanation came from Lewin. Starting a task creates a kind of tension, a quasi-need, and finishing it discharges that tension. Until then, the unfinished task keeps pulling at you.",
     "Zeigarnik's own life was far from settled. In 1931 she and her husband Albert moved to Moscow, where she worked with Lev Vygotsky. In 1933, when Lewin passed through Moscow, it was she who told him of Hitler's rise to Chancellor, which helped convince him to leave Germany. In 1940 Albert was arrested as a supposed German spy and sentenced to ten years. By 1953 she had lost her job, essentially because she was Jewish. She returned to run a laboratory in 1957, became a professor in 1965, and died in 1988.",
     "Her name now turns up wherever people talk about cliffhangers and nagging to-do lists. Whether unfinished tasks really stick in memory has proved harder to show than the waiter's story suggests."
@@ -35,7 +35,7 @@
         "heading": "The urge to go back",
         "body": [
           "Zeigarnik had a sister effect, found by a fellow student. Maria Ovsiankina was born in Chita, in Siberia, in 1898 and studied under Lewin in Berlin. For her doctorate, completed in 1928, she interrupted people's tasks, left them alone in a room, and watched whether they returned to what they had been doing. Almost always, they did. This tendency to resume an interrupted task is now called the Ovsiankina effect.",
-          "It has worn well. A 2025 meta-analysis by Riccardo Ghibellini and Beat Meier pooled the studies and found that interrupted tasks are resumed about 67% of the time, well above the 50% you would expect by chance. They caution that methods varied too much to treat the figure as exact. Ovsiankina later emigrated to the United States, worked with patients with schizophrenia, taught clinical psychology, and died in Berkeley in 1993, aged 95."
+          "It has worn well. A 2025 meta-analysis by Romain Ghibellini and Beat Meier pooled the studies and found that interrupted tasks are resumed about 67% of the time, well above the 50% you would expect by chance. They caution that methods varied too much to treat the figure as exact. Ovsiankina later emigrated to the United States, worked with patients with schizophrenia, taught clinical psychology, and died in Berkeley in 1993, aged 95."
         ]
       },
       {
@@ -60,7 +60,7 @@
       },
       {
         "title": "Interruption, recall and resumption: a meta-analysis of the Zeigarnik and Ovsiankina effects",
-        "author": "Riccardo Ghibellini and Beat Meier, Humanities and Social Sciences Communications (2025)",
+        "author": "Romain Ghibellini and Beat Meier, Humanities and Social Sciences Communications (2025)",
         "note": "Open access. The most thorough recent weighing of both effects.",
         "url": "https://doi.org/10.1057/s41599-025-05000-w"
       }
@@ -114,7 +114,7 @@
       "url": "https://www.gwern.net/doc/psychology/willpower/1927-zeigarnik.pdf"
     },
     {
-      "title": "Riccardo Ghibellini and Beat Meier, 'Interruption, recall and resumption: a meta-analysis of the Zeigarnik and Ovsiankina effects', Humanities and Social Sciences Communications 12 (2025)",
+      "title": "Romain Ghibellini and Beat Meier, 'Interruption, recall and resumption: a meta-analysis of the Zeigarnik and Ovsiankina effects', Humanities and Social Sciences Communications 12 (2025)",
       "url": "https://doi.org/10.1057/s41599-025-05000-w"
     },
     {

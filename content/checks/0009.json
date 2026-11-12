@@ -1,0 +1,47 @@
+{
+  "issue": 9,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-12T06:05:00Z",
+  "summary": "Two small corrections: the meta-analysis's first author is Romain Ghibellini, not Riccardo, and Zeigarnik's first experiment used 18 to 22 tasks per person, not exactly 22. Everything else checked out, including every quotation.",
+  "claims": { "checked": 58, "confirmed": 56, "corrected": 2, "removed": 0 },
+  "links": { "checked": 4, "working": 4, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Shaky", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "rabbit hole, 'The urge to go back', paragraph 2",
+      "before": "A 2025 meta-analysis by Riccardo Ghibellini and Beat Meier",
+      "after": "A 2025 meta-analysis by Romain Ghibellini and Beat Meier",
+      "why": "The first author's name is Romain Ghibellini (University of Bern).",
+      "source": "https://ideas.repec.org/a/pal/palcom/v12y2025i1d10.1057_s41599-025-05000-w.html"
+    },
+    {
+      "where": "rabbit hole, further reading, third item (author)",
+      "before": "Riccardo Ghibellini and Beat Meier, Humanities and Social Sciences Communications (2025)",
+      "after": "Romain Ghibellini and Beat Meier, Humanities and Social Sciences Communications (2025)",
+      "why": "Same author name correction.",
+      "source": "https://ideas.repec.org/a/pal/palcom/v12y2025i1d10.1057_s41599-025-05000-w.html"
+    },
+    {
+      "where": "sources, fourth item (title)",
+      "before": "Riccardo Ghibellini and Beat Meier, 'Interruption, recall and resumption",
+      "after": "Romain Ghibellini and Beat Meier, 'Interruption, recall and resumption",
+      "why": "Same author name correction.",
+      "source": "https://www.kog.psy.unibe.ch/e48276/e1785865/s41599-025-05000-w1_ger.pdf"
+    },
+    {
+      "where": "story, paragraph 3",
+      "before": "In her first experiment, 32 adults each worked through 22 small tasks",
+      "after": "In her first experiment, 32 adults each worked through 18 to 22 small tasks",
+      "why": "Zeigarnik's own paper says each subject was given 'from 18 to 22 tasks'. MacLeod's review rounds this to 22.",
+      "source": "https://www.Gwern.net/doc/psychology/willpower/1927-zeigarnik.pdf"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "Three links could not be opened directly because my tools were refused access to them: the Springer PDF of MacLeod (2020) and the two doi.org links. I read the same papers through other copies (MacLeod's lab copy at uwaterloo.ca and the University of Bern copy of the meta-analysis) and confirmed both DOIs are correct from independent records, but I have not seen those three links load. The PubMed page opened but showed no text to my tools; I confirmed the abstract, including the quoted sentence, from a library catalogue record.",
+    "The two waiter stories (Boring 1957, MacKinnon in Marrow 1969) differ, as the story says. MacLeod reports Lewin's 1933 Moscow visit and Zeigarnik telling him of Hitler; Andrey Zeigarnik's memoir confirms the visit but doesn't mention Hitler.",
+    "Ovsiankina's emigration year differs between sources (1931 or 1938); the story gives no year."
+  ]
+}
