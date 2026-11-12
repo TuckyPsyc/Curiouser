@@ -1,0 +1,129 @@
+{
+  "id": 9,
+  "date": "2026-11-12",
+  "topic": "Psychology",
+  "title": "The Waiter Who Forgot the Bill",
+  "concept": "The Zeigarnik effect",
+  "teaser": "A Berlin waiter reportedly forgot a table's order once the bill was settled. A Lithuanian student turned the puzzle into a famous effect.",
+  "readingMinutes": 3,
+  "story": [
+    "The story goes that it began in a Berlin restaurant. Kurt Lewin, a psychologist at the University of Berlin, was out with a group, and they asked the waiter for the bill. In the version told by Donald MacKinnon, who was there, the waiter gave each of them exactly what they had ordered. About half an hour later, Lewin asked him to write it out again. The waiter protested that he no longer knew what they had ordered. While the bill was open, he seemed to hold every detail. Once it was settled, it was gone.",
+    "One of those working with Lewin was Bluma Zeigarnik. She was born in 1901 in Prienai, in Lithuania, and grew up partly in Minsk. In 1922 she enrolled at the University of Berlin, where she was taught by the Gestalt psychologists. Between 1924 and 1926 she put the question to the test.",
+    "In her first experiment, 32 adults each worked through 22 small tasks: folding paper, drawing a vase, winding thread, multiplying, counting backwards. She let them finish half the tasks. The other half she stopped, choosing the moment when the person was most absorbed. Afterwards she asked each of them to list all the tasks they could remember. On average they recalled the interrupted tasks almost twice as well as the finished ones, and 26 of the 32 remembered the interrupted ones best. Children showed the effect even more strongly. The advantage shrank after a day.",
+    "She published the results in 1927, and the finding became known as the Zeigarnik effect: a task you have started but not finished stays active in the mind, and so is easier to remember than one you have completed. Her explanation came from Lewin. Starting a task creates a kind of tension, a quasi-need, and finishing it discharges that tension. Until then, the unfinished task keeps pulling at you.",
+    "Zeigarnik's own life was far from settled. In 1931 she and her husband Albert moved to Moscow, where she worked with Lev Vygotsky. In 1933, when Lewin passed through Moscow, it was she who told him of Hitler's rise to Chancellor, which helped convince him to leave Germany. In 1940 Albert was arrested as a supposed German spy and sentenced to ten years. By 1953 she had lost her job, essentially because she was Jewish. She returned to run a laboratory in 1957, became a professor in 1965, and died in 1988.",
+    "Her name now turns up wherever people talk about cliffhangers and nagging to-do lists. Whether unfinished tasks really stick in memory has proved harder to show than the waiter's story suggests."
+  ],
+  "takeaway": "The Zeigarnik effect: Bluma Zeigarnik found that people remembered tasks they were stopped from finishing better than ones they completed, as if an unfinished task keeps a tension alive in the mind.",
+  "recall": {
+    "question": "Sailing home in 1921, C. V. Raman refused to accept that the sea is blue only because it reflects the sky. What did he discover in Calcutta seven years later, and what is it called?",
+    "answer": "A tiny fraction of light scattered by molecules changes colour, trading energy with the molecules' vibrations, so it carries a fingerprint of the substance. It's the Raman effect.",
+    "fromIssue": 6
+  },
+  "rabbitHole": {
+    "title": "Loose ends",
+    "intro": "A waiter's lapse became a famous effect, a sister effect, and a modern trick for quietening a busy mind. Follow the unfinished business down.",
+    "levels": [
+      {
+        "heading": "Which waiter?",
+        "body": [
+          "The waiter is the best-known part of the story, but there are two versions of him. In the one told by the historian of psychology Edwin Boring in 1957, Lewin and friends were deep in conversation in a Berlin restaurant. After Lewin had paid, he asked the waiter how much he had been paid, and the waiter no longer knew. In MacKinnon's version, quoted in Alfred Marrow's 1969 biography of Lewin, it was the individual orders the waiter forgot. The psychologist Colin MacLeod sets the two side by side and doesn't try to settle which is right.",
+          "Zeigarnik herself was more careful than the legend. In later experiments she tested other explanations: that the shock of being stopped made a task memorable, or that people expected to be allowed back to it. Neither changed her results, and she rejected both in favour of Lewin's idea of lingering tension."
+        ]
+      },
+      {
+        "heading": "The urge to go back",
+        "body": [
+          "Zeigarnik had a sister effect, found by a fellow student. Maria Ovsiankina was born in Chita, in Siberia, in 1898 and studied under Lewin in Berlin. For her doctorate, completed in 1928, she interrupted people's tasks, left them alone in a room, and watched whether they returned to what they had been doing. Almost always, they did. This tendency to resume an interrupted task is now called the Ovsiankina effect.",
+          "It has worn well. A 2025 meta-analysis by Riccardo Ghibellini and Beat Meier pooled the studies and found that interrupted tasks are resumed about 67% of the time, well above the 50% you would expect by chance. They caution that methods varied too much to treat the figure as exact. Ovsiankina later emigrated to the United States, worked with patients with schizophrenia, taught clinical psychology, and died in Berkeley in 1993, aged 95."
+        ]
+      },
+      {
+        "heading": "Consider it done",
+        "body": [
+          "If unfinished goals tug at the mind, can you make them stop without finishing them? In 2011 the psychologists E. J. Masicampo and Roy Baumeister reported a set of experiments in the Journal of Personality and Social Psychology. Unfinished goals produced intrusive thoughts, made goal-related words come to mind more readily, and hurt performance on an unrelated task.",
+          "But when people made a specific plan for how they would reach the goal, those effects went away, even though the goal was still unmet. The benefit seemed to depend on how committed people were to their plan, and it didn't require them to feel any differently about the goal. In the authors' words, 'Once a plan is made, the drive to attain a goal is suspended.' It is a modern twist on Lewin's tension: the tension can be eased not only by finishing, but by committing to a plan."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Zeigarnik and von Restorff: The memory effects and the stories behind them",
+        "author": "Colin M. MacLeod, Memory & Cognition (2020)",
+        "note": "A lively account of Zeigarnik's life, her experiments and the long trouble replicating them.",
+        "url": "https://doi.org/10.3758/s13421-020-01033-5"
+      },
+      {
+        "title": "The Practical Theorist: The Life and Work of Kurt Lewin",
+        "author": "Alfred J. Marrow (1969)",
+        "note": "The standard biography of Lewin, including MacKinnon's account of the waiter."
+      },
+      {
+        "title": "Interruption, recall and resumption: a meta-analysis of the Zeigarnik and Ovsiankina effects",
+        "author": "Riccardo Ghibellini and Beat Meier, Humanities and Social Sciences Communications (2025)",
+        "note": "Open access. The most thorough recent weighing of both effects.",
+        "url": "https://doi.org/10.1057/s41599-025-05000-w"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "The effect that wouldn't stay put",
+    "body": [
+      "The memory advantage itself has a poor record. Replications were mixed from the start: Schlote failed to support it in 1930, and reviewers in the 1950s noted further failures. John Atkinson reported in 1953 that it appeared mainly in people with a high need for achievement. In 1968 another researcher, van Bergen, ran careful replications, found no effect, reported that less than half the studies meant to show it actually did, and called it a 'non-problem' to be discarded.",
+      "The 2025 meta-analysis by Ghibellini and Meier, covering 38 publications on recall, found people remembered interrupted and finished tasks about equally, and concluded that the Zeigarnik effect 'lacks universal validity'. MacLeod suggests it may be 'a provocative and appealing idea' that is hard to put back in the box once let out."
+    ],
+    "confidence": "Shaky",
+    "verdict": "Where that leaves you: don't rely on an interrupted task being easier to remember, but expect unfinished work to tug at you, and treat the waiter's story as a good question rather than a proven law."
+  },
+  "quiz": [
+    {
+      "question": "What did Bluma Zeigarnik find when she stopped people partway through half of their tasks?",
+      "options": [
+        "They recalled the interrupted tasks almost twice as well as the finished ones",
+        "They forgot the interrupted tasks almost entirely",
+        "They recalled finished and interrupted tasks equally well",
+        "They refused to carry on with the remaining tasks"
+      ],
+      "answer": 0,
+      "explain": "In her first experiment, 32 adults recalled interrupted tasks almost twice as well as finished ones, and 26 of them remembered the interrupted tasks best."
+    },
+    {
+      "question": "Which of these best fits the Zeigarnik effect as she described it?",
+      "options": [
+        "A waiter remembers every order while the bill is open, then forgets them once it's settled",
+        "A student remembers the first and last items on a list best",
+        "A shopper rates a product higher after paying a lot for it",
+        "A driver remembers a route better after driving it many times"
+      ],
+      "answer": 0,
+      "explain": "The unfinished task, an open bill, stays active in the mind. Once it's settled, Lewin's tension is discharged and the details go."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Colin M. MacLeod, 'Zeigarnik and von Restorff: The memory effects and the stories behind them', Memory & Cognition 48 (2020)",
+      "url": "https://link.springer.com/content/pdf/10.3758/s13421-020-01033-5.pdf"
+    },
+    {
+      "title": "Andrey V. Zeigarnik, 'Bluma Zeigarnik: A Memoir', Gestalt Theory 29 (2007)",
+      "url": "https://en.gestalttheory.net/uploads/pdf/GTH-Archive/2007Zeigarnik_Memoir.pdf"
+    },
+    {
+      "title": "Bluma Zeigarnik, 'On Finished and Unfinished Tasks' (translated extract of her 1927 paper in Psychologische Forschung)",
+      "url": "https://www.gwern.net/doc/psychology/willpower/1927-zeigarnik.pdf"
+    },
+    {
+      "title": "Riccardo Ghibellini and Beat Meier, 'Interruption, recall and resumption: a meta-analysis of the Zeigarnik and Ovsiankina effects', Humanities and Social Sciences Communications 12 (2025)",
+      "url": "https://doi.org/10.1057/s41599-025-05000-w"
+    },
+    {
+      "title": "E. J. Masicampo and Roy F. Baumeister, 'Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals', Journal of Personality and Social Psychology 101 (2011), PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21688924/"
+    },
+    {
+      "title": "Maria Ovsiankina, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Maria_Ovsiankina"
+    }
+  ]
+}
