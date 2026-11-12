@@ -9,7 +9,7 @@
   "story": [
     "In the early 1900s, crowds in Berlin gathered to watch a horse do sums. His owner, Wilhelm von Osten, was a mathematics teacher who had spent years schooling him. Ask Hans a question and he would tap out the answer with his hoof. He could, apparently, add, subtract, multiply and divide, work with fractions, tell the time and spell out words.",
     "In 1904 a panel of thirteen experts led by the psychologist Carl Stumpf examined Hans and found no sign of trickery. That wasn't surprising. Von Osten wasn't a showman; he sought no profit and sincerely believed he had taught his horse to think.",
-    "Stumpf passed the case to a psychologist named Oskar Pfungst, who ran a series of careful tests. The crucial one was simple: ask questions to which the questioner didn't know the answer. Hans fell apart. When the person asking knew the answer and Hans could see them, he was right 89 per cent of the time. When they didn't, he was right 6 per cent of the time. With blinkers on, he couldn't answer at all.",
+    "Stumpf passed the case to a psychologist named Oskar Pfungst, who ran a series of careful tests. The crucial one was simple: ask questions to which the questioner didn't know the answer. Hans fell apart. When the person asking knew the answer, he was right 98 per cent of the time. When they didn't, he was right 8 per cent of the time. With blinkers on, he was right 89 per cent of the time when he could still see the questioner, and 6 per cent when he couldn't.",
     "Hans wasn't counting. He was reading people. As a questioner bent forward to watch the hoof, Hans began to tap. When the count reached the right number, the questioner relaxed and lifted their head ever so slightly, and Hans stopped. Nobody was doing it on purpose: not von Osten, not the experts, not the crowd. Even Pfungst, once he knew exactly what to look for, had to make a conscious effort not to send the signals himself.",
     "Psychologists now call this the Clever Hans effect. Our expectations leak out in signals too small for us to notice, and those signals shape the very thing we're observing. It's why careful experiments are run 'blind', so that whoever takes the measurements doesn't know which result they're hoping for. Hans really was clever, just not at arithmetic."
   ],
@@ -85,7 +85,7 @@
         "Rewarding Hans only when he got an answer wrong"
       ],
       "answer": 0,
-      "explain": "When the questioner knew the answer, Hans was right 89 per cent of the time; when they didn't, 6 per cent. He was reading tiny movements of their head."
+      "explain": "When the questioner knew the answer, Hans was right 98 per cent of the time; when they didn't, 8 per cent. He was reading tiny movements of their head."
     },
     {
       "question": "Why are trials of new medicines run double-blind?",

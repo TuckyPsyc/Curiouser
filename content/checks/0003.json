@@ -1,9 +1,24 @@
 {
   "issue": 3,
-  "verdict": "released-unchecked",
-  "by": "launch",
-  "at": "2026-11-08T07:00:00Z",
-  "summary": "Published before the fact-checker existed. Waiting for its first check.",
+  "verdict": "pass",
+  "by": "fact-checker",
+  "at": "2026-11-12T07:22:00Z",
+  "summary": "Everything checked out: the Hemingway quotations are word for word, and the Chekhov, Carver and baby-shoes details match their sources. No changes.",
+  "claims": { "checked": 48, "confirmed": 48, "corrected": 0, "removed": 0 },
+  "links": { "checked": 7, "working": 7, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Contested", "fair": true },
+  "quiz": { "sound": true },
   "changes": [],
-  "problems": []
+  "problems": [],
+  "notes": [
+    "The earliest printed Hemingway version of the baby-shoes anecdote Quote Investigator found is a 1989 play, with a claimed oral source around 1974. The story's '1980s and 1990s' is fair."
+  ],
+  "history": [
+    {
+      "verdict": "released-unchecked",
+      "by": "launch",
+      "at": "2026-11-08T07:00:00Z",
+      "summary": "Published before the fact-checker existed. Waiting for its first check."
+    }
+  ]
 }

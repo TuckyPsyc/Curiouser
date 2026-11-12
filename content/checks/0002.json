@@ -1,9 +1,39 @@
 {
   "issue": 2,
-  "verdict": "released-unchecked",
-  "by": "launch",
-  "at": "2026-11-08T07:00:00Z",
-  "summary": "Published before the fact-checker existed. Waiting for its first check.",
-  "changes": [],
-  "problems": []
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-12T07:21:00Z",
+  "summary": "One correction, in two places: the story had mixed up two of Pfungst's tests. When the questioner knew the answer Hans was right 98 per cent of the time, against 8 per cent when they didn't; the 89 and 6 per cent figures come from the blinker test, and Hans did still answer with blinkers on. Everything else checked out.",
+  "claims": { "checked": 50, "confirmed": 48, "corrected": 2, "removed": 0 },
+  "links": { "checked": 5, "working": 5, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Settled", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 3",
+      "before": "When the person asking knew the answer and Hans could see them, he was right 89 per cent of the time. When they didn't, he was right 6 per cent of the time. With blinkers on, he couldn't answer at all.",
+      "after": "When the person asking knew the answer, he was right 98 per cent of the time. When they didn't, he was right 8 per cent of the time. With blinkers on, he was right 89 per cent of the time when he could still see the questioner, and 6 per cent when he couldn't.",
+      "why": "Pfungst reports 98% correct with knowledge (42 tests) and 8% without (49 tests). The 89% and 6% figures are from the blinker test: questioner seen (56 tests) versus not seen (35 tests).",
+      "source": "https://gutenberg.org/files/33936/33936-h/33936-h.htm"
+    },
+    {
+      "where": "quiz, question 1, explain",
+      "before": "When the questioner knew the answer, Hans was right 89 per cent of the time; when they didn't, 6 per cent.",
+      "after": "When the questioner knew the answer, Hans was right 98 per cent of the time; when they didn't, 8 per cent.",
+      "why": "Same correction, so the quiz agrees with the story and with Pfungst.",
+      "source": "https://gutenberg.org/files/33936/33936-h/33936-h.htm"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The Horse Journals source makes the same mix-up of the 89 and 6 per cent figures. It still supports the rest of what it's cited for, so I kept it."
+  ],
+  "history": [
+    {
+      "verdict": "released-unchecked",
+      "by": "launch",
+      "at": "2026-11-08T07:00:00Z",
+      "summary": "Published before the fact-checker existed. Waiting for its first check."
+    }
+  ]
 }
