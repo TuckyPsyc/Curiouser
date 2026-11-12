@@ -36,6 +36,13 @@ A typical story has 40 to 70 of these. Keep the list; you will count it at the e
 
 **4. Open every link** in `sources` and in the rabbit hole's `furtherReading`. For each one, ask two questions: does it load, and does it say what the story uses it for? A link that loads but doesn't support the claim is a problem, not a pass.
 
+**Opening links when you run unattended.** Nobody is there to approve a link you open straight from the story, so the request times out. To avoid that:
+
+- Before opening any link from the story, search for it first: the title, the author, the DOI, or the URL itself. Then open the link as it appears in the search results. A link found by searching opens without asking.
+- If the search returns a different address for the same page (for example `en.wikipedia.org` instead of a mirror, or a publisher's page instead of `doi.org`), open that one. If it shows the same content the story's link points to, count the story's link as checked.
+- For a `doi.org` link, it is enough to confirm from an independent record (a library catalogue, PubMed, RePEc, the publisher's page) that the DOI belongs to the paper the story names, and to read the paper itself from any reliable copy.
+- If a link still can't be opened or confirmed, don't count it as working. Say so in `notes` and in your report. If you can't confirm the link at all, and at least three sources would still remain without it, remove it and record the change. Otherwise, treat the check as unfinished and write no verdict.
+
 **5. Judge the Looking-Glass.**
 - Is the `kind` honest? `counter` needs a real objection that serious people hold. `none` is right when there isn't one. `myth` needs a popular claim that is actually wrong. A manufactured controversy is a serious problem.
 - Is the `confidence` rating fair once the other side is weighed? The guide asks for conservative ratings: `Settled` only for findings virtually no expert disputes.
