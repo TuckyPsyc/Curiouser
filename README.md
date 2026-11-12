@@ -30,8 +30,10 @@ On your phone, open **[the latest release](https://github.com/TuckyPsyc/curiouse
 | `marketing/` | The Marketing agent's weekly briefs, its notebook, the post results Carl reports, and `playbook.md`, which sets the Producer's style. |
 | `support/` | How Curiouser writes back to readers: the tone guide and the FAQ. |
 | `IDEAS.md` | The Developer's backlog, in order. |
+| `scripts/ask-carl.mjs` | How an agent puts a request on Carl's queue: an issue labelled `needs-carl`. |
+| the `status` branch | The status page, `status.md` and `status.json`, rewritten by the desk on every run for Fenton to read aloud. Never merged; nothing else uses it. |
 | `src/` | The Expo / React Native app. |
-| `.github/workflows/` | `update.yml` sends screen and feature changes to installed phones over the air; `android.yml` builds a new APK only when native-level files change. `desk.yml` keeps the editor's desk up to date, `release.yml` is Carl's override to publish a story, `video.yml` makes the daily video, and `checks.yml` tests every change. |
+| `.github/workflows/` | `update.yml` sends screen and feature changes to installed phones over the air; `android.yml` builds a new APK only when native-level files change. `desk.yml` keeps the editor's desk and the status page up to date, `release.yml` is Carl's override to publish a story, `video.yml` makes the daily video, and `checks.yml` tests every change. |
 
 Deliberate shortcuts and what to change before growing beyond friends are in [DECISIONS.md](DECISIONS.md).
 
@@ -42,6 +44,7 @@ npm install
 node scripts/build-feed.mjs   # validate stories, regenerate feed and bundled seed
 node scripts/test-gate.mjs    # prove an unchecked story can't reach readers
 node scripts/stats.mjs --no-save   # the week's numbers, as the Analyst sees them
+node scripts/ask-carl.mjs --from claude --title "…" --why "…" --minutes 2 --how "…" --rehearsal   # what a request for Carl would look like
 npx tsc --noEmit              # typecheck
 npx expo start                # run in Expo Go / a dev build
 ```

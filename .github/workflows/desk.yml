@@ -1,8 +1,15 @@
 name: Editor's desk
 
 # Keeps "The editor's desk" (a pinned issue) showing everything waiting for Carl,
-# and raises a ticket when a story is unchecked, held or missing. It only reads
-# the repository and writes to issues; it never changes a file.
+# ranked, with each agent's health, and raises a ticket when a story is
+# unchecked, held or missing. It assigns Carl to each new request agents raise
+# with scripts/ask-carl.mjs (label needs-carl), which is what notifies him.
+#
+# It also writes the status page Fenton reads aloud, status.md and status.json,
+# and force-pushes them to the `status` branch as one replaced commit. It never
+# changes a file on main. A push made with this workflow's token starts no
+# workflows, and every workflow that runs on a push lists its branches (main,
+# rehearsal), so the status branch starts nothing (DECISIONS.md, D-020).
 #
 # It runs whenever something on the desk changes, and four times between 05:35
 # and 06:50 UTC. scripts/desk.mjs works from UK time, so the 06:30 alarm for an
@@ -10,7 +17,8 @@ name: Editor's desk
 # summer. GitHub often starts scheduled runs late, hence several slots.
 #
 # Pushing to the `rehearsal` branch runs the same thing as a practice: tickets
-# are labelled "rehearsal" and nobody is notified.
+# are labelled "rehearsal", nobody is notified, and the status page goes to
+# `status-rehearsal`.
 on:
   push:
     branches: [main, rehearsal]
@@ -22,7 +30,11 @@ on:
       - 'support/status.json'
       - 'scripts/desk.mjs'
       - 'scripts/lib/**'
+      - 'IDEAS.md'
       - '.github/workflows/desk.yml'
+  # A request for Carl opened or closed: the job below runs only for needs-carl issues.
+  issues:
+    types: [opened, closed, reopened]
   # _target runs this file from main with main's code; the pull request's own code is never run.
   pull_request_target:
     types: [opened, reopened, closed, ready_for_review]
@@ -39,7 +51,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write   # only to push the status page to the `status` branch
   issues: write
   pull-requests: read
   actions: read
@@ -50,6 +62,7 @@ concurrency:
 
 jobs:
   desk:
+    if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'needs-carl')
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

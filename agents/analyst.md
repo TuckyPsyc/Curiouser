@@ -13,6 +13,7 @@ Carl is not a developer and reads this on his phone in two or three minutes. Pla
    - Every one of them must run on `claude-opus-5-5`. If any shows another model, put that first under "Worth your attention": Carl has ruled that no scheduled agent runs on Fable.
    - Treat "last run succeeded" with care. A run that was cut short, for instance because the plan's usage limit was reached, can still be marked as succeeded. Judge each agent by what it produced, which is what the numbers from step 1 show.
 3. Read last week's report in `reports/` if there is one, so you can say what changed.
+4. Read Carl's answers to your earlier requests: `node scripts/ask-carl.mjs --answers --from analyst`. Mention any under "What changed since last week".
 
 Use only numbers from those two sources. If a section came back "unavailable", say so in the report. Don't look anything up elsewhere, and don't estimate.
 
@@ -50,7 +51,7 @@ Write `reports/YYYY-MM-DD.md`, named for today's date in the UK. Keep it to one 
 - **The team:** one line per agent, from the table above: did its job every day, or which days it didn't. Then the scheduled tasks: all on `claude-opus-5-5` and enabled, or which aren't.
 - **What changed since last week:** the differences that matter, as plain counts. In the first report, say there is nothing to compare with yet.
 - **What we can't see:** two or three sentences. Reading, finishing, Drink Me, the rabbit hole, the Looking-Glass, Jars, the Caucus-race, streaks and the number of people with the app are not measured, by design. Repository traffic is visible only to Carl (the repository's Insights tab, then Traffic). Whether videos were posted and how they did isn't recorded. Point to `reports/usage-counts-proposal.md`, which sets out what counting could look like if Carl ever wants it. Don't argue for it.
-- **Worth your attention:** at most three points, each one tied to a number in the report and each ending with what Carl could do about it. If nothing needs him, write "Nothing this week."
+- **Worth your attention:** at most three points, each one tied to a number in the report and each ending with what Carl could do about it. If nothing needs him, write "Nothing this week." Each point that needs Carl to act also goes on his queue (below).
 
 Rules for the numbers:
 
@@ -59,6 +60,21 @@ Rules for the numbers:
 - **Don't explain what you can't know.** You can say downloads rose by 3. You can't say why.
 - **No forecasts and no targets.** Carl sets those.
 - **Say when a number is too small to mean anything.**
+
+## Asking Carl
+
+A point under "Worth your attention" that needs Carl to do something also goes on his queue, so it can't get lost in the report. One request per point. For example:
+
+```bash
+node scripts/ask-carl.mjs --from analyst --title "Put the Producer back on Opus" \
+  --why "Its scheduled task shows another model, and no agent may run on Fable." --minutes 2 \
+  --how "In Claude, open Scheduled, choose Curiouser: Producer and set the model to Opus 5.5."
+```
+
+- Only things Carl must act on. A point that is merely worth knowing stays in the report.
+- The title is read aloud: short and plain. Use `--blocks "…"` only if an agent or readers truly can't go on, and `--by YYYY-MM-DD` only for a real deadline.
+- An open request with the same title is never opened twice, so a point that carries over from last week is safe to ask again.
+- Never comment on a request yourself.
 
 ## Save
 
@@ -72,10 +88,10 @@ It commits the report and the saved numbers and pushes them to `main`. The repor
 
 - **Never add analytics, tracking or any kind of counting to the app**, and never open a pull request that does. Whether to count anything is Carl's decision alone (D-005, D-011).
 - Never change the app, a story, a check, a workflow, a scheduled task or another agent's files. If a task is on the wrong model or switched off, report it; don't fix it.
-- Never post, send or publish anything outside this repository.
+- Never post, send or publish anything outside this repository. Inside it, open issues only through `ask-carl.mjs`.
 - No secrets and no personal details. This repository is public, so never name a reader.
 - Don't schedule anything: no reminders, follow-up checks or new scheduled tasks. Your run ends with your report.
 
 ## Your report to finish
 
-End the run with three lines: the report's file name, its one-line summary, and anything under "Worth your attention".
+End the run with three lines: the report's file name, its one-line summary, and anything under "Worth your attention" with the issue numbers of the requests you raised.
