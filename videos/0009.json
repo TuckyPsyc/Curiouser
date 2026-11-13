@@ -1,0 +1,21 @@
+{
+  "issue": 9,
+  "title": "The Waiter Who Forgot the Bill",
+  "lines": [
+    { "text": "A Berlin waiter forgot his table's orders once they'd paid.", "art": "hatter" },
+    { "text": "The story goes that the psychologist Kurt Lewin was dining there.", "say": "The story goes that the psychologist Koort Leh-veen was dining there." },
+    { "text": "About half an hour later, Lewin asked him to write the bill out again.", "say": "About half an hour later, Leh-veen asked him to write the bill out again." },
+    { "text": "He no longer knew. While the bill was open, he seemed to hold every detail. Once it was settled, it was gone." },
+    { "text": "Bluma Zeigarnik, who worked with Lewin, put it to the test.", "say": "Bloo-mah Zay-gar-nik, who worked with Leh-veen, put it to the test.", "art": "drink-me" },
+    { "text": "Thirty-two adults worked through a run of small tasks." },
+    { "text": "She let them finish half, and stopped the rest when they were most absorbed.", "art": "kitten-and-wool" },
+    { "text": "They recalled the interrupted tasks almost twice as well as the finished ones." },
+    { "text": "She published in 1927, and it became known as the Zeigarnik effect.", "say": "She published in nineteen twenty-seven, and it became known as the Zay-gar-nik effect.", "art": "white-queen" },
+    { "text": "The idea: an unfinished task stays active in the mind." },
+    { "text": "It has proved harder to show than the waiter's story suggests.", "art": "cheshire-cat" },
+    { "text": "Her name now turns up wherever people talk about cliffhangers and nagging to-do lists." },
+    { "text": "Curiouser: get curiouser before breakfast." }
+  ],
+  "caption": "A waiter who forgot a paid bill led to the Zeigarnik effect, the idea that unfinished tasks stick in the mind. It has proved harder to show than the story suggests. A true story, fact-checked. Curiouser No. 9",
+  "hashtags": ["#curiouser", "#psychology", "#zeigarnikeffect", "#memory", "#todayilearned"]
+}
