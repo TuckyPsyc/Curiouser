@@ -1,0 +1,32 @@
+{
+  "issue": 10,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-13T05:51:00Z",
+  "summary": "Two small corrections: plants cross oceans more readily than animals, not less (which is why their lines are blurrier), and I cut the line saying cockatoos live on Lombok but not Bali, which is no longer true. Everything else checked out, including every quotation.",
+  "claims": { "checked": 71, "confirmed": 69, "corrected": 1, "removed": 1 },
+  "links": { "checked": 11, "working": 11, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "Through the Looking-Glass, paragraph 2",
+      "before": "Plants, which cross oceans less readily than animals, may draw blurrier lines still.",
+      "after": "Plants, which cross oceans more readily than animals, may draw blurrier lines still.",
+      "why": "The source says plants tend to disperse across oceans better than animals, and that is the reason their divisions may be less clear. The draft had it backwards.",
+      "source": "https://www.sciencenews.org/article/victorian-zoological-map-redrawn"
+    },
+    {
+      "where": "story, paragraph 5",
+      "before": "The line is still visible today. Cockatoos live on Lombok but not on Bali. Sulawesi",
+      "after": "The line is still visible today. Sulawesi",
+      "why": "Not true today: the yellow-crested cockatoo is probably extinct on Lombok, while a remnant population survives on Nusa Penida in Bali province. Wallace himself noted a few cockatoos in west Bali. A peripheral detail, cut cleanly.",
+      "source": "https://cites.org/sites/default/files/eng/cop/13/prop/E13-P11.pdf"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "Wallace's reply to Darwin about Earl survives only as quoted in later scholarship (Fichman 1977, via the ANU Press chapter); the letter itself has not been found. The wording matches that source.",
+    "The two doi.org links were confirmed against independent records (HKU Scholars Hub and the University of Amsterdam repository) rather than opened directly."
+  ]
+}

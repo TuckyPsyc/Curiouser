@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-12T06:05:14.617Z",
+  "updated": "2026-11-13T05:51:04.294Z",
   "issues": [
+    {
+      "id": 10,
+      "date": "2026-11-13",
+      "topic": "Nature",
+      "title": "The Cockatoos Across the Strait",
+      "concept": "Wallace’s Line",
+      "teaser": "In 1856 a young naturalist sailed from Bali to Lombok, a short hop, and found himself among the birds of a different continent.",
+      "readingMinutes": 3
+    },
     {
       "id": 9,
       "date": "2026-11-12",
