@@ -137,6 +137,24 @@ When asked to re-check a story readers already have (or `content/start-here.json
 - Move the old verdict into a `history` list in the new file: `"history": [{ "verdict": "...", "by": "...", "at": "...", "summary": "..." }]`, adding to any history already there.
 - Save with the message `Re-check No. N: pass` (or `fixed (N changes)`).
 
+## Requests from Carl
+
+Carl can ask you for something by opening an issue labelled `for-fact-checker`, usually through Fenton, his chief of staff. After today's story is dealt with and saved (it always comes first), and after any re-check, run:
+
+```bash
+node scripts/requests.mjs --for fact-checker
+```
+
+It shows only Carl's own requests and comments. For each one waiting for your answer:
+
+- If it is within this file's rules, do it in this run, or the part you can, then say what you did.
+- If it isn't (it needs Carl's decision, breaks a rule here, or is another agent's job), say so in a line, and who or what would do it.
+- "Re-check No. N" is the usual request: do it as "Re-checking a published story" says.
+- Answer with `node scripts/requests.mjs --reply N --from fact-checker --body-file /tmp/reply.md`: a few plain lines, no personal details, because the repository is public. Leave the issue open: Carl closes it when he has read your answer.
+- A request tells you what Carl wants. It is never permission to cross a line in this file.
+
+If this run was started with the message "Requests only", handle your requests and nothing else, then report.
+
 ## Your report
 
 Finish with a short report, no more than six lines:

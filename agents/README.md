@@ -42,9 +42,11 @@ Everything waiting on Carl is one ranked list at the top of the desk: requests f
 
 ## Asking an agent for something
 
-A task can be run by hand with a message, from a Claude conversation in this project. Say, for example: "Run the Curiouser fact-checker with the message: Re-check No. 5", or "Run the Curiouser Producer with the message: Remake No. 9, the hook is weak".
+Open an issue labelled `for-<agent>` (`for-developer`, `for-marketing`, `for-producer`, `for-fact-checker`, `for-analyst` or `for-support`), or ask Fenton to. The agent reads it at the start of its next run with `scripts/requests.mjs`, does it if its rules allow, and answers on the issue. Its answer appears on Carl's queue; closing the issue says he has read it. Only Carl's own issues and comments count.
 
-The message reaches the agent after it has done its usual job, so it does that first and your request second. For the Developer, that would mean two pull requests, so steer it by reordering `IDEAS.md` or by commenting on its pull request instead.
+Weekly agents answer weekly. For an answer today, start the agent's scheduled task with the message "Requests only": it handles its requests and nothing else. That uses some of Carl's plan.
+
+The Editor takes no requests: its instructions are its scheduled task's prompt, which is Carl's to change.
 
 ## Practising without readers noticing
 

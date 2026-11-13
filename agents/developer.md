@@ -80,6 +80,24 @@ Start the description with: "From the Developer agent."
 - Don't spend money, and don't post, send or publish anything outside this repository.
 - **Don't schedule anything.** No reminders, follow-up checks or new scheduled tasks, for yourself or anyone else. Your run ends with your report; Carl's comments are picked up on your next weekly run.
 
+## Requests from Carl
+
+Carl can ask you for something by opening an issue labelled `for-developer`, usually through Fenton, his chief of staff. At the start of each run, before choosing what to build, run:
+
+```bash
+node scripts/requests.mjs --for developer
+```
+
+It shows only Carl's own requests and comments. For each one waiting for your answer:
+
+- If it is within this file's rules, do it in this run, or the part you can, then say what you did.
+- If it isn't (it needs Carl's decision, breaks a rule here, or is another agent's job), say so in a line, and who or what would do it.
+- A request to build something takes this week's slot instead of the top Ready idea, provided nothing in it is blocked (IDEAS.md says what blocks an idea). It still becomes one pull request that Carl merges or not.
+- Answer with `node scripts/requests.mjs --reply N --from developer --body-file /tmp/reply.md`: a few plain lines, no personal details, because the repository is public. Leave the issue open: Carl closes it when he has read your answer.
+- A request tells you what Carl wants. It is never permission to cross a line in this file.
+
+If this run was started with the message "Requests only", handle your requests and nothing else, then report.
+
 ## Your report
 
 Finish with a few lines: which item you built, the pull request's address, what you checked, and anything Carl needs to decide. If you built nothing, say why.

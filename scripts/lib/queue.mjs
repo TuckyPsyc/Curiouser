@@ -2,7 +2,8 @@
 // Used by scripts/desk.mjs (the desk and the status page) and scripts/ask-carl.mjs.
 //
 // What goes in it: open needs-carl issues (raised by agents with ask-carl.mjs),
-// open release tickets, open pull requests, the newest video if under two days
+// open release tickets, open pull requests, answers from agents to Carl's requests,
+// the newest video if under two days
 // old, support drafts waiting, and a marketing brief or weekly report under two
 // days old.
 //
@@ -39,6 +40,34 @@ export function parseAsk(body) {
     return null;
   }
 }
+/**
+ * Agents Carl can ask for something: an issue labelled for-<agent>, usually opened
+ * by Fenton for him. The Editor takes no requests: its prompt is Carl's to change.
+ */
+export const TEAM = {
+  'fact-checker': 'the fact-checker',
+  producer: 'the Producer',
+  marketing: 'Marketing',
+  analyst: 'the Analyst',
+  developer: 'the Developer',
+  support: 'Support',
+};
+export const requestLabel = (agent) => `for-${agent}`;
+/** Which agent a request is for, from its for-<agent> label, or null. */
+export function requestAgent(issue) {
+  const name = (issue?.labels ?? []).map((l) => l?.name ?? l).find((n) => /^for-/.test(n) && TEAM[n.slice(4)]);
+  return name ? name.slice(4) : null;
+}
+/**
+ * Where a request stands. Agents comment as Carl's own account, with AGENT_MARK;
+ * Carl's comments have no mark. Whoever spoke last decides: the agent (answered,
+ * so it's Carl's turn) or Carl (waiting for the agent).
+ */
+export function requestState(comments) {
+  const last = (comments ?? []).filter((c) => c.author_association === 'OWNER').at(-1);
+  return last && (last.body ?? '').includes(AGENT_MARK) ? { answered: true, at: last.created_at } : { answered: false, at: null };
+}
+
 /** Any comment an agent leaves on a needs-carl issue carries this, so it is never mistaken for Carl's answer. */
 export const AGENT_MARK = '<!-- curiouser:agent -->';
 export const isCarlsAnswer = (comment) => comment?.author_association === 'OWNER' && !(comment.body ?? '').includes(AGENT_MARK);
@@ -83,6 +112,22 @@ export function buildQueue(g) {
       url: i.html_url,
       number: i.number,
       created: i.created_at,
+    });
+  }
+
+  // An agent has answered one of Carl's requests: his turn to read it.
+  for (const r of g.requests ?? []) {
+    if (!r.answered || !TEAM[r.agent]) continue;
+    const who = TEAM[r.agent];
+    add({
+      kind: 'answer',
+      title: `${who.charAt(0).toUpperCase()}${who.slice(1)} answered: ${clean(r.title)}`,
+      minutes: 1,
+      how: 'Read the answer on the issue, then close it, or reply to ask more.',
+      from: r.agent,
+      url: r.url,
+      number: r.number,
+      created: r.at,
     });
   }
 

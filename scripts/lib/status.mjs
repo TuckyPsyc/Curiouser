@@ -3,7 +3,7 @@
 // scripts/desk.mjs writes both each time the desk updates and pushes them to
 // the `status` branch.
 import { fmtDate, dueWords } from './dates.mjs';
-import { totalMinutes } from './queue.mjs';
+import { totalMinutes, TEAM } from './queue.mjs';
 
 export const STATUS_WORDS = 200;
 const words = (s) => s.split(/\s+/).filter(Boolean).length;
@@ -58,7 +58,16 @@ export function weekLine(w) {
   ].join('; ');
 }
 
-export function renderStatus({ uk, now, rehearsal, fenton, health, queue, today, week, deskUrl }) {
+/** Carl's requests the agents haven't answered yet: who has them, never what they say. */
+function teamLine(waiting) {
+  if (!waiting?.length) return null;
+  const by = {};
+  for (const r of waiting) by[r.agent] = (by[r.agent] ?? 0) + 1;
+  const who = Object.entries(by).map(([a, n]) => `${TEAM[a] ?? a}${n > 1 ? ` (${n})` : ''}`);
+  return `With the team: ${waiting.length === 1 ? '1 request' : `${waiting.length} requests`} waiting for an answer, from ${andList(who)}.`;
+}
+
+export function renderStatus({ uk, now, rehearsal, fenton, health, queue, today, week, waiting = [], deskUrl }) {
   const head = [
     '# Curiouser status',
     '',
@@ -69,6 +78,7 @@ export function renderStatus({ uk, now, rehearsal, fenton, health, queue, today,
     '',
     agentsLine(health),
     '',
+    ...(teamLine(waiting) ? [teamLine(waiting), ''] : []),
     `Today's story: ${plain(today)}`,
     '',
   ];
@@ -105,6 +115,7 @@ export function renderStatus({ uk, now, rehearsal, fenton, health, queue, today,
     today: plain(today),
     health,
     queue: { count: queue.length, minutes: total, items: queue },
+    requestsWaiting: waiting.map((r) => ({ number: r.number, agent: r.agent, title: r.title })),
     week,
     desk: deskUrl,
   };

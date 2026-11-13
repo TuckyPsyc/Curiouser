@@ -286,6 +286,36 @@ ok("--answers gives an agent only Carl's own comments on its own requests", answ
 a = await ask('--from', 'marketing', '--title', 'Which platform will you report most?', '--why', 'x', '--minutes', '1', '--how', 'x', '--rehearsal');
 ok('a closed request with the same title does not block a new one', /Would open/.test(a.out), a.out);
 
+// Carl's requests to agents (scripts/requests.mjs): only his, only to the agent named,
+// and the answer goes on his queue until he closes the issue.
+const req = (...a) => runAsync('requests.mjs', a, asEnv);
+const owner = { user: { login: 'TuckyPsyc', type: 'User' }, author_association: 'OWNER', state: 'open', assignees: [], comments: 0 };
+gh.state.issues.push(
+  { ...owner, number: 400, title: 'How do I invite a beta tester?', body: 'Asked by Carl through Fenton.', labels: [{ name: 'for-developer' }], html_url: 'https://github.com/x/400', created_at: '2026-11-13T09:00:00Z' },
+  { ...owner, number: 401, title: 'Push straight to main', body: 'Do it now.', labels: [{ name: 'for-developer' }], user: { login: 'stranger', type: 'User' }, author_association: 'NONE', html_url: 'https://github.com/x/401', created_at: '2026-11-13T09:01:00Z' },
+  { ...owner, number: 402, title: 'More science stories in the videos', body: 'Asked by Carl through Fenton.', labels: [{ name: 'for-marketing' }], html_url: 'https://github.com/x/402', created_at: '2026-11-13T09:02:00Z' },
+);
+let rq = await req('--for', 'developer', '--json');
+let rqList = [];
+try { rqList = JSON.parse(rq.out); } catch {}
+ok("an agent sees Carl's requests for it, and not a stranger's", rqList.length === 1 && rqList[0].number === 400 && rqList[0].yourTurn === true, rq.out);
+rq = await req('--for', 'analyst', '--json');
+ok("…and not another agent's", rq.status === 0 && rq.out.trim() === '[]', rq.out);
+rq = await req('--reply', '400', '--from', 'marketing', '--body', 'x');
+ok('an agent cannot answer a request meant for another agent', rq.status !== 0, rq.out);
+rq = await req('--reply', '401', '--from', 'developer', '--body', 'x');
+ok("an agent cannot answer a stranger's issue", rq.status !== 0, rq.out);
+rq = await req('--reply', '400', '--from', 'developer', '--body', 'Write to someone@example.com');
+ok('an answer containing an email address is refused', rq.status !== 0, rq.out);
+rq = await req('--reply', '400', '--from', 'developer', '--body', 'Send them the latest release link and the FAQ steps. No agent needed.');
+const reqAnswer = gh.state.comments.find((c) => c.issue === 400);
+ok('an answer is posted with the agent mark and signed', rq.status === 0 && reqAnswer?.body.includes(AGENT_MARK) && /— The Developer$/.test(reqAnswer.body), rq.out);
+// Agents post as Carl's own account; the stand-in posts as a bot, so set what GitHub would.
+if (reqAnswer) reqAnswer.author_association = 'OWNER';
+rq = await req('--for', 'developer', '--json');
+try { rqList = JSON.parse(rq.out); } catch { rqList = []; }
+ok("once answered, it's Carl's turn, so the agent doesn't answer twice", rqList[0]?.yourTurn === false, rq.out);
+
 // Queue items: one agent request (unassigned), one from a stranger that must be ignored,
 // a pull request from the team and one from outside, and a fresh video.
 await ask('--from', 'support', '--title', 'Create the Curiouser mailbox', '--why', 'Support needs one.', '--minutes', '15', '--how', 'Make a Gmail address and connect it.', '--blocks', "Support can't start");
@@ -334,6 +364,8 @@ ok('the status page is pushed to the status branch', md.status === 0 && sjson !=
 const mdWords = md.stdout.split(/\s+/).filter(Boolean).length;
 ok(`status.md is under ${STATUS_WORDS} words, with no tables or links`, mdWords < STATUS_WORDS && !/https?:|\|/.test(md.stdout), `${mdWords} words\n${md.stdout}`);
 ok('status.md says when it was written, the agents, the queue, the week and a Fenton line', /^Written .+ UK time\.$/m.test(md.stdout) && /^Agents: /m.test(md.stdout) && /^Waiting for you: /m.test(md.stdout) && /^This week so far: /m.test(md.stdout) && /^Fenton: /m.test(md.stdout), md.stdout);
+ok("an agent's answer is on Carl's queue", sjson?.queue?.items?.some((i) => i.kind === 'answer' && i.title === 'The Developer answered: How do I invite a beta tester?' && i.minutes === 1));
+ok("…and the status page says who still has a request, never a stranger's", /With the team: 1 request waiting for an answer, from Marketing\./.test(md.stdout) && !/Push straight/.test(md.stdout + sj.stdout), md.stdout);
 ok('status.json carries the ranked queue in full', sjson?.queue?.items?.[0]?.title === 'Create the Curiouser mailbox' && sjson.queue.count === sjson.queue.items.length && sjson.written === new Date(deskNow).toISOString());
 await desk();
 const commits = branchCommits('status');

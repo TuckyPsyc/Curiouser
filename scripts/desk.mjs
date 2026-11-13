@@ -27,7 +27,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { root, loadStories, londonNow, pad } from './lib/state.mjs';
 import { github, trusted } from './lib/github.mjs';
-import { buildQueue, totalMinutes } from './lib/queue.mjs';
+import { buildQueue, totalMinutes, TEAM, requestAgent, requestState, requestLabel } from './lib/queue.mjs';
 import { agentHealth, healthIcon } from './lib/health.mjs';
 import { fentonState, fentonLine } from './lib/fenton.mjs';
 import { renderStatus, plain } from './lib/status.mjs';
@@ -272,17 +272,31 @@ async function syncNeeds() {
   return open;
 }
 
+// Carl's requests to agents (issues labelled for-<agent>), and whether each has been answered.
+async function readRequests() {
+  const open = (await read(`/repos/${repo}/issues?state=open&per_page=100`)).filter(
+    (i) => !i.pull_request && trusted(i) && requestAgent(i) && i.labels.some((l) => l.name === 'rehearsal') === rehearsal,
+  );
+  const out = [];
+  for (const i of open) {
+    const comments = i.comments ? await read(`/repos/${repo}/issues/${i.number}/comments?per_page=100`) : [];
+    out.push({ number: i.number, title: i.title, url: i.html_url, agent: requestAgent(i), ...requestState(comments) });
+  }
+  return out;
+}
+
 async function gather(stories, uk) {
   const day = new Date(now.getTime() - 24 * 3600 * 1000);
   const monday = mondayOf(uk.date);
   // One call covers both the last day and the week so far.
   const since = new Date(Math.min(day.getTime(), Date.parse(`${monday}T00:00:00Z`) - 3600 * 1000)).toISOString();
-  const [pulls, recentPulls, failed, videos, needs] = await Promise.all([
+  const [pulls, recentPulls, failed, videos, needs, requests] = await Promise.all([
     quiet(() => read(`/repos/${repo}/pulls?state=open&per_page=30`), []),
     quiet(() => read(`/repos/${repo}/pulls?state=all&sort=created&direction=desc&per_page=30`), []),
     quiet(() => read(`/repos/${repo}/actions/runs?status=failure&created=${encodeURIComponent(`>${since}`)}&per_page=100`), { workflow_runs: [] }),
     quiet(() => read(`/repos/${repo}/releases/tags/${rehearsal ? 'videos-rehearsal' : 'videos'}`), null),
     quiet(() => syncNeeds(), []),
+    quiet(() => readRequests(), []),
   ]);
   const runs = failed.workflow_runs ?? [];
   const support = existsSync(join(root, 'support', 'status.json')) ? JSON.parse(readFileSync(join(root, 'support', 'status.json'), 'utf8')) : null;
@@ -314,6 +328,7 @@ async function gather(stories, uk) {
     madeThisWeek: mp4s.filter((a) => ukOf(a.updated_at).date >= monday).length,
     scripts: new Set(listFiles('videos', /^\d{4}\.json$/).map((f) => Number(f.slice(0, 4)))),
     needs,
+    requests,
     support,
     report: reports.at(-1) ?? null,
     reports: reports.map((f) => f.slice(0, 10)),
@@ -559,6 +574,7 @@ if (!dryRun) {
     ['release-ticket', 'B60205', 'A story that needs the editor-in-chief'],
     ['desk', '1D1D1B', "The editor's desk"],
     ['needs-carl', 'D93F0B', 'Waiting for Carl'],
+    ...Object.entries(TEAM).map(([agent, who]) => [requestLabel(agent), 'BFD4F2', `A request from Carl for ${who}`]),
     ...(rehearsal ? [['rehearsal', 'C5DEF5', 'A practice run. Nothing here is real.']] : []),
   ]) {
     await quiet(() => api('POST', `/repos/${repo}/labels`, { name, color, description }).catch((e) => { if (!/already_exists/.test(e.message)) throw e; }));
@@ -574,6 +590,7 @@ const queue = buildQueue({
   now,
   tickets,
   needs: g.needs,
+  requests: g.requests,
   pulls: g.pulls,
   video: g.video && { id: g.video.id, made: g.video.mp4.updated_at, url: g.video.mp4.browser_download_url, warnings: g.video.meta?.warnings },
   support: g.support,
@@ -611,6 +628,7 @@ const status = renderStatus({
   // Only the first sentence: the corrections are on the desk.
   today: today.split(/(?<!No)\.\s/)[0].replace(/\.?$/, '.'),
   week: weekNumbers(stories, uk, g),
+  waiting: (g.requests ?? []).filter((r) => !r.answered),
   deskUrl: deskNumber ? `${web}/issues/${deskNumber}` : `${web}/issues`,
 });
 if (dryRun) console.log(`\n----- desk -----\n${body}\n----- morning note -----\n${summary}\n> ${line} — Fenton\n----- status.md (${status.words} words) -----\n${status.md}`);

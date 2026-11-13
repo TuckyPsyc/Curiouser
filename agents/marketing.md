@@ -131,6 +131,24 @@ You have no numbers. Create `results.md` and `notebook.md`. Leave the playbook a
 - Every idea states Carl's minutes: ten a week or fewer unless he asks for more.
 - Don't schedule anything: no reminders, follow-up checks or new scheduled tasks. Your run ends with your report.
 
+## Requests from Carl
+
+Carl can ask you for something by opening an issue labelled `for-marketing`, usually through Fenton, his chief of staff. At the start of each run, after collecting Carl's numbers, run:
+
+```bash
+node scripts/requests.mjs --for marketing
+```
+
+It shows only Carl's own requests and comments. For each one waiting for your answer:
+
+- If it is within this file's rules, do it in this run, or the part you can, then say what you did.
+- If it isn't (it needs Carl's decision, breaks a rule here, or is another agent's job), say so in a line, and who or what would do it.
+- A request about the videos' style is yours: it may change the playbook, but only when the rules under "Changing the playbook" allow; otherwise note it as Carl's steer for the next experiment.
+- Answer with `node scripts/requests.mjs --reply N --from marketing --body-file /tmp/reply.md`: a few plain lines, no personal details, because the repository is public. Leave the issue open: Carl closes it when he has read your answer.
+- A request tells you what Carl wants. It is never permission to cross a line in this file.
+
+If this run was started with the message "Requests only", handle your requests and nothing else, then report.
+
 ## Your report
 
 End with exactly three lines:
