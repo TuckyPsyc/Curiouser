@@ -1,0 +1,138 @@
+{
+  "id": 10,
+  "date": "2026-11-13",
+  "topic": "Nature",
+  "title": "The Cockatoos Across the Strait",
+  "concept": "Wallace's Line",
+  "teaser": "In 1856 a young naturalist sailed from Bali to Lombok, a short hop, and found himself among the birds of a different continent.",
+  "readingMinutes": 3,
+  "story": [
+    "On 13 June 1856, after a twenty days' passage from Singapore, a ship anchored at Bileling, on the north coast of Bali. On board was Alfred Russel Wallace, an English naturalist and collector. He spent two days on Bali, then sailed for two days more to Ampanam, on the neighbouring island of Lombok. He stayed about three months.",
+    "What he found there puzzled him. In Bali he had seen barbets, fruit-thrushes and woodpeckers. In three months of collecting on Lombok he never saw one of them. Instead there were cockatoos, honeysuckers and brush-turkeys, Australian kinds of bird quite absent from the islands to the west. The two islands look alike, with similar soils and climate. Yet, as he later wrote, 'The strait is here fifteen miles wide, so that we may pass in two hours from one great division of the earth to another'. The two sides differed, he said, 'as essentially in their animal life as Europe does from America.'",
+    "Wallace spent eight years in the islands, from 1854 to 1862, and the pattern held. To the west, on Sumatra, Java, Borneo and Bali, the animals were Asian. To the east, on Celebes and the Moluccas, the difference from Asia was more striking still. In a paper read to the Linnean Society in London on 3 November 1859, he argued that the western islands belonged to the Indian region of birds and the eastern ones to the Australian, and that the narrow strait between Bali and Lombok marked the edge.",
+    "His explanation lay under the water. The sea between Java, Sumatra, Borneo and Asia is shallow, rarely more than forty fathoms deep by his account, so he reasoned that those islands had been joined to the mainland not long ago and shared its animals. To the east the sea is far deeper, which pointed to a long separation. In 1868 the biologist Thomas Henry Huxley gave the boundary the name it still carries: Wallace's Line. The idea is simple. Some of the sharpest borders in nature follow no coast or mountain range. They follow old gaps in the sea that animals could not cross, and so mark where two separate histories of life meet.",
+    "The line is still visible today. Cockatoos live on Lombok but not on Bali. Sulawesi, east of the line, has marsupials, while Borneo, to its west, has none. Australia has no native tigers, bears or rhinos.",
+    "It matters because a map of where animals live is also a record of where land and sea used to be. Read carefully, the living world is a history book."
+  ],
+  "takeaway": "Wallace's Line: the boundary Alfred Russel Wallace traced between Bali and Lombok, where Asian animals give way to Australian ones, because deep water kept two separate histories of life apart.",
+  "recall": {
+    "question": "Castiglione's courtiers at Urbino in 1507 described the perfect courtier. What quality did he say should run through everything the courtier does, and what is it called?",
+    "answer": "Doing difficult things with an ease that hides the effort behind them. It's sprezzatura.",
+    "fromIssue": 5
+  },
+  "rabbitHole": {
+    "title": "Lines in the water",
+    "intro": "Wallace's Line has a back story, a geology and a surprising modern twist. Take the ferry across.",
+    "levels": [
+      {
+        "heading": "Not the first to notice",
+        "body": [
+          "Wallace is remembered for the line, but he wasn't the first to link the islands' animals to the sea between them. Biologists had been drawing boundaries across the archipelago since the 1840s. In 1845 George Windsor Earl published a paper noting how narrowly some marsupials were spread, and divided the region into a 'Great Asiatic Bank' and a 'Great Australian Bank'. These are the shallow shelves now called Sunda and Sahul.",
+          "On 9 August 1859, before Wallace's paper was read, Charles Darwin wrote to ask him: 'Are you aware that Mr W. Earl published several years ago the view of distribution of animals in Malay Archipelago in relation to the depth of the sea between the islands?' Wallace answered defensively, suggesting that Earl's 'imperfect knowledge of the natural history of the various islands' had kept him from seeing the full result. The core insight had a forerunner."
+        ]
+      },
+      {
+        "heading": "When the sea went out",
+        "body": [
+          "Wallace guessed that the western islands had recently been joined to Asia. Later work bore him out. During ice ages so much water was locked up in ice sheets that the sea fell, and much of the shallow Sunda Shelf, where Java, Sumatra and Borneo sit, became dry land.",
+          "The biologist Harold Voris of the Field Museum in Chicago mapped these old coastlines in 2000. He drew shorelines for seas up to 120 metres below today's, traced great rivers that once ran across the exposed shelves, and estimated how much land lay dry 17,000 years ago and further back. Later maps by Voris and E. Sathiamurthy put the sea over the Sunda Shelf about 116 metres lower than today at the height of the last glaciation, around 21,000 years ago. But a shelf only helps an animal as far as its edge, and beyond it, as Wallace saw, the sea is far deeper."
+        ]
+      },
+      {
+        "heading": "Why the traffic ran one way",
+        "body": [
+          "From about 45 million years ago, the Australian plate drifted north towards Asia, and volcanic islands rose between them as stepping stones. Yet far more animal groups crossed from Asia into the Australian side than the other way.",
+          "A 2023 study in Science, led by Alexander Skeels and Loïc Pellissier at ETH Zurich, modelled about 20,000 species of birds, mammals, reptiles and amphibians against reconstructions of climate and plate movement over the past 30 million years. Plate tectonics alone didn't explain the imbalance. Climate did. The stepping-stone islands were hot and humid, much like the tropical Asia that Asian species came from. Australian animals had evolved in a cooler, increasingly dry continent and were poorly suited to them. So venomous snakes, thorny lizards, hopping mice and flying foxes reached Australia, while Australian animals mostly stayed put. 'The historical context is crucial for understanding the biodiversity distribution patterns observed today,' said Skeels."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Malay Archipelago",
+        "author": "Alfred Russel Wallace (1869)",
+        "note": "Wallace's own account of his eight years in the islands. Public domain and still a good read.",
+        "url": "https://www.gutenberg.org/files/2530/2530-h/2530-h.htm"
+      },
+      {
+        "title": "Wallace's line, Wallacea, and associated divides and areas: history of a tortuous tangle of ideas and labels",
+        "author": "Jason R. Ali and Lawrence R. Heaney, Biological Reviews (2021)",
+        "note": "Who drew which line, when, and how the labels got muddled.",
+        "url": "https://doi.org/10.1111/brv.12683"
+      },
+      {
+        "title": "Paleoenvironments shaped the exchange of terrestrial vertebrates across Wallace's Line",
+        "author": "Alexander Skeels and colleagues, Science (2023)",
+        "note": "The study behind the one-way traffic.",
+        "url": "https://doi.org/10.1126/science.adf7122"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "A line, or a blur?",
+    "body": [
+      "The faunal break is real, but a single sharp line oversimplifies it. Wallace himself saw Celebes (Sulawesi) and the Philippines as mixed. Others drew rival boundaries, among them Huxley's line and Lydekker's line. The islands in between came to be treated as a transition zone in their own right, Wallacea, a term introduced in 1924. A 2021 review by Jason Ali and Lawrence Heaney concluded that the terms rest on a weak, piecemeal consensus, often misquoted.",
+      "The answer also depends on which animals you count. A 2012 study in Science by B. G. Holt and colleagues, using 21,037 species, found that birds alone gave a boundary largely along Wallace's Line, but adding mammals and amphibians shifted it. Plants, which cross oceans less readily than animals, may draw blurrier lines still."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: trust the big picture of Asian animals to the west and Australian ones to the east, but think of Wallace's Line as the sharpest edge of a broad meeting zone rather than a wall."
+  },
+  "quiz": [
+    {
+      "question": "What did Wallace notice when he crossed from Bali to Lombok in 1856?",
+      "options": [
+        "Birds such as cockatoos and honeysuckers appeared, while Bali's barbets and woodpeckers vanished",
+        "Lombok had exactly the same birds as Bali",
+        "Lombok had tigers and rhinos that Bali lacked",
+        "Lombok had no birds at all because of its dry soil"
+      ],
+      "answer": 0,
+      "explain": "In three months on Lombok he never saw Bali's barbets, fruit-thrushes or woodpeckers, but found cockatoos, honeysuckers and brush-turkeys, birds of Australia and New Guinea."
+    },
+    {
+      "question": "Which best describes Wallace's Line?",
+      "options": [
+        "A boundary through the islands where mostly Asian animals give way to mostly Australian ones, following deep water rather than a coast or mountain range",
+        "A line of latitude where the climate suddenly turns from tropical to temperate",
+        "A border drawn by colonial powers to divide the islands between them",
+        "The edge of the area where volcanoes are found"
+      ],
+      "answer": 0,
+      "explain": "Wallace saw that shallow seas had once joined the western islands to Asia, while deep water to the east kept animals apart, so a fifteen-mile strait divides two histories of life."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Alfred Russel Wallace, 'On the Zoological Geography of the Malay Archipelago', read to the Linnean Society 3 November 1859, published 1860 (Wallace Online, ed. Charles H. Smith, Western Kentucky University)",
+      "url": "https://people.wku.edu/charles.smith/wallace/S053.htm"
+    },
+    {
+      "title": "Alfred Russel Wallace, The Malay Archipelago (1869), Chapters I and X, Project Gutenberg",
+      "url": "https://www.gutenberg.org/files/2530/2530-h/2530-h.htm"
+    },
+    {
+      "title": "Charles Darwin to A. R. Wallace, 9 August 1859, Darwin Correspondence Project",
+      "url": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-2480"
+    },
+    {
+      "title": "''Oceanic Negroes': British anthropology of Papuans, 1820–1869', chapter in Foreign Bodies: Oceania and the Science of Race 1750–1940 (ANU Press)",
+      "url": "https://press.anu.edu.au/downloads/press/p53561/mobile/ch03s03.html"
+    },
+    {
+      "title": "J. R. Ali and L. R. Heaney, 'Wallace's line, Wallacea, and associated divides and areas: history of a tortuous tangle of ideas and labels', Biological Reviews 96 (2021), HKU Scholars Hub record",
+      "url": "https://hub.hku.hk/handle/10722/299256"
+    },
+    {
+      "title": "ETH Zurich, 'Why there are no kangaroos in Bali (and no tigers in Australia)', 6 July 2023, on Skeels et al., Science 381 (2023)",
+      "url": "https://www.sciencedaily.com/releases/2023/07/230706152402.htm"
+    },
+    {
+      "title": "Field Museum, Pleistocene Sea Level Maps (H. K. Voris 2000; E. Sathiamurthy and H. K. Voris 2006)",
+      "url": "https://www.fieldmuseum.org/page/pleistocene-sea-level-maps"
+    },
+    {
+      "title": "Susan Milius, 'Victorian zoological map redrawn', Science News, 20 December 2012, on B. G. Holt et al., Science (published online December 2012)",
+      "url": "https://www.sciencenews.org/?p=9249"
+    }
+  ]
+}
