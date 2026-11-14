@@ -64,8 +64,8 @@ The 7:00 reminder always says "Today's story is waiting". On a morning when the 
 Show readers that a story was independently checked, with the date, and say so honestly when it was released unchecked. The verdicts are already in `content/checks/`.
 
 ### 12. Write to the editor
-**Status:** Blocked: needs a decision
-A link in the app that opens an email to Curiouser. **What's needed from Carl:** the address (see Support).
+**Status:** Ready
+A link in the app that opens an email to Curiouser. **Decided by Carl, 14 November 2026:** the address is curiousersupport@gmail.com, the Curiouser-only mailbox that Support reads.
 
 ## Done
 
