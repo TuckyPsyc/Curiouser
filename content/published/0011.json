@@ -1,0 +1,155 @@
+{
+  "id": 11,
+  "date": "2026-11-14",
+  "topic": "Literature",
+  "title": "The Man Who Sang an Odyssey",
+  "concept": "Oral-formulaic composition",
+  "teaser": "In 1935 a Bosnian singer who could not read dictated an epic as long as the Odyssey to an American scholar hunting for Homer.",
+  "readingMinutes": 3,
+  "story": [
+    "In July 1935, in Bijelo Polje, a small town in what is now Montenegro, an old singer named Avdo Međedović sat down with a team of visiting scholars. Avdo could not read or write. Over several days he dictated a single song, The Wedding of Smailagić Meho, the tale of a young Bosnian Muslim hero’s journey to Buda and his marriage. When it was finished it ran to more than 12,000 lines, about the length of Homer’s Odyssey.",
+    "Avdo had learned the story by listening to a friend read a printed version aloud, five or six times over. That printed text was about 2,160 lines long. Avdo’s version was more than five times as long and far richer in description. Albert Lord, one of the team, described an experiment. Another singer, Mumin Vlahovljak, sang a song Avdo had never heard, 2,294 lines long. Avdo then sang it himself, and his version ran to 6,313 lines.",
+    "The man who had come to listen was Milman Parry, a young American classicist at Harvard. His real subject was Homer. In Paris in the 1920s he had studied the stock phrases that run through the Iliad and the Odyssey: the wine-dark sea, swift-footed Achilles, grey-eyed Athena. He argued that they were chosen to fit the metre, not the moment. Homer’s ships are swift, as Parry put it, ‘even when drawn up on land.’ His teacher, the linguist Antoine Meillet, introduced him to Matija Murko, a scholar who had studied the epic singers of Yugoslavia and recorded some of them. If Homer’s poems came out of a tradition of singers, living singers might show how such a tradition worked. Parry went in the summer of 1933, and again from June 1934 to September 1935, helped by Lord and by Nikola Vujnović, himself a singer.",
+    "What they found has a name: oral-formulaic composition. A singer like Avdo does not recite a fixed text. He composes as he sings, building lines from a large stock of formulas, which Parry defined as ‘a group of words which is regularly employed under the same metrical conditions to express a given essential idea’, and from familiar set scenes, such as a hero arming. The story holds steady; the words change. Singers who said they sang a song exactly as they had learned it turned out, when recorded, to vary it. The team filled more than 3,500 aluminium discs. Parry died in December 1935, aged 33, from a gunshot in a Los Angeles hotel room that was judged an accident. Lord carried the work on and in 1960 published The Singer of Tales.",
+    "It matters because it changes what a poem can be. For most of human history, and in many places still, a great poem was not a fixed text but something made afresh each time it was sung, by a singer drawing on a tradition far older than himself."
+  ],
+  "takeaway": "Oral-formulaic composition: singers in an oral tradition don’t recite a memorised text but compose as they perform, building lines from a stock of ready-made phrases and familiar scenes, so every performance is new.",
+  "recall": {
+    "question": "Hemingway cut the real ending of ‘Out of Season’, in which the old fishing guide hanged himself. What was his theory, and what is it called?",
+    "answer": "You can leave out something you truly know and the reader will still feel it, as long as you know what you left out. It’s the iceberg theory.",
+    "fromIssue": 3
+  },
+  "rabbitHole": {
+    "title": "Pull up a stool by the singer",
+    "intro": "The theory began with counting adjectives in Homer and ended up reaching traditions across the world. Here is how it works, and where it went.",
+    "levels": [
+      {
+        "heading": "The arithmetic of epithets",
+        "body": [
+          "The popular picture of Homer is a lone genius, composing much as a modern writer might. Parry’s evidence pointed elsewhere. In 1923 Antoine Meillet had written that Homeric epic is ‘entirely composed of formulae handed down from poet to poet’. Parry set out to show it, as one later account puts it, ‘quasi-mathematically, statistically’. His wife Marian remembered him upstairs, ‘counting all these epithets’.",
+          "What he found was a system. Phrases such as ‘rosy-fingered dawn’ fit fixed slots in the Greek hexameter line, and phrases with the same rhythm can stand in for one another, so ‘swift-footed Achilles’ and ‘glancing-helmed Hector’ can fill the same place. An epithet’s job, Parry argued, was to fill a niche in the line as the singer sang, not to describe what was happening at that moment. That is why ships stay swift even on the beach. His thesis, L’Épithète traditionnelle dans Homère, was published in Paris in 1928."
+        ]
+      },
+      {
+        "heading": "How a guslar learns",
+        "body": [
+          "In The Singer of Tales, Lord described how a singer is made. First the young singer sits to one side while others sing, taking in the stories and the rhythm. Then he practises on his own, learning formulas through use, until he can sing a whole song before a critical audience. Over the years he adds songs and ornaments them, shaped by his listeners. A master, Lord wrote, can hear a song once and sing it straight back, telling the story in his own words.",
+          "Lord reckoned that the singers sang at roughly ten to twenty ten-syllable lines a minute. He also noticed that singers insisted they sang a song ‘word for word and line for line’ as they had learned it. The recordings showed otherwise. When one singer learned a song from another, the two versions told recognisably the same story but were not exactly alike. For the singer, Lord concluded, ‘word for word’ was simply an emphatic way of saying ‘like’."
+        ]
+      },
+      {
+        "heading": "Still singing",
+        "body": [
+          "The idea spread far beyond Bosnia. In 1953 Francis Magoun applied it to Old English poetry such as Beowulf. John Miles Foley, a leading scholar of oral tradition, counted applications to more than 150 different traditions. Scholars have used it on parts of the Quran, on early Japanese works and on the Olonkho epics of the Sakha people of Siberia.",
+          "Nor is it only history. In 2010 Harvard held a conference to mark fifty years of The Singer of Tales, and the Turkish minstrel-poet Âşık Şeref Taşlıova performed there. The book that grew out of it, published by the Milman Parry Collection in 2024, discusses epic singing in Albania and the use of the theory in China. It also points out something time has made clearer: Avdo’s greatest song began as a printed text read aloud, so the border between oral and written was never as sharp as it first looked. Families of the singers have since contacted the Collection, adding their own histories to its recordings."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Singer of Tales",
+        "author": "Albert B. Lord (1960; 2nd edition 2000)",
+        "note": "The classic account of how Bosnian singers composed, and what it means for Homer."
+      },
+      {
+        "title": "Oral Poetry: Its Nature, Significance and Social Context",
+        "author": "Ruth Finnegan (1977; revised edition, Open Book Publishers, 2025)",
+        "note": "A wide-ranging survey of oral poetry across the world, and a careful critique of the Parry-Lord model."
+      },
+      {
+        "title": "Singers and Tales in the Twenty-First Century",
+        "author": "David F. Elmer and Peter McMurray, eds. (Milman Parry Collection, 2024)",
+        "note": "Scholars revisit the Parry and Lord legacy, from Bosnia to Albania, Turkey and China.",
+        "url": "https://scholar.harvard.edu/sites/scholar.harvard.edu/files/dfelmer/files/elmer_and_mcmurray.pdf"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "A formula is not proof",
+    "body": [
+      "The strongest objection is not to what Parry and Lord saw in Bosnia but to how far it travels. In 1966 Larry Benson showed that Old English poems known to have been composed in writing, such as The Phoenix and the Meters of Boethius, were just as formulaic as other Old English verse. ‘Not only can literate poets write formulaic verse,’ he wrote, ‘they can write it pen in hand.’ A formulaic style alone cannot prove that a poem was composed aloud.",
+      "The anthropologist Ruth Finnegan added that composing in performance is only one way among several. Somali poets often finish a poem in private before performing it, and reciters learn it by heart. Gilbertese poets polish their verses over long periods. She argued that ‘a single model of the relation of composition to performance will not cover all cases.’"
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: trust the core finding that singers like Avdo compose as they perform, but be wary of anyone who claims that a formulaic style alone proves a poem, Homer’s included, was never written."
+  },
+  "quiz": [
+    {
+      "question": "How did Avdo Međedović first learn The Wedding of Smailagić Meho?",
+      "options": [
+        "By listening to a friend read a printed version aloud",
+        "By reading it himself in a songbook",
+        "Milman Parry taught it to him in Bijelo Polje",
+        "By copying it from his father’s manuscript"
+      ],
+      "answer": 0,
+      "explain": "Avdo couldn’t read. A friend read him a printed version of about 2,160 lines five or six times, and he turned it into a song of more than 12,000 lines."
+    },
+    {
+      "question": "Which best describes oral-formulaic composition?",
+      "options": [
+        "Composing while performing, from a stock of ready-made phrases and set scenes, so each performance differs",
+        "Memorising a fixed text and reciting it word for word",
+        "Writing a poem down first and then reading it aloud",
+        "Improvising freely with no traditional phrases at all"
+      ],
+      "answer": 0,
+      "explain": "Parry and Lord found that singers like Avdo build lines from formulas and familiar scenes as they sing, so the story stays the same while the words change."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Milman Parry Collection of Oral Literature, Harvard University, ‘The Milman Parry Collection, 1933–35’",
+      "url": "https://mpc.chs.harvard.edu/milman-parry-collection-1933-35"
+    },
+    {
+      "title": "Robert Kanigel, ‘Milman Parry: brief life of a Homeric scholar’, Harvard Magazine, September–October 2022",
+      "url": "https://www.harvardmagazine.com/2022/08/feature-vita-milman-parry"
+    },
+    {
+      "title": "John Miles Foley, ‘From Oral Performance to Paper-Text to Cyber-Edition’, Oral Tradition 20/2 (2005), 233–263",
+      "url": "https://journal.oraltradition.org/wp-content/uploads/files/articles/20ii/Foley.pdf"
+    },
+    {
+      "title": "David F. Elmer and Peter McMurray, eds., Singers and Tales in the Twenty-First Century (Milman Parry Collection, 2024), Introduction",
+      "url": "https://scholar.harvard.edu/sites/scholar.harvard.edu/files/dfelmer/files/elmer_and_mcmurray.pdf"
+    },
+    {
+      "title": "Ruth Finnegan, Oral Poetry (revised edition, Open Book Publishers, 2025), Chapter 3, ‘Composition’",
+      "url": "https://books.openbookpublishers.com/10.11647/obp.0428.03.pdf"
+    },
+    {
+      "title": "Alexandra Hennessey Olsen, ‘Oral-Formulaic Research in Old English Studies: II’, Oral Tradition 3/1–2 (1988), 138–190, on Larry D. Benson, PMLA 81 (1966)",
+      "url": "https://core.ac.uk/download/159354647.pdf"
+    },
+    {
+      "title": "Larry D. Benson, ‘The Literary Character of Anglo-Saxon Formulaic Poetry’, PMLA 81.5 (1966), 334–341, Cambridge Core",
+      "url": "https://core-prod.cambridgecore.org/core/journals/pmla/article/literary-character-of-anglosaxon-formulaic-poetry/2A233445B5B44668E48EF01BA05296A3"
+    },
+    {
+      "title": "Matthew Wills, ‘How Do We Know That Epic Poems Were Recited from Memory?’, JSTOR Daily, 28 February 2020",
+      "url": "https://daily.jstor.org/how-do-we-know-that-epic-poems-were-recited-from-memory/"
+    },
+    {
+      "title": "Kush R. Varshney, ‘An Annotated Reading of The Singer of Tales in the LLM Era’, arXiv:2502.05148 (2025), quoting Albert B. Lord",
+      "url": "https://arxiv.org/pdf/2502.05148"
+    },
+    {
+      "title": "Wikipedia, ‘Avdo Međedović’ (orientation; cites Lord, ‘Avdo Međedović, Guslar’, Journal of American Folklore 69, 1956)",
+      "url": "https://en.wikipedia.org/wiki/Avdo_Me%C4%91edovi%C4%87"
+    },
+    {
+      "title": "Wikipedia, ‘The Wedding of Smailagić Meho’ (orientation; Parry Collection text no. 6840, Bijelo Polje, July 1935)",
+      "url": "https://en.wikipedia.org/wiki/The_Wedding_of_Smailagi%C4%87_Meho"
+    },
+    {
+      "title": "Wikipedia, ‘Bosniak epic poetry’ (orientation; Lord’s Mumin Vlahovljak experiment)",
+      "url": "https://en.wikipedia.org/wiki/Bosniak_epic_poetry"
+    },
+    {
+      "title": "Wikipedia, ‘Milman Parry’ and ‘Oral-formulaic composition’ (orientation; Meillet 1923; Magoun 1953)",
+      "url": "https://en.wikipedia.org/wiki/Oral-formulaic_composition"
+    }
+  ]
+}

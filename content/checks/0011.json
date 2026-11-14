@@ -1,0 +1,18 @@
+{
+  "issue": 11,
+  "verdict": "pass",
+  "by": "fact-checker",
+  "at": "2026-11-14T05:59:00Z",
+  "summary": "Everything checked out, including every quotation and all 14 links. No changes needed.",
+  "claims": { "checked": 60, "confirmed": 60, "corrected": 0, "removed": 0 },
+  "links": { "checked": 14, "working": 14, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [],
+  "problems": [],
+  "notes": [
+    "Sources differ slightly on details the story rounds sensibly: Avdo's 1935 song is given as 12,311 or 12,323 lines (the story says 'more than 12,000'), and the end of the long field trip as August 1935 (Elmer and McMurray) or September 1935 (the Parry Collection's own page, which the story follows).",
+    "Avdo lived near Bijelo Polje in Montenegro; 'Bosnian' in the teaser refers to the Bosniak (Bosnian Muslim) epic tradition he sang in, as the Parry Collection and Lord describe it.",
+    "The figure of 'more than 150 different oral traditions' is Foley's, as quoted in the JSTOR Daily article."
+  ]
+}

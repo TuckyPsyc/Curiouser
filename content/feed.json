@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-13T05:51:04.294Z",
+  "updated": "2026-11-14T05:59:12.290Z",
   "issues": [
+    {
+      "id": 11,
+      "date": "2026-11-14",
+      "topic": "Literature",
+      "title": "The Man Who Sang an Odyssey",
+      "concept": "Oral-formulaic composition",
+      "teaser": "In 1935 a Bosnian singer who could not read dictated an epic as long as the Odyssey to an American scholar hunting for Homer.",
+      "readingMinutes": 3
+    },
     {
       "id": 10,
       "date": "2026-11-13",
