@@ -167,8 +167,8 @@ export default function Archive() {
           <View style={{ flex: 1 }}>
             <Text style={[styles.settingTitle, { color: p.ink }]}>The White Rabbit</Text>
             <Text style={[styles.settingNote, { color: p.muted }]}>
-              “Oh dear! Oh dear! I shall be late!” A nudge at {REMINDER_HOUR}:00 when Before
-              Breakfast is ready.
+              “Oh dear! Oh dear! I shall be late!” A nudge at {REMINDER_HOUR}:00, in time for
+              Before Breakfast.
             </Text>
           </View>
           <Switch
