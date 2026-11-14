@@ -55,10 +55,6 @@ A way to discuss the day's story. A discussion inside the app needs accounts and
 
 Found on 11 November 2026 while setting up the fact-checker and the desk. Lower priority unless Carl moves them up.
 
-### 10. A reminder that doesn't promise a story on a morning without one
-**Status:** Ready
-The 7:00 reminder always says "Today's story is waiting". On a morning when the story was held or unchecked, that isn't true (D-012). Reword it so it's true either way.
-
 ### 11. "Checked" on each story
 **Status:** Ready
 Show readers that a story was independently checked, with the date, and say so honestly when it was released unchecked. The verdicts are already in `content/checks/`.
@@ -69,4 +65,8 @@ A link in the app that opens an email to Curiouser. **What's needed from Carl:**
 
 ## Done
 
-Nothing yet. The Developer moves an item here in the pull request that builds it.
+The Developer moves an item here in the pull request that builds it.
+
+### 10. A reminder that doesn't promise a story on a morning without one
+**Status:** Done, 14 November 2026
+The 7:00 reminder always says "Today's story is waiting". On a morning when the story was held or unchecked, that isn't true (D-012). Reword it so it's true either way.

@@ -32,9 +32,12 @@ export async function getReminderPref(): Promise<boolean> {
 async function schedule(): Promise<void> {
   await Notifications.cancelAllScheduledNotificationsAsync();
   await Notifications.scheduleNotificationAsync({
+    // Worded to be true on any morning. The reminder is scheduled on the phone and
+    // can't know whether today's story was released; on a morning it was held or
+    // left unchecked, readers see the previous one (D-012).
     content: {
-      title: 'Before Breakfast is ready',
-      body: "Oh dear! Oh dear! Don't be late. Today's story is waiting, with a rabbit hole if you're hungry for more.",
+      title: 'Time for Before Breakfast',
+      body: "Oh dear! Oh dear! Don't be late. Come and see what's on the page this morning, with a rabbit hole if you're hungry for more.",
     },
     trigger: {
       type: Notifications.SchedulableTriggerInputTypes.DAILY,
