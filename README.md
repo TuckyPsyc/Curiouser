@@ -45,6 +45,7 @@ node scripts/build-feed.mjs   # validate stories, regenerate feed and bundled se
 node scripts/test-gate.mjs    # prove an unchecked story can't reach readers
 node scripts/stats.mjs --no-save   # the week's numbers, as the Analyst sees them
 node scripts/requests.mjs --for developer   # Carl's requests to an agent, as it sees them
+node scripts/clerk.mjs ledger.txt --dry-run  # what the clerk would do with Fenton's Ledger lines
 node scripts/ask-carl.mjs --from claude --title "…" --why "…" --minutes 2 --how "…" --rehearsal   # what a request for Carl would look like
 npx tsc --noEmit              # typecheck
 npx expo start                # run in Expo Go / a dev build

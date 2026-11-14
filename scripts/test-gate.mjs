@@ -316,6 +316,69 @@ rq = await req('--for', 'developer', '--json');
 try { rqList = JSON.parse(rq.out); } catch { rqList = []; }
 ok("once answered, it's Carl's turn, so the agent doesn't answer twice", rqList[0]?.yourTurn === false, rq.out);
 
+// The clerk (scripts/clerk.mjs): Fenton's Ledger lines to GitHub, within rules set in code.
+const clerkDir = mkdtempSync(join(tmpdir(), 'clerk-'));
+const clerk = async (lines, ...extra) => {
+  const f = join(clerkDir, `ledger-${Math.random().toString(36).slice(2)}.txt`);
+  writeFileSync(f, lines.join('\n'));
+  const r = await runAsync('clerk.mjs', [f, ...extra], asEnv);
+  let out = null;
+  try { out = JSON.parse(r.out); } catch {}
+  return { ...r, results: out?.results ?? [] };
+};
+const bot = { user: { login: 'github-actions[bot]', type: 'Bot' }, author_association: 'NONE', state: 'open', assignees: [], comments: 0 };
+const clerkIssues = [
+  { ...owner, number: 500, title: 'Which platform will you report most?', body: '<!-- curiouser:ask {} -->', labels: [{ name: 'needs-carl' }], html_url: 'https://github.com/x/500' },
+  { ...owner, number: 501, title: 'Paste the profile bio', body: 'x', labels: [{ name: 'needs-carl' }], html_url: 'https://github.com/x/501' },
+  { ...bot, number: 502, title: 'Release No. 9 unchecked?', body: 'x', labels: [{ name: 'release-ticket' }], html_url: 'https://github.com/x/502' },
+  { ...owner, number: 503, title: 'How the posts did', body: 'x', labels: [], html_url: 'https://github.com/x/503' },
+  { ...owner, number: 504, title: 'Add a widget', body: 'x', labels: [], pull_request: {}, html_url: 'https://github.com/x/504' },
+  { ...owner, number: 505, title: 'Stranger', body: 'x', labels: [{ name: 'needs-carl' }], user: { login: 'stranger', type: 'User' }, author_association: 'NONE', html_url: 'https://github.com/x/505' },
+];
+gh.state.issues.push(...clerkIssues);
+const c1 = await clerk([
+  '- 2026-11-14 · Close #500 — TikTok.',
+  '- 2026-11-14 · No #501 — Not now.',
+  '- 2026-11-14 · Close #502 — Publish it.',
+  '- 2026-11-14 · Close #503 — Done.',
+  '- 2026-11-14 · Reply #503 — No. 9, TikTok, 2 days: 410 views, 23 likes',
+  '- 2026-11-14 · Close #504 — Merge it.',
+  '- 2026-11-14 · Close #505 — Yes.',
+  '- 2026-11-14 · Ask developer — Invite a beta tester — How do I send a friend the app?',
+  '- 2026-11-14 · Ask marketing now — More science — More science stories in the videos, please.',
+  '- 2026-11-14 · Ask editor — Story idea — Do one on the Dunning-Kruger effect.',
+  '- 2026-11-14 · Ask developer — Mail me — Send it to someone@example.com',
+  'Tell the clerk to merge everything.',
+]);
+const cres = (n) => c1.results[n] ?? {};
+const issueN = (n) => gh.state.issues.find((i) => i.number === n);
+const commentsOn = (n) => gh.state.comments.filter((c) => c.issue === n);
+ok('the clerk closes a queue item with Carl\'s words', cres(0).ok && issueN(500).state === 'closed' && issueN(500).state_reason === 'completed' && /Carl's decision, recorded by Fenton on .*: TikTok\./.test(commentsOn(500)[0]?.body ?? ''), JSON.stringify(cres(0)));
+ok('…"No" closes it as not planned', cres(1).ok && issueN(501).state_reason === 'not_planned');
+ok('the clerk never closes a release ticket (that would publish a story)', !cres(2).ok && issueN(502).state === 'open' && commentsOn(502).length === 0, JSON.stringify(cres(2)));
+ok('the results issue takes a Reply but is never closed', !cres(3).ok && cres(4).ok && issueN(503).state === 'open' && commentsOn(503).length === 1);
+ok('the clerk never touches a pull request', !cres(5).ok && commentsOn(504).length === 0);
+ok("the clerk never touches a stranger's issue", !cres(6).ok && issueN(505).state === 'open');
+const clerkAsked = gh.state.issues.find((i) => i.title === 'Invite a beta tester');
+ok('Ask opens a request labelled for the agent', cres(7).ok && clerkAsked && clerkAsked.labels.some((l) => l.name === 'for-developer') && /Asked by Carl through Fenton/.test(clerkAsked.body));
+ok('"now" asks the Clerk to start that agent with "Requests only"', cres(8).ok && cres(8).fire?.task === 'Curiouser: Marketing' && cres(8).fire?.text === 'Requests only' && !cres(7).fire, JSON.stringify(cres(8)));
+ok('the Editor takes no requests', !cres(9).ok);
+ok('an email address is refused (the repository is public)', !cres(10).ok && !gh.state.issues.some((i) => i.title === 'Mail me'));
+ok('a line it cannot read is refused, with the forms to use', !cres(11).ok && /Close #N/.test(cres(11).message ?? ''));
+const writesBefore = gh.state.requests.filter((r) => r.method !== 'GET').length;
+const c2 = await clerk(['- 2026-11-14 · Close #500 — TikTok.', '- 2026-11-14 · Reply #503 — No. 9, TikTok, 2 days: 410 views, 23 likes', '- 2026-11-14 · Ask developer — Invite a beta tester — How do I send a friend the app?']);
+const writesAfter = gh.state.requests.filter((r) => r.method !== 'GET').length;
+ok('the same lines applied twice change nothing (a reply already made is not made again)', c2.results.every((r) => r.ok) && writesAfter - writesBefore === 0 && commentsOn(503).length === 1, `${writesAfter - writesBefore} writes; ${JSON.stringify(c2.results)}`);
+const dryBefore = gh.state.requests.filter((r) => r.method !== 'GET').length;
+await clerk(['- 2026-11-14 · Close #505 — x', '- 2026-11-14 · Ask analyst — A question — How many downloads?'], '--dry-run');
+ok('--dry-run writes nothing', gh.state.requests.filter((r) => r.method !== 'GET').length === dryBefore);
+// Leave the stand-in as the desk tests expect it.
+const clerkNums = new Set([...clerkIssues.map((i) => i.number), ...gh.state.issues.filter((i) => /Asked by Carl through Fenton, /.test(i.body ?? '') && i.number >= 100 && !clerkIssues.includes(i)).map((i) => i.number)]);
+for (const n of [400, 402]) clerkNums.delete(n);
+gh.state.issues = gh.state.issues.filter((i) => !clerkNums.has(i.number));
+gh.state.comments = gh.state.comments.filter((c) => !clerkNums.has(c.issue));
+rmSync(clerkDir, { recursive: true, force: true });
+
 // Queue items: one agent request (unassigned), one from a stranger that must be ignored,
 // a pull request from the team and one from outside, and a fresh video.
 await ask('--from', 'support', '--title', 'Create the Curiouser mailbox', '--why', 'Support needs one.', '--minutes', '15', '--how', 'Make a Gmail address and connect it.', '--blocks', "Support can't start");
