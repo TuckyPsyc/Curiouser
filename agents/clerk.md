@@ -19,6 +19,8 @@ The ledger's address is in the message that started this run. Its tab has a shor
    - delete its paragraph: `{"op":"delete","target":{"kind":"blocks","ids":["<paragraph id>"]},"ifHash":"<its h>","ifRev":<the rev from step 1>}`
    - insert a paragraph directly under the Done heading: `{"op":"insert","target":{"kind":"blocks","ids":["<Done heading id>"]},"side":"after","source":{"from":{"kind":"inline","content":"<the line> → <the message>"},"as":"text"}}`. Start the message with "Not done: " when `ok` is false. Add "Started the Producer." (or whichever agent) when step 4 started a run, or "Couldn't start it." when it didn't.
 
+   One insert op for each result, with no line breaks inside its content, so every result is its own paragraph. Only the first insert targets the Done heading; the tool refuses two inserts on the same anchor. Each later insert targets the one before it, written `"ids":["$n"]`, where n is that insert's position in the ops list counting from 1. So with one delete per line first and then the inserts, results keep the order of the lines.
+
    The call is `update( ref = {"object":"node","id":"<body id>"}, engine = "prose", container = {"kind":"project","id":"<ledger id>"}, payload = {"ops":[…]} )`.
 
    If it's refused with `guard_mismatch`, Fenton changed a line while you worked. Read the doc again and write back only the lines that still stand as they were.
