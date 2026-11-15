@@ -1,27 +1,37 @@
 # Marketing notebook
 
 ## Studied
-- 12 Nov 2026. Question: how do small, faceless, narrated accounts earn their first thousand followers? Honest answer: little first-hand evidence found; most search results were tool vendors selling "faceless" kits (discounted).
-  - Comparable/creator: Kapwing's @InTheNow, faceless AI-voice Shorts, 1k subs in 157 days. https://www.kapwing.com/resources/we-grew-a-faceless-youtube-channel-to-1000-subscribers/ (Jan 2025; vendor; over a year old).
-  - Unrelated field (museums and archives): MERL "absolute unit", report https://merl.reading.ac.uk/wp-content/uploads/sites/20/2018/05/Absolute-Unit-report.pdf (2018; first breakout of a large account). Also Hyperallergic on small museums (2021) and Museums Association, Aug 2026 (Story Museum: video beats stills). Next field in rotation: puzzles and daily games.
+- 15 Nov 2026. Question: what makes people come back to, and pass on, a numbered daily thing? (No numbers yet, so the weakest visible step is follow/return.)
+  - Unrelated field (puzzles and daily games): Wordle share grid, Spinoff 13 Jan 2022 https://thespinoff.co.nz/business/13-01-2022/those-coloured-boxes-on-twitter-are-new-zealands-fault (over a year old, discounted). Waffle, mobilegamer.biz 29 May 2025 https://mobilegamer.biz/daily-word-game-studio-waffle-is-the-latest-small-dev-to-find-a-big-audience. Thinky Dailies season 1, 29 Jan 2026 https://thinkygames.com/news/thank-you-for-playing-thinky-dailies-season-1/ (no figures). The Daily Spell devlog https://itch.io/devlog/1135541/thinkycon-thoughts-and-the-development-of-the-daily-spell.amp (no figures, undated). Next field: film trailers.
+  - Comparable: Now I Know (fact-a-day email), newsletter-crew 8 Jun 2021 (over a year old; nothing on forwarding). Search results for microlearning on TikTok were all vendors.
+  - Creator (Science, topic 0): found no small faceless science account with visible figures; Primal Space (large; first breakout), NetInfluencer 19 Nov 2025. Next topic: History.
+- 12 Nov 2026. Faceless accounts' first thousand followers: Kapwing @InTheNow (Jan 2025, vendor); MERL "absolute unit" (2018). Museums field done.
 
 ## Patterns
-- A narrow subject with one repeated title pattern, worded as the question people search, kept drawing views after the post day. Kapwing @InTheNow, Jan 2025. Shaky.
-- A faceless account needs to say plainly what a follow gets you; a "subscribe" ask mattered more without a face. Kapwing @InTheNow, Jan 2025. Shaky.
-- Unchecked AI scripts drew viewer complaints about invented facts. Kapwing @InTheNow, Jan 2025. Shaky. (Our fact-check is a visible difference.)
-- An old, plain archive picture plus one dry line in today's idiom stopped people; the gap between the two did the work, and the follow-ups kept the voice. MERL, 2018 (107,308 likes, 30,687 retweets, 22k+ new followers, per its own report). Shaky.
+- The thing shared shows that you took part and how you did, but hides the answer, so the receiver has to go and do it. Wordle grid, Spinoff Jan 2022. Shaky (one case, old).
+- A first breakout came from posting the work itself to a forum already keen on the subject; paid ads later did little. Waffle (Reddit, May 2025), Primal Space (Reddit, Nov 2025 interview). Shaky (two cases, own figures).
+- A running story across daily pieces gives people something to talk about between days. Thinky Dailies, The Daily Spell, 2026. Shaky (makers' words, no figures).
+- A narrow subject with one repeated title pattern, worded as the question people search, kept drawing views. Kapwing @InTheNow, Jan 2025. Shaky.
+- A faceless account needs to say plainly what a follow gets you. Kapwing @InTheNow, Jan 2025. Shaky.
+- Unchecked AI scripts drew complaints about invented facts. Kapwing, Jan 2025. Shaky.
+- An old plain archive picture plus one dry line in today's idiom stopped people. MERL, 2018. Shaky.
 
 ## Ideas (ranked)
-1. Profile bio. Carl, 5 min once. Draft: drafts/profile-bio.md. Know by: follows per profile view (TikTok analytics), week before vs two weeks after, once views pass 100. [briefed 12 Nov]
-2. Next Producer experiment: caption's first sentence as the question a stranger would search ("Why did Hanoi end up farming rats?") vs statement. Producer, 0 min. Know by: views at 2+ days, 6 posts per arm. Waits for the hook experiment to close.
-3. Pinned comment per post: the source and the fact-checker's verdict in one line, drafted by the Producer (needs Producer file change: Carl/Developer). Carl 1 min/post, ~7/week. Know by: comments that question a fact or say "source?"; shares. Medium risk: none to trust.
-4. Weekly still: one Tenniel engraving, one dry line, the week's best idea (MERL transplant). Carl 3 min/week. Know by: shares and saves vs videos' median, 4 weeks. Producer can't make stills; draft by us.
-5. Serial sign-off: name tomorrow's story in the last line. Carl's call (sign-off). Risk medium: tomorrow's story may be held by the fact-checker, so a promise could break. Parked.
-6. Wild card: a Sunday video of the Caucus-race questions. Developer's backlog. Risk: quiz bait tone. Parked.
+1. Profile bio. Carl, 5 min once (#17, unanswered). Draft: drafts/profile-bio.md. Know by: follows per profile view, week before vs two after, once views pass 100. [briefed 12 Nov]
+2. Reddit first post. Carl, 10 min once, then 5 min/week for three weeks. Draft: drafts/reddit-first-post.md. Know by: upvotes/comments vs the same video's TikTok views at 2 days, three posts. Risk medium: self-promotion norms; only where rules allow own videos. [briefed 15 Nov]
+3. Next Producer experiment, candidate A: caption ends "Tomorrow: <topic>". Topic is fixed by rotation, so no promise can break (fixes the old serial sign-off risk). Producer, 0 min. Know by: follows per post, 6 posts per arm. Waits for hook experiment.
+4. Next Producer experiment, candidate B: caption's first sentence as the question a stranger would search vs statement. Producer, 0 min. Views at 2+ days, 6 per arm. Waits.
+5. Caucus-race share text: "Caucus-race, week N: 4/5" with squares, no answers (Wordle transplant). Developer's backlog, Carl 1 min to approve. Know by: public posts carrying the text, 4 weeks after release. Low risk: no tracking.
+6. Pinned comment per post: source and fact-check verdict in one line. Carl 1 min/post. Know by: "source?" comments, shares. Needs Producer file change.
+7. Weekly still: one Tenniel engraving, one dry line (MERL transplant). Carl 3 min/week. Know by: shares and saves vs video median, 4 weeks.
+8. Invert: everyone hides sources; name the main source in the caption's last line. Producer, 0 min. Candidate experiment after 3 and 4.
+9. Wild card: a seven-day arc, one figure met across a week's topics, like a Thinky Dailies season. Editor's job, Carl's call. Risk: bends the rotation and the one-story rule. Parked.
+10. Wild card: Sunday video of the Caucus-race questions. Developer's backlog. Risk: quiz-bait tone. Parked.
 
 ## Experiments
-- Hook form (scene for odd numbers, contradiction for even). Started with the playbook, 12 Nov 2026. 0 reported posts.
-- Baseline: No. 1's script (written before the playbook) opens with the contradiction form though odd ("Hanoi once paid for rat tails. People started farming rats."), its caption has no "A true story, fact-checked." or "Curiouser No. 1", and its hashtags include #truestory and #learnontiktok, not #todayilearned. Record No. 1 as "pre-playbook", outside both arms. Style: plain, short sentences, 6 pictures, idea named in the last third, moral-ish last line ("Reward a number…").
+- Hook form (scene for odd numbers, contradiction for even). Started 12 Nov 2026. 0 reported posts.
+  - Scripts so far: No. 9 (odd) "A Berlin waiter forgot his table's orders once they'd paid." (where and what, no when: the story itself is undated, so not a misread). No. 10 (even) "Two islands two hours apart had different continents' birds." No. 11 (odd) "In 1935, an illiterate singer dictated an Odyssey-length epic." All within ten words; openers not repeated; captions and hashtags follow rules 8 and 9.
+- Baseline: No. 1 is "pre-playbook", outside both arms (contradiction form, old caption and hashtags).
 
 ## Carl's steers
-(none yet, issue #8 empty on 12 Nov)
+- 15 Nov: none. #8, #11 (platform), #12 (assumptions), #13 (account names), #17 (bio) open, no comments. No for-marketing requests.
