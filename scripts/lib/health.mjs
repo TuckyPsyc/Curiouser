@@ -8,6 +8,7 @@ export const STORY_BY = 5 * 60 + 30; // the Editor runs at 04:47
 export const VERDICT_BY = 6 * 60 + 30; // the fact-checker runs at 05:40
 export const VIDEO_BY = 6 * 60 + 45; // the Producer runs at 06:07; GitHub renders in about five minutes
 const PRODUCER_RUNS = 6 * 60 + 7;
+export const SUPPORT_BY = 6 * 60 + 45; // Support runs at 06:15
 // The weekly agents: which day, when their work is due, and the first week it was due.
 const WEEKLY = {
   developer: { name: 'Developer', day: 6, starts: 7 * 60 + 10, by: 9 * 60 + 30, first: '2026-11-14' },
@@ -27,6 +28,7 @@ const verdictWords = { pass: 'passed', fixed: 'corrected and released', held: 'h
  * @param h.pulls     recent pull requests, open or closed
  * @param h.ready     IDEAS.md items marked Ready that don't already have an open pull request
  * @param h.failures  workflow runs that failed in the last 24 hours
+ * @param h.support   support/status.json ({ waiting, checked }), or null until Support is switched on
  */
 export function agentHealth(h) {
   const { uk, stories } = h;
@@ -63,6 +65,18 @@ export function agentHealth(h) {
   else if (uk.minutes < VIDEO_BY) notDue('Producer', `the video of No. ${y.id} is due by ${clockOf(VIDEO_BY)}.`);
   else if (!h.scripts.has(y.id)) fail('Producer', `no script for No. ${y.id}.`);
   else fail('Producer', `No. ${y.id} has a script but no finished video.`);
+
+  // Support: once switched on, it checks the mailbox daily at 06:15 and saves the time
+  // it checked in support/status.json, even when nothing is waiting.
+  const s = h.support;
+  if (!s?.checked) notDue('Support', 'not switched on.');
+  else {
+    const t = ukOf(s.checked);
+    const waiting = s.waiting ? `${s.waiting} ${s.waiting === 1 ? 'reply' : 'replies'} waiting in Drafts.` : 'nothing waiting.';
+    if (t.date === uk.date) ok('Support', `mailbox checked at ${t.clock}; ${waiting}`);
+    else if (uk.minutes < SUPPORT_BY) notDue('Support', `the mailbox check is due by ${clockOf(SUPPORT_BY)}.`);
+    else fail('Support', `mailbox not checked today; last checked ${fmtDate(t.date)} at ${t.clock}.`);
+  }
 
   // The weekly agents.
   const weekly = (key, done, missing) => {

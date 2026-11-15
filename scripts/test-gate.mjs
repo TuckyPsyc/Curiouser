@@ -485,6 +485,14 @@ h = H({ date: '2026-11-23', minutes: 8 * 60 }, [], { briefs: ['2026-11-22'], rep
 ok('a missing weekly report is ✗, a brief for the latest Sunday is ✓', h.Marketing === 'ok' && h.Analyst === 'fail');
 h = H({ date: '2026-11-21', minutes: 10 * 60 }, [], { ready: 0 });
 ok('no pull request is "not due" when nothing was Ready', h.Developer === 'not-due');
+h = H({ date: '2026-11-20', minutes: 9 * 60 }, []);
+ok('Support is "not due" until it is switched on', h.Support === 'not-due');
+h = H({ date: '2026-11-20', minutes: 6 * 60 + 30 }, [], { support: { waiting: 0, checked: '2026-11-19T06:16:00Z' } });
+ok('before 06:45 an unchecked mailbox is "not due"', h.Support === 'not-due');
+h = H({ date: '2026-11-20', minutes: 6 * 60 + 50 }, [], { support: { waiting: 0, checked: '2026-11-19T06:16:00Z' } });
+ok('after 06:45 a mailbox not checked today is ✗', h.Support === 'fail');
+h = H({ date: '2026-11-20', minutes: 6 * 60 + 50 }, [], { support: { waiting: 2, checked: '2026-11-20T06:17:00Z' } });
+ok("a mailbox checked today is ✓", h.Support === 'ok');
 ok("Fenton's state: broken first, then the weekend", fentonState({ health: [{ state: 'fail' }], queue: [], date: '2026-11-14' }) === 'broken' && fentonState({ health: [], queue: [1, 2, 3, 4, 5], date: '2026-11-14' }) === 'weekend' && fentonState({ health: [], queue: [1, 2, 3, 4], date: '2026-11-13' }) === 'pile');
 ok('about twenty Fenton lines, five states', Object.keys(LINES).length === 5 && Object.values(LINES).flat().length === 20);
 const long = rank(Array.from({ length: 30 }, (_, n) => ({ title: `A deliberately long request number ${n} that goes on and on for a while to test the limit`, minutes: n + 1, how: 'Open it, read every word of it slowly, and then do the thing it asks, carefully.', number: n })));

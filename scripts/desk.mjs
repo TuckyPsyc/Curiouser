@@ -602,7 +602,7 @@ const queue = buildQueue({
     brief: g.brief && `${web}/blob/${branch}/marketing/${g.brief}`,
   },
 });
-const health = agentHealth({ uk, stories, scripts: g.scripts, rendered: g.rendered, briefs: g.briefs, reports: g.reports, pulls: g.recentPulls, ready: g.ready, failures: g.failures });
+const health = agentHealth({ uk, stories, scripts: g.scripts, rendered: g.rendered, briefs: g.briefs, reports: g.reports, pulls: g.recentPulls, ready: g.ready, failures: g.failures, support: g.support });
 const state = fentonState({ health, queue, date: uk.date });
 const line = fentonLine(state, uk.date);
 const body = render(stories, uk, g, queue, health);

@@ -104,7 +104,7 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 ## D-017 · Support drafts, and never sends
 **Decided:** 11 November 2026, by Claude under Carl's brief.
 **What:** The Support agent reads a mailbox used only for Curiouser and writes each reply as a draft in that mailbox for Carl to edit and send (`agents/support.md`, `support/TONE.md`, `support/FAQ.md`). Readers' names, addresses and words never enter this public repository; only a count of waiting drafts does. Anything about a reader's data, money, the press, legal threats or someone's safety gets no draft and goes straight to Carl.
-**Status:** Built and rehearsed on invented messages. Switched off until Carl creates the mailbox and connects it.
+**Status:** Built and rehearsed on invented messages. Switched on 15 November 2026: Carl made a mailbox used only for Curiouser and connected it, and Support checks it daily at 06:15. The desk shows ✗ if the mailbox wasn't checked by 06:45.
 
 ## D-018 · The weekly report counts only what can be counted
 **Decided:** 11 November 2026, by Claude under Carl's brief.

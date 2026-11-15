@@ -11,7 +11,7 @@ Curiouser is run by a handful of scheduled agents, each with one narrow job, and
 | Marketing | Studies what earns attention elsewhere, invents ideas, and sets the Producer's style through `marketing/playbook.md` | Sundays, 07:37 | `agents/marketing.md` | `marketing/` |
 | Clerk | Carries Carl's decisions from Fenton's Ledger to GitHub: records his answers, closes queue items, opens requests to agents | Daily, 09:21 and 18:21 | `agents/clerk.md` | nothing in the repository; GitHub only through `scripts/clerk.mjs` |
 | Developer | Builds the top Ready item in `IDEAS.md` and opens a pull request | Saturdays, 07:10 | `agents/developer.md` | a `dev/…` branch only, never `main` |
-| Support | Drafts replies to readers for Carl to send | Not scheduled until there is a mailbox | `agents/support.md` | `support/status.json` |
+| Support | Drafts replies to readers for Carl to send | Daily, 06:15 | `agents/support.md` | `support/status.json` |
 
 All of them run on `claude-opus-5-5`. Why these times: DECISIONS.md, D-016.
 
