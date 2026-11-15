@@ -28,7 +28,7 @@ Two narrators share the stories. **You choose by what the story is about, not by
 
 - **The Raconteur** when the payoff turns on people, words, character or irony.
 - **The Reckoner** when it turns on a number, a measurement, scale, chance or how we know.
-- If both fit equally, take the one who didn't narrate yesterday. Never bend a story to suit a narrator, and never pick one to balance the count.
+- If both fit equally, take whichever has narrated fewer of the last seven scripts in `videos/`. Never bend a story to suit a narrator, and never pick one to balance the count.
 - Say in your report why you chose.
 
 Both are original characters. Never imitate a real person's voice, phrasing or catchphrases.
