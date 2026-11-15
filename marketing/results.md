@@ -5,4 +5,4 @@ Carl's readings from issue #8 ("How the posts did"), owner comments only. One ro
 | Date read | No. | Platform | Age (days) | Views | Likes | Comments | Shares | Saves | Follows | Hook as broadcast | Arm |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 
-No readings yet (checked 12 November 2026).
+No readings yet (checked 12 and 15 November 2026; issue #8 has no comments).
