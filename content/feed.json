@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-14T05:59:12.290Z",
+  "updated": "2026-11-15T05:53:40.290Z",
   "issues": [
+    {
+      "id": 12,
+      "date": "2026-11-15",
+      "topic": "Economics",
+      "title": "Twenty-Seven Dollars in Jobra",
+      "concept": "Solidarity lending",
+      "teaser": "A Bangladeshi economics professor found 42 villagers trapped by $27 of debt, and a bank that said the poor were not creditworthy.",
+      "readingMinutes": 3
+    },
     {
       "id": 11,
       "date": "2026-11-14",
