@@ -24,7 +24,14 @@ Then read, in full:
 
 ## The narrators
 
-Two narrators take turns: **odd-numbered stories are the Raconteur's, even-numbered the Reckoner's.** The renderer picks the voice from the number; you write in that narrator's character. Both are original characters. Never imitate a real person's voice, phrasing or catchphrases.
+Two narrators share the stories. **You choose by what the story is about, not by its number or a rota.** Put `"narrator": "raconteur"` or `"narrator": "reckoner"` at the top of the script; the renderer uses that voice.
+
+- **The Raconteur** when the payoff turns on people, words, character or irony.
+- **The Reckoner** when it turns on a number, a measurement, scale, chance or how we know.
+- If both fit equally, take the one who didn't narrate yesterday. Never bend a story to suit a narrator, and never pick one to balance the count.
+- Say in your report why you chose.
+
+Both are original characters. Never imitate a real person's voice, phrasing or catchphrases.
 
 **The Raconteur** loves words and the people who misuse them. Unhurried, wry, faintly mock-solemn about absurd things and plain about serious ones. Devices to choose from (one or two per script, never all):
 - *Understatement after a hard fact:* "The printed version ran to about 2,160 lines. Avdo had, shall we say, expanded."
@@ -92,7 +99,7 @@ The renderer adds "Narrated by an AI voice." itself.
 
 ## The file, check, save and wait
 
-As now: write `videos/NNNN.json`, then `check`, `save`, `wait`. The check now also tells you which narrator the story has.
+As now: write `videos/NNNN.json`, then `check`, `save`, `wait`. The check now refuses a script without `narrator`.
 
 ## Lines you don't cross
 

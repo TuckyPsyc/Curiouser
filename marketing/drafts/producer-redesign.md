@@ -1,6 +1,6 @@
 # Redesigning the videos (Marketing, 15 November 2026)
 
-Carl asked for this: the scripts are solid but predictable. He is building two new voices and will alternate them daily. This says what changed, why, and what needs his yes or the Developer's hands.
+Carl asked for this: the scripts are solid but predictable. He is building two new voices. Each story gets the voice that suits it, chosen by the Producer, not a rota (Carl, 15 Nov: better an irregular order with the right voice than a fixed pattern with the wrong one). This says what changed, why, and what needs his yes or the Developer's hands.
 
 ## What changes, and the evidence
 
@@ -20,13 +20,13 @@ Grades: Shaky (seen once), Contested (counter-examples), Well supported (repeate
 
 ## Live now (the playbook)
 
-`marketing/playbook.md` is rewritten. It has the two narrators by odd and even number, nine standing rules, and one experiment on the closing line: the **button** against the **ritual** ("Today's word" or "Today's number"). Both arms work under the current Producer file. The old hook experiment is closed with no numbers. Samples written to today's rules are in `marketing/drafts/samples/`; both pass `video.mjs check`.
+`marketing/playbook.md` is rewritten. It has the two narrators, chosen by the Producer to suit each story, nine standing rules, and one experiment on the closing line: the **button** (odd numbers) against the **ritual** (even numbers: "Today's word" or "Today's number"). Both arms work under the current Producer file. The old hook experiment is closed with no numbers. Samples written to today's rules are in `marketing/drafts/samples/`; both pass `video.mjs check`.
 
 ## Needs Carl's yes, then the Developer
 
-1. **Two voices by story number.** `videos/voice.json` gains `"narrators": { "odd": {…}, "even": {…} }`, each with the provider and voice settings used today. The renderer picks by the story's number. `check` prints the narrator. The voices themselves are Carl's to make.
+1. **Two voices, chosen per script.** `videos/voice.json` gains `"narrators": { "raconteur": {…}, "reckoner": {…} }`, each with the provider and voice settings used today. The renderer reads the script's `"narrator"` field (the Producer already writes it; the check accepts it today). `check` should require it and print it. If a narrator has no voice yet, use today's voice and say so on the desk. The voices themselves are Carl's to make.
 2. **The sign-off becomes `Curiouser.`** The end card shows "Curiouser No. N · get curiouser before breakfast" with the White Rabbit for about 1.5 seconds, silent. This saves about three seconds of speech after the payoff. Change `SIGN_OFF` in `scripts/video.mjs` and the renderer's end card.
-3. **Length 120 to 175 words.** Today's floor is 150. The finding: best performers often finish well under 60 seconds, and no platform says 60 is best. Contested. Note that TikTok's Creator Rewards needs videos "over a minute", but only from 10,000 followers.
+3. **Length 120 to 175 words.** The Producer file asks for 150 to 175 today; the check's own floor is about 38 seconds, which can stay. The finding: best performers often finish well under 60 seconds, and no platform says 60 is best. Contested. Note that TikTok's Creator Rewards needs videos "over a minute", but only from 10,000 followers.
 4. **`"pause": true` on a line:** about 0.6 seconds of silence before it, at most once per script. In a trailer, the drop in sound before the reveal does this job.
 5. **Install `marketing/drafts/producer.md` as `agents/producer.md`.** Its "unchanged" and "as now" sections keep the current file's text word for word.
 
