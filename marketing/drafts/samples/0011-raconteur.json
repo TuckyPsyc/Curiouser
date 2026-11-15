@@ -1,0 +1,21 @@
+{
+  "issue": 11,
+  "title": "The Man Who Sang an Odyssey",
+  "lines": [
+    { "text": "In 1935, a man who couldn't read began singing.", "art": "father-william" },
+    { "text": "Days later, he stopped. The song was more than 12,000 lines long.", "say": "Days later, he stopped. The song was more than twelve thousand lines long." },
+    { "text": "His name was Avdo Međedović, of Bijelo Polje, in what is now Montenegro.", "say": "His name was Ahv-doh Meh-jeh-doh-vitch, of Bee-yeh-lo Poh-lyeh, in what is now Montenegro." },
+    { "text": "He had learned the tale by hearing a friend read it aloud, five or six times.", "art": "footmen-letter" },
+    { "text": "The printed version ran to about 2,160 lines. Avdo had, shall we say, expanded.", "say": "The printed version ran to about two thousand one hundred and sixty lines. Ahv-doh had, shall we say, expanded." },
+    { "text": "You would assume a prodigious memory. So did the singers themselves.", "art": "white-queen" },
+    { "text": "The man taking it down was Milman Parry, a young Harvard classicist, and his real quarry was Homer." },
+    { "text": "Homer's ships, Parry noted, are swift 'even when drawn up on land.'", "art": "walrus-and-carpenter" },
+    { "text": "The phrase fits the metre, not the moment." },
+    { "text": "Avdo wasn't reciting. He was building each line as he sang, from ready-made phrases and familiar scenes.", "say": "Ahv-doh wasn't reciting. He was building each line as he sang, from ready-made phrases and familiar scenes.", "art": "hatter" },
+    { "text": "It has a name: oral-formulaic composition. The story holds steady. The words change." },
+    { "text": "Given a song of 2,294 lines he had never heard, he sang it back at 6,313.", "say": "Given a song of two thousand two hundred and ninety-four lines he had never heard, he sang it back at six thousand three hundred and thirteen.", "art": "humpty-dumpty" },
+    { "text": "Curiouser: get curiouser before breakfast." }
+  ],
+  "caption": "He couldn't read, yet his song outgrew the book he learned it from by about ten thousand lines. Oral-formulaic composition explains how. A true story, fact-checked. Tomorrow: Economics. Curiouser No. 11",
+  "hashtags": ["#curiouser", "#literature", "#oralformulaic", "#homer", "#todayilearned"]
+}

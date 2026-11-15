@@ -1,25 +1,28 @@
 # The playbook
 
-Producer: read this before every script. It shapes style only: your accuracy and safety rules and fixed limits always win. Everything here is a hypothesis until Carl's numbers say otherwise.
+Producer: read before every script. Style only: your accuracy and safety rules and limits always win. All of it is hypothesis.
 
-## Standing rules (hypotheses)
+## Two narrators
 
-1. **One story, one turn, one idea.** Cut any name, date or number that doesn't carry the turn.
-2. **Trouble by word 40.** By then the viewer knows what went wrong or what doesn't add up.
-3. **Name the idea late:** after the turn, in the last third, once.
-4. **Write for the ear.** Most sentences under 14 words, one thought each. No brackets, no lists.
-5. **Last line before the sign-off:** where the viewer would meet this idea today. No moral, no instruction.
-6. **Tone:** dry, exact, amused. Never "you won't believe", "did you know", or a question the video doesn't answer.
-7. **Pictures:** open on the engraving a stranger would stop for (one figure doing something odd), not the most literal match. Change picture at each beat. Never reuse yesterday's opener.
-8. **Caption:** the first sentence tells the story and names the idea, in words a stranger would search for. Then "A true story, fact-checked." (only after a pass or fixed verdict). End "Curiouser No. N". The AI-voice label is added for you; don't write it.
-9. **Hashtags:** #curiouser, the topic (#history), the idea (#goodhartslaw), the subject (#hanoi), #todayilearned. Never #fyp or #viral.
+Odd numbers: **the Raconteur.** Relishes words, understates, mock-solemn about absurd things, one aside per script. Even: **the Reckoner.** Quick and playful; makes numbers physical ("five times the book he learned it from"), says how we know, says ranges aloud. Original characters, imitating no one. Each talks to one listener.
 
-## This experiment: which opening stops the scroll?
+## Standing rules
 
-Only the form of the hook changes. It is still ten words at most and true to the checked story.
+1. **Open mid-scene on the strangest true moment, with a person in it.** Hold back the cause: the cause is the idea.
+2. **Line two hints where we're going.**
+3. **Let the viewer guess wrong:** set up an assumption the story reports, then overturn it.
+4. **The idea is the payoff,** named once, the moment it explains the opening.
+5. **After the payoff, one line at most, then the sign-off.** No moral, no "it matters because".
+6. **Write for the ear.** Sentences under 14 words. Humour from understatement, never about real suffering.
+7. **Pictures:** open on one figure doing something odd. Change at each beat; hold one engraving through the reveal.
+8. **Caption:** a different angle from the hook, naming the idea in words a stranger would search. Then "A true story, fact-checked." Then "Tomorrow: <the next number's topic, from the guide's rotation>." End "Curiouser No. N".
+9. **Hashtags:** #curiouser, the topic, the idea, the subject, #todayilearned. Never #fyp or #viral.
 
-- **Odd-numbered stories, the scene:** when, where, what happened. "In 1902, Hanoi paid a bounty for every rat's tail."
-- **Even-numbered stories, the contradiction:** the result that shouldn't have happened, cause held back. "Hanoi paid for dead rats and got rat farms."
-- **Measure:** views at two days, on the platform Carl reports most.
-- **It counts if** one form's median is at least half as much again as the other's and it leads in both halves of the run.
-- **Judge after** six reported posts of each form. Until then, nothing else here changes.
+## This experiment: how should it end?
+
+Only the line before the sign-off changes. Each narrator gets both arms.
+
+- **The button** (Nos. 13, 14, 17, 18, 21, 22…): one more true detail from the story that recolours it.
+- **The ritual** (Nos. 12, 15, 16, 19, 20, 23…): "Today's word: …" (Raconteur) or "Today's number: …" (Reckoner), from the story.
+- **Measure:** shares plus follows per 1,000 views, at two days or older, on the platform Carl reports most.
+- **It counts if** one arm's median is at least half as much again and leads in both halves of the run. Judge after six reported posts per arm.
