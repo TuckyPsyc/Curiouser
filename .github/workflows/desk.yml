@@ -16,7 +16,7 @@ name: Editor's desk
 # The Courier's first run is meant to be its clock, for the alarm when a story
 # is unchecked at 06:30 and the morning note after 06:45. scripts/desk.mjs
 # works from UK time, so both are right in winter and summer. The four timed
-# slots below are a poor clock: GitHub has started them 7 to 9 hours late every
+# slots below are a poor clock: GitHub has started them about 7 to 10 hours late every
 # day since 12 November 2026. Until the Courier is scheduled they are the only one.
 #
 # Pushing to the `rehearsal` branch runs the same thing as a practice: tickets

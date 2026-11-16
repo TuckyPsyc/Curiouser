@@ -25,7 +25,7 @@ All the scheduled ones run on `claude-opus-5-5`. Why these times: DECISIONS.md, 
 5. **After 06:45** The desk sends its morning note at its next run, signed by Fenton, with everything waiting for Carl in one place.
 6. **07:00** The app shows the newest released story.
 
-**The desk's clock.** The desk runs whenever an agent saves something: several times before 06:30 on most mornings, then often not again for hours. GitHub's own timer for it runs 7 to 9 hours late. So steps 4 and 5 can be hours late, and on a morning when nothing is saved between 06:45 and 11:00 the note isn't sent at all. The Courier's 06:46 run is meant to be the clock: it starts the desk, then copies the fresh status page into Fenton's Briefing. Until the Courier is scheduled, the desk waits for the next save or for GitHub's timer.
+**The desk's clock.** The desk runs whenever an agent saves something: several times before 06:30 on most mornings, then often not again for hours. GitHub's own timer for it runs about 7 to 10 hours late. So steps 4 and 5 can be hours late, and on a morning when nothing is saved between 06:45 and 11:00 the note isn't sent at all. The Courier's 06:46 run is meant to be the clock: it starts the desk, then copies the fresh status page into Fenton's Briefing. Until the Courier is scheduled, the desk waits for the next save or for GitHub's timer.
 
 ## Carl's queue
 
