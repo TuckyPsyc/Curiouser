@@ -24,7 +24,7 @@
 // Prints JSON: one result per line, for the Clerk to write back into the ledger.
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { github, trusted } from './lib/github.mjs';
+import { github, trusted, hasOwnToken } from './lib/github.mjs';
 import { TEAM, requestAgent, requestLabel } from './lib/queue.mjs';
 import { fmtDate } from './lib/dates.mjs';
 
@@ -32,7 +32,7 @@ const argv = process.argv.slice(2);
 const file = argv.find((a) => !a.startsWith('--'));
 const dryRun = argv.includes('--dry-run');
 const repo = process.env.GITHUB_REPOSITORY || 'TuckyPsyc/curiouser';
-const api = github({ useGh: !process.env.GITHUB_TOKEN });
+const api = github({ useGh: !hasOwnToken() });
 const RESULTS_TITLE = 'How the posts did';
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 

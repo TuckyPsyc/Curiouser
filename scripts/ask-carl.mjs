@@ -22,7 +22,7 @@
 //
 // The repository is public: never put a reader's name or words, an email address
 // or a secret in a request.
-import { github, trusted } from './lib/github.mjs';
+import { github, trusted, hasOwnToken } from './lib/github.mjs';
 import { ASKERS, askMarker, parseAsk, sameTitle, isCarlsAnswer } from './lib/queue.mjs';
 import { fmtDate, ukOf } from './lib/dates.mjs';
 
@@ -30,7 +30,7 @@ const argv = process.argv.slice(2);
 const flag = (f) => argv.includes(f);
 const opt = (f) => (argv.includes(f) ? argv[argv.indexOf(f) + 1] : undefined);
 const repo = process.env.GITHUB_REPOSITORY || 'TuckyPsyc/curiouser';
-const api = github({ useGh: !process.env.GITHUB_TOKEN });
+const api = github({ useGh: !hasOwnToken() });
 const LABEL = 'needs-carl';
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 

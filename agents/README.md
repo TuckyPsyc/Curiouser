@@ -12,6 +12,7 @@ Curiouser is run by a handful of scheduled agents, each with one narrow job, and
 | Clerk | Carries Carl's decisions from Fenton's Ledger to GitHub: records his answers, closes queue items, opens requests to agents | Daily, 09:21 and 18:21 | `agents/clerk.md` | nothing in the repository; GitHub only through `scripts/clerk.mjs` |
 | Developer | Builds the top Ready item in `IDEAS.md` and opens a pull request | Saturdays, 07:10 | `agents/developer.md` | a `dev/…` branch only, never `main` |
 | Support | Drafts replies to readers for Carl to send | Daily, 06:15 | `agents/support.md` | `support/status.json` |
+| Courier | Starts the desk on time, then copies the status page, the open issues, this page, `IDEAS.md`, `DECISIONS.md`, the FAQ and the newest report and brief into Fenton's Briefing, a Claude doc | Daily, 06:46, 07:46 and 09:46 | `agents/courier.md` | nothing in the repository; the briefing doc only |
 
 All of them run on `claude-opus-5-5`. Why these times: DECISIONS.md, D-016.
 
@@ -19,10 +20,11 @@ All of them run on `claude-opus-5-5`. Why these times: DECISIONS.md, D-016.
 
 1. **04:47** The Editor writes `content/issues/NNNN.json` and saves it. It is a draft: readers can't see it.
 2. **05:40** The fact-checker re-researches every claim, opens every link, and writes its verdict to `content/checks/NNNN.json`. `pass` or `fixed` releases the story. `held` keeps it back, and the previous story stays in place.
-3. **06:30** If the story still has no verdict, the desk raises a ticket and Carl's phone buzzes. Closing that ticket publishes the story unchecked. Nothing else can.
-4. **06:07** The Producer writes the script for a video of yesterday's story, if the fact-checker passed it. GitHub renders the video and puts it on the desk within about five minutes.
-5. **After 06:45** The desk sends its morning note, signed by Fenton, with everything waiting for Carl in one place.
-6. **07:00** The app shows the newest released story.
+3. **06:07** The Producer writes the script for a video of yesterday's story, if the fact-checker passed it. GitHub renders the video and puts it on the desk within about five minutes.
+4. **06:46** The Courier starts the desk, which does two things by the clock. If the story still has no verdict (it was due by 06:30), the desk raises a ticket and Carl's phone buzzes; closing that ticket publishes the story unchecked, and nothing else can. And it sends its morning note, signed by Fenton, with everything waiting for Carl in one place. The Courier then copies the fresh status page into Fenton's Briefing.
+5. **07:00** The app shows the newest released story.
+
+The desk also runs whenever an agent saves something, so on most mornings it has been rewritten several times before 06:46. GitHub's own timer for it runs 7 to 9 hours late, which is why the Courier starts it.
 
 ## Carl's queue
 
@@ -30,7 +32,8 @@ Everything waiting on Carl is one ranked list at the top of the desk: requests f
 
 - **Asking.** An agent that needs Carl runs `node scripts/ask-carl.mjs --from <agent> --title "…" --why "…" --minutes N --how "…"`, with `--blocks "…"` or `--by YYYY-MM-DD` if they're true. It opens an issue labelled `needs-carl`, never twice with the same title. The desk assigns Carl, which is what makes his phone buzz. `--rehearsal` prints the request and writes nothing.
 - **Answering.** Carl comments on the request if there's anything to say, then closes it. Closing it as not planned means no. An agent reads the answers to its own requests with `node scripts/ask-carl.mjs --answers --from <agent>`; only Carl's own comments count. Marketing, the Analyst and Support do this at the start of each run.
-- **The status page.** Each time the desk updates it also writes `status.md` and `status.json` to the `status` branch, at `raw.githubusercontent.com/TuckyPsyc/Curiouser/status/status.md`. Fenton, Carl's chief of staff in the Claude project HQ, reads it aloud. Pushes to that branch start no workflows.
+- **The status page.** Each time the desk updates it also writes `status.md` and `status.json` to the `status` branch, at `raw.githubusercontent.com/TuckyPsyc/Curiouser/status/status.md`. Pushes to that branch start no workflows.
+- **Fenton's Briefing.** Fenton, Carl's chief of staff in the Claude project HQ, can't count on opening that address or anything else on GitHub: his chat's web tool opens only pages a web search returns, and may hand back an old copy. So the Courier copies the status page into a Claude doc, with everything else he may be asked about, one tab each: Status, Issues, Team, Ideas, Decisions, FAQ and Papers. Fenton reads it with the same connection he uses for his ledger. `scripts/briefing.mjs` gathers the text; only issues and comments from Carl, the agents and the desk are copied.
 
 ## Rules every agent follows
 
