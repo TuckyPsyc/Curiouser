@@ -11,12 +11,13 @@ name: Editor's desk
 # workflows, and every workflow that runs on a push lists its branches (main,
 # rehearsal), so the status branch starts nothing (DECISIONS.md, D-020).
 #
-# It runs whenever something on the desk changes, and when the Courier starts
-# it (scripts/briefing.mjs, at 06:46, 07:46 and 09:46 UK time). The Courier's
-# first run is its clock: the alarm for a story unchecked at 06:30 and the
-# morning note after 06:45. scripts/desk.mjs works from UK time, so both are
-# right in winter and summer. The four timed slots below are only a backstop:
-# GitHub has started them 7 to 9 hours late every day since 12 November 2026.
+# It runs whenever something on the desk changes, and whenever the Courier
+# starts it (scripts/briefing.mjs; planned for 06:46, 07:46 and 09:46 UK time).
+# The Courier's first run is meant to be its clock, for the alarm when a story
+# is unchecked at 06:30 and the morning note after 06:45. scripts/desk.mjs
+# works from UK time, so both are right in winter and summer. The four timed
+# slots below are a poor clock: GitHub has started them 7 to 9 hours late every
+# day since 12 November 2026. Until the Courier is scheduled they are the only one.
 #
 # Pushing to the `rehearsal` branch runs the same thing as a practice: tickets
 # are labelled "rehearsal", nobody is notified, and the status page goes to
