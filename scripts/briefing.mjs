@@ -19,7 +19,10 @@
 // It takes about a minute, most of it waiting for the desk (--wait, 100 seconds at most).
 //
 // It writes one file per tab to DIR (default /tmp/briefing) and prints a plan:
-//   { desk, written, copies, tabs: [{ key, tab, file, write, why }] }
+//   { desk, written, copies, tabs: [{ key, tab, file, write, why, fingerprint }] }
+// A fingerprint is the first eight characters of the text's SHA-256. The doc
+// reports the same for a block it has just stored (its "h"), so the Courier can
+// tell that a tab arrived whole.
 // The Status tab is written every run. The others only when what they copy has
 // changed: each has a fingerprint on the Status tab's "Copies" line, which the
 // Courier reads from the doc and passes back with --have. --failed names tabs the
@@ -125,12 +128,12 @@ async function runDesk() {
     return `The desk could not be started (${first(e)}), so this is the status page as it stood.`;
   }
   log('started the desk; waiting for its status page');
-  // The desk takes about half a minute. A page written within the last minute counts: clocks differ a little.
+  // The desk takes about half a minute. Clocks differ a little, so a page written up to 15 seconds "before" counts.
   while (Date.now() - started < waitSeconds * 1000) {
     await sleep(waitSeconds > 20 ? 5000 : 200);
     try {
       const { json } = await readStatus();
-      if (Date.parse(json.written) >= started - 60000) return `The desk was run first, and wrote its status page at ${ukOf(json.written).clock}.`;
+      if (Date.parse(json.written) >= started - 15000) return `The desk was run first, and wrote its status page at ${ukOf(json.written).clock}.`;
     } catch {}
   }
   return `The desk was started but had not finished after ${waitSeconds} seconds, so this is the status page as it stood.`;
@@ -330,21 +333,23 @@ const plan = [];
 for (const t of TABS) {
   const file = join(out, `${t.key}.md`);
   if (t.key === 'status') {
-    plan.push({ key: t.key, tab: t.tab, file, write: true, why: 'every run' });
+    plan.push({ key: t.key, tab: t.tab, file, write: true, why: 'every run', fingerprint: null });
     continue;
   }
   const old = have[t.key] ?? NEVER;
   if (problems[t.key]) {
     copies[t.key] = old;
-    plan.push({ key: t.key, tab: t.tab, file: null, write: false, why: `could not be read: ${problems[t.key]}` });
+    plan.push({ key: t.key, tab: t.tab, file: null, write: false, why: `could not be read: ${problems[t.key]}`, fingerprint: null });
     continue;
   }
   const fp = fingerprint(texts[t.key]);
   writeFileSync(file, texts[t.key]);
   const changed = fp !== old;
   copies[t.key] = failed.has(t.key) ? old : fp;
-  plan.push({ key: t.key, tab: t.tab, file, write: changed && !failed.has(t.key), why: failed.has(t.key) ? 'failed this run; will be tried again next run' : changed ? 'changed' : 'unchanged' });
+  plan.push({ key: t.key, tab: t.tab, file, write: changed && !failed.has(t.key), why: failed.has(t.key) ? 'failed this run; will be tried again next run' : changed ? 'changed' : 'unchanged', fingerprint: fp });
 }
-writeFileSync(join(out, 'status.md'), safe(statusTab(status, deskNote, copies, uk)));
+const statusText = safe(statusTab(status, deskNote, copies, uk));
+writeFileSync(join(out, 'status.md'), statusText);
+plan[0].fingerprint = fingerprint(statusText);
 
 console.log(JSON.stringify({ desk: deskNote, written: status.json.writtenUK, copies, tabs: plan }, null, 2));

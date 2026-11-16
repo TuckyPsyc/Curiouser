@@ -7,6 +7,7 @@ import { spawnSync, execFileSync, spawn } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { topicFor, pad, loadStories } from './lib/state.mjs';
 import { fakeGitHub } from './lib/fake-github.mjs';
 import { parseAsk, rank, AGENT_MARK } from './lib/queue.mjs';
@@ -531,6 +532,8 @@ ok('…after starting the desk on main, so the alarm and the morning note have a
 const st = tabFile('status');
 ok('the Status tab holds the status page, the whole queue and each agent', /^Written .+ UK time\.$/m.test(st) && /## The whole queue\n\n1\. Create the Curiouser mailbox\. 15 minutes\. Blocks: Support can't start\./.test(st) && /^- Editor: /m.test(st), st);
 ok('…and a fingerprint for every other tab', /^Copies: issues=[0-9a-f]{8} team=[0-9a-f]{8} ideas=[0-9a-f]{8} decisions=[0-9a-f]{8} faq=[0-9a-f]{8} papers=[0-9a-f]{8}$/m.test(st), st.slice(-200));
+const sha8 = (text) => createHash('sha256').update(text).digest('hex').slice(0, 8);
+ok("the plan gives each tab's fingerprint, the first eight of its SHA-256, which is what the doc reports back", b.plan?.tabs.every((t) => t.fingerprint === sha8(tabFile(t.key))) && st.includes(`team=${sha8(tabFile('team'))}`), JSON.stringify(b.plan?.tabs));
 const it = tabFile('issues');
 ok("the Issues tab has a request to Carl with its why and its step", /## Issue \d+ · Create the Curiouser mailbox\n\nA request to Carl from Support, .*About 15 minutes\. Blocks: Support can't start\.\n\nWhy: Support needs one\.\n\nWhat to do: Make a Gmail address and connect it\./.test(it), it.slice(0, 1500));
 ok("…Carl's request to an agent, with the agent's answer under its name", /## Issue 400 · How do I invite a beta tester\?\n\nCarl's request to the Developer/.test(it) && /The Developer, .*: Send them the latest release link/.test(it), it);

@@ -70,13 +70,13 @@ Choices made for the proof of concept (a gift for a few friends), and what to re
 **Why:** It is what backs up "curated and checked". One agent writing and checking its own work is not a check.
 **Rule:** Whoever writes a story never writes its verdict. `scripts/save.mjs` enforces it: the Editor can save only to `content/issues/`. An unchecked story never releases itself. Only Carl can publish one, by closing its release ticket or running "Release a story" (`.github/workflows/release.yml`), and it is then recorded as `released-unchecked` by the editor-in-chief. `scripts/test-gate.mjs` tests all of this on every change.
 **Consequence:** On a morning when the story is held or unchecked, readers see the previous story, and the 7:00 reminder, which is scheduled on the phone and can't know, still says a new one is waiting.
-**Limits:** A story already bundled into an app update can't be taken back by holding it, only corrected. GitHub starts scheduled workflows late at busy times, so the 06:30 alarm for an unchecked story can arrive up to about 20 minutes late; four slots guard against a missed one.
+**Limits:** A story already bundled into an app update can't be taken back by holding it, only corrected. GitHub starts scheduled workflows late at busy times, so the 06:30 alarm for an unchecked story can arrive up to about 20 minutes late; four slots guard against a missed one. (Measured on 16 November 2026: 7 to 9 hours late, not 20 minutes. See D-020.)
 
 ## D-013 · The editor's desk is a pinned GitHub issue
 **Decided:** 11 November 2026, by Claude under Carl's brief ("pick the simplest thing that works well on Android").
 **What:** One issue, "The editor's desk", pinned to the top of this repository's Issues page. `scripts/desk.mjs` rewrites it whenever something changes: today's story and its verdict, the video to post with its caption, drafted support replies, open pull requests, the weekly report, and any automation that failed. A story that is unchecked, held or missing gets its own ticket, assigned to Carl so the GitHub app notifies him. Closing an "unchecked" ticket as completed is his one-tap release (D-012). One comment a day, after 06:45, is the morning note.
 **Why:** Carl already has GitHub on his phone, it costs nothing, and it needs no new account, app or server.
-**Limit:** Notifications depend on the GitHub app being installed with notifications on. GitHub starts scheduled workflows late at busy times, so the 06:30 alarm can be up to about 20 minutes late.
+**Limit:** Notifications depend on the GitHub app being installed with notifications on. GitHub starts scheduled workflows late at busy times, so the 06:30 alarm can be up to about 20 minutes late. (Measured on 16 November 2026: 7 to 9 hours late. See D-020.)
 
 ## D-014 · Videos: the Producer writes, GitHub renders, Carl posts
 **Decided:** 11 November 2026, by Claude under Carl's brief.

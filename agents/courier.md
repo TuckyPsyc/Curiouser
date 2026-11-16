@@ -23,8 +23,8 @@ The briefing's id, each tab's body id and the block id are in the message that s
 
    `update( ref = {"object":"node","id":"<that tab's body id>"}, engine = "prose", container = {"kind":"project","id":"<briefing id>"}, payload = {"ops":[{"op":"replace","target":{"kind":"blocks","ids":["<block id>"]},"force":true,"with":{"from":{"kind":"inline","content":"<the file's text>"},"as":"text"}}]} )`
 
-   The answer says `"verdict":"allow"` when it worked. If a call is refused, try it once more. If it is refused again, note that tab's `key` and go on to the next.
-5. **If any tab could not be written,** run the script again with the same `--have`, adding `--failed <the keys, separated by commas>`. It rewrites `/tmp/briefing/status.md` so those tabs are tried again next run, and doesn't start the desk twice. Ignore the plan it prints this time.
+   The answer says `"verdict":"allow"` when it worked, and gives the block's `h`. That `h` should equal the tab's `fingerprint` in the plan, which proves the text arrived whole. If the call is refused, or `h` differs, send the tab once more. If it is refused again, note that tab's `key` and go on to the next. If it is allowed but `h` still differs, leave it and say so under Problems.
+5. **If any tab could not be written,** run the script again with the same `--have`, adding `--failed <the keys, separated by commas>`. It rewrites `/tmp/briefing/status.md` so those tabs are tried again next run, and doesn't start the desk twice. From the plan it prints this time, use only the Status tab's `fingerprint`.
 6. **Write the Status tab last,** the same way, from `/tmp/briefing/status.md`. Its last line records what the other tabs now hold, which is why it goes last.
 
 Most runs write only Status, or Status and Issues. The other tabs change when their file does.
