@@ -16,7 +16,7 @@ The briefing's id, each tab's body id and the block id are in the message that s
    `read( ref = {"object":"node","id":"<Status body id>"}, engine = "prose", container = {"kind":"project","id":"<briefing id>"}, payload = {"kind":"view"} )`
 
    Find the line that starts `Copies:`. If there is none, the doc is new: carry on without it.
-3. **Run the script,** allowing it three minutes: `node scripts/briefing.mjs --have "<the Copies line>"`. Leave `--have` out if there was no line. It starts the desk, waits for it, and writes one file per tab to `/tmp/briefing/`. It prints a plan: `desk` (what happened with the desk), then for each tab its `key`, `tab`, `file` and `write`.
+3. **Run the script,** allowing it five minutes: `node scripts/briefing.mjs --have "<the Copies line>"`. Leave `--have` out if there was no line. It starts the desk, waits for it (usually under a minute, up to four when GitHub is slow to start the run), and writes one file per tab to `/tmp/briefing/`. It prints a plan: `desk` (what happened with the desk), then for each tab its `key`, `tab`, `file` and `write`.
 
    If it stops with "Could not read the status page", change nothing in the doc and report it.
 4. **Write each tab marked `"write": true`, except Status,** one update call per tab. Read the tab's file and send its whole text exactly as it stands: every line, nothing added, shortened or reworded.

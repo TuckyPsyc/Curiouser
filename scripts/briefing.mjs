@@ -16,7 +16,9 @@
 // Usage:
 //   node scripts/briefing.mjs [--out DIR] [--have "<the doc's Copies line>"]
 //                             [--failed issues,team] [--no-desk] [--wait SECONDS] [--now ISO]
-// It takes about a minute, most of it waiting for the desk (--wait, 100 seconds at most).
+// It takes about a minute, most of it waiting for the desk. GitHub sometimes keeps a
+// run queued for minutes, so it waits up to four (--wait SECONDS) before going on
+// with the status page as it stood, and says which it did.
 //
 // It writes one file per tab to DIR (default /tmp/briefing) and prints a plan:
 //   { desk, written, copies, tabs: [{ key, tab, file, write, why, fingerprint }] }
@@ -47,7 +49,7 @@ const repo = process.env.GITHUB_REPOSITORY || 'TuckyPsyc/curiouser';
 const api = github({ useGh: !hasOwnToken() });
 const out = opt('--out') || '/tmp/briefing';
 const now = opt('--now') ? new Date(opt('--now')) : new Date();
-const waitSeconds = Number(opt('--wait') ?? 100);
+const waitSeconds = Number(opt('--wait') ?? 240);
 const log = (s) => console.error(s);
 const first = (e) => String(e?.message ?? e).split('\n')[0].slice(0, 200);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -128,15 +130,22 @@ async function runDesk() {
     return `The desk could not be started (${first(e)}), so this is the status page as it stood.`;
   }
   log('started the desk; waiting for its status page');
-  // The desk takes about half a minute. Clocks differ a little, so a page written up to 15 seconds "before" counts.
+  // The desk takes about half a minute once GitHub starts it. Clocks differ a little, so a page written up to 15 seconds "before" counts.
+  let again = false;
   while (Date.now() - started < waitSeconds * 1000) {
     await sleep(waitSeconds > 20 ? 5000 : 200);
     try {
       const { json } = await readStatus();
       if (Date.parse(json.written) >= started - 15000) return `The desk was run first, and wrote its status page at ${ukOf(json.written).clock}.`;
     } catch {}
+    // GitHub now and then leaves a run queued and never starts it (16 November 2026). Halfway through, start it once more.
+    if (!again && Date.now() - started > (waitSeconds * 1000) / 2) {
+      again = true;
+      log('no fresh status page yet; starting the desk once more');
+      await api('POST', `/repos/${repo}/actions/workflows/desk.yml/dispatches`, { ref: 'main' }).catch(() => {});
+    }
   }
-  return `The desk was started but had not finished after ${waitSeconds} seconds, so this is the status page as it stood.`;
+  return `The desk was started twice but had not finished after ${waitSeconds} seconds, so this is the status page as it stood.`;
 }
 
 // ---------- The tabs ----------

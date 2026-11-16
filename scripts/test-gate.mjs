@@ -555,6 +555,14 @@ b = await briefing('--have', copiesLine, '--failed', 'issues');
 const oldIssues = /issues=([0-9a-f]{8})/.exec(copiesLine)?.[1];
 ok('a tab that could not be written keeps its old fingerprint, so the next run tries again', b.status === 0 && tabFile('status').includes(`issues=${oldIssues}`) && b.plan?.tabs.find((t) => t.key === 'issues')?.write === false, tabFile('status').slice(-200));
 ok('…and that second pass does not start the desk again', gh.state.dispatches.length === dispatched && /^The desk was run first/.test(b.plan?.desk ?? ''), b.out);
+// GitHub sometimes leaves a started run queued for good: the first start does nothing here.
+const startsBefore = gh.state.dispatches.length;
+const freshPage = gh.state.onDispatch;
+gh.state.onDispatch = (s) => { if (s.dispatches.length - startsBefore >= 2) freshPage(s); };
+gh.state.contents['status.json@status'] = JSON.stringify({ ...JSON.parse(gh.state.contents['status.json@status']), written: new Date(Date.now() - 3600000).toISOString() });
+b = await briefing('--have', copiesLine);
+ok('if the desk does not run when started, it is started once more', b.status === 0 && gh.state.dispatches.length - startsBefore === 2 && /^The desk was run first/.test(b.plan?.desk ?? ''), b.out);
+gh.state.onDispatch = freshPage;
 gh.state.noDispatch = true;
 b = await briefing('--have', copiesLine);
 ok('if the desk cannot be started the briefing still goes out, and says so', b.status === 0 && /^The desk could not be started/.test(b.plan?.desk ?? '') && tabFile('status').includes('The desk could not be started'), b.out);
