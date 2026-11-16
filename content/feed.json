@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-15T05:53:40.290Z",
+  "updated": "2026-11-16T05:49:56.316Z",
   "issues": [
+    {
+      "id": 13,
+      "date": "2026-11-16",
+      "topic": "Self-Improvement",
+      "title": "The Jesuit Who Remembered Backwards",
+      "concept": "The method of loci",
+      "teaser": "In 1595 an Italian Jesuit in Ming China astonished scholars by repeating lists of characters backwards. His secret was an ancient trick of places.",
+      "readingMinutes": 3
+    },
     {
       "id": 12,
       "date": "2026-11-15",

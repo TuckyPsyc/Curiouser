@@ -1,0 +1,19 @@
+{
+  "issue": 13,
+  "verdict": "pass",
+  "by": "fact-checker",
+  "at": "2026-11-16T05:49:56Z",
+  "summary": "Everything checked out: Ricci's Nanchang memory feats, the Xiguo Jifa, Cicero's Simonides story, the memory-athlete studies and the 2025 meta-analysis all match independent sources. No changes.",
+  "claims": { "checked": 62, "confirmed": 62, "corrected": 0, "removed": 0 },
+  "links": { "checked": 10, "working": 10, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [],
+  "problems": [],
+  "notes": [
+    "The 29 August 1595 letter to Duarte (Edoardo) de Sande in Macao and the 'miracle' detail are confirmed by Shixiang Jin's chapter. The two quoted phrases come from Hosne's English rendering of Ricci (Tacchi Venturi, vol. 2, p. 235), which doesn't name the letter; the story's 'he reported' doesn't tie them to that exact letter, so I left it.",
+    "'Almost negligible' is Jin's summary of Lackner's verdict, not Lackner's own words. The story doesn't quote it, so it stands.",
+    "Ricci reached Macao in August 1582 and settled on the mainland, at Zhaoqing, in 1583 (Britannica); 'lived in China since 1583' is fair. The Lienhard episode says 1582, counting Macao.",
+    "The furtherReading link to Hosne is the same page as the first source; counted as a separate link check."
+  ]
+}
