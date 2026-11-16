@@ -1,0 +1,24 @@
+{
+  "issue": 12,
+  "title": "Twenty-Seven Dollars in Jobra",
+  "narrator": "raconteur",
+  "lines": [
+    { "text": "42 villagers owed $27 between them.", "say": "Forty-two villagers owed twenty-seven dollars between them.", "art": "sheep-shop" },
+    { "text": "What one professor did about it would spread to almost every country." },
+    { "text": "Muhammad Yunus taught economics in Bangladesh, during a terrible famine.", "say": "Moo-hah-mad Yoo-nuss taught economics in Bangladesh, during a terrible famine.", "art": "mock-turtle" },
+    { "text": "In Jobra, a woman borrowed less than a dollar from a moneylender.", "say": "In Job-rah, a woman borrowed less than a dollar from a moneylender.", "art": "oysters" },
+    { "text": "Only he could buy what she made, at a price he set." },
+    { "text": "Yunus offered the twenty-seven dollars from his own pocket.", "say": "Yoo-nuss offered the twenty-seven dollars from his own pocket." },
+    { "text": "Then he asked the bank on his campus to lend to people like them.", "art": "red-queen-and-alice" },
+    { "text": "The bank said 'the poor were not creditworthy.'" },
+    { "text": "After months of trying, Yunus offered to guarantee the loans himself.", "say": "After months of trying, Yoo-nuss offered to guarantee the loans himself." },
+    { "text": "And the borrowers paid back on time, he later recalled." },
+    { "text": "Grameen Bank came to lend through groups of five neighbours.", "say": "Grah-meen Bank came to lend through groups of five neighbours.", "art": "mouse-audience" },
+    { "text": "If one member defaulted, the whole group lost the right to borrow again." },
+    { "text": "This is solidarity lending. Economists argued neighbours' trust did the work that collateral does." },
+    { "text": "Today's word: creditworthy." },
+    { "text": "Curiouser: get curiouser before breakfast." }
+  ],
+  "caption": "A bank said the poor were not creditworthy. Then they paid back on time. Solidarity lending puts borrowers in small groups so neighbours' trust stands in for collateral. A true story, fact-checked. Tomorrow: Self-Improvement. Curiouser No. 12",
+  "hashtags": ["#curiouser", "#economics", "#solidaritylending", "#muhammadyunus", "#todayilearned"]
+}
