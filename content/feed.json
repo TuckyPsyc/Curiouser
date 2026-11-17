@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-16T05:49:56.316Z",
+  "updated": "2026-11-17T06:00:35.431Z",
   "issues": [
+    {
+      "id": 14,
+      "date": "2026-11-17",
+      "topic": "Art & Music",
+      "title": "The Stars on the Shrine Wall",
+      "concept": "Girih tiles",
+      "teaser": "A physics student in Uzbekistan noticed ten-pointed stars on a madrasa wall. They led him to five tiles and a pattern far ahead of its time.",
+      "readingMinutes": 3
+    },
     {
       "id": 13,
       "date": "2026-11-16",

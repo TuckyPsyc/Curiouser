@@ -1,0 +1,28 @@
+{
+  "issue": 14,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-17T06:00:35Z",
+  "summary": "One small correction: Emil Makovicky is now described as a crystallographer at the University of Copenhagen rather than 'Danish', which I couldn't confirm. Everything else, including Lu's quotations, the 1453 Darb-i Imam figures and Cromwell's objection, checked out.",
+  "claims": { "checked": 64, "confirmed": 63, "corrected": 1, "removed": 0 },
+  "links": { "checked": 12, "working": 12, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Contested", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "rabbit hole, level 1, paragraph 2",
+      "before": "the Danish crystallographer Emil Makovicky had already",
+      "after": "Emil Makovicky, a crystallographer at the University of Copenhagen, had already",
+      "why": "Makovicky's base at the University of Copenhagen is documented, but no source I found gives his nationality as Danish.",
+      "source": "https://test01.ku.dk/:obvius/pureproxy/3974268/en/publications/800-year-old-pentagonal-tiling-from-maragha-iran-and-the-new-vari"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "'Scrolls like this served as training manuals' follows the AAAS/EurekAlert release. The Wikipedia page on the Topkapı Scroll suggests it may instead have been a record of tiling work rather than a workshop reference; the story's wording is supported, but scholars differ.",
+    "The Bielefeld Tilings Encyclopedia, following Necipoğlu, lists six girih shapes (two convex hexagons); Lu and Steinhardt's set, which the story uses, has five. Not an error, just two ways of counting.",
+    "Lu's 'Lu found no evidence the tiles were made... templates' line matches Philip Ball's Nature report: Lu said 'we speculate they were', to be used as templates.",
+    "'Thousands of photographs' is supported by a 2007 report reprinted at amaana.org; Aramco World says 'hundreds'. The story's countries match the AAAS release.",
+    "The rabbit hole's furtherReading link is the same PDF as the first source; counted as a separate link check. The Cromwell Springer link was confirmed via its DOI address."
+  ]
+}
