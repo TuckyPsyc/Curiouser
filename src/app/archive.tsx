@@ -9,7 +9,14 @@ import { useJars } from '../lib/jars';
 import { useToday } from '../lib/progress';
 import { currentRace, useRaceResults } from '../lib/race';
 import { goBack } from '../lib/nav';
-import { getReminderPref, REMINDER_HOUR, setReminder } from '../lib/notifications';
+import {
+  getRaceReminderPref,
+  getReminderPref,
+  RACE_REMINDER_HOUR,
+  REMINDER_HOUR,
+  setRaceReminder,
+  setReminder,
+} from '../lib/notifications';
 import { labelSpacing, fonts, useConceptColour, usePalette } from '../lib/theme';
 import { TOPICS, type IssueSummary, type Topic } from '../lib/types';
 
@@ -64,9 +71,11 @@ export default function Archive() {
   const { issues, status, refresh } = useFeed();
   const [topic, setTopic] = useState<Topic | null>(null);
   const [reminder, setReminderState] = useState(true);
+  const [raceReminder, setRaceReminderState] = useState(true);
 
   useEffect(() => {
     getReminderPref().then(setReminderState);
+    getRaceReminderPref().then(setRaceReminderState);
   }, []);
 
   const shown = topic ? issues.filter((i) => i.topic === topic) : issues;
@@ -174,6 +183,23 @@ export default function Archive() {
           <Switch
             value={reminder}
             onValueChange={async (v) => setReminderState(await setReminder(v))}
+            trackColor={{ true: p.accent, false: p.rule }}
+          />
+        </View>
+      ) : null}
+      {Platform.OS !== 'web' ? (
+        <View style={styles.setting}>
+          <Plate name="dodo-thimble" width={40} />
+          <View style={{ flex: 1 }}>
+            <Text style={[styles.settingTitle, { color: p.ink }]}>The Dodo</Text>
+            <Text style={[styles.settingNote, { color: p.muted }]}>
+              “Everybody has won, and all must have prizes.” A nudge at {RACE_REMINDER_HOUR}:00 on
+              Sundays when the Caucus-race opens.
+            </Text>
+          </View>
+          <Switch
+            value={raceReminder}
+            onValueChange={async (v) => setRaceReminderState(await setRaceReminder(v))}
             trackColor={{ true: p.accent, false: p.rule }}
           />
         </View>
