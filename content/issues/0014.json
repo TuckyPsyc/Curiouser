@@ -1,0 +1,148 @@
+{
+  "id": 14,
+  "date": "2026-11-17",
+  "topic": "Art & Music",
+  "title": "The Stars on the Shrine Wall",
+  "concept": "Girih tiles",
+  "teaser": "A physics student in Uzbekistan noticed ten-pointed stars on a madrasa wall. They led him to five tiles and a pattern far ahead of its time.",
+  "readingMinutes": 3,
+  "story": [
+    "In 2005 Peter Lu, a physics graduate student at Harvard, was travelling in Uzbekistan. In Bukhara the tilework of a fifteenth-century madrasa stopped him in his tracks. 'I saw five-fold and ten-fold stars,' he later recalled, 'which immediately aroused my curiosity about how these tilings had been made.'",
+    "Lu knew why such stars are awkward. You can cover a floor with squares, triangles or hexagons, but regular pentagons leave gaps, and no pattern that repeats regularly, like wallpaper, can have five-fold or ten-fold symmetry. There is a way out. In the 1970s the British mathematician Roger Penrose found shapes that cover a plane in a pattern that follows strict rules yet never repeats. In the 1980s physicists found atoms in certain alloys arranged in the same strange order, and called them quasicrystals. Lu's undergraduate adviser at Princeton, the physicist Paul Steinhardt, had shown how Penrose's scheme could generate such patterns.",
+    "Back at Harvard, Lu searched thousands of photographs of buildings and designs from Iran, Iraq, Turkey, Afghanistan and beyond. The usual view was that craftsmen drafted these star patterns directly, as networks of zigzagging lines, with a compass and straightedge. Lu found another trail. In an architects' pattern scroll held by the Topkapı Palace Museum in Istanbul, dotted outlines of tiles lie beneath some of the designs.",
+    "They are girih tiles, from the Persian word for 'knot'. There are five: a decagon, a pentagon, an elongated hexagon, a bowtie and a rhombus. All their sides are the same length, and each carries decorative lines that meet the middle of every edge at the same angles. Lay the tiles edge to edge and the lines run on from tile to tile, so the joins seem to vanish and only the interlacing pattern shows. 'Once you have the tiles,' Lu said, 'you can make complicated patterns, even quasi-crystalline ones, by following a few simple rules.' In Science in February 2007, Lu and Steinhardt argued that by about 1200 designers had begun to think in tiles rather than lines. One early example is the Gunbad-i Kabud, a tomb tower built in 1197 in Maragha, Iran.",
+    "Their most striking case was the Darb-i Imam, a shrine in Isfahan built in 1453. There, a large pattern of girih tiles is subdivided into a smaller pattern of the same tiles. Mapped onto Penrose's shapes, the design held 11 mismatches among about 3,700 Penrose tiles, each of which could be fixed by rearranging a few tiles. Lu called it a 'nearly perfect' Penrose pattern, made about five centuries before Penrose. The two authors were careful to add that they had found signs the designers' understanding was incomplete. Lu found no evidence that the tiles were ever made as physical objects. He speculated that they served as templates for laying out a design on a wall.",
+    "A handful of shapes and one simple rule let craftsmen build patterns whose mathematics the West only named in the twentieth century. Sometimes the cleverest part of a design is the method that makes it easy."
+  ],
+  "takeaway": "Girih tiles: five equal-sided shapes, each carrying decorative lines, which medieval Islamic designers could fit together so that the lines join into one continuous star-and-polygon pattern, including some of startling mathematical complexity.",
+  "recall": {
+    "question": "As a young man, Wang Yangming spent seven days staring at bamboo. Years later, in exile in Guizhou, what idea did he arrive at?",
+    "answer": "The unity of knowledge and action: truly knowing what is right already moves you to do it, so someone who knows but doesn't act doesn't yet really know.",
+    "fromIssue": 8
+  },
+  "rabbitHole": {
+    "title": "Behind the knotwork",
+    "intro": "Were the patterns drawn with lines or built from tiles, what is in the scroll in Istanbul, and where did the 'impossible' crystals turn up next? Follow the lines.",
+    "levels": [
+      {
+        "heading": "Lines or tiles?",
+        "body": [
+          "The conventional view, as Lu and Steinhardt put it in Science, was that girih patterns were conceived as a network of zigzagging lines, drafted directly with a compass and straightedge. Their alternative was that by 1200 a conceptual breakthrough had occurred, in which designers reconceived the patterns as tessellations of a special set of equal-sided polygons. All angles in the tiles and their decorating lines are multiples of 36 degrees, and the lines cross each edge's midpoint at 72 and 108 degrees.",
+          "Their evidence at the Gunbad-i Kabud in Maragha was a second, finer layer of lines. The main raised brick pattern follows the lines of girih tiles, but the smaller lines have two-fold rather than five-fold symmetry, which the authors argued would be hard to explain if the designers had simply drafted the large pattern line by line. They also noted that the Danish crystallographer Emil Makovicky had already linked this pattern to Penrose tiling in 1992, while describing it as periodic."
+        ]
+      },
+      {
+        "heading": "The scroll in Istanbul",
+        "body": [
+          "The Topkapı Scroll is about 29.5 metres long and 33 centimetres wide, and holds 114 geometric patterns drawn in ink and dye. It was probably made in Iran in the late fifteenth or early sixteenth century, and Lu and Steinhardt describe it as Timurid-Turkmen. Lu was led to it by Gülru Necipoğlu's 1995 book The Topkapı Scroll: Geometry and Ornament in Islamic Architecture which reproduced its designs.",
+          "Scrolls like this served as training manuals for architects. Lu and Steinhardt reported dotted outlines of girih tiles beneath some of its patterns, including ones that are not decagonal. To them, that was direct historical evidence that designers thought in tiles. They also showed that the girih tile set turned up in buildings across a wide area, from Turkey to Afghanistan, which Lu called 'an incredibly interesting universal picture'."
+        ]
+      },
+      {
+        "heading": "The impossible crystal, and one from space",
+        "body": [
+          "The physics behind the story was itself once dismissed. On the morning of 8 April 1982, the Nobel Foundation recounts, Dan Shechtman saw in his electron microscope a crystal whose atoms were packed in a pattern that could not be repeated. The discovery was 'extremely controversial', and in defending it he was asked to leave his research group. He won the Nobel Prize in Chemistry in 2011. The Nobel announcement itself pointed to the Alhambra in Spain and the Darb-i Imam shrine as examples of such aperiodic mosaics.",
+          "Steinhardt then went looking for a quasicrystal made by nature. In 2009 he, the mineralogist Luca Bindi and colleagues announced that a museum in Florence held one, in a mineral said to come from Russia's Koryak Mountains, later named icosahedrite. Further work concluded it had arrived on a 4.5-billion-year-old meteorite. A pattern once thought impossible had been sitting in a museum."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Decagonal and Quasi-Crystalline Tilings in Medieval Islamic Architecture",
+        "author": "Peter J. Lu and Paul J. Steinhardt, Science 315 (2007)",
+        "note": "The paper behind the story, with the tiles, the Gunbad-i Kabud and the Darb-i Imam.",
+        "url": "https://bpb-us-w2.wpmucdn.com/sites.uwm.edu/dist/0/158/files/2017/04/Lu-Steinhardt.Decagonal-and-Quasi-Crystalline-Tilings-in-Medieval-Islamic-Architecture.2017-23rjxd4.pdf"
+      },
+      {
+        "title": "The Topkapı Scroll: Geometry and Ornament in Islamic Architecture",
+        "author": "Gülru Necipoğlu (1995)",
+        "note": "The scroll reproduced and explained, with a history of how geometric ornament was designed."
+      },
+      {
+        "title": "Islamic Geometric Patterns: Their Historical Development and Traditional Methods of Construction",
+        "author": "Jay Bonner (2017)",
+        "note": "A practitioner's history of the patterns and the ways they were drawn."
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Were they really quasicrystals?",
+    "body": [
+      "The strongest objection comes from Peter Cromwell, a mathematician at the University of Liverpool. In a 2016 survey of 40 two-level patterns from Iran and Central Asia, published in the Nexus Network Journal, he argued that the Darb-i Imam tympanum was made by filling compartments rather than by subdividing tiles, and that none of the medieval patterns in his catalogue is quasiperiodic. He warns that reconstructions can project modern expectations of symmetry onto old designs, and notes that Lu and Steinhardt's subdivision does not match the original mosaic.",
+      "Others push the opposite way. In 2012 Rima Ajlouni of Texas Tech University argued that some patterns, including one at Maragha, were perfect quasicrystals drawn with compass and straightedge. The quasicrystal researcher Rónán McGrath called that 'a fascinating conjecture' in a continuing debate over how quasiperiodic these patterns really are."
+    ],
+    "confidence": "Contested",
+    "verdict": "Where that leaves you: the girih tiles are real and explain a great deal about how these patterns could be built, but treat the claim that medieval designers deliberately made quasicrystals as a live argument among experts, not a settled fact."
+  },
+  "quiz": [
+    {
+      "question": "What first made Peter Lu curious about medieval Islamic tilework?",
+      "options": [
+        "Five-fold and ten-fold stars on a fifteenth-century madrasa in Bukhara",
+        "A cracked tile he was asked to repair in Isfahan",
+        "A lecture by Roger Penrose on the Alhambra",
+        "A set of wooden tiles he found in a museum in Istanbul"
+      ],
+      "answer": 0,
+      "explain": "Travelling in Uzbekistan in 2005, Lu saw five-fold and ten-fold stars on a Bukhara madrasa and wondered how such tilings had been made."
+    },
+    {
+      "question": "How do girih tiles produce a continuous pattern?",
+      "options": [
+        "Each tile carries lines that meet the middle of every edge at the same angles, so laid edge to edge the lines run on from tile to tile",
+        "Every tile is a regular pentagon, so they fit together without gaps",
+        "The tiles are painted after they are laid, so the painter can join the lines by hand",
+        "Each tile is a copy of one square shape, repeated like wallpaper"
+      ],
+      "answer": 0,
+      "explain": "The five equal-sided tiles carry decorative lines crossing each edge at matching angles, so the joins vanish and only the interlacing pattern shows."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Peter J. Lu and Paul J. Steinhardt, 'Decagonal and Quasi-Crystalline Tilings in Medieval Islamic Architecture', Science 315 (2007), 1106–1110",
+      "url": "https://bpb-us-w2.wpmucdn.com/sites.uwm.edu/dist/0/158/files/2017/04/Lu-Steinhardt.Decagonal-and-Quasi-Crystalline-Tilings-in-Medieval-Islamic-Architecture.2017-23rjxd4.pdf"
+    },
+    {
+      "title": "Philip Ball, 'Islamic tiles reveal sophisticated maths', Nature News (22 February 2007)",
+      "url": "https://www.nature.com/news/2007/070219/full/news070219-9.html"
+    },
+    {
+      "title": "Hamish Johnston, 'Islamic \"quasicrystals\" predate Penrose tiles', Physics World (22 February 2007)",
+      "url": "https://physicsworld.com/a/islamic-quasicrystals-predate-penrose-tiles/"
+    },
+    {
+      "title": "AAAS press release, 'Medieval Islamic architecture: tiling patterns', EurekAlert (22 February 2007)",
+      "url": "https://www.eurekalert.org/news-releases/491068"
+    },
+    {
+      "title": "'The Tiles of Infinity', Saudi Aramco World 60.5 (September/October 2009)",
+      "url": "https://archive.aramcoworld.com/issue/200905/the.tiles.of.infinity.htm"
+    },
+    {
+      "title": "'Girih', Tilings Encyclopedia, Bielefeld University",
+      "url": "https://tilings.math.uni-bielefeld.de/glossary/girih/"
+    },
+    {
+      "title": "'Topkapı Scroll', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Topkap%C4%B1_Scroll"
+    },
+    {
+      "title": "Nobel Foundation, press release for the Nobel Prize in Chemistry 2011",
+      "url": "https://nobelprize.org/prizes/chemistry/2011/press-release"
+    },
+    {
+      "title": "Physics Today, 'Earth's natural quasicrystals came from outer space'",
+      "url": "https://physicstoday.aip.org/news/earths-natural-quasicrystals-came-from-outer-space"
+    },
+    {
+      "title": "Peter R. Cromwell, 'Modularity and Hierarchy in Persian Geometric Ornament', Nexus Network Journal 18 (2016), 7–54",
+      "url": "https://link.springer.com/article/10.1007/s00004-015-0280-6"
+    },
+    {
+      "title": "Physics World, 'Ancient Islamic architects created perfect quasicrystals' (31 January 2012)",
+      "url": "https://physicsworld.com/a/ancient-islamic-architects-created-perfect-quasicrystals/"
+    }
+  ]
+}
