@@ -15,6 +15,10 @@ To unblock an item, change its status to **Ready** (and say what you decided), o
 
 ## The list
 
+### 13. A checked backup story
+**Status:** Ready
+**Asked for by Carl, 17 November 2026 (issue #30), a definite do.** Keep one spare story, already fact-checked, that is released automatically whenever the day's story is held or missing, so the 7:00 reminder can always say today's story is waiting. The Developer's part is the release step (`scripts/build-feed.mjs` and the desk) and its test in `scripts/test-gate.mjs`. The Editor's instructions also need changing so it writes and keeps the spare (no topical or dated material, never two at once); that part goes to the workshop, not the Developer.
+
 ### 2. Web version on GitHub Pages
 **Status:** Blocked: needs a decision
 The same app in a browser, for friends on iPhone (D-006). The workflow exists (`web.yml`) but only runs by hand. **What's needed from Carl:** in the repository's Settings → Pages, set Source to "GitHub Actions". After that the Developer can make it publish on every change and add a link to the README.
@@ -43,10 +47,6 @@ Gift a friend a free month. Needs accounts, and payments.
 **Status:** Blocked: needs accounts or a server
 A paid tier, with the first 100 readers keeping a lower price for good. Needs accounts, payments, and stories moved out of the public repository (D-001), or anyone can read them free.
 
-### 9. Tea Party
-**Status:** Blocked: needs a decision
-A way to discuss the day's story. A discussion inside the app needs accounts and a server. A lighter version could ship over the air: a button that shares the day's talking point to WhatsApp or Messages, so the conversation happens where friends already are. **What's needed from Carl:** which of the two he wants.
-
 ## Suggested while building the agent team
 
 Found on 11 November 2026 while setting up the fact-checker and the desk. Lower priority unless Carl moves them up.
@@ -66,6 +66,10 @@ A link in the app that opens an email to Curiouser. **Decided by Carl, 14 Novemb
 ## Done
 
 The Developer moves an item here in the pull request that builds it.
+
+### Tea Party: the share button
+**Done:** 18 November 2026.
+**Decided by Carl, 17 November 2026 (issues #29 and #31):** the lighter version. A Tea Party card under Through the Looking-Glass in every story, with a talking point made from the Looking-Glass and a button that opens the phone's share sheet (WhatsApp, Messages and so on). The discussion happens where friends already are; the app sends nothing itself. A discussion inside the app would still need accounts and a server.
 
 ### Caucus-race reminder on Sunday mornings
 **Done:** 11 November 2026.
