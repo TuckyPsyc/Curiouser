@@ -1,0 +1,34 @@
+{
+  "issue": 16,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-19T05:55:17Z",
+  "summary": "Two small corrections: Naosuke's age in 1831 was given in the Japanese way of counting, so it is now left out, and the Omotesenke phrase now matches the school's own wording. Everything else, including the quotations, dates and every link, checked out.",
+  "claims": { "checked": 62, "confirmed": 60, "corrected": 1, "removed": 1 },
+  "links": { "checked": 14, "working": 14, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 1",
+      "before": "In 1831, at 17, he moved",
+      "after": "In 1831 he moved",
+      "why": "Naosuke was born in late 1815, so he was 15 or 16 in 1831 by Western reckoning. Japanese sources give 17 because they count age the traditional way, and Landeck says sixteen. The age is a peripheral detail, so it has been cut rather than guessed.",
+      "source": "https://www.mlit.go.jp/tagengo-db/common/001562022.pdf"
+    },
+    {
+      "where": "rabbit hole, level 1, paragraph 1",
+      "before": "an expression of his, 'one chance in a lifetime'",
+      "after": "an expression of his, 'once in a lifetime'",
+      "why": "Omotesenke's own glossary renders Rikyū's phrase 'ichigo ni ichido' as 'once in a lifetime'. 'One chance in a lifetime' is Wikipedia's wording, not the school's.",
+      "source": "https://www.omotesenke.jp/english/chanoyu/glossary.html"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "Sōji's line 'as though it were a meeting that could occur only once in the lifetime' is the translation Wikipedia gives. Landeck renders the same line 'as if this gathering can occur only once'. The sense is the same.",
+    "The Varley wording ('which we can speak of as \"one time, one meeting\"', 'one day's gathering can never be repeated exactly') was confirmed from Wikipedia's quotation of Tea in Japan, p. 187, and from Landeck's paraphrase of it. I could not open Varley's book itself.",
+    "The assassins are usually counted as 18: 17 from Mito and one from Satsuma. Some summaries, including the Japan Tourism Agency's, say 17.",
+    "Wikipedia's article on Naosuke gives his birth year as 1814; Japanese official sources give 1815. The story doesn't state it, so no change was needed."
+  ]
+}

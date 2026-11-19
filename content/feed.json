@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-18T05:50:37.527Z",
+  "updated": "2026-11-19T05:55:30.286Z",
   "issues": [
+    {
+      "id": 16,
+      "date": "2026-11-19",
+      "topic": "Gentleman's Pursuits",
+      "title": "The Tea Master in the Snow",
+      "concept": "Ichi-go ichi-e",
+      "teaser": "A Japanese lord with no prospects spent his youth on tea. His phrase for treating every gathering as the only one outlived him.",
+      "readingMinutes": 3
+    },
     {
       "id": 15,
       "date": "2026-11-18",
