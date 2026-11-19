@@ -5,7 +5,9 @@
 import { createServer } from 'node:http';
 
 export async function fakeGitHub({ owner = 'TuckyPsyc', issues = [], pulls = [], runs = [], release = null, files = {} } = {}) {
-  const state = { issues: issues.map((i) => ({ comments: 0, assignees: [], labels: [], state: 'open', ...i })), comments: [], pulls, runs, release, requests: [], labels: new Set() };
+  // contents: files on a branch, keyed "path@branch". dispatches: workflows started by hand;
+  // onDispatch lets a test say what such a run would have done, and noDispatch refuses them.
+  const state = { issues: issues.map((i) => ({ comments: 0, assignees: [], labels: [], state: 'open', ...i })), comments: [], pulls, runs, release, requests: [], labels: new Set(), contents: {}, dispatches: [], onDispatch: null, noDispatch: false };
   let nextNumber = Math.max(100, ...state.issues.map((i) => i.number + 1));
   let nextComment = 1;
   const send = (res, code, body) => {
@@ -85,6 +87,17 @@ export async function fakeGitHub({ owner = 'TuckyPsyc', issues = [], pulls = [],
     }
     if (req.method === 'GET' && p === '/pulls') return send(res, 200, state.pulls.filter((x) => q.state === 'all' || x.state === (q.state ?? 'open')));
     if (req.method === 'GET' && p === '/actions/runs') return send(res, 200, { workflow_runs: state.runs });
+    if (req.method === 'POST' && (m = /^\/actions\/workflows\/([^/]+)\/dispatches$/.exec(p))) {
+      if (state.noDispatch) return send(res, 403, { message: 'Resource not accessible' });
+      state.dispatches.push({ workflow: m[1], ...body });
+      state.onDispatch?.(state);
+      return send(res, 204);
+    }
+    if (req.method === 'GET' && (m = /^\/contents\/(.+)$/.exec(p))) {
+      const file = state.contents[`${m[1]}@${q.ref ?? 'main'}`];
+      if (file === undefined) return send(res, 404, { message: 'Not Found' });
+      return send(res, 200, { content: Buffer.from(file).toString('base64'), encoding: 'base64' });
+    }
     if (req.method === 'GET' && p.startsWith('/releases/tags/')) {
       if (!state.release) return send(res, 404, { message: 'Not Found' });
       return send(res, 200, {

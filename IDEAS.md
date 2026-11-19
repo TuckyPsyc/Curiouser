@@ -15,10 +15,6 @@ To unblock an item, change its status to **Ready** (and say what you decided), o
 
 ## The list
 
-### 1. Caucus-race reminder on Sunday mornings
-**Status:** Ready
-A second reminder on Sunday mornings, telling readers the week's Caucus-race is open. It uses the notification library already in the app and is scheduled on the phone, like the 7:00 reminder, with its own on/off switch.
-
 ### 2. Web version on GitHub Pages
 **Status:** Blocked: needs a decision
 The same app in a browser, for friends on iPhone (D-006). The workflow exists (`web.yml`) but only runs by hand. **What's needed from Carl:** in the repository's Settings → Pages, set Source to "GitHub Actions". After that the Developer can make it publish on every change and add a link to the README.
@@ -60,13 +56,17 @@ Found on 11 November 2026 while setting up the fact-checker and the desk. Lower 
 Show readers that a story was independently checked, with the date, and say so honestly when it was released unchecked. The verdicts are already in `content/checks/`.
 
 ### 12. Write to the editor
-**Status:** Blocked: needs a decision
-A link in the app that opens an email to Curiouser. **What's needed from Carl:** the address (see Support).
+**Status:** Ready
+A link in the app that opens an email to Curiouser. **Decided by Carl, 14 November 2026:** the address is curiousersupport@gmail.com, the Curiouser-only mailbox that Support reads.
 
 ## Done
 
 The Developer moves an item here in the pull request that builds it.
 
-### 10. A reminder that doesn't promise a story on a morning without one
-**Status:** Done, 14 November 2026
+### Caucus-race reminder on Sunday mornings
+**Done:** 11 November 2026.
+A second reminder at 9:00 on Sunday mornings, telling readers the week's Caucus-race is open. It uses the notification library already in the app and is scheduled on the phone, like the 7:00 reminder, with its own switch (the Dodo) on the Shelves.
+
+### A reminder that doesn't promise a story on a morning without one
+**Done:** 14 November 2026.
 The 7:00 reminder always says "Today's story is waiting". On a morning when the story was held or unchecked, that isn't true (D-012). Reword it so it's true either way.

@@ -1,0 +1,140 @@
+{
+  "id": 13,
+  "date": "2026-11-16",
+  "topic": "Self-Improvement",
+  "title": "The Jesuit Who Remembered Backwards",
+  "concept": "The method of loci",
+  "teaser": "In 1595 an Italian Jesuit in Ming China astonished scholars by repeating lists of characters backwards. His secret was an ancient trick of places.",
+  "readingMinutes": 3,
+  "story": [
+    "In 1595 an Italian Jesuit named Matteo Ricci settled in Nanchang, the capital of Jiangxi province in Ming China. He had lived in China since 1583, and he wanted a hearing from its scholars. Nanchang was full of them. Many were students hoping to pass the civil-service examinations, whose set texts included the Analects of Confucius and the Classic of Poetry.",
+    "Ricci had a way of getting their attention. Shown a list of Chinese characters chosen at random, he could read it once and repeat it, then repeat it backwards. On 29 August 1595 he wrote to his superior in Macao that the literati of Nanchang regarded his memory as a miracle. Word spread, he reported, that he knew an art of memory, ‘something unprecedented for them’, and in a city of students and literati there ‘could not be anything more welcome than this’. He began teaching it to visitors. The governor of Jiangxi asked him to teach it to his three sons, who were preparing for the examinations.",
+    "Ricci’s feat rested on a technique he had learned from the Jesuits in Rome, and it was very old. Cicero tells the story of its invention. The poet Simonides, the story goes, was called outside from a banquet moments before the roof fell in, crushing the guests. He was able to identify the bodies by remembering where each guest had reclined. From this, Cicero says, Simonides worked out that orderly arrangement is the key to memory.",
+    "The technique is the method of loci, from the Latin for ‘places’. You fix in your mind a series of places in a set order, such as the rooms of a building you know well. Then you turn each thing you want to remember into a vivid image and leave one in each place. To recall them, you walk through the building in your mind, and the order of the places keeps the order of the things. Ricci presented his places as a memory palace. In 1596 he set the method down in Chinese, in a short treatise called Xiguo Jifa, the Western Method of Memory. It described buildings large, medium and small, showed how Chinese characters themselves could be made into images, and took examples from the Analects and the Classic of Poetry.",
+    "Ricci hoped that scholars impressed by his memory would grow curious about his culture, and then about his God. It did not work out that way. The sinologist Michael Lackner, who translated the treatise into German, judged its influence on Chinese scholars almost negligible.",
+    "The method itself has lasted far better, and it works for ordinary memories too. Much of what looks like a gift turns out to be a technique, and techniques can be learned."
+  ],
+  "takeaway": "The method of loci: to remember things in order, turn each one into a vivid image and place it along a route through a building you know, then walk the route in your mind to recall them.",
+  "recall": {
+    "question": "In Bluma Zeigarnik’s experiments in Berlin, people remembered some of their tasks much better than others. Which ones, and what is the finding called?",
+    "answer": "The tasks they were stopped from finishing: the Zeigarnik effect, the idea that an unfinished task stays active in the mind and is easier to remember than a completed one.",
+    "fromIssue": 9
+  },
+  "rabbitHole": {
+    "title": "Down the corridors of the palace",
+    "intro": "Are memory champions born or made, where did Ricci’s palace come from, and what did his fellow Jesuits find on the other side of the world? Step inside.",
+    "levels": [
+      {
+        "heading": "Made, not born",
+        "body": [
+          "It is tempting to think that people with prodigious memories have unusual brains. In 2003 Eleanor Maguire and colleagues, writing in Nature Neuroscience, tested ten people known for superior memory, eight of them high finishers at the World Memory Championships, against ten matched controls. The memorisers’ verbal and non-verbal ability was in the high-average range, comparable to the controls, and scans found no structural differences in their brains. Shown snowflake patterns, which are hard to put into words, both groups scored the same. What set them apart was strategy. Nine of the ten used the method of loci. They relied on a spatial learning strategy, and while they memorised, brain regions including the hippocampus were engaged.",
+          "In 2017 Martin Dresler and colleagues reported in Neuron that 23 memory athletes had, ‘without a single exception’, trained for months and years using such strategies. They then trained 51 people with ordinary memories. One group practised the method of loci for 30 minutes a day over 40 days. Their recall of a 72-word list rose on average from about 26 words to 62, and four months later they still recalled more than 22 words more than before."
+        ]
+      },
+      {
+        "heading": "Where Ricci’s palace came from",
+        "body": [
+          "Cicero’s account of Simonides, in his dialogue De Oratore, also gives the rule. Those who want to train their memory should choose places, form images of the things to be remembered, and store the images in the places, so that the order of the places preserves the order of the things. Ricci’s version came out of the classical art of memory as it had been handed down through medieval and Renaissance Europe. Lackner calls the treatise anachronistic because it draws on a medieval, Lullian art of memory, and the scholar Jaewon Ahn has traced the influence of Host von Romberch’s Congestorium artificiose memoriae, printed in 1520.",
+          "What was new was the adaptation. One chapter of the Xiguo Jifa draws on the six categories of character formation set out by Xu Shen in the Shuowen jiezi, and later chapters show how to build images from characters, with examples drawn from about 120 of them. Ricci saw the characters themselves as ideal images for a memory palace. The Chinese text does not mention the Christian God."
+        ]
+      },
+      {
+        "heading": "Knots in the Andes",
+        "body": [
+          "While Ricci taught memory palaces in China, his fellow Jesuits in Peru met a very different art of memory. The historian Ana Carolina Hosne has compared the two missions. In Peru, Andean people used quipus, cords of knotted string, to memorise Christian doctrine. In his annual letter of 1577, the Jesuit José de Acosta wrote that they ‘remember what they are taught, as we do in writing’. The Jesuits even encouraged people to make a quipu of their sins before confession, as one of the sermons of the Third Lima Council recommends.",
+          "It was an uneasy arrangement. The same council, which met in 1582 and 1583 and bore Acosta’s influence, also ordered quipus seen as idolatrous to be destroyed. Hosne reads the Jesuits’ tolerance as a practical choice rather than a genuine adoption of a local technique. On both sides of the world, an art of memory became a bridge between cultures, built mainly to carry the missionaries’ own message."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Memory Palace of Matteo Ricci",
+        "author": "Jonathan D. Spence (1984)",
+        "note": "A historian’s portrait of Ricci, built around four images from his memory treatise."
+      },
+      {
+        "title": "The Art of Memory",
+        "author": "Frances A. Yates (1966)",
+        "note": "The classic history of the memory arts in Europe, from Simonides to the Renaissance."
+      },
+      {
+        "title": "The ‘Art of Memory’ in the Jesuit Missions in Peru and China in the Late 16th Century",
+        "author": "Ana Carolina Hosne, Material Culture Review 76 (2012)",
+        "note": "Ricci’s memory palace and the Andean quipus side by side.",
+        "url": "https://journals.lib.unb.ca/index.php/MCR/article/download/21407/24871?inline=1"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Powerful for lists, costly to learn",
+    "body": [
+      "The strongest objection is not that the method fails but that its reach is narrower than its reputation. In a 2025 systematic review and meta-analysis in the British Journal of Psychology, Jan Ondřej of Masaryk University found that, compared with simple rehearsal, the method gave adults a large boost in recalling items in order. But he rated the certainty of the evidence low to very low, and judged 89.2 per cent of the experiments on young adults to be at high risk of bias.",
+      "It also takes work. Creating memory palaces is, in Ondřej’s words, ‘time-intensive’, and fast encoding ‘requires considerable practice’. Many older adults found it demanding and often did not use it unless prompted, and in one three-year follow-up only one person still used it consistently. Reusing the same places can cause interference between old and new lists."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: a memory palace is a well-tested way to hold things in order, such as the points of a speech, but expect to practise before it pays off and don’t expect it to do the work of understanding."
+  },
+  "quiz": [
+    {
+      "question": "What did the governor of Jiangxi ask Matteo Ricci to do?",
+      "options": [
+        "Teach his memory technique to the governor’s three sons, who were preparing for the examinations",
+        "Recite the Analects backwards at a banquet in his honour",
+        "Translate the Classic of Poetry into Italian",
+        "Leave Nanchang and return to Macao"
+      ],
+      "answer": 0,
+      "explain": "Ricci’s memory had made him famous in Nanchang, and the governor wanted it taught to his three sons, who were preparing for the civil-service examinations."
+    },
+    {
+      "question": "Which of these is an example of the method of loci?",
+      "options": [
+        "Picturing each item on a shopping list as a vivid image and leaving them one by one in the rooms of your house",
+        "Repeating a list aloud over and over until it sticks",
+        "Making up a word from the first letters of each item",
+        "Writing each item on a card and shuffling the cards"
+      ],
+      "answer": 0,
+      "explain": "The method of loci puts a vivid image of each thing in a familiar place, in order, as Simonides did with the guests’ seats and Ricci with his memory palace."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ana Carolina Hosne, ‘The “Art of Memory” in the Jesuit Missions in Peru and China in the Late 16th Century’, Material Culture Review 76 (2012)",
+      "url": "https://journals.lib.unb.ca/index.php/MCR/article/download/21407/24871?inline=1"
+    },
+    {
+      "title": "Shixiang Jin, ‘The Encounter of Image and xiang in Matteo Ricci’s Western Art of Memory (Xiguo Jifa, 1596)’, book chapter (Routledge), open access via the Max Planck Society",
+      "url": "https://pure.mpg.de/pubman/item/item_3388585_3/component/file_3388586/10.4324_9781003258704-10_chapterpdf.pdf"
+    },
+    {
+      "title": "Peter Burke, ‘The Exotic West’, review of Jonathan Spence, The Memory Palace of Matteo Ricci, London Review of Books 8.2 (1986)",
+      "url": "https://www.lrb.co.uk/v08/n02/peter-burke/the-exotic-west"
+    },
+    {
+      "title": "Joseph Hsing-san Shih and the Editors, ‘Matteo Ricci’, Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/Matteo-Ricci"
+    },
+    {
+      "title": "John H. Lienhard, Engines of Our Ingenuity, episode 1226, University of Houston",
+      "url": "https://engines.egr.uh.edu/episode/1226"
+    },
+    {
+      "title": "Cicero, De Oratore 2.86.351–354, on Simonides and the art of memory, via the University of Texas ‘Memoria’ site",
+      "url": "https://www.laits.utexas.edu/memoria/Cicero.html"
+    },
+    {
+      "title": "Eleanor A. Maguire, Elizabeth R. Valentine, John M. Wilding and Narinder Kapur, ‘Routes to remembering: the brains behind superior memory’, Nature Neuroscience 6 (2003), 90–95",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12483214/"
+    },
+    {
+      "title": "Cell Press, ‘You too can gain super-sized memory with training’, on Martin Dresler et al., ‘Mnemonic training reshapes brain networks to support superior memory’, Neuron (8 March 2017)",
+      "url": "https://www.eurekalert.org/news-releases/750131"
+    },
+    {
+      "title": "Jan Ondřej, ‘The method of loci in the context of psychological research: A systematic review and meta-analysis’, British Journal of Psychology 116.4 (2025), 930–986",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12514325/"
+    }
+  ]
+}

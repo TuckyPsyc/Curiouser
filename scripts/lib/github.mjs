@@ -5,6 +5,14 @@
 // - Otherwise the gh command, which is how the agents are signed in.
 import { spawnSync } from 'node:child_process';
 
+// Does this run hold a GitHub token of its own? A workflow does. An agent's
+// session may set GITHUB_TOKEN to a placeholder ("proxy-injected") that only the
+// gh command and git can use, because their requests pass through a proxy that
+// swaps in the real sign-in; a request made straight from Node with it is refused
+// as "Bad credentials". So a placeholder counts as no token, and the scripts the
+// agents run fall back to gh: github({ useGh: !hasOwnToken() }).
+export const hasOwnToken = () => Boolean(process.env.GITHUB_TOKEN) && !/^proxy-/.test(process.env.GITHUB_TOKEN);
+
 export function github({ useGh = false } = {}) {
   const base = process.env.CURIOUSER_API || 'https://api.github.com';
   const viaGh = useGh && !process.env.CURIOUSER_API;

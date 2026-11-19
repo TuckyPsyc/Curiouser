@@ -1,0 +1,136 @@
+{
+  "id": 15,
+  "date": "2026-11-18",
+  "topic": "Mathematics",
+  "title": "The Dirty First Pages",
+  "concept": "Benford's law",
+  "teaser": "An astronomer noticed that the first pages of logarithm books wore out fastest. The reason turned into a law that now helps catch fraudsters.",
+  "readingMinutes": 3,
+  "story": [
+    "Before calculators, anyone who had to multiply long numbers reached for a book of logarithm tables. Simon Newcomb used them more than most. Born in Nova Scotia in 1835, he joined the American Nautical Almanac Office, which prepared the astronomical tables navigators relied on, in 1857, and became its director in 1877. Somewhere along the way he noticed something odd about the books themselves.",
+    "In 1881 he described it in a two-page note in the American Journal of Mathematics. 'That the ten digits do not occur with equal frequency,' he wrote, 'must be evident to any one making much use of logarithmic tables, and noticing how much faster the first pages wear out than the last ones.' The first pages hold the numbers beginning with 1. People were looking those up far more often than numbers beginning with 9. 'The first significant figure is oftener 1 than any other digit,' Newcomb concluded, 'and the frequency diminishes up to 9.' He gave a rule for how often each digit should lead, but no collection of data to show it. The note was largely forgotten.",
+    "Decades later Frank Benford, a physicist at the General Electric research laboratories in Schenectady, New York, made the same observation about worn tables, apparently without knowing Newcomb's paper. Unlike Newcomb, he went looking for evidence. He gathered 20 lists of numbers, 20,229 observations in all, from sources as different as the areas of rivers, American League baseball statistics, atomic weights and the numbers printed in an issue of Reader's Digest. In 1938 he published the results as 'The Law of Anomalous Numbers'. The lists fitted the same logarithmic pattern very well, and because his paper was far more widely noticed, the pattern took his name.",
+    "Benford's law says that in many collections of naturally occurring numbers, the leading digit is 1 about 30 per cent of the time, 2 about 18 per cent, and so on down to 9, which leads less than 5 per cent of the time. The probability that the first digit is d is the logarithm, to base 10, of 1 + 1/d. It doesn't apply to everything. It works best for numbers that describe the sizes of similar things and have no built-in maximum or minimum. Assigned numbers, such as telephone numbers or postcodes, don't follow it.",
+    "The law's most famous use came half a century later. In his 1992 doctoral thesis the accountant Mark Nigrini applied it to tax returns, reasoning that because human choices are not random, invented numbers are unlikely to follow the law. In 1993 Wayne James Nelson, a manager in the Arizona State Treasurer's office, was found guilty of trying to defraud the state of nearly $2 million through 23 cheques to a bogus vendor. Nigrini later showed how the cheques would have stood out: more than 90 per cent of the amounts began with 7, 8 or 9, nearly the reverse of Benford's pattern.",
+    "A pattern first spotted in grubby library books now helps auditors decide where to look. Real numbers have habits, and invented ones rarely share them."
+  ],
+  "takeaway": "Benford's law: in many sets of real-world numbers, such as the sizes of similar things with no built-in limit, the first digit is far more often small than large, with 1 leading about 30 per cent of the time and 9 under 5 per cent.",
+  "recall": {
+    "question": "In 1935 Avdo Međedović, who could not read or write, dictated a song of more than 12,000 lines. What idea explains how singers like him could do it?",
+    "answer": "Oral-formulaic composition: they compose as they perform, building lines from a stock of ready-made phrases and familiar scenes rather than reciting a memorised text.",
+    "fromIssue": 11
+  },
+  "rabbitHole": {
+    "title": "Why the ones come first",
+    "intro": "When does the law hold, why does it hold at all, and why did it take a century for anyone to care? Turn to page one.",
+    "levels": [
+      {
+        "heading": "Where it works, and where it doesn't",
+        "body": [
+          "The popular version says that any big pile of numbers starts with 1 about 30 per cent of the time. The evidence is narrower. In a 1999 article in the Journal of Accountancy, Nigrini listed the conditions that make conformity likely: the numbers describe the sizes of similar things, such as companies' market values, and they have no built-in maximum or minimum. 'Assigned numbers,' he wrote, 'such as Social Security numbers, zip codes or bank account numbers will not conform to Benford's law.'",
+          "The mathematician Theodore Hill, writing in American Scientist in 1998, added more exceptions. Lists of telephone numbers and tables of square roots don't follow it, and nor do uniformly distributed numbers such as lottery draws. Hill also pointed out that a mixture of many different kinds of data can converge to the law even when no single ingredient obeys it."
+        ]
+      },
+      {
+        "heading": "The units test",
+        "body": [
+          "Why should nature prefer small leading digits at all? One clue came from Roger Pinkham in 1961. If there is a universal law of first digits, it shouldn't depend on the units we happen to use. Hill gives the example of stock prices: convert them from dollars to pesos and every individual price changes, but the overall share beginning with 1 should stay about the same. Pinkham argued that Benford's distribution is scale-invariant in this sense, and that it is the only distribution of first digits that is.",
+          "In 1995 Hill gave the explanation a firmer footing. He proved that base-invariance, meaning the pattern holds whatever number base you count in, also implies Benford's law. In a second paper he showed that if you take random samples from a random mix of distributions, the leading digits tend towards Benford's proportions."
+        ]
+      },
+      {
+        "heading": "A sleeping beauty",
+        "body": [
+          "Scientists who study citations have a name for papers ignored for years and then suddenly discovered: sleeping beauties. In a 2017 study, Tariq Ahmad Mir and Marcel Ausloos traced both papers behind the law. Newcomb's 1881 note was first cited in 1920, nearly 40 years after it appeared, and for decades afterwards hardly at all. Benford's paper was first cited in 1944 and then slept until 1968.",
+          "What woke them, the authors found, was Hill's 1995 work, followed by Nigrini's 1996 paper on tax compliance, which turned a mathematical curiosity into a working tool. After that, citations to both papers rose sharply. The law that explains why the first pages of logarithm books got dirty spent most of the twentieth century waiting for someone to pick it up."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The First-Digit Phenomenon",
+        "author": "Theodore P. Hill, American Scientist 86 (1998)",
+        "note": "A clear, readable account of the law, its history and why it holds."
+      },
+      {
+        "title": "Benford's Law: Applications for Forensic Accounting, Auditing, and Fraud Detection",
+        "author": "Mark J. Nigrini (2012)",
+        "note": "The accountant who made the law a working tool explains how it is used, and its limits."
+      },
+      {
+        "title": "Note on the Frequency of Use of the Different Digits in Natural Numbers",
+        "author": "Simon Newcomb, American Journal of Mathematics 4 (1881)",
+        "note": "The original two pages, where it all began.",
+        "url": "https://pdodds.w3.uvm.edu/research/papers/others/1881/newcomb1881a.pdf"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Not a lie detector",
+    "body": [
+      "The strongest objection isn't to the law but to how it is used. In 2011 the political scientists Joseph Deckert, Mikhail Myagkov and Peter Ordeshook tested Benford-style checks on simulated fair and fraudulent elections, and on real ones where fraud was known or unlikely. Conforming to the law, or departing from it, showed no consistent link with fraud. The test sometimes passed rigged elections and flagged clean ones, with accuracy about that of a coin toss. They concluded it was 'problematical at best as a forensic tool when applied to elections'.",
+      "Even in accounting, its champions treat a large deviation as a signal that something may be wrong and deserves a closer look, not as proof. And as Nigrini's own conditions make plain, honest data that is capped or assigned can stray from the pattern for perfectly innocent reasons."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: trust the pattern in large, wide-ranging sets of natural numbers, treat a deviation as a prompt for questions rather than an accusation, and be wary of anyone who uses it alone to declare fraud."
+  },
+  "quiz": [
+    {
+      "question": "What first tipped Simon Newcomb off to the pattern now called Benford's law?",
+      "options": [
+        "The first pages of logarithm books wore out faster than the last ones",
+        "Tax returns he audited had too many numbers beginning with 9",
+        "Star catalogues listed more bright stars than faint ones",
+        "Baseball scores in the newspapers often began with 1"
+      ],
+      "answer": 0,
+      "explain": "Newcomb wrote in 1881 that anyone using logarithmic tables would notice 'how much faster the first pages wear out than the last ones', where numbers beginning with 1 are found."
+    },
+    {
+      "question": "Which set of numbers would you expect to follow Benford's law most closely?",
+      "options": [
+        "The areas of thousands of rivers around the world",
+        "A list of telephone numbers",
+        "Winning lottery numbers",
+        "Amounts invented by someone trying to avoid suspicion"
+      ],
+      "answer": 0,
+      "explain": "River areas measure similar things with no built-in limit, and were among Benford's own lists. Telephone numbers are assigned, and invented amounts, like the Arizona cheques, rarely fit the pattern."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Simon Newcomb, 'Note on the Frequency of Use of the Different Digits in Natural Numbers', American Journal of Mathematics 4 (1881), 39–40",
+      "url": "https://pdodds.w3.uvm.edu/research/papers/others/1881/newcomb1881a.pdf"
+    },
+    {
+      "title": "Theodore P. Hill, 'The First-Digit Phenomenon', American Scientist 86 (1998), 358–363",
+      "url": "https://web.williams.edu/Mathematics/sjmiller/public_html/BrownClasses/197/benford/Hill_1st-dig.pdf"
+    },
+    {
+      "title": "Mark J. Nigrini, 'I've Got Your Number', Journal of Accountancy (May 1999)",
+      "url": "https://www.journalofaccountancy.com/issues/1999/may/nigrini.html"
+    },
+    {
+      "title": "Tariq Ahmad Mir and Marcel Ausloos, 'Benford's law: a \"sleeping beauty\" sleeping in the dirty pages of logarithmic tables' (2017)",
+      "url": "https://arxiv.org/pdf/1702.00554"
+    },
+    {
+      "title": "AMS Feature Column, 'Simon Newcomb and \"Natural Numbers\" (Benford's Law)'",
+      "url": "https://www.ams.org/featurecolumn/archive/newcomb.html"
+    },
+    {
+      "title": "'Simon Newcomb', MacTutor History of Mathematics, University of St Andrews",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Newcomb/"
+    },
+    {
+      "title": "'Frank Benford', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Frank_Benford"
+    },
+    {
+      "title": "Joseph Deckert, Mikhail Myagkov and Peter C. Ordeshook, 'Benford's Law and the Detection of Election Fraud', Political Analysis 19 (2011), 245–268",
+      "url": "https://econpapers.repec.org/RePEc:cup:polals:v:19:y:2011:i:03:p:245-268_01"
+    }
+  ]
+}

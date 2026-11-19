@@ -1,6 +1,42 @@
 {
-  "updated": "2026-11-14T05:59:12.290Z",
+  "updated": "2026-11-18T05:50:37.527Z",
   "issues": [
+    {
+      "id": 15,
+      "date": "2026-11-18",
+      "topic": "Mathematics",
+      "title": "The Dirty First Pages",
+      "concept": "Benford’s law",
+      "teaser": "An astronomer noticed that the first pages of logarithm books wore out fastest. The reason turned into a law that now helps catch fraudsters.",
+      "readingMinutes": 3
+    },
+    {
+      "id": 14,
+      "date": "2026-11-17",
+      "topic": "Art & Music",
+      "title": "The Stars on the Shrine Wall",
+      "concept": "Girih tiles",
+      "teaser": "A physics student in Uzbekistan noticed ten-pointed stars on a madrasa wall. They led him to five tiles and a pattern far ahead of its time.",
+      "readingMinutes": 3
+    },
+    {
+      "id": 13,
+      "date": "2026-11-16",
+      "topic": "Self-Improvement",
+      "title": "The Jesuit Who Remembered Backwards",
+      "concept": "The method of loci",
+      "teaser": "In 1595 an Italian Jesuit in Ming China astonished scholars by repeating lists of characters backwards. His secret was an ancient trick of places.",
+      "readingMinutes": 3
+    },
+    {
+      "id": 12,
+      "date": "2026-11-15",
+      "topic": "Economics",
+      "title": "Twenty-Seven Dollars in Jobra",
+      "concept": "Solidarity lending",
+      "teaser": "A Bangladeshi economics professor found 42 villagers trapped by $27 of debt, and a bank that said the poor were not creditworthy.",
+      "readingMinutes": 3
+    },
     {
       "id": 11,
       "date": "2026-11-14",

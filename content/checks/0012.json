@@ -1,0 +1,27 @@
+{
+  "issue": 12,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-15T05:55:00Z",
+  "summary": "Every claim and quotation checked out. One change: the link to the Ghatak and Guinnane paper could not be opened, so it now points to the copy on Maitreesh Ghatak's LSE page.",
+  "claims": { "checked": 62, "confirmed": 62, "corrected": 0, "removed": 0 },
+  "links": { "checked": 10, "working": 9, "replaced": 1, "removed": 0 },
+  "lookingGlass": { "rating": "Contested", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "sources, Ghatak and Guinnane (1999)",
+      "before": "https://are.berkeley.edu/courses/ARE251/2004/papers/Ghatak-Guinane.pdf",
+      "after": "https://econ.lse.ac.uk/staff/mghatak/My%20Papers/jde2.pdf",
+      "why": "The Berkeley course link could not be opened or confirmed. The LSE copy is the same paper (Journal of Development Economics 60, 1999, 195-228) and supports the group-of-five design, the four lender problems and the German co-operatives figures.",
+      "source": "https://econ.lse.ac.uk/staff/mghatak/My%20Papers/jde2.pdf"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The Green Bank of Caraga is described by Gine and Karlan as a rural bank in the central Philippines; it is its 169 centres, not necessarily the bank's head office, that were on Leyte. The story's wording can be read either way.",
+    "Sources differ on the year of the first $27: Yunus's lecture places his discovery in the 1974 famine years, while Grameen and the Company Histories entry date the Jobra project to 1976. The story follows both sensibly.",
+    "Stiglitz's abstract says peer monitoring moves risk from the bank to the 'cosigner'; the story's 'borrowers' neighbours' is a fair paraphrase, since the cosigners in his model are neighbours.",
+    "The Wall Street Journal figures (19 per cent of loans a year overdue; half the portfolio in two northern districts) are as reported by Pearl and Phillips in 2001 and quoted by Roodman; they are journalists' figures, not Grameen's own accounts."
+  ]
+}

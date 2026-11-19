@@ -32,6 +32,7 @@ On your phone, open **[the latest release](https://github.com/TuckyPsyc/curiouse
 | `IDEAS.md` | The Developer's backlog, in order. |
 | `scripts/ask-carl.mjs` | How an agent puts a request on Carl's queue: an issue labelled `needs-carl`. |
 | the `status` branch | The status page, `status.md` and `status.json`, rewritten by the desk on every run for Fenton to read aloud. Never merged; nothing else uses it. |
+| `scripts/briefing.mjs` | Starts the desk, then gathers the status page, the open issues, the team page, `IDEAS.md`, `DECISIONS.md`, the FAQ and the newest report and brief as text. The Courier copies it into Fenton's Briefing, a Claude doc, because Fenton's chat can't count on reaching GitHub. |
 | `src/` | The Expo / React Native app. |
 | `.github/workflows/` | `update.yml` sends screen and feature changes to installed phones over the air; `android.yml` builds a new APK only when native-level files change. `desk.yml` keeps the editor's desk and the status page up to date, `release.yml` is Carl's override to publish a story, `video.yml` makes the daily video, and `checks.yml` tests every change. |
 
@@ -45,6 +46,8 @@ node scripts/build-feed.mjs   # validate stories, regenerate feed and bundled se
 node scripts/test-gate.mjs    # prove an unchecked story can't reach readers
 node scripts/stats.mjs --no-save   # the week's numbers, as the Analyst sees them
 node scripts/requests.mjs --for developer   # Carl's requests to an agent, as it sees them
+node scripts/clerk.mjs ledger.txt --dry-run  # what the clerk would do with Fenton's Ledger lines
+node scripts/briefing.mjs --no-desk --out /tmp/briefing   # what the Courier would copy into Fenton's Briefing, without starting the desk
 node scripts/ask-carl.mjs --from claude --title "…" --why "…" --minutes 2 --how "…" --rehearsal   # what a request for Carl would look like
 npx tsc --noEmit              # typecheck
 npx expo start                # run in Expo Go / a dev build

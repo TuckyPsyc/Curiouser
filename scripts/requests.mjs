@@ -13,7 +13,7 @@
 // --rehearsal reads only practice requests (label rehearsal) and, for --reply,
 // prints the answer instead of posting it.
 import { readFileSync } from 'node:fs';
-import { github, trusted } from './lib/github.mjs';
+import { github, trusted, hasOwnToken } from './lib/github.mjs';
 import { TEAM, AGENT_MARK, requestAgent, requestLabel, requestState, isCarlsAnswer } from './lib/queue.mjs';
 import { fmtDate, ukOf } from './lib/dates.mjs';
 
@@ -21,7 +21,7 @@ const argv = process.argv.slice(2);
 const flag = (f) => argv.includes(f);
 const opt = (f) => (argv.includes(f) ? argv[argv.indexOf(f) + 1] : undefined);
 const repo = process.env.GITHUB_REPOSITORY || 'TuckyPsyc/curiouser';
-const api = github({ useGh: !process.env.GITHUB_TOKEN });
+const api = github({ useGh: !hasOwnToken() });
 const rehearsal = flag('--rehearsal');
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 const isRehearsal = (i) => (i.labels ?? []).some((l) => (l?.name ?? l) === 'rehearsal');

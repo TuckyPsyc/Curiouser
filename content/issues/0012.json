@@ -1,0 +1,143 @@
+{
+  "id": 12,
+  "date": "2026-11-15",
+  "topic": "Economics",
+  "title": "Twenty-Seven Dollars in Jobra",
+  "concept": "Solidarity lending",
+  "teaser": "A Bangladeshi economics professor found 42 villagers trapped by $27 of debt, and a bank that said the poor were not creditworthy.",
+  "readingMinutes": 3,
+  "story": [
+    "In 1974 Bangladesh was in the grip of a terrible famine. Muhammad Yunus, who headed the economics department at Chittagong University, later said he found it difficult to teach 'elegant theories of economics' while it went on around him. In the village of Jobra he came across a woman borrowing less than a dollar from a moneylender. The price of the loan was that the lender had the exclusive right to buy everything she made, at a price he set.",
+    "A list was drawn up of villagers caught in the same trap. It had 42 names, and between them they had borrowed a total of US $27. Yunus offered the $27 from his own pocket. Then he went to the bank on his campus and asked it to lend to people like them. The bank said 'the poor were not creditworthy.' After several months of failed efforts, Yunus offered to guarantee the loans himself. 'The poor paid back their loans, on time, every time!' he later recalled. Grameen dates the birth of its project to 1976, in Jobra. In 1983 it became a bank in its own right.",
+    "The borrowers had no land or property to pledge. What the bank asked for instead was a group. In the classic Grameen design, as the economists Maitreesh Ghatak and Timothy Guinnane described it in 1999, each borrower joined a group of five people from the same village, chosen by themselves. Two members received loans first. Two more could borrow only if the first two kept up their weekly payments and the group kept the bank's rules. If any member defaulted, the whole group lost the right to borrow from the bank again.",
+    "This is solidarity lending. A bank cannot easily tell which poor villager is reliable, or watch how each loan is spent. Neighbours can. Tie their futures together, and they have reason to choose partners they trust, keep an eye on one another and lean on anyone who falls behind. Their knowledge and their relationships do the work that collateral does for a richer borrower. In 1990 the economist Joseph Stiglitz called this peer monitoring, and wrote that it was 'largely responsible for the successful financial performance of the Grameen Bank'. By 2006, when Yunus and Grameen Bank shared the Nobel Peace Prize, the bank was lending to nearly 7 million people, 97 per cent of them women, and Grameen-style programmes had spread to almost every country.",
+    "It matters because the idea reaches well beyond banking. When an institution can't see who is trustworthy, the people who can see may be the best guarantee it has."
+  ],
+  "takeaway": "Solidarity lending: lending to people with no collateral by putting them in small groups whose members share a stake in each other's repayment, so neighbours' knowledge and social ties stand in for security.",
+  "recall": {
+    "question": "After his bloody conquest of Kalinga, the emperor Ashoka carved his remorse into stone and proposed a better kind of victory. What did he call it?",
+    "answer": "Conquest by dhamma: winning people over by moral example, persuasion and good government rather than by force of arms.",
+    "fromIssue": 7
+  },
+  "rabbitHole": {
+    "title": "Down the line of borrowers",
+    "intro": "The groups of five became the most famous idea in development economics. Here is what the evidence says, why economists thought it worked, and what happened when the floods came.",
+    "levels": [
+      {
+        "heading": "Helpful, but not a cure for poverty",
+        "body": [
+          "Microcredit, the field Grameen helped create, has been both celebrated and vilified. The popular hope was that small loans could lift whole families out of poverty. To test it, economists ran randomised trials, offering credit in some places and not in others and comparing the results.",
+          "In January 2015 the American Economic Journal: Applied Economics published six of these studies together, from Bosnia and Herzegovina, Ethiopia, India, Mexico, Mongolia and Morocco, covering more than 37,000 people. Four of the six programmes used group lending. Loans did increase business activity. But none of the studies found a statistically significant rise in total household income, and none of the four that measured household consumption found it went up. The editors, Abhijit Banerjee, Dean Karlan and Jonathan Zinman, summed up the effects as 'modestly positive, but not transformative'. They also found little evidence of harm. Credit, it turns out, is useful to poor households in the way it is useful to anyone. It is not a cure for poverty."
+        ]
+      },
+      {
+        "heading": "Why groups should work",
+        "body": [
+          "Economists set out to explain the high repayment rates. In their 1999 review in the Journal of Development Economics, Ghatak and Guinnane listed four problems any lender faces with poor borrowers. It must work out who is a good risk, make sure the loan is used well, find out what really happened when a borrower says they can't pay, and enforce repayment. Joint liability helps with all four. People choose partners they know to be reliable, watch one another, know when a neighbour's excuse is real, and can apply social pressure that a bank cannot.",
+          "Stiglitz added a warning. Peer monitoring, he wrote, transfers risk from the bank, which is better able to bear it, onto the borrowers' neighbours. The idea was not new, either. Credit cooperatives first appeared in Germany in the 1850s, and most of their rural loans were secured by a co-signer responsible if the borrower failed to pay. By the First World War there were about 19,000 of them."
+        ]
+      },
+      {
+        "heading": "When the floods came",
+        "body": [
+          "Grameen's repayment rates were famous; in his 2006 Nobel lecture Yunus put the figure at 99 per cent. But there had been a crisis on the way. In 1998 Bangladesh suffered what the microfinance writer Stuart Rutherford called its worst floods in living memory. Daniel Pearl and Michael Phillips of the Wall Street Journal reported in 2001 that in two northern districts half the loan portfolio was overdue by at least a year, and that for the whole bank 19 per cent of loans were.",
+          "The old system's rules were rigid, and borrowers who fell behind found it hard to catch up. As Yunus put it in a Grameen document, 'If one borrower stopped payments, it encouraged others to follow.' Grameen began designing a new system in 2000, now known as Grameen II. As the economist David Roodman summarised it, its hallmarks were simpler loan products, computers and flexibility, including a new 'top-up' that let borrowers borrow back their repaid balance after 26 weeks of on-time payments. Membership grew from 2.4 million at the end of 2001 to 6.9 million at the end of 2006."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Banker to the Poor",
+        "author": "Muhammad Yunus with Alan Jolis (1998)",
+        "note": "Yunus's own account of Jobra and the founding of Grameen Bank."
+      },
+      {
+        "title": "Due Diligence: An Impertinent Inquiry into Microfinance",
+        "author": "David Roodman (2012)",
+        "note": "A careful, sceptical history of microcredit and the evidence for it."
+      },
+      {
+        "title": "Six Randomized Evaluations of Microcredit: Introduction and Further Steps",
+        "author": "Abhijit Banerjee, Dean Karlan and Jonathan Zinman, American Economic Journal: Applied Economics (2015)",
+        "note": "The short summary of the six trials.",
+        "url": "https://economics.mit.edu/sites/default/files/publications/Six%20Randomized%20Evaluations%20of%20Microcredit.pdf"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Is the group doing the work?",
+    "body": [
+      "The strongest challenge is that the shared liability may matter less than the theory says. From 2004 the Green Bank of Caraga, on the island of Leyte in the Philippines, let Xavier Giné and Dean Karlan randomly convert half of its 169 group-lending centres to individual liability. Groups still held weekly meetings, but members no longer answered for one another's loans. After three years, there was no increase in default under individual liability, and the converted centres had grown larger. The bank's own staff, though, were less willing to open new individual-liability groups.",
+      "Grameen itself has moved away from the idea. A 2009 page on Yunus's own website says each borrower must belong to a five-member group, but that 'there is no form of joint liability'. Weekly meetings, regular repayments and the prospect of a bigger next loan may do much of what the shared liability was thought to do."
+    ],
+    "confidence": "Contested",
+    "verdict": "Where that leaves you: lending through small groups clearly can work for people without collateral, but don't assume the shared liability is the secret ingredient, since meeting together and wanting the next loan may matter as much."
+  },
+  "quiz": [
+    {
+      "question": "Why did the bank on Muhammad Yunus's campus refuse to lend to the villagers of Jobra at first?",
+      "options": [
+        "It said the poor were not creditworthy",
+        "It had run out of money during the famine",
+        "The government had banned loans to villagers",
+        "The villagers asked for loans larger than the bank allowed"
+      ],
+      "answer": 0,
+      "explain": "The bank said 'the poor were not creditworthy', so Yunus offered to guarantee the loans himself, and the borrowers paid them back."
+    },
+    {
+      "question": "Which best describes solidarity lending?",
+      "options": [
+        "Lending to small groups whose members share a stake in each other's repayment, in place of collateral",
+        "Lending only to people who can pledge land or property as security",
+        "Charities giving money to the poor with no expectation of repayment",
+        "A government guaranteeing every loan a bank makes"
+      ],
+      "answer": 0,
+      "explain": "In Grameen's classic design, borrowers joined groups of five, and if one member defaulted the whole group lost the right to borrow again, so neighbours' knowledge and ties stood in for security."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Muhammad Yunus, Nobel Lecture, Oslo, 10 December 2006, NobelPrize.org",
+      "url": "https://www.nobelprize.org/prizes/peace/2006/yunus/lecture/"
+    },
+    {
+      "title": "Frederick C. Ingram, 'Grameen Bank', International Directory of Company Histories, and Salim Rashid and Munir Quddus, 'Grameen Bank', International Encyclopedia of the Social Sciences (Gale), via Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/social-sciences-and-law/economics-business-and-labor/money-banking-and-investment/grameen-bank-bhaban"
+    },
+    {
+      "title": "'Grameen Bank at a Glance', muhammadyunus.org, 23 June 2009",
+      "url": "https://muhammadyunus.org/post/370/grameen-bank-at-a-glance"
+    },
+    {
+      "title": "Maitreesh Ghatak and Timothy W. Guinnane, 'The economics of lending with joint liability: theory and practice', Journal of Development Economics 60 (1999), 195–228",
+      "url": "https://econ.lse.ac.uk/staff/mghatak/My%20Papers/jde2.pdf"
+    },
+    {
+      "title": "Joseph E. Stiglitz, 'Peer Monitoring and Credit Markets', World Bank Economic Review 4.3 (1990), 351–366, abstract via RePEc",
+      "url": "https://ideas.repec.org/a/oup/wbecrv/v4y1990i3p351-66.html"
+    },
+    {
+      "title": "Abhijit Banerjee, Dean Karlan and Jonathan Zinman, 'Six Randomized Evaluations of Microcredit: Introduction and Further Steps', American Economic Journal: Applied Economics 7.1 (2015), 1–21",
+      "url": "https://economics.mit.edu/sites/default/files/publications/Six%20Randomized%20Evaluations%20of%20Microcredit.pdf"
+    },
+    {
+      "title": "J-PAL, 'Where credit is due', press release, 22 January 2015, on the six microcredit evaluations",
+      "url": "https://www.povertyactionlab.org/sites/default/files/2015.01.22-Microcredit-EurekAlert!.pdf"
+    },
+    {
+      "title": "J-PAL, 'Group Versus Individual Liability in the Philippines', on Xavier Giné and Dean Karlan, Journal of Development Economics 107 (2014), 65–83",
+      "url": "https://www.povertyactionlab.org/evaluation/group-versus-individual-liability-philippines"
+    },
+    {
+      "title": "David Roodman, Center for Global Development, 9 February 2010, discussing Daniel Pearl and Michael M. Phillips, 'Grameen Bank, Which Pioneered Loans For the Poor, Has Hit a Repayment Snag', Wall Street Journal, 27 November 2001",
+      "url": "https://www.cgdev.org/node/3073110"
+    },
+    {
+      "title": "Stuart Rutherford, 'What is Grameen II? Is it up and running in the field yet?', MicroSave, January 2005",
+      "url": "https://www.microsave.net/2005/01/04/what-is-grameen-ii-is-it-up-and-running-in-the-field-yet/"
+    }
+  ]
+}

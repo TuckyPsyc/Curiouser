@@ -1,0 +1,41 @@
+{
+  "issue": 15,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-18T05:50:26Z",
+  "summary": "Three small corrections: I cut an unsupported '1920s and 1930s' date for Benford's work, softened 'Pinkham showed' to 'Pinkham argued' (his uniqueness argument was later found flawed and properly proved by Hill), and fixed a sum (1881 to 1920 is 39 years, not 38). Everything else, including Newcomb's quotations and the Arizona cheques, checked out.",
+  "claims": { "checked": 58, "confirmed": 55, "corrected": 2, "removed": 1 },
+  "links": { "checked": 9, "working": 9, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 3",
+      "before": "In the 1920s and 1930s Frank Benford",
+      "after": "Decades later Frank Benford",
+      "why": "No source I found dates Benford's data-gathering to the 1920s; sources say only that he spent years collecting data before publishing in 1938.",
+      "source": "https://en.wikipedia.org/wiki/Frank_Benford"
+    },
+    {
+      "where": "rabbit hole, level 2, paragraph 1",
+      "before": "Pinkham showed that Benford's distribution is scale-invariant",
+      "after": "Pinkham argued that Benford's distribution is scale-invariant",
+      "why": "Berger and Hill note that Pinkham's uniqueness argument rested on a flawed assumption (pointed out by Knuth and Raimi); the first correct proof came from Hill. 'Argued' is accurate and fits the next paragraph's 'firmer footing'.",
+      "source": "https://www.math.ualberta.ca/~aberger/papers/benford_strikes_back.pdf"
+    },
+    {
+      "where": "rabbit hole, level 3, paragraph 1",
+      "before": "first cited in 1920, 38 years after it appeared",
+      "after": "first cited in 1920, nearly 40 years after it appeared",
+      "why": "Mir and Ausloos say '38 years', but 1881 to 1920 is 39; 'nearly 40' is true either way.",
+      "source": "https://arxiv.org/pdf/1702.00554"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "Mir and Ausloos name Hill (1995) alone as the 'prince' who woke both papers; Nigrini (1996) coincided with the rise in citations and is credited with the first practical application, but did not cite Newcomb. The story's wording is supported by their section 4.",
+    "The Hill link is a preprint copy at williams.edu rather than the American Scientist page; its text matches the 1998 article (DOI 10.1511/1998.4.358 confirmed via benfordonline.net).",
+    "Benford's '20 lists' is confirmed by Hill (1995, Statistical Science: '20 different tables') and the 20,229 total by Hill (1998) and Leemis et al. (2000).",
+    "The further-reading link is the same Newcomb PDF as the first source; counted as a separate link check."
+  ]
+}
