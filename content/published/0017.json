@@ -1,0 +1,153 @@
+{
+  "id": 17,
+  "date": "2026-11-20",
+  "topic": "Society",
+  "title": "The Necklaces Nobody Could Keep",
+  "concept": "The kula ring",
+  "teaser": "Stranded in the Pacific by war, a young anthropologist found islanders trading shell valuables they could barely wear and were not allowed to keep.",
+  "readingMinutes": 3,
+  "story": [
+    "In June 1914 a young anthropologist named Bronisław Malinowski left London for Australia, travelling with an expedition of the British Association for the Advancement of Science as secretary to the anthropologist Robert Marett. Then war broke out. Malinowski had been born in Kraków in 1884, which made him a subject of Austria-Hungary, at war with Britain, and he risked internment as an enemy alien. Instead, after Marett and Alfred Cort Haddon intervened, the Australian authorities let him stay in the region and gave him fresh funding.",
+    "So he went into the field. He spent May 1915 to May 1916, and October 1917 to October 1918, in the Trobriand Islands, off the eastern end of New Guinea, living in a tent in the middle of the village. There he watched men exchanging two kinds of shell valuable with partners on other islands: long necklaces of red shell, called soulava, and bracelets of white shell, called mwali.",
+    "The objects were strange things to prize. Malinowski reckoned that ‘easily ninety per cent.’ of the armshells were ‘of too small a size to be worn even by young boys and girls’. Nor could anyone hold on to them. ‘Thus no man ever keeps any of the articles for any length of time in his possession,’ he wrote. The necklaces travelled round a great circle of islands ‘in the direction of the hands of a clock’, the armshells the opposite way, and an opening gift of one kind had to be answered with the other. The same voyages carried ordinary trade too, with hard bargaining, but the islanders called that gimwali, and Malinowski wrote that they ‘sharply distinguish’ it from the ceremonial exchange.",
+    "This is the kula ring: a circle of ceremonial gift exchange that today links 18 island communities of the Massim archipelago, in Papua New Guinea’s Milne Bay Province, and involves thousands of people. The valuables are not for use. They are given for prestige and to bind partners together. Important men have hundreds of partners, lesser ones fewer than a dozen, and on the island of Muyuw people say a good kula relationship should be ‘like a marriage’. Malinowski compared the valuables to the Crown Jewels he had once been shown at Edinburgh Castle, heirlooms ‘too valuable and too cumbersome to be worn’, with one difference: a kula piece is held only ‘for a time’.",
+    "His account, published in 1922 as Argonauts of the Western Pacific, is often described as his masterpiece, and three years later the French scholar Marcel Mauss used the kula as a primary source for his essay The Gift.",
+    "It matters because a great deal of what holds any community together never shows up as trade. The favour that must be returned and the gift that must be passed on are exchanges too, and often what they are buying is the relationship itself."
+  ],
+  "takeaway": "The kula ring: a circle of island communities in Papua New Guinea that pass shell necklaces one way and armshells the other, never keeping them for long, because the exchange exists to build prestige and lasting partnerships, not to trade goods.",
+  "recall": {
+    "question": "Grameen Bank lent to villagers in Jobra who had no land or property to pledge. What did it ask for instead, and what is the idea called?",
+    "answer": "A small group of neighbours who shared a stake in each other’s repayment. That is solidarity lending: their knowledge and ties stand in for collateral.",
+    "fromIssue": 12
+  },
+  "rabbitHole": {
+    "title": "Gifts that keep moving",
+    "intro": "Was the kula just shell money, what did a French sociologist make of it, and is anyone still sailing the ring? Follow the necklaces.",
+    "levels": [
+      {
+        "heading": "Not shell money",
+        "body": [
+          "The popular version treats the kula as a primitive market, with shells as a kind of currency. Malinowski’s own evidence points the other way. The islanders had a separate word, gimwali, for barter with hard bargaining, and he wrote that they kept the two apart. One of his aims was to show that people everywhere make rational decisions, while the things they strive for are shaped by culture. He also traced how the exchanges were bound up with political authority.",
+          "Later fieldwork shows how unequal the ring can be. On Muyuw, three men account for over half the kula valuables, and the ten most influential men control about 90 per cent. Most valuables can be passed on but not sold. The exception is a piece held as kitoum, which belongs outright to its owner, and on Muyuw the most important men own between three and seven valuables that way."
+        ]
+      },
+      {
+        "heading": "The obligation to return",
+        "body": [
+          "In 1925 the French sociologist Marcel Mauss published ‘Essai sur le don’ in L’Année Sociologique, known in English as The Gift. His main sources included Malinowski’s kula and Franz Boas’s work on the potlatch of the Pacific north-west. Mauss argued that such exchange rests on three obligations: to give, to receive and, above all, to reciprocate.",
+          "To explain the pull of the return gift, Mauss borrowed a Māori idea, hau, a force that compels the recipient to reciprocate and wants to return to its origins. He drew on the scholar Robert Hertz for it. Mauss seemed to argue that a return gift is given to keep the relationship between givers alive. The anthropologist Jonathan Parry later pointed out that the idea of a ‘pure’, selfless gift is really about market societies."
+        ]
+      },
+      {
+        "heading": "Still going round",
+        "body": [
+          "The kula did not end with Malinowski. A 2017 seminar at the Cairns Institute of James Cook University reported that it ‘is still practiced in the Massim region’, and that it continues despite the changes brought by the cash economy and new technologies. The project behind it brought kula masters and anthropologists together to study the system as it works today.",
+          "The anthropologist Susanne Kuehling spent 18 months on the island of Dobu and published Dobu: Ethics of Exchange on a Massim Island in 2005. An earlier anthropologist, Reo Fortune, had seen deceit in Dobu’s kula dealings, and Kuehling’s research does not support his emphasis on cheating. Malinowski himself admitted that the kula brought squabbles, resentments and even feuds. A gift system, it turns out, is held together by rules and reputation, not by everyone being nice."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Argonauts of the Western Pacific",
+        "author": "Bronisław Malinowski (1922)",
+        "note": "The original account of the kula, now in the public domain.",
+        "url": "https://archive.org/stream/argonautsofthewe032976mbp/argonautsofthewe032976mbp_djvu.txt"
+      },
+      {
+        "title": "The Gift: Forms and Functions of Exchange in Archaic Societies",
+        "author": "Marcel Mauss (1925)",
+        "note": "The essay that turned the kula into a general theory of gift and obligation."
+      },
+      {
+        "title": "Women of Value, Men of Renown: New Perspectives in Trobriand Exchange",
+        "author": "Annette B. Weiner (1976)",
+        "note": "The restudy that put Trobriand women’s wealth back into the picture."
+      },
+      {
+        "title": "Dobu: Ethics of Exchange on a Massim Island, Papua New Guinea",
+        "author": "Susanne Kuehling (2005)",
+        "note": "A modern ethnography of the kula from one of its islands."
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Half the islands’ wealth was missing",
+    "body": [
+      "Malinowski’s kula is a world of men, and later anthropologists showed how much that picture left out. Annette Weiner went to the Trobriands meaning to study men’s carving and ended up studying women’s exchanges of bundles of banana leaves, made by the thousands each year, and the skirts made from their fibres, which women give away in mortuary distributions. In Women of Value, Men of Renown (1976) she argued that this women’s wealth, tied to matrilineal ancestors, was central to Trobriand society, and that Malinowski had ignored it. A later study, ‘Women and Kula’, goes further, arguing that women’s role in the kula itself has been misrepresented as marginal.",
+      "None of this undoes the kula ring, which is still practised. It does show that his famous account was partial, and that the most visible exchange in a society is not always the most important one."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: the kula ring is real and well documented, but read Malinowski as one brilliant, incomplete view, and ask whose exchanges a classic account leaves out."
+  },
+  "quiz": [
+    {
+      "question": "Why could no Trobriand Islander keep a kula necklace or armshell for long?",
+      "options": [
+        "The rules of the kula required valuables to be passed on to other partners",
+        "The shells crumbled after a year or two",
+        "The colonial authorities confiscated them",
+        "They were sold for cash at the next market"
+      ],
+      "answer": 0,
+      "explain": "Malinowski wrote that ‘no man ever keeps any of the articles for any length of time’; necklaces moved clockwise round the islands and armshells the other way."
+    },
+    {
+      "question": "Which of these best fits the kula ring?",
+      "options": [
+        "Valuables that are hardly ever worn circulate between partners to build prestige and relationships",
+        "Islanders haggle over shells to get the best price for food",
+        "Shells serve as everyday money for buying and selling",
+        "Each family keeps its valuables locked away as heirlooms"
+      ],
+      "answer": 0,
+      "explain": "Most armshells were too small even for children to wear, and the islanders kept hard bargaining, gimwali, separate from the ceremonial exchange."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bronisław Malinowski, Argonauts of the Western Pacific (1922), Chapter III, ‘The Essentials of the Kula’, via Internet Archive",
+      "url": "https://archive.org/stream/argonautsofthewe032976mbp/argonautsofthewe032976mbp_djvu.txt"
+    },
+    {
+      "title": "‘Kula ring’, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Kula_ring"
+    },
+    {
+      "title": "‘Bronisław Malinowski’, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Bronis%C5%82aw_Malinowski"
+    },
+    {
+      "title": "‘The Gift (essay)’, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/The_Gift_(essay)"
+    },
+    {
+      "title": "Cairns Institute, James Cook University, ‘Cruising the kula network’ (seminar, 2017)",
+      "url": "https://www.cairnsinstitute.jcu.edu.au/kula/"
+    },
+    {
+      "title": "‘Susanne Kuehling’, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Susanne_Kuehling"
+    },
+    {
+      "title": "‘Annette Weiner’, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Annette_Weiner"
+    },
+    {
+      "title": "‘Inalienable possessions’, Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Inalienable_possessions"
+    },
+    {
+      "title": "Trobriands In Depth, ‘Trobriand Bundles of Sorrow’",
+      "url": "https://trobriandsindepth.com/Bundles%20of%20sorrow.html"
+    },
+    {
+      "title": "Anna-Karina Hermkens and Katherine Lepani, eds., Sinuous Objects: Revaluing Women’s Wealth in the Contemporary Pacific (ANU Press, 2017)",
+      "url": "https://press.anu.edu.au/publications/series/pacific/sinuous-objects"
+    },
+    {
+      "title": "‘Women and Kula: The Invisible Force Behind Hospitality’, Suomen Antropologi",
+      "url": "https://journal.fi/suomenantropologi/article/view/143800"
+    }
+  ]
+}

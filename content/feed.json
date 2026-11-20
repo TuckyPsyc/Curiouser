@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-19T05:55:30.286Z",
+  "updated": "2026-11-20T05:50:39.276Z",
   "issues": [
+    {
+      "id": 17,
+      "date": "2026-11-20",
+      "topic": "Society",
+      "title": "The Necklaces Nobody Could Keep",
+      "concept": "The kula ring",
+      "teaser": "Stranded in the Pacific by war, a young anthropologist found islanders trading shell valuables they could barely wear and were not allowed to keep.",
+      "readingMinutes": 3
+    },
     {
       "id": 16,
       "date": "2026-11-19",

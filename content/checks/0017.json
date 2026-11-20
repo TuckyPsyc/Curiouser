@@ -1,0 +1,33 @@
+{
+  "issue": 17,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-20T05:50:27Z",
+  "summary": "Two small corrections in the rabbit hole: a Malinowski quotation about feuds wasn't in his words, so it is now a plain paraphrase, and the Kuehling line now says what the source says. Everything else, including every other Malinowski quotation, checked out against Argonauts itself.",
+  "claims": { "checked": 60, "confirmed": 58, "corrected": 2, "removed": 0 },
+  "links": { "checked": 11, "working": 11, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "rabbitHole, level 3 ('Still going round'), paragraph 2",
+      "before": "Malinowski himself admitted that the kula produced 'many squabbles, deep resentments and even feuds'.",
+      "after": "Malinowski himself admitted that the kula brought squabbles, resentments and even feuds.",
+      "why": "The quoted words are Wikipedia's paraphrase, not Malinowski's. In Argonauts (Ch. III) he writes that it 'does not mean that people are always satisfied, and that there are no squabbles about the transactions, no resentments and even feuds'. The paraphrase is true; the quotation marks were not.",
+      "source": "https://archive.org/stream/argonautsofthewe032976mbp/argonautsofthewe032976mbp_djvu.txt"
+    },
+    {
+      "where": "rabbitHole, level 3 ('Still going round'), paragraph 2",
+      "before": "and Kuehling's research does not support that view.",
+      "after": "and Kuehling's research does not support his emphasis on cheating.",
+      "why": "The source says Kuehling's research does not support Fortune's emphasis on cheating, not that it rules out deceit altogether; the same article notes that deceit does break kula partnerships.",
+      "source": "https://handwiki.org/wiki/Social:Kula_ring"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The Wikipedia pages for 'Kula ring' and 'The Gift (essay)' couldn't be opened directly in this run; I checked them through mirror copies of the same articles (HandWiki and a March 2026 Wikipedia snapshot), which carry the content the story relies on.",
+    "The Suomen Antropologi page for 'Women and Kula' sits behind a bot check; its title and abstract (which says women's role in kula is 'typically misrepresented as marginal') were confirmed from the page's metadata and the DOAJ library record.",
+    "Wikipedia says 'important chiefs' have hundreds of partners; the story says 'important men'. Close enough to leave, but worth knowing."
+  ]
+}
