@@ -1,0 +1,136 @@
+{
+  "id": 18,
+  "date": "2026-11-21",
+  "topic": "Technology",
+  "title": "The Typewriter With a Magic Eye",
+  "concept": "The input method",
+  "teaser": "A best-selling Chinese novelist spent his fortune on a typewriter that never went on sale, and quietly changed what it means to type.",
+  "readingMinutes": 3,
+  "story": [
+    "In the summer of 1947, at a press event in New York, the writer Lin Yutang unveiled a machine he had spent years and a fortune on. Lin had been born in Fujian province in 1895 and had done well from English-language books such as The Importance of Living and the novel Moment in Peking. He poured the royalties into a typewriter for Chinese, exhausted his savings and went into debt. His second daughter, Lin Tai-yi, demonstrated it.",
+    "The problem he was attacking was old. An English typewriter needs a key for each letter. Chinese has no alphabet, and a working typist needs thousands of characters, far too many for a key apiece. Lin's machine, which he called MingKwai, meaning 'clear and fast', was the first Chinese typewriter with a keyboard. The only prototype was built by the Carl E. Krum Company.",
+    "It had 72 keys in three banks: 36 at the top, 28 below and eight number keys. The keys did not stand for characters at all. Each top and lower key stood for a shape found in characters. Pressing one of each set gears turning inside, and up to eight characters that matched appeared in a small window Lin called the 'Magic Eye'. The typist then pressed a number key to choose the right one, and it was printed.",
+    "This is the idea of the input method: the keys you press are not the letters you get, but instructions for finding them. The Stanford historian Thomas Mullaney, author of The Chinese Typewriter, says MingKwai 'combined \"search\" and \"writing\" for arguably the first time in history', anticipating what is now called input, or shuru in Chinese.",
+    "Commercially it went nowhere. In 1948 Lin signed with the Mergenthaler Linotype Company to test whether it could be made in quantity, but it was costly to build, and the communist victory in China made its market uncertain. The prototype stayed with the company and vanished. In January 2025 a couple clearing a late grandfather's basement in New York State posted photographs of a strange heavy machine in a Facebook group called 'What's My Typewriter Worth?'. It was MingKwai, and Stanford's libraries now hold it.",
+    "Anyone who types Chinese on a phone today, tapping a few letters and picking from a row of suggestions, is working much as Lin's Magic Eye did. If Mullaney is right, so in a small way is anyone who accepts an autocomplete."
+  ],
+  "takeaway": "The input method: typing by searching rather than spelling, where the keys you press are clues for finding the character you want, which you then pick from a short list. Lin Yutang's 1947 MingKwai typewriter was an early example.",
+  "recall": {
+    "question": "Alfred Russel Wallace sailed from Bali to neighbouring Lombok in 1856 and found the birds changed. What boundary is named after him, and why is it there?",
+    "answer": "Wallace's Line: the divide where Asian animals give way to Australian ones, because deep water kept the two histories of life apart.",
+    "fromIssue": 10
+  },
+  "rabbitHole": {
+    "title": "From brass gears to the row of suggestions",
+    "intro": "How did the Magic Eye actually work, who taught a keyboard to guess, and how did a one-off prototype survive in a basement? Down we go.",
+    "levels": [
+      {
+        "heading": "Inside the machine",
+        "body": [
+          "MingKwai stood about 9 inches tall, 14 inches wide and 18 inches deep, according to Mullaney. Lin split characters into strokes and shapes and sorted them as a dictionary might. A top key moved gears and a 'type complex'; a lower key brought eight candidates into the Magic Eye; a number key from 1 to 8 picked one. Stanford's Regan Murphy-Kao sums it up as 'three keystrokes and the use of a special viewfinder' for each character.",
+          "Inside, about 7,000 characters, full and half width, were arranged on 36 octagonal bars, according to the researcher Liu Yuli. Claims about its full range need care. Lin said it could produce over 90,000 characters, but Liu reports that only about 31,000 of those key combinations were characters actually in use. The machine could also type Latin letters and numerals, Cyrillic, Japanese and Zhuyin, a phonetic script for Chinese."
+        ]
+      },
+      {
+        "heading": "Teaching a keyboard to guess",
+        "body": [
+          "MingKwai never reached shops, but the problem it attacked did not go away. In his later book The Chinese Computer (2024), Mullaney follows the search for ways to put Chinese onto keyboards built for the Latin alphabet.",
+          "One milestone was the Sinotype, which the MIT professor Samuel Hawks Caldwell and the Graphic Arts Research Foundation unveiled in 1959. Caldwell worked out that a typist rarely needs to enter every stroke of a character: after a few, only one character fits, so the machine can stop asking. He called this 'minimum spelling'. Mullaney argues that the quest to type Chinese on a QWERTY keyboard created autocomplete, the habit of a machine finishing what you have started. Today most Chinese typists enter a few Latin letters, often in pinyin spelling, and choose from a list of candidates: search and pick, as with the Magic Eye."
+        ]
+      },
+      {
+        "heading": "Lost for seventy years",
+        "body": [
+          "According to the physicist and writer Yangyang Cheng, Lin Tai-yi tried to recover the prototype in the 1960s and was told she was 'late by three months'. The firm had moved from Brooklyn to Long Island, and the machine had gone home with a toolmaker who worked there, who kept it in his basement until his death in 2004.",
+          "About two decades later his granddaughter Jennifer Felix and her husband Nelson found it. Nelson's post said 'It weighs a ton!' Hundreds replied, and one pointed them to Mullaney's book, which has a chapter on the machine. Jennifer Felix said she 'didn't want this unique, one-of-a-kind piece of history to disappear again.' Stanford announced in May 2025 that its libraries had acquired it, with support from the Bin Lin and Daisy Liu Family Foundation, for research and exhibitions."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Chinese Typewriter: A History",
+        "author": "Thomas S. Mullaney (2017)",
+        "note": "The standard history, with a chapter on MingKwai."
+      },
+      {
+        "title": "The Chinese Computer: A Global History of the Information Age",
+        "author": "Thomas S. Mullaney (2024)",
+        "note": "The sequel, on input methods, the Sinotype and the road to autocomplete."
+      },
+      {
+        "title": "Lost and Found: The Unexpected Journey of the MingKwai Typewriter",
+        "author": "Yangyang Cheng (2025)",
+        "note": "An essay in Made in China Journal on Lin, his debts and the prototype's disappearance.",
+        "url": "https://madeinchinajournal.com/2025/05/02/lost-and-found-the-unexpected-journey-of-the-mingkwai-typewriter/"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "A curiosity, not a revolution",
+    "body": [
+      "Not everyone accepts the heroic version. The sinologist Victor Mair, writing on the linguistics blog Language Log, has called MingKwai 'completely impractical, just a curiosity', 'a Rube Goldberg typewriter', and 'at best a quirky documentation of a minor byway in the history of Chinese information technology'. He argues that Lin bankrupted himself trying to make Chinese characters behave like an alphabet, and objects to the Chinese typewriter being praised as if it led the information revolution. He points readers to the linguist David Moser's critiques of the ideas built around it.",
+      "None of this disputes that MingKwai worked by search and selection. The argument is about how much a machine that never went on sale really shaped what came after."
+    ],
+    "confidence": "Contested",
+    "verdict": "Where that leaves you: MingKwai really did type by searching and choosing, but treat 'it led to your phone's autocomplete' as one historian's argument about lineage, not an established chain of cause."
+  },
+  "quiz": [
+    {
+      "question": "How did a typist produce a character on Lin Yutang's MingKwai typewriter?",
+      "options": [
+        "Pressed keys for shapes in the character, then chose it from up to eight shown in the 'Magic Eye' with a number key",
+        "Picked the metal type for it out of a large tray by hand",
+        "Pressed one dedicated key for each of several thousand characters",
+        "Spelled it out in English letters, which a dictionary drum converted"
+      ],
+      "answer": 0,
+      "explain": "A top key and a lower key brought up to eight matching characters into the 'Magic Eye' window; a number key from the bottom row picked the right one."
+    },
+    {
+      "question": "Which of these is an example of an input method?",
+      "options": [
+        "Typing a few letters on a phone and picking the word you want from a row of suggestions",
+        "Pressing the A key to print the letter A",
+        "Writing a character by hand with a brush",
+        "Setting a page of metal type one letter at a time"
+      ],
+      "answer": 0,
+      "explain": "In an input method the keys are clues for finding a character, not the character itself, just as MingKwai's keys pointed to shapes and the typist chose from a list."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Stanford Report, 'Stanford Libraries acquires MingKwai Chinese typewriter prototype' (May 2025)",
+      "url": "https://news.stanford.edu/stories/2025/05/mingkwai-chinese-typewriter-prototype-stanford-libraries"
+    },
+    {
+      "title": "Thomas S. Mullaney, 'The Uncanny Keyboard', MIT Press Reader (2020), excerpted from The Chinese Typewriter",
+      "url": "https://thereader.mitpress.mit.edu/the-uncanny-keyboard/"
+    },
+    {
+      "title": "Yangyang Cheng, 'Lost and Found: The Unexpected Journey of the MingKwai Typewriter', Made in China Journal (2025)",
+      "url": "https://madeinchinajournal.com/2025/05/02/lost-and-found-the-unexpected-journey-of-the-mingkwai-typewriter/"
+    },
+    {
+      "title": "Liu Yuli, 'The MingKwai Experiment: Typing Chinese Before Computers', Sixth Tone (2026)",
+      "url": "https://www.sixthtone.com/news/1018129"
+    },
+    {
+      "title": "Kate Mothes, 'A Long-Lost Prototype of the First Chinese Typewriter With a Keyboard Has Been Found', Colossal (2025)",
+      "url": "https://www.thisiscolossal.com/2025/05/mingkwai-typewriter-found/"
+    },
+    {
+      "title": "Thomas S. Mullaney, 'How the quest to type Chinese on a QWERTY keyboard created autocomplete', MIT Technology Review (2024)",
+      "url": "https://www.technologyreview.com/2024/05/27/1092876/type-chinese-computer-qwerty-keyboard/amp/"
+    },
+    {
+      "title": "Victor Mair, 'The (ir)reality of the MingKwai typewriter', Language Log (2025)",
+      "url": "https://languagelog.ldc.upenn.edu/nll/?p=71697"
+    },
+    {
+      "title": "Victor Mair, 'The (ir)reality of the MingKwai typewriter, part 2', Language Log (2026)",
+      "url": "https://languagelog.ldc.upenn.edu/nll?p=73064"
+    }
+  ]
+}
