@@ -1,0 +1,328 @@
+{
+  "written": "2026-11-21T09:47:34.777Z",
+  "writtenUK": "Saturday 21 November, 09:47",
+  "rehearsal": false,
+  "fenton": {
+    "state": "broken",
+    "line": "Not everything ran as it should. The particulars follow, without varnish."
+  },
+  "today": "No. 18, “The Typewriter With a Magic Eye” (The input method) was checked, corrected and released at 05:48.",
+  "health": [
+    {
+      "agent": "Editor",
+      "state": "ok",
+      "text": "No. 18 written."
+    },
+    {
+      "agent": "Fact-checker",
+      "state": "ok",
+      "text": "No. 18 corrected and released."
+    },
+    {
+      "agent": "Producer",
+      "state": "fail",
+      "text": "no script for No. 17."
+    },
+    {
+      "agent": "Support",
+      "state": "ok",
+      "text": "mailbox checked at 06:15; nothing waiting."
+    },
+    {
+      "agent": "Marketing",
+      "state": "ok",
+      "text": "brief for Sunday 15 November written."
+    },
+    {
+      "agent": "Analyst",
+      "state": "ok",
+      "text": "report for Monday 16 November written."
+    },
+    {
+      "agent": "Developer",
+      "state": "fail",
+      "text": "no pull request since Saturday 21 November."
+    },
+    {
+      "agent": "Automation",
+      "state": "ok",
+      "text": "no failed runs in the last day."
+    }
+  ],
+  "queue": {
+    "count": 17,
+    "minutes": 53,
+    "items": [
+      {
+        "rank": 1,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "marketing",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/11",
+        "number": 11,
+        "created": "2026-11-12T16:53:16Z",
+        "kind": "ask",
+        "title": "Which platform will you report most?",
+        "minutes": 1,
+        "how": "Comment TikTok or Instagram."
+      },
+      {
+        "rank": 2,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "marketing",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/13",
+        "number": 13,
+        "created": "2026-11-12T16:53:19Z",
+        "kind": "ask",
+        "title": "May your social account names appear in the repository?",
+        "minutes": 1,
+        "how": "Comment yes or no."
+      },
+      {
+        "rank": 3,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "analyst",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/28",
+        "number": 28,
+        "created": "2026-11-17T09:23:25Z",
+        "kind": "answer",
+        "title": "The Analyst answered: Explain the usage-counts options",
+        "minutes": 1,
+        "how": "Read the answer on the issue, then close it, or reply to ask more."
+      },
+      {
+        "rank": 4,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "developer",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/25",
+        "number": 25,
+        "created": "2026-11-17T09:24:26Z",
+        "kind": "answer",
+        "title": "The Developer answered: Play Store readiness",
+        "minutes": 1,
+        "how": "Read the answer on the issue, then close it, or reply to ask more."
+      },
+      {
+        "rank": 5,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "developer",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/27",
+        "number": 27,
+        "created": "2026-11-17T09:24:28Z",
+        "kind": "answer",
+        "title": "The Developer answered: Play Store versus own website",
+        "minutes": 1,
+        "how": "Read the answer on the issue, then close it, or reply to ask more."
+      },
+      {
+        "rank": 6,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "developer",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/29",
+        "number": 29,
+        "created": "2026-11-17T09:24:30Z",
+        "kind": "answer",
+        "title": "The Developer answered: Tea Party: the share button",
+        "minutes": 1,
+        "how": "Read the answer on the issue, then close it, or reply to ask more."
+      },
+      {
+        "rank": 7,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "developer",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/30",
+        "number": 30,
+        "created": "2026-11-17T09:24:31Z",
+        "kind": "answer",
+        "title": "The Developer answered: A checked backup story",
+        "minutes": 1,
+        "how": "Read the answer on the issue, then close it, or reply to ask more."
+      },
+      {
+        "rank": 8,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "developer",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/31",
+        "number": 31,
+        "created": "2026-11-18T18:27:13Z",
+        "kind": "answer",
+        "title": "The Developer answered: Tea Party and backup story Ready",
+        "minutes": 1,
+        "how": "Read the answer on the issue, then close it, or reply to ask more."
+      },
+      {
+        "rank": 9,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "claude",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/15",
+        "number": 15,
+        "created": "2026-11-12T16:53:22Z",
+        "kind": "ask",
+        "title": "Watch the No. 1 video and judge the voice",
+        "minutes": 2,
+        "how": "On the desk, tap download the video. If you'd rather, say to Claude: Change the Curiouser video voice to bm_george, or Make Curiouser videos captions-only."
+      },
+      {
+        "rank": 10,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "claude",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/16",
+        "number": 16,
+        "created": "2026-11-12T16:53:24Z",
+        "kind": "ask",
+        "title": "Decide on the web version",
+        "minutes": 2,
+        "how": "Comment yes or no. For yes, say to Claude: Set the Curiouser web version to Ready."
+      },
+      {
+        "rank": 11,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "marketing",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/17",
+        "number": 17,
+        "created": "2026-11-12T16:53:26Z",
+        "kind": "ask",
+        "title": "Paste the profile bio",
+        "minutes": 5,
+        "how": "Open marketing/drafts/profile-bio.md, copy the TikTok or Instagram version and paste it into your profile."
+      },
+      {
+        "rank": 12,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "analyst",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/18",
+        "number": 18,
+        "created": "2026-11-12T16:53:28Z",
+        "kind": "ask",
+        "title": "Read the usage-counts proposal and decide",
+        "minutes": 5,
+        "how": "Read reports/usage-counts-proposal.md. Comment: nothing, option 1 or option 2."
+      },
+      {
+        "rank": 13,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "claude",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/19",
+        "number": 19,
+        "created": "2026-11-12T16:53:29Z",
+        "kind": "ask",
+        "title": "Unblock other ideas when you're ready",
+        "minutes": 5,
+        "how": "Say to Claude which to set to Ready, and what you decided."
+      },
+      {
+        "rank": 14,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "developer",
+        "url": "https://github.com/TuckyPsyc/Curiouser/pull/22",
+        "number": 22,
+        "created": "2026-11-14T07:13:11Z",
+        "kind": "pull",
+        "title": "Pull request #22: A 7:00 reminder that's true on every morning",
+        "minutes": 5,
+        "how": "Open it, look at the pictures, then tap Merge to send it to phones, or comment."
+      },
+      {
+        "rank": 15,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "claude",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/20",
+        "number": 20,
+        "created": "2026-11-12T16:53:31Z",
+        "kind": "ask",
+        "title": "Choose a permanent narrator voice",
+        "minutes": 10,
+        "how": "Watch the No. 1 video first. For ElevenLabs, design a voice there, then in a browser add the repository secret ELEVENLABS_API_KEY."
+      },
+      {
+        "rank": 16,
+        "blocks": null,
+        "by": null,
+        "optional": false,
+        "from": "analyst",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/24",
+        "number": 24,
+        "created": "2026-11-16T06:24:59Z",
+        "kind": "ask",
+        "title": "Review the two waiting pull requests",
+        "minutes": 10,
+        "how": "On GitHub, open Pull requests, read each one and its screenshots, then merge or comment."
+      },
+      {
+        "rank": 17,
+        "blocks": null,
+        "by": null,
+        "optional": true,
+        "from": "claude",
+        "url": "https://github.com/TuckyPsyc/Curiouser/issues/21",
+        "number": 21,
+        "created": "2026-11-12T16:53:33Z",
+        "kind": "ask",
+        "title": "Delete the Videos (rehearsal) release",
+        "minutes": 1,
+        "how": "In a browser, open the repository's Releases, choose Videos (rehearsal) and delete it."
+      }
+    ]
+  },
+  "requestsWaiting": [
+    {
+      "number": 35,
+      "agent": "developer",
+      "title": "Tea Party button label"
+    },
+    {
+      "number": 34,
+      "agent": "analyst",
+      "title": "Option 2 in short"
+    },
+    {
+      "number": 33,
+      "agent": "marketing",
+      "title": "TikTok or Instagram: highest return"
+    }
+  ],
+  "week": {
+    "from": "2026-11-16",
+    "to": "2026-11-21",
+    "released": 6,
+    "held": 0,
+    "drafts": 0,
+    "checks": 6,
+    "corrected": 5,
+    "corrections": 9,
+    "videos": 2,
+    "prsOpened": 1,
+    "prsMerged": 2,
+    "failedRuns": 0
+  },
+  "desk": "https://github.com/TuckyPsyc/Curiouser/issues/1"
+}
