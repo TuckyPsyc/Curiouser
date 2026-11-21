@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { Linking, Platform, Pressable, Share, StyleSheet, Text, View } from 'react-native';
+import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
 import { formatDate } from '../lib/feed';
 import { markRead } from '../lib/progress';
 import { labelSpacing, DOWNLOAD_URL, fonts, useConceptColour, usePalette, useTopicColour } from '../lib/theme';
@@ -15,24 +15,11 @@ import { RabbitHoleButton } from './RabbitHoleButton';
 import { RecallCard } from './RecallCard';
 import { SeenMarker } from './Screen';
 import { SizeShifter, type Size } from './SizeShifter';
+import { shareText, TeaParty } from './TeaParty';
 
-async function shareIssue(issue: Issue): Promise<string | null> {
+function shareIssue(issue: Issue): Promise<string | null> {
   const message = `${issue.title}\n\n${issue.takeaway}\n\nGet curiouser before breakfast: ${DOWNLOAD_URL}`;
-  try {
-    if (Platform.OS === 'web') {
-      const nav = globalThis.navigator as Navigator | undefined;
-      if (nav?.share) {
-        await nav.share({ title: issue.title, text: message });
-        return null;
-      }
-      await nav?.clipboard?.writeText(message);
-      return 'Copied to clipboard';
-    }
-    await Share.share({ message, title: issue.title });
-    return null;
-  } catch {
-    return null;
-  }
+  return shareText(issue.title, message);
 }
 
 /** The opening words in small capitals, as at the start of a chapter. */
@@ -127,6 +114,9 @@ export function IssueReader({ issue, kicker }: { issue: Issue; kicker: string })
 
           <MarginNote note={g?.lookingGlass} />
           {issue.lookingGlass ? <LookingGlassPanel glass={issue.lookingGlass} /> : null}
+
+          {/* After the other side, so the reader has something to argue about. */}
+          <TeaParty issue={issue} />
 
           <MarginNote note={g?.rabbitHole} />
           <RabbitHoleButton issue={issue} />
