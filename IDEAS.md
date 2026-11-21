@@ -51,10 +51,6 @@ A way to discuss the day's story. A discussion inside the app needs accounts and
 
 Found on 11 November 2026 while setting up the fact-checker and the desk. Lower priority unless Carl moves them up.
 
-### 10. A reminder that doesn't promise a story on a morning without one
-**Status:** Ready
-The 7:00 reminder always says "Today's story is waiting". On a morning when the story was held or unchecked, that isn't true (D-012). Reword it so it's true either way.
-
 ### 11. "Checked" on each story
 **Status:** Ready
 Show readers that a story was independently checked, with the date, and say so honestly when it was released unchecked. The verdicts are already in `content/checks/`.
@@ -70,3 +66,7 @@ The Developer moves an item here in the pull request that builds it.
 ### Caucus-race reminder on Sunday mornings
 **Done:** 11 November 2026.
 A second reminder at 9:00 on Sunday mornings, telling readers the week's Caucus-race is open. It uses the notification library already in the app and is scheduled on the phone, like the 7:00 reminder, with its own switch (the Dodo) on the Shelves.
+
+### A reminder that doesn't promise a story on a morning without one
+**Done:** 14 November 2026.
+The 7:00 reminder always says "Today's story is waiting". On a morning when the story was held or unchecked, that isn't true (D-012). Reword it so it's true either way.
