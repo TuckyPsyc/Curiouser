@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-20T05:50:39.276Z",
+  "updated": "2026-11-21T05:48:30.559Z",
   "issues": [
+    {
+      "id": 18,
+      "date": "2026-11-21",
+      "topic": "Technology",
+      "title": "The Typewriter With a Magic Eye",
+      "concept": "The input method",
+      "teaser": "A best-selling Chinese novelist spent his fortune on a typewriter that never went on sale, and quietly changed what it means to type.",
+      "readingMinutes": 3
+    },
     {
       "id": 17,
       "date": "2026-11-20",

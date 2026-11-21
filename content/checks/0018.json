@@ -1,0 +1,27 @@
+{
+  "issue": 18,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-21T05:48:00Z",
+  "summary": "One small correction: no source says Lin paid for the typewriter from his book royalties, only that he exhausted his savings and went into debt, so 'the royalties' became 'his money'. Everything else checked out, including all the quotations.",
+  "claims": { "checked": 62, "confirmed": 61, "corrected": 1, "removed": 0 },
+  "links": { "checked": 9, "working": 9, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Contested", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 1",
+      "before": "He poured the royalties into a typewriter for Chinese",
+      "after": "He poured his money into a typewriter for Chinese",
+      "why": "Cheng's essay says Lin 'exhausted his savings and went into debt' (the prototype cost over US$120,000), and Stanford says he was in debt, but no source I found says the money came from his book royalties.",
+      "source": "https://madeinchinajournal.com/2025/05/02/lost-and-found-the-unexpected-journey-of-the-mingkwai-typewriter/"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The Made in China Journal link timed out when opened directly, but the same essay opened at its short address (madeinchinajournal.com/?p=26219), which points to the story's link, so I counted it as working. The further-reading link to it is the same page and counted once more.",
+    "The 36 top / 28 lower / 8 number-key split and the 9 x 14 x 18 inch size come from Mullaney's MIT Press Reader excerpt; the Stanford and Colossal pages give only '72 keys'.",
+    "NPR says the typewriter was patented in 1946; that doesn't conflict with the 1947 unveiling.",
+    "Mair's 'Rube Goldberg typewriter' is from a rhetorical question in his first post; the quoted words are his."
+  ]
+}
