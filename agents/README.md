@@ -48,7 +48,7 @@ Everything waiting on Carl is one ranked list at the top of the desk: requests f
 
 Open an issue labelled `for-<agent>` (`for-developer`, `for-marketing`, `for-producer`, `for-fact-checker`, `for-analyst` or `for-support`), or ask Fenton to. The agent reads it at the start of its next run with `scripts/requests.mjs`, does it if its rules allow, and answers on the issue. Its answer appears on Carl's queue; closing the issue says he has read it. Only Carl's own issues and comments count.
 
-Weekly agents answer weekly. For an answer today, start the agent's scheduled task with the message "Requests only": it handles its requests and nothing else. That uses some of Carl's plan.
+Weekly agents answer weekly. For an answer today, start the agent's scheduled task with the message "Requests only": it handles its requests and nothing else. That uses some of Carl's plan. Fenton can start it, on Carl's yes.
 
 The Editor takes no requests: its instructions are its scheduled task's prompt, which is Carl's to change.
 
