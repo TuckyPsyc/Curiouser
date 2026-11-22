@@ -1,0 +1,141 @@
+{
+  "id": 19,
+  "date": "2026-11-22",
+  "topic": "Language",
+  "title": "The Moon Looks Down on the Earth",
+  "concept": "Enphrasing",
+  "teaser": "On the Upper Congo, drummers sent words across the river by turning each one into a little phrase. An English missionary learned why.",
+  "readingMinutes": 3,
+  "story": [
+    "In November 1954, Time magazine told its readers about a mission station at Yalemba, on the Upper Congo river. Its schoolmaster was John F. Carrington, a 40-year-old Englishman from the Baptist Missionary Society, who had arrived in the Belgian Congo in 1938. According to Time, a 5.30 a.m. wake-up drum beat ‘sukóla sukóla sukóla’: wash, wash, wash. When his wife, Nora, wanted him home for lunch, she drummed for him too. Decoded, her message began ‘White man spirit in forest come come to house of shingles high up above’ and ended ‘Woman with yams awaits. Come come.’",
+    "Why so many words to say lunch is ready? Carrington had learned Kele, the language of the Lokele, a fishing people living west of what is now Kisangani. Like most African languages it is a tone language: every syllable is spoken high or low, and the pattern helps to tell words apart. A drum can copy that pattern of high and low, but it loses the consonants and vowels. As Time put it, drum talk ‘is not a code like Morse. It is actually an attempt to reproduce language.’",
+    "That creates a problem. Carrington found that the Kele words for ‘moon’ and ‘fowl’ would each come out as the same two high strokes. So drummers did not beat the bare word. ‘Moon’ became ‘the moon looks down on the earth’. ‘Fowl’ became ‘the fowl, the little one which says kiokio’. A white man was drummed as ‘white man spirit from the forest’. Carrington described the method as ‘using small stereotyped phrases rather than single words’. The longer phrase gives listeners a tone pattern they can tell apart, and drummers repeated each phrase and framed messages with set openings and closings.",
+    "Linguists now call this enphrasing. The anthropologist Theodore Stern named it in 1957, in a study of drum and whistle ‘languages’, defining it simply: ‘the lexical unit is replaced by a phrase’. It is a way of buying back clarity with extra length when a signal can carry only part of what speech carries.",
+    "Carrington wrote it up in a doctoral thesis in 1947 and in The Talking Drums of Africa in 1949. He knew he was recording something fragile. Time reported that only one pupil in ten at his school could speak on the drums, and the reporter’s own test showed how much a drum relies on shared knowledge. Two drummers stood 200 yards apart. ‘The Giants beat the Indians in the World Series’ was first reworded as ‘The Giants beat the Redskins in the competition’, and arrived as ‘The crocodile got the better of the leopard.’",
+    "The drummers of the Congo had met, by ear, a problem every noisy channel faces: when a signal is thin, adding words people expect is how meaning gets through."
+  ],
+  "takeaway": "Enphrasing: when a signal can carry only part of a word, such as its tones on a drum, replace the word with a longer stock phrase whose pattern can’t be mistaken. Kele drummers on the Upper Congo beat ‘the moon looks down on the earth’ for ‘moon’.",
+  "recall": {
+    "question": "In 1590s Nanchang, the Jesuit Matteo Ricci won over Chinese scholars with a feat of memory. What technique was he teaching, and how does it work?",
+    "answer": "The method of loci: you turn each thing into a vivid image, place the images along a route through a building you know, then walk the route in your mind to recall them.",
+    "fromIssue": 13
+  },
+  "rabbitHole": {
+    "title": "Beyond the jungle telegraph",
+    "intro": "What were the drums really copying, who gave the trick its name, and where does a drum still talk today? Down we go.",
+    "levels": [
+      {
+        "heading": "Not a code, a copy",
+        "body": [
+          "The popular picture of the ‘jungle telegraph’ is a code, with so many beats for each letter. The evidence says otherwise. In a lecture he gave at the university in Kisangani in December 1970, later printed in the journal African Music, Carrington explained that in Kele ‘every word has an inherent tonal pattern which helps the hearer to recognise what is signified’. The drum reproduces that pattern.",
+          "Long phrases were only one layer of safety. Carrington wrote that ‘further redundancy is added to the beaten message by the repetition of each phrase and the use of special opening and closing phrases’. Names of people and villages were turned into phrases in the same way, so that each had its own recognisable tune. His own survey of Lokele schoolboys in 1943 already found drum signalling in decline."
+        ]
+      },
+      {
+        "heading": "Surrogates and their trade-offs",
+        "body": [
+          "Theodore Stern’s 1957 paper in American Anthropologist, ‘Drum and Whistle “Languages”: An analysis of speech surrogates’, gave scholars their vocabulary. A speech surrogate imitates spoken language by other means: a drum, a whistle, a horn. Drums like the Kele ones belong to what Stern called abridging systems, which, in his words, preserve ‘some phonic resemblance to the base utterance’ but represent ‘only part of its phonemic qualities’.",
+          "That missing part is the source of ambiguity, and enphrasing is one cure. Stern set abridging systems against what he called lexical ideographs, which do away with the sound of speech altogether. In a 2021 review, Lucas James of Dartmouth College notes that many speech surrogates are now extinct or endangered, and that no community is known to use one as its main way of talking."
+        ]
+      },
+      {
+        "heading": "A drum that keeps time",
+        "body": [
+          "In the Amazon, the Bora, about 1,500 people living in Colombia and Peru, still beat messages on the manguaré: a pair of wooden slit drums, each about two metres long and carved from a single log. Each drum gives two pitches. In talking mode only two are used, and each beat stands for a syllable of spoken Bora. An announcement averages about 15 words and 60 beats.",
+          "In 2018 Frank Seifart, Julien Meyer, Sven Grawunder and Laure Dentel reported in Royal Society Open Science that tone does only part of the work. ‘Rhythm turns out to be crucial for distinguishing words in drummed Bora,’ said Seifart. The pauses between beats fall into four lengths, which match the intervals between vowels in spoken Bora. Where ambiguity remains, the Bora, like the Lokele, elaborate their phrases."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The Talking Drums of Africa",
+        "author": "John F. Carrington (1949)",
+        "note": "A short book by the missionary who learned Kele drumming, with many translated messages."
+      },
+      {
+        "title": "Drum and Whistle “Languages”: An analysis of speech surrogates",
+        "author": "Theodore Stern (1957)",
+        "note": "The American Anthropologist paper that named enphrasing."
+      },
+      {
+        "title": "Systems of Communication: Aspects of Culture and Structure in Speech Surrogates",
+        "author": "Lucas James (2021)",
+        "note": "An open-access review of drum and whistle systems around the world.",
+        "url": "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.653268/full"
+      },
+      {
+        "title": "Reducing language to rhythm: Amazonian Bora drummed language exploits speech rhythm for long-distance communication",
+        "author": "Frank Seifart, Julien Meyer, Sven Grawunder and Laure Dentel (2018)",
+        "note": "The Royal Society Open Science study of the manguaré."
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Not just longer, but familiar",
+    "body": [
+      "The usual explanation, that drummers lengthen words to remove ambiguity, may be only half the story. Lucas James, writing on Dartmouth’s speech-surrogates blog, points out a puzzle in Carrington’s own examples: a phrase such as ‘the fowl looks down at the earth’ would in principle be just as easy to confuse with the moon’s phrase. Length alone can’t be what makes the system work. James argues that ‘enphrased sequences can’t just be longer phrases, they also have to be rote expressions in common use’, understood by a community of practice.",
+      "In his later review he goes further: the phrases form a drum vocabulary of their own that refers ‘only conventionally to the base language’, and an enphrasing ‘need not “make sense”’ in speech at all. The practice is not in doubt. What is debated is whether it works by adding information or by shared habit."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: enphrasing is real and well recorded, but its power comes from phrases everyone already knows, not from length on its own, so a longer message only helps if the listener shares the code."
+  },
+  "quiz": [
+    {
+      "question": "How did Kele drummers on the Upper Congo send the word for ‘moon’?",
+      "options": [
+        "As the phrase ‘the moon looks down on the earth’",
+        "As a set number of beats for each letter, like Morse code",
+        "As two high strokes and nothing more",
+        "By borrowing the French word, which had a clearer rhythm"
+      ],
+      "answer": 0,
+      "explain": "On its own, ‘moon’ came out as two high strokes, the same as ‘fowl’, so drummers beat the longer phrase ‘the moon looks down on the earth’ instead."
+    },
+    {
+      "question": "Which of these is an example of enphrasing?",
+      "options": [
+        "Replacing a short word with a longer stock phrase so its drummed pattern can’t be confused with another word",
+        "Shortening a long phrase to save time on the drum",
+        "Spelling out a word letter by letter with beats",
+        "Drumming the same message louder so it carries further"
+      ],
+      "answer": 0,
+      "explain": "Stern defined enphrasing as replacing a word with a phrase. Kele drummers turned ‘fowl’ into ‘the fowl, the little one which says kiokio’."
+    }
+  ],
+  "sources": [
+    {
+      "title": "‘Education: Boomlay’, Time (22 November 1954)",
+      "url": "https://time.com/archive/6609281/education-boomlay"
+    },
+    {
+      "title": "J. F. Carrington, ‘The musical dimension of perception in the upper Congo, Zaire’, African Music (lecture given in Kisangani, December 1970)",
+      "url": "https://journal.ru.ac.za/index.php/africanmusic/article/view/1149/607"
+    },
+    {
+      "title": "Lucas James, ‘Enphrasing isn’t just about disambiguation’, Speech Surrogates, Dartmouth College (2020)",
+      "url": "https://sites.dartmouth.edu/speech-surrogates/2020/04/09/enphrasing-isnt-just-about-disambiguation/"
+    },
+    {
+      "title": "Lucas James, ‘Systems of Communication: Aspects of Culture and Structure in Speech Surrogates’, Frontiers in Communication (2021)",
+      "url": "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2021.653268/full"
+    },
+    {
+      "title": "Max Planck Society, ‘Rhythm crucial in drummed speech’ (April 2018), on Seifart et al., Royal Society Open Science",
+      "url": "https://www.mpg.de/12017337/drummed-speech-rhythm"
+    },
+    {
+      "title": "Glottolog reference: Theodore Stern, ‘Drum and Whistle “Languages”: An analysis of speech surrogates’, American Anthropologist 59(3), 1957",
+      "url": "https://glottolog.org/resource/reference/id/66540"
+    },
+    {
+      "title": "Honoré Vinck, ‘John Carrington (1914–1985): bio-bibliography’, Aequatoria",
+      "url": "https://aequatoria.be/themes/bio-bibliographies/carrington_en.html"
+    },
+    {
+      "title": "Wikipedia, ‘John F. Carrington’",
+      "url": "https://en.wikipedia.org/wiki/John_F._Carrington"
+    }
+  ]
+}

@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-21T05:48:30.559Z",
+  "updated": "2026-11-22T05:49:36.404Z",
   "issues": [
+    {
+      "id": 19,
+      "date": "2026-11-22",
+      "topic": "Language",
+      "title": "The Moon Looks Down on the Earth",
+      "concept": "Enphrasing",
+      "teaser": "On the Upper Congo, drummers sent words across the river by turning each one into a little phrase. An English missionary learned why.",
+      "readingMinutes": 3
+    },
     {
       "id": 18,
       "date": "2026-11-21",

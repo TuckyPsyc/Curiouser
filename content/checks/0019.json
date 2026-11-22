@@ -1,0 +1,46 @@
+{
+  "issue": 19,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-22T05:50:00Z",
+  "summary": "One small cut: no source I found says nobody can learn the drum language without knowing the spoken one, so that half-sentence went. Everything else checked out, including every quotation, the moon and fowl example and the Bora figures.",
+  "claims": {
+    "checked": 58,
+    "confirmed": 57,
+    "corrected": 0,
+    "removed": 1
+  },
+  "links": {
+    "checked": 9,
+    "working": 9,
+    "replaced": 0,
+    "removed": 0
+  },
+  "lookingGlass": {
+    "rating": "Well supported",
+    "fair": true
+  },
+  "quiz": {
+    "sound": true
+  },
+  "changes": [
+    {
+      "where": "rabbit hole, level 1, paragraph 1",
+      "before": "The drum reproduces that pattern, so nobody can learn the drum language without knowing the spoken one.",
+      "after": "The drum reproduces that pattern.",
+      "why": "Carrington's 1970 lecture says every word has an inherent tonal pattern, but neither it nor the other sources says nobody can learn the drum language without the spoken one. It is an inference, so the unsupported half was cut.",
+      "source": "https://journal.ru.ac.za/index.php/africanmusic/article/view/1149/607"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The Dartmouth blog post couldn't be opened directly in this unattended run; I read its full text on the blog's 'drum' category page (found by searching), which links to the story's address. Author, date and all quoted words match.",
+    "Time (1954) doesn't name Carrington's wife, and says he arrived '14 years ago'; Nora, and the 1938 arrival, come from Wikipedia and Vinck's bio-bibliography, which agree.",
+    "Time prints the homophone pair as 'moon and jowl', apparently a misprint; Carrington (via Lucas James's blog and 2021 review) gives 'fowl' (koko), both drummed as two high strokes.",
+    "The Moon, fowl and 1943 schoolboy survey details are confirmed in Lucas James's 2021 review, which quotes Carrington (1949). The survey found only 36 per cent could drum their own drum names.",
+    "The Max Planck release says each Bora drum beat corresponds to a syllable; the paper itself is more careful and ties rhythm to vowel-to-vowel intervals. The story reports both fairly.",
+    "The Aequatoria bio-bibliography page has no English version yet; its French text confirms the dates.",
+    "The Looking-Glass rests on one scholar's argument (a blog post and a peer-reviewed review), a real nuance rather than a wide debate; 'counter' and 'Well supported' are fair.",
+    "Most words quoted from Time are the drum messages and the test sentences rather than Time's own prose; Time's prose quoted is under 20 words."
+  ]
+}
