@@ -7,4 +7,4 @@ Carl's readings from issue #8 ("How the posts did"), owner comments only. One ro
 
 From 15 Nov the Arm column gives the arm and the narrator, e.g. "button, Raconteur".
 
-No readings yet (checked 12 and 15 November 2026; issue #8 has no comments).
+No readings yet (checked 12, 15 and 22 November 2026; issue #8 has no comments).
