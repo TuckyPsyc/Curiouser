@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-22T05:49:36.404Z",
+  "updated": "2026-11-23T05:49:19.669Z",
   "issues": [
+    {
+      "id": 20,
+      "date": "2026-11-23",
+      "topic": "Health & Medicine",
+      "title": "The Cups at Bangaon",
+      "concept": "Oral rehydration therapy",
+      "teaser": "In a 1971 refugee camp, a doctor short of drips handed cholera treatment to patients’ families. Their cups of salty, sugary water worked.",
+      "readingMinutes": 3
+    },
     {
       "id": 19,
       "date": "2026-11-22",

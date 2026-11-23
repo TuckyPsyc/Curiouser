@@ -1,0 +1,40 @@
+{
+  "issue": 20,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-23T05:49:08Z",
+  "summary": "Three small corrections in paragraphs 4 and 5: the 1960s trials cut the need for drips rather than matching them, WHO (not the World Health Assembly) is the source-backed launcher of the 1978 programme, and the Lancet's 1978 praise was for the discovery behind the treatment. Everything else checked out.",
+  "claims": { "checked": 62, "confirmed": 59, "corrected": 3, "removed": 0 },
+  "links": { "checked": 9, "working": 9, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 4",
+      "before": "that it could work as well as a drip.",
+      "after": "that it could greatly reduce the need for a drip.",
+      "why": "The researchers who ran the first trials describe them as showing that oral rehydration 'could greatly reduce or eliminate the need for intravenous fluids', not that it matched a drip outright.",
+      "source": "https://ppgsp.furg.br/images/artigos/50-years-of-ORT_Nalin--Cash-Lancet-2018.pdf"
+    },
+    {
+      "where": "story, paragraph 5",
+      "before": "In 1978, the year the World Health Assembly launched a global programme",
+      "after": "In 1978, the year WHO launched a global programme",
+      "why": "Sources confirm WHO launched its diarrhoeal diseases control programme in 1978 with oral rehydration at its heart; I could not confirm it was launched by the World Health Assembly.",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/7530695/"
+    },
+    {
+      "where": "story, paragraph 5",
+      "before": "The Lancet called the treatment 'potentially the most important medical advance' of the century.",
+      "after": "The Lancet called the discovery behind it 'potentially the most important medical advance this century'.",
+      "why": "The 1978 Lancet editorial ('Water with sugar and salt') applied the phrase to the discovery that glucose enhances sodium and water absorption, which led to the treatment.",
+      "source": "https://ppgsp.furg.br/images/artigos/50-years-of-ORT_Nalin--Cash-Lancet-2018.pdf"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "Camp death rates differ slightly between sources: the WHO Bulletin gives about 3% against 20-30% elsewhere; the National Medical Journal of India obituary gives 3.6%, one-tenth of that elsewhere. The story's 'about 3 per cent' follows the WHO Bulletin.",
+    "That families 'begged for saline' and the name 'oral saline' was meant to reassure them comes from the National Medical Journal of India obituary.",
+    "The 2002 WHO/UNICEF statement says countries should use the new formula 'in place of' the old one; 'told countries to replace' is a fair paraphrase."
+  ]
+}
