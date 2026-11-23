@@ -1,0 +1,323 @@
+{
+  "made": "2026-11-23T06:23:39.241Z",
+  "from": "2026-11-16",
+  "to": "2026-11-22",
+  "stories": {
+    "written": 7,
+    "daysExpected": 7,
+    "daysWithNoStory": [],
+    "released": 7,
+    "held": 0,
+    "stillDrafts": 0,
+    "releasedUnchecked": 0,
+    "list": [
+      {
+        "id": 13,
+        "date": "2026-11-16",
+        "title": "The Jesuit Who Remembered Backwards",
+        "topic": "Self-Improvement",
+        "status": "released",
+        "verdict": "pass",
+        "by": "fact-checker",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": 62,
+        "linksChecked": 10
+      },
+      {
+        "id": 14,
+        "date": "2026-11-17",
+        "title": "The Stars on the Shrine Wall",
+        "topic": "Art & Music",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 1,
+        "problems": 0,
+        "claimsChecked": 64,
+        "linksChecked": 12
+      },
+      {
+        "id": 15,
+        "date": "2026-11-18",
+        "title": "The Dirty First Pages",
+        "topic": "Mathematics",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 3,
+        "problems": 0,
+        "claimsChecked": 58,
+        "linksChecked": 9
+      },
+      {
+        "id": 16,
+        "date": "2026-11-19",
+        "title": "The Tea Master in the Snow",
+        "topic": "Gentleman's Pursuits",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 2,
+        "problems": 0,
+        "claimsChecked": 62,
+        "linksChecked": 14
+      },
+      {
+        "id": 17,
+        "date": "2026-11-20",
+        "title": "The Necklaces Nobody Could Keep",
+        "topic": "Society",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 2,
+        "problems": 0,
+        "claimsChecked": 60,
+        "linksChecked": 11
+      },
+      {
+        "id": 18,
+        "date": "2026-11-21",
+        "title": "The Typewriter With a Magic Eye",
+        "topic": "Technology",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 1,
+        "problems": 0,
+        "claimsChecked": 62,
+        "linksChecked": 9
+      },
+      {
+        "id": 19,
+        "date": "2026-11-22",
+        "title": "The Moon Looks Down on the Earth",
+        "topic": "Language",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 1,
+        "problems": 0,
+        "claimsChecked": 58,
+        "linksChecked": 9
+      }
+    ]
+  },
+  "checks": {
+    "done": 7,
+    "pass": 1,
+    "fixed": 6,
+    "held": 0,
+    "corrections": 10,
+    "claimsChecked": 426,
+    "linksChecked": 74,
+    "openProblems": [],
+    "neverChecked": [],
+    "list": [
+      {
+        "id": 13,
+        "date": "2026-11-16",
+        "title": "The Jesuit Who Remembered Backwards",
+        "topic": "Self-Improvement",
+        "status": "released",
+        "verdict": "pass",
+        "by": "fact-checker",
+        "changes": 0,
+        "problems": 0,
+        "claimsChecked": 62,
+        "linksChecked": 10
+      },
+      {
+        "id": 14,
+        "date": "2026-11-17",
+        "title": "The Stars on the Shrine Wall",
+        "topic": "Art & Music",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 1,
+        "problems": 0,
+        "claimsChecked": 64,
+        "linksChecked": 12
+      },
+      {
+        "id": 15,
+        "date": "2026-11-18",
+        "title": "The Dirty First Pages",
+        "topic": "Mathematics",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 3,
+        "problems": 0,
+        "claimsChecked": 58,
+        "linksChecked": 9
+      },
+      {
+        "id": 16,
+        "date": "2026-11-19",
+        "title": "The Tea Master in the Snow",
+        "topic": "Gentleman's Pursuits",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 2,
+        "problems": 0,
+        "claimsChecked": 62,
+        "linksChecked": 14
+      },
+      {
+        "id": 17,
+        "date": "2026-11-20",
+        "title": "The Necklaces Nobody Could Keep",
+        "topic": "Society",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 2,
+        "problems": 0,
+        "claimsChecked": 60,
+        "linksChecked": 11
+      },
+      {
+        "id": 18,
+        "date": "2026-11-21",
+        "title": "The Typewriter With a Magic Eye",
+        "topic": "Technology",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 1,
+        "problems": 0,
+        "claimsChecked": 62,
+        "linksChecked": 9
+      },
+      {
+        "id": 19,
+        "date": "2026-11-22",
+        "title": "The Moon Looks Down on the Earth",
+        "topic": "Language",
+        "status": "released",
+        "verdict": "fixed",
+        "by": "fact-checker",
+        "changes": 1,
+        "problems": 0,
+        "claimsChecked": 58,
+        "linksChecked": 9
+      }
+    ]
+  },
+  "videos": {
+    "checkedStoriesThisWeek": 7,
+    "ofThoseWithAScript": 1,
+    "scriptsInAll": 6
+  },
+  "downloads": {
+    "total": 12,
+    "sinceLastReport": 0,
+    "lastReport": "2026-11-16",
+    "perRelease": [
+      {
+        "tag": "v1.0.6",
+        "published": "2026-11-09",
+        "downloads": 3,
+        "sinceLastReport": 0
+      },
+      {
+        "tag": "v1.0.5",
+        "published": "2026-11-08",
+        "downloads": 1,
+        "sinceLastReport": 0
+      },
+      {
+        "tag": "v1.0.4",
+        "published": "2026-11-08",
+        "downloads": 5,
+        "sinceLastReport": 0
+      },
+      {
+        "tag": "v1.0.3",
+        "published": "2026-11-08",
+        "downloads": 3,
+        "sinceLastReport": 0
+      }
+    ]
+  },
+  "automation": {
+    "runs": 95,
+    "failed": [],
+    "byWorkflow": {
+      "Editor's desk": {
+        "runs": 77,
+        "failed": 0
+      },
+      "Checks": {
+        "runs": 13,
+        "failed": 0
+      },
+      "Release a story": {
+        "runs": 2,
+        "failed": 0
+      },
+      "Publish app update": {
+        "runs": 2,
+        "failed": 0
+      },
+      "Make the video": {
+        "runs": 1,
+        "failed": 0
+      }
+    },
+    "truncated": true
+  },
+  "pulls": {
+    "opened": [
+      {
+        "number": 32,
+        "title": "The Tea Party: send the day's talking point to friends"
+      }
+    ],
+    "merged": [
+      {
+        "number": 32,
+        "title": "The Tea Party: send the day's talking point to friends"
+      },
+      {
+        "number": 6,
+        "title": "Sunday-morning reminder for the Caucus-race"
+      }
+    ],
+    "closedUnmerged": [],
+    "openNow": [
+      {
+        "number": 22,
+        "title": "A 7:00 reminder that's true on every morning",
+        "openedDaysAgo": 8
+      }
+    ]
+  },
+  "tickets": {
+    "unchecked": 0,
+    "held": 0,
+    "noStory": 0,
+    "releasedByCarl": 0,
+    "list": []
+  },
+  "traffic": {
+    "views14Days": 17,
+    "visitors14Days": 3,
+    "clones14Days": 1659,
+    "cloners14Days": 408
+  },
+  "support": {
+    "waiting": 0,
+    "checked": "2026-11-23T06:15:53Z"
+  },
+  "allTime": {
+    "stories": 20,
+    "released": 20,
+    "checkedByFactChecker": 20
+  },
+  "unavailable": []
+}
