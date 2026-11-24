@@ -37,15 +37,17 @@ export function agentHealth(h) {
   const fail = (agent, text) => out.push({ agent, state: 'fail', text });
   const notDue = (agent, text) => out.push({ agent, state: 'not-due', text });
 
-  // The Editor: today's story exists by 05:30.
-  const todays = stories.filter((s) => s.date === uk.date).at(-1);
+  // The Editor: today's story exists by 05:30. A spare put out today (D-021) is not the Editor's work for today.
+  const todays = stories.filter((s) => s.date === uk.date && s.issue?.spare !== true).at(-1);
+  const usedSpare = stories.find((s) => s.date === uk.date && s.issue?.spare === true);
   if (todays) ok('Editor', `No. ${todays.id} written.`);
   else if (uk.minutes < STORY_BY) notDue('Editor', `today's story is due by ${clockOf(STORY_BY)}.`);
-  else fail('Editor', 'no story for today.');
+  else fail('Editor', `no story for today${usedSpare ? `; the spare went out instead as No. ${usedSpare.id}` : ''}.`);
 
   // The fact-checker: today's story has a verdict by 06:30.
   const c = todays?.check;
-  if (!todays) notDue('Fact-checker', uk.minutes < VERDICT_BY ? `a verdict is due by ${clockOf(VERDICT_BY)}.` : 'no story to check.');
+  if (!todays && usedSpare) ok('Fact-checker', `the spare went out as No. ${usedSpare.id}.`);
+  else if (!todays) notDue('Fact-checker', uk.minutes < VERDICT_BY ? `a verdict is due by ${clockOf(VERDICT_BY)}.` : 'no story to check.');
   else if (c?.by === 'fact-checker' && byTime(c.at, uk.date, VERDICT_BY)) ok('Fact-checker', `No. ${todays.id} ${verdictWords[c.verdict] ?? c.verdict}.`);
   else if (c?.by === 'fact-checker') fail('Fact-checker', `No. ${todays.id} ${verdictWords[c.verdict] ?? c.verdict}, but late, at ${ukOf(c.at).clock}.`);
   else if (uk.minutes < VERDICT_BY) notDue('Fact-checker', `No. ${todays.id}'s verdict is due by ${clockOf(VERDICT_BY)}.`);

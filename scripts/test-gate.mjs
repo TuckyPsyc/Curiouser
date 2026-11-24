@@ -105,6 +105,61 @@ ok('…records it as the editor-in-chief\'s decision, not a check', after.verdic
 ok('…and keeps the fact-checker\'s problems and history', after.problems?.length === 1 && after.history?.[0]?.verdict === 'held');
 ok('release.mjs with nothing left to release changes nothing', run('release.mjs').status === 0);
 
+// The spare (DECISIONS.md, D-021): a checked story kept for a morning when the day's is missing or held.
+console.log('The spare');
+const sparePath = 'content/spare/spare.json';
+const spareCheck = 'content/checks/spare.json';
+const spareSha = () => createHash('sha256').update(readFileSync(join(scratch, sparePath))).digest('hex');
+const spareStory = (extra = {}) => {
+  const { id: _i, date: _d, ...rest } = draft(n, last);
+  // An off-rotation topic: the spare may be on any topic.
+  return { ...rest, written: '2099-01-01', topic: topicFor(n + 1) === 'Science' ? 'History' : 'Science', title: 'Test spare', concept: 'Test spare concept', ...extra };
+};
+const spareVerdict = (extra = {}) => ({ ...verdict('spare', 'pass'), sha256: spareSha(), ...extra });
+const useSpare = (now) => spawnSync(process.execPath, [join(here, 'spare.mjs'), 'use'], { env: { ...env, SPARE_NOW: now }, encoding: 'utf8' });
+const feedBefore = JSON.stringify(read('content/feed.json').issues);
+write(sparePath, spareStory());
+ok('a spare with no verdict builds', builds());
+ok('…and readers cannot see it', JSON.stringify(read('content/feed.json').issues) === feedBefore);
+let u = useSpare('2099-02-01T05:45:00Z');
+ok('an unchecked spare is never used', u.status === 1 && existsSync(join(scratch, sparePath)), u.stdout + u.stderr);
+write(sparePath, { ...spareStory(), id: 99 });
+ok('a spare with an id is rejected', !builds());
+write(sparePath, spareStory({ concept: read(`content/issues/${pad(last)}.json`).concept }));
+ok('a spare may not repeat a concept already used', !builds());
+write(sparePath, spareStory());
+write(spareCheck, { ...spareVerdict(), by: 'editor' });
+ok('a spare verdict from anyone but the fact-checker is rejected', !builds());
+write(spareCheck, spareVerdict());
+ok('a checked spare builds', builds());
+write(sparePath, spareStory({ teaser: 'Changed after the check.' }));
+u = useSpare('2099-02-01T05:45:00Z');
+ok('a spare changed after its check is not used', builds() && u.status === 1, u.stdout + u.stderr);
+write(sparePath, spareStory());
+write(spareCheck, spareVerdict());
+u = useSpare('2099-01-01T05:45:00Z');
+ok('the spare is not used when today\'s story is already out', u.status === 0 && existsSync(join(scratch, sparePath)) && !existsSync(join(scratch, `content/issues/${pad(n + 1)}.json`)), u.stdout + u.stderr);
+write(`content/issues/${pad(n + 1)}.json`, { ...draft(n + 1, last), date: '2099-02-01' });
+u = useSpare('2099-02-01T05:45:00Z');
+ok('…nor while today\'s story is waiting for the fact-checker', u.status === 1 && existsSync(join(scratch, sparePath)), u.stdout + u.stderr);
+write(checkFile(n + 1), verdict(n + 1, 'held', { problems: [{ where: 'story ¶1', problem: 'Test problem.' }] }));
+u = useSpare('2099-02-01T05:45:00Z');
+const used = existsSync(join(scratch, `content/issues/${pad(n + 2)}.json`)) ? read(`content/issues/${pad(n + 2)}.json`) : {};
+ok('when today\'s story is held, the checked spare becomes the next story, dated today', u.status === 0 && used.id === n + 2 && used.date === '2099-02-01' && used.spare === true && used.written === undefined, u.stdout + u.stderr);
+ok('…keeps its own topic outside the rotation, and builds', used.topic !== topicFor(n + 2) && builds());
+ok('…carries the fact-checker\'s verdict, so readers see it', read(checkFile(n + 2)).by === 'fact-checker' && visible(n + 2) && !visible(n + 1));
+ok('…and the spare and its verdict are gone, ready for a new one', !existsSync(join(scratch, sparePath)) && !existsSync(join(scratch, spareCheck)));
+ok('…with a record of when it was written, checked and used', read(checkFile(n + 2)).fromSpare?.used === '2099-02-01');
+write(`content/issues/${pad(n + 3)}.json`, { ...draft(n + 3, last), spare: true, topic: topicFor(n + 4) });
+ok('a story can\'t mark itself as a spare to step out of the rotation', !builds());
+write(`content/issues/${pad(n + 3)}.json`, draft(n + 3, last));
+ok('the rotation carries on by number after a used spare', builds());
+for (const id of [n + 3, n + 2, n + 1]) {
+  rmSync(join(scratch, `content/issues/${pad(id)}.json`), { force: true });
+  rmSync(join(scratch, checkFile(id)), { force: true });
+}
+ok('the repo builds again without the test stories', builds());
+
 // save.mjs: what each agent may push. Uses a throwaway repo with a local "GitHub".
 console.log('Saving');
 const work = mkdtempSync(join(tmpdir(), 'curiouser-save-'));
@@ -146,6 +201,14 @@ cwrite(clone, 'README.md', 'changed\n');
 r = save(clone, 'editor', 'Editor edits the README');
 ok('an agent cannot save a file outside its own', r.status !== 0);
 git(clone, 'checkout', '--', 'README.md');
+cwrite(clone, 'content/spare/spare.json', spareStory());
+cwrite(clone, 'content/checks/spare.json', { ...verdict('spare', 'pass'), sha256: createHash('sha256').update(readFileSync(join(clone, 'content/spare/spare.json'))).digest('hex') });
+r = save(clone, 'editor', 'Editor tries to check its own spare');
+ok('the Editor cannot save a verdict for its own spare', r.status !== 0 && !onMain('content/checks/spare.json'), r.stdout + r.stderr);
+rmSync(join(clone, 'content/checks/spare.json'));
+r = save(clone, 'editor', 'Spare: Test spare');
+ok('the Editor can save a spare', r.status === 0 && onMain('content/spare/spare.json'), r.stdout + r.stderr);
+git(other, 'pull', '--quiet');
 
 // Meanwhile someone else pushes an unrelated change.
 cwrite(other, 'reports/note.md', 'x\n');

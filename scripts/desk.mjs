@@ -25,7 +25,7 @@ import { spawnSync } from 'node:child_process';
 import { readdirSync, readFileSync, existsSync, mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { root, loadStories, londonNow, pad } from './lib/state.mjs';
+import { root, loadStories, londonNow, pad, loadSpare } from './lib/state.mjs';
 import { github, trusted } from './lib/github.mjs';
 import { buildQueue, totalMinutes, TEAM, requestAgent, requestState, requestLabel } from './lib/queue.mjs';
 import { agentHealth, healthIcon } from './lib/health.mjs';
@@ -171,9 +171,12 @@ function ticketsWanted(stories, uk) {
       });
     }
   }
-  // No story at all today: the Editor failed or didn't run.
+  // No story at all today: the Editor failed or didn't run, and the fact-checker
+  // didn't put the spare out either (it does that at 05:40 when it can).
   const todays = stories.some((s) => s.date === uk.date);
   if (!todays && uk.minutes >= ALARM_MINUTES) {
+    const spare = loadSpare();
+    const ready = spare.status === 'checked';
     wanted.push({
       kind: 'missing',
       key: uk.date,
@@ -181,11 +184,15 @@ function ticketsWanted(stories, uk) {
       body: [
         marker('missing', uk.date),
           ...banner,
-        `The Editor hasn't written today's story. Readers see the last released story instead.`,
+        `The Editor hasn't written today's story${ready ? ', and the fact-checker didn\'t put the spare out' : ''}. Readers see the last released story instead.`,
         '',
         '**What you can do**',
+        ...(ready
+          ? [`- **Publish the spare: close this issue** (as completed). The spare is ${quote(spare.spare.title)} (${spare.spare.concept}, ${spare.spare.topic}), already checked by the fact-checker. It reaches readers within about five minutes.`]
+          : [`- There is no checked spare to use. ${{ none: 'The Editor writes one on its next run.', unchecked: 'The spare hasn\'t been checked yet.', changed: 'The spare changed after its check.', held: 'The fact-checker held the spare.' }[spare.status]}`]),
         '- **Nothing.** The Editor runs again tomorrow at 04:47.',
         '- **Run it now.** In the Claude app, open **Scheduled**, choose **Curiouser: Before Breakfast story** and tap **Run now**. The fact-checker then needs running the same way.',
+        ...(ready ? ['- **Dismiss this ticket without publishing:** close it as **not planned**.'] : []),
         '',
         'This ticket closes itself when a story for today appears.',
       ].join('\n'),
@@ -388,6 +395,21 @@ function todayLine(stories, uk, tickets) {
 }
 
 
+/** The spare story (DECISIONS.md, D-021): ready, waiting, or used today. */
+function spareLine(stories, uk) {
+  const used = stories.find((s) => s.date === uk.date && s.issue?.spare === true);
+  if (used) return `🛟 Today's story is **the spare**, put out because the day's own story was missing or held. The Editor writes a new spare on its next run.`;
+  const sp = loadSpare();
+  const name = sp.spare ? ` ${quote(sp.spare.title)} (${sp.spare.concept})` : '';
+  return {
+    checked: `🛟 **Spare:**${name}, checked and ready for a morning when the story is missing or held.`,
+    unchecked: `🛟 **Spare:**${name}, waiting for the fact-checker.`,
+    changed: `🛟 **Spare:**${name}, changed since its check, so waiting for the fact-checker again.`,
+    held: `🛟 **Spare:**${name} was held by the fact-checker; the Editor replaces it on its next run.`,
+    none: '🛟 **Spare:** none yet. The Editor writes one on its next run.',
+  }[sp.status];
+}
+
 /** One queue item as a line on the desk: what, how long, and the one step to take. */
 function itemMarkdown(i, uk) {
   const facts = [
@@ -450,6 +472,7 @@ function render(stories, uk, g, queue, health) {
     `**${fmtDate(uk.date)}**, as of ${uk.clock}.`,
     '',
     todayLine(stories, uk, g.tickets),
+    spareLine(stories, uk),
     '',
     `## Waiting for you${queue.length ? ` (${queue.length}, about ${total} min)` : ''}`,
     '',

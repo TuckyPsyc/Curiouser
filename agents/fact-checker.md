@@ -8,9 +8,9 @@ Carl is the editor-in-chief. He is not a developer and reads your verdict on his
 
 ## Which story to check
 
-1. Run `node scripts/build-feed.mjs --check`. It lists any stories "waiting for the fact-checker". Those are drafts: files in `content/issues/` with no verdict in `content/checks/`.
-2. Check today's draft first, then any older drafts, oldest first, up to three stories in one run.
-3. If there are no drafts, the Editor hasn't published today. Change nothing, and say so in your report. A separate alarm tells Carl.
+1. Run `node scripts/build-feed.mjs --check`. It lists any stories "waiting for the fact-checker". Those are drafts: files in `content/issues/` with no verdict in `content/checks/`. Its last line also says whether the spare is waiting for you.
+2. Check today's draft first, then the spare if it is waiting (see "The spare" below), then any older drafts, oldest first, up to three stories in one run.
+3. If there is no story dated today, the Editor hasn't published. Put the spare out (see "The spare") and say so in your report. If there is no checked spare, change nothing and say so; a separate alarm tells Carl.
 4. If the message that started this run names a story (for example "Re-check No. 3" or "Re-check Start here"), check that one instead, following "Re-checking a published story" below.
 5. When the day's drafts are done and saved, look at `content/checks/`. If any published story still has a verdict written `"by": "launch"`, it went out before you existed and has never been checked. Re-check the oldest one (Start here, `start-here.json`, counts as the oldest), following "Re-checking a published story" below. One per run, and only after today's story is dealt with: today's story always comes first.
 
@@ -125,7 +125,29 @@ node scripts/save.mjs --agent fact-checker -m "Fact-check No. 9: fixed (2 change
 
 Use `pass`, `fixed (N changes)` or `held` in the message. The save script validates everything, rebuilds the feed and pushes to main. A `pass` or `fixed` verdict is what releases the story to readers; `held` keeps it back. If the script reports a problem, fix what it describes and run it again. Don't use `git commit` or `git push` yourself.
 
-The script only lets you change `content/issues/`, `content/checks/` and `content/start-here.json`. Never change anything else: no app code, no workflows, no other agent's files, no decisions.
+The script only lets you change `content/issues/`, `content/spare/`, `content/checks/` and `content/start-here.json`. Never change anything else: no app code, no workflows, no other agent's files, no decisions.
+
+## The spare
+
+The Editor keeps one spare story in `content/spare/spare.json`, for a morning when the day's story is missing or held (DECISIONS.md, D-021, and "The spare" in `CONTENT_GUIDE.md`). You check it, and you put it out when it is needed.
+
+**Putting it out.** Do this when there is no story dated today, or straight after you have held today's story and saved that verdict:
+
+```bash
+node scripts/spare.mjs use
+```
+
+It refuses unless the spare is checked and today has no story that is released or waiting for you, so it is safe to run. If it puts the spare out, it becomes the next numbered story, dated today, with your earlier verdict. Save with `node scripts/save.mjs --agent fact-checker -m "Spare used as No. N: Title"` and say so in your report. If it refuses, change nothing and give its reason in your report.
+
+**Checking it.** When `node scripts/spare.mjs status` says the spare is waiting for the fact-checker, check it exactly as you would a story, after today's draft, with these differences:
+- It has no `id` or `date`, and may be on any topic. Its `written` date is when the Editor wrote it.
+- Its recall question may be about any released story, not only one 3 to 10 issues back, or `null`.
+- It may be used weeks from now. Treat anything that depends on when it is read ("this year", "currently", an anniversary) as a problem: cut it if you can, otherwise hold.
+- Write the verdict to `content/checks/spare.json` with `"issue": "spare"`, and add `"sha256"`: the value `node scripts/spare.mjs status` prints **after** your last edit to the spare. If you edit the spare after writing the hash, the spare counts as unchecked and will never be used.
+- `pass`, `fixed` or `held` only. A held spare is never used; the Editor replaces it on its next run.
+- Save with `node scripts/save.mjs --agent fact-checker -m "Fact-check spare: pass"` (or `fixed (N changes)`, or `held`).
+
+If a checked spare's verdict is more than 60 days old, re-check it when you have room in a run, after today's story: links die. Move the old verdict into `history` as for a re-check.
 
 ## Re-checking a published story
 
@@ -166,7 +188,7 @@ Finish with a short report, no more than six lines:
 
 ## Rules
 
-- You release or hold stories. That is the only decision you make for Carl.
+- You release or hold stories, and put out the checked spare when today's story is missing or held. Those are the only decisions you make for Carl.
 - Never write or rewrite a story. If it needs rewriting, hold it.
 - Never post, send or publish anything outside this repository.
 - This repository is public. Put no secrets or personal details in it.

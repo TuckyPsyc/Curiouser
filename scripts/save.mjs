@@ -18,10 +18,10 @@ const repo = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // What each agent may change on main. Paths ending in / are folders.
 const ALLOWED = {
-  // The Editor writes stories. It may not write verdicts, so it cannot release its own story.
-  editor: ['content/issues/'],
-  // The fact-checker corrects stories and writes verdicts.
-  'fact-checker': ['content/issues/', 'content/checks/', 'content/start-here.json'],
+  // The Editor writes stories and the spare. It may not write verdicts, so it cannot release its own story.
+  editor: ['content/issues/', 'content/spare/'],
+  // The fact-checker corrects stories and the spare, writes verdicts, and puts the spare out when it is needed.
+  'fact-checker': ['content/issues/', 'content/spare/', 'content/checks/', 'content/start-here.json'],
   // The Producer writes one script per story. The voice (videos/voice.json) is Carl's choice, not the Producer's.
   producer: [/^videos\/\d{4}\.json$/],
   analyst: ['reports/'],

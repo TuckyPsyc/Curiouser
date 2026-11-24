@@ -6,6 +6,7 @@
 // check file is a draft. Nothing else can publish it.
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 // CURIOUSER_ROOT lets the tests run against a scratch copy of the repo.
@@ -100,4 +101,47 @@ export function londonNow(now = new Date()) {
     minutes: Number(parts.hour) * 60 + Number(parts.minute),
     clock: `${parts.hour}:${parts.minute}`,
   };
+}
+
+// ---------- The spare ----------
+// One checked story kept in reserve for a morning when the day's story is
+// missing or held (DECISIONS.md, D-021). The Editor writes it to
+// content/spare/spare.json, with no id or date. The fact-checker checks it and
+// writes content/checks/spare.json, which records the spare's sha256 as checked,
+// so a spare changed after its check is unchecked again. scripts/spare.mjs puts
+// it out as the next numbered story.
+export const spareDir = join(root, 'content', 'spare');
+export const sparePath = join(spareDir, 'spare.json');
+export const spareCheckPath = join(checksDir, 'spare.json');
+export const SPARE_VERDICTS = ['pass', 'fixed', 'held'];
+
+export function sha256(buf) {
+  return createHash('sha256').update(buf).digest('hex');
+}
+
+/** The spare and its verdict. status: 'none' | 'unchecked' | 'changed' | 'held' | 'checked'. */
+export function loadSpare() {
+  if (!existsSync(sparePath)) return { status: 'none', spare: null, check: null, sha: null, problem: null };
+  const raw = readFileSync(sparePath);
+  const sha = sha256(raw);
+  let spare = null;
+  let problem = null;
+  try {
+    spare = JSON.parse(raw.toString('utf8'));
+  } catch (e) {
+    problem = `spare/spare.json: invalid JSON (${e.message})`;
+  }
+  let check = null;
+  if (existsSync(spareCheckPath)) {
+    try {
+      check = readJSON(spareCheckPath);
+    } catch (e) {
+      problem ??= `checks/spare.json: invalid JSON (${e.message})`;
+    }
+  }
+  let status = 'unchecked';
+  if (check && check.sha256 !== sha) status = check.sha256 ? 'changed' : 'unchecked';
+  else if (check?.verdict === 'held') status = 'held';
+  else if (check && RELEASING.has(check.verdict) && check.by === 'fact-checker') status = 'checked';
+  return { status, spare, check, sha, problem };
 }

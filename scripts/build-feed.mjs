@@ -12,7 +12,7 @@
 // Usage: node scripts/build-feed.mjs [--check]
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, unlinkSync } from 'node:fs';
 import { join } from 'node:path';
-import { root, issuesDir, loadChecks, statusOf, VERDICTS, CHECKERS, CYCLE, topicFor, pad } from './lib/state.mjs';
+import { root, issuesDir, loadChecks, statusOf, VERDICTS, CHECKERS, CYCLE, topicFor, pad, loadSpare, SPARE_VERDICTS } from './lib/state.mjs';
 
 const checkOnly = process.argv.includes('--check');
 
@@ -22,22 +22,23 @@ const fail = (file, msg) => errors.push(`${file}: ${msg}`);
 
 const isStr = (v) => typeof v === 'string' && v.trim().length > 0;
 const isStrArr = (v) => Array.isArray(v) && v.length > 0 && v.every(isStr);
+const isISOTime = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(v) && !Number.isNaN(Date.parse(v));
 const isUrl = (v) => typeof v === 'string' && /^https:\/\/\S+$/.test(v);
 
+const checksForSpares = loadChecks().checks;
 const files = readdirSync(issuesDir).filter((f) => /^\d{4}\.json$/.test(f)).sort();
 const issues = [];
 
-for (const file of files) {
-  let issue;
-  try {
-    issue = JSON.parse(readFileSync(join(issuesDir, file), 'utf8'));
-  } catch (e) {
-    fail(file, `invalid JSON (${e.message})`);
-    continue;
+// Checks one story's shape. The spare (content/spare/spare.json) has no id or
+// date yet and may be on any topic, since nobody knows which day it will fill.
+function validate(issue, file, id, { spare = false } = {}) {
+  if (spare) {
+    if (issue.id !== undefined || issue.date !== undefined) fail(file, 'the spare has no id or date; they are given when it is used');
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(issue.written ?? '')) fail(file, 'written must be the date the spare was written, YYYY-MM-DD');
+  } else {
+    if (issue.id !== id) fail(file, `id ${issue.id} does not match file name`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(issue.date ?? '')) fail(file, 'date must be YYYY-MM-DD');
   }
-  const id = Number(file.slice(0, 4));
-  if (issue.id !== id) fail(file, `id ${issue.id} does not match file name`);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(issue.date ?? '')) fail(file, 'date must be YYYY-MM-DD');
   if (!TOPICS.includes(issue.topic)) fail(file, `topic must be one of: ${TOPICS.join(', ')}`);
   for (const k of ['title', 'concept', 'teaser', 'takeaway']) if (!isStr(issue[k])) fail(file, `${k} missing`);
   if (!Number.isInteger(issue.readingMinutes) || issue.readingMinutes < 1) fail(file, 'readingMinutes must be a positive integer');
@@ -49,7 +50,7 @@ for (const file of files) {
   if (issue.recall !== null) {
     const r = issue.recall ?? {};
     if (!isStr(r.question) || !isStr(r.answer) || !Number.isInteger(r.fromIssue)) fail(file, 'recall needs question, answer, fromIssue (or null)');
-    else if (r.fromIssue >= id) fail(file, 'recall.fromIssue must point to an earlier issue');
+    else if (!spare && r.fromIssue >= id) fail(file, 'recall.fromIssue must point to an earlier issue');
   }
 
   const rh = issue.rabbitHole ?? {};
@@ -86,22 +87,61 @@ for (const file of files) {
     else if (q.explain.split(/\s+/).length > 45) fail(file, `${n}: keep explain under 45 words`);
   });
 
-  const expectedTopic = topicFor(id);
-  if (issue.topic !== expectedTopic) fail(file, `topic should be "${expectedTopic}" in the rotation (see CONTENT_GUIDE.md)`);
+  // A used spare keeps its own topic; the rotation carries on by number after it.
+  if (!spare && issue.spare !== true) {
+    const expectedTopic = topicFor(id);
+    if (issue.topic !== expectedTopic) fail(file, `topic should be "${expectedTopic}" in the rotation (see CONTENT_GUIDE.md)`);
+  }
+  // Only scripts/spare.mjs marks a used spare, and it records that in the verdict, which the Editor can't write.
+  if (issue.spare !== undefined && (spare || issue.spare !== true || !checksForSpares.get(id)?.fromSpare)) {
+    fail(file, '"spare": true is set only by scripts/spare.mjs when a checked spare is used');
+  }
 
   if (!Array.isArray(issue.sources) || issue.sources.length < 3) fail(file, 'needs at least 3 sources');
   else issue.sources.forEach((s, i) => {
     if (!isStr(s.title)) fail(file, `source ${i + 1} needs a title`);
     if (s.url !== undefined && !isUrl(s.url)) fail(file, `source ${i + 1} url must be https`);
   });
+}
 
+for (const file of files) {
+  let issue;
+  try {
+    issue = JSON.parse(readFileSync(join(issuesDir, file), 'utf8'));
+  } catch (e) {
+    fail(file, `invalid JSON (${e.message})`);
+    continue;
+  }
+  validate(issue, file, Number(file.slice(0, 4)));
   issues.push(issue);
+}
+
+// The spare and its verdict (DECISIONS.md, D-021). Readers never see the spare
+// until scripts/spare.mjs makes it the next numbered story.
+const spare = loadSpare();
+if (spare.problem) errors.push(spare.problem);
+if (spare.spare) validate(spare.spare, 'spare/spare.json', null, { spare: true });
+if (spare.check) {
+  const f = 'checks/spare.json';
+  const c = spare.check;
+  if (c.issue !== 'spare') fail(f, 'issue must be "spare"');
+  if (!SPARE_VERDICTS.includes(c.verdict)) fail(f, `verdict must be one of: ${SPARE_VERDICTS.join(', ')}`);
+  if (c.by !== 'fact-checker') fail(f, 'only the fact-checker checks the spare');
+  if (!/^[0-9a-f]{64}$/.test(c.sha256 ?? '')) fail(f, 'sha256 must be the spare as checked (node scripts/spare.mjs status prints it)');
+  if (!isISOTime(c.at)) fail(f, 'at must be an ISO date and time, e.g. 2026-11-12T05:55:00Z');
+  if (!isStr(c.summary)) fail(f, 'summary missing');
+  for (const k of ['changes', 'problems']) if (!Array.isArray(c[k])) fail(f, `${k} must be a list (empty if none)`);
+  const count = (v) => Number.isInteger(v) && v >= 0;
+  if (!count(c.claims?.checked) || c.claims.checked < 1) fail(f, 'claims.checked must say how many claims were checked');
+  if (!count(c.links?.checked)) fail(f, 'links.checked must say how many links were opened');
+  if (c.verdict === 'fixed' && !c.changes?.length) fail(f, 'verdict "fixed" must list each change made');
+  if (c.verdict === 'pass' && c.changes?.length) fail(f, 'verdict "pass" means nothing was changed; use "fixed" if the spare was edited');
+  if (c.verdict === 'held' && !c.problems?.length) fail(f, 'verdict "held" must list the problems');
 }
 
 // Fact-check verdicts. These decide what readers see, so their shape is checked too.
 const { checks, problems: unreadableChecks } = loadChecks();
 for (const p of unreadableChecks) errors.push(p);
-const isISOTime = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(v) && !Number.isNaN(Date.parse(v));
 for (const [id, c] of checks) {
   const f = `checks/${id === 0 ? 'start-here' : pad(id)}.json`;
   if (c.issue !== id) fail(f, `issue ${c.issue} does not match file name`);
@@ -154,6 +194,12 @@ for (const issue of issues) {
   const key = issue.concept?.toLowerCase().trim();
   if (concepts.has(key)) fail(`${issue.id}`, `concept "${issue.concept}" already used in issue ${concepts.get(key)}`);
   concepts.set(key, issue.id);
+}
+if (spare.spare) {
+  const key = spare.spare.concept?.toLowerCase().trim();
+  if (concepts.has(key)) fail('spare/spare.json', `concept "${spare.spare.concept}" already used in issue ${concepts.get(key)}`);
+  const from = spare.spare.recall?.fromIssue;
+  if (from !== undefined && status(from) !== 'released') fail('spare/spare.json', `recall points to No. ${from}, which readers haven't seen; ask about a released story`);
 }
 
 // No. 0, "Start here": the Alice story that doubles as the app's tutorial.
@@ -238,5 +284,6 @@ console.log(
   `✓ ${issues.length} issue(s) valid: ${released.length} released` +
     (waiting.length ? `, ${waiting.length} waiting for the fact-checker (${list(waiting)})` : '') +
     (held.length ? `, ${held.length} held (${list(held)})` : '') +
+    `; spare: ${{ none: 'none', unchecked: 'waiting for the fact-checker', changed: 'changed since its check, so waiting for the fact-checker', held: 'held by the fact-checker', checked: 'checked and ready' }[spare.status]}${spare.spare ? ` (${spare.spare.concept})` : ''}` +
     (checkOnly ? '' : '; wrote content/feed.json, content/published/ and src/data/seed.json'),
 );

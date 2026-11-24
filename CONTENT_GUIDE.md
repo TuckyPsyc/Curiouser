@@ -124,6 +124,20 @@ A story goes through two pairs of hands before readers see it (DECISIONS.md, D-0
 
 Ask recall questions only about stories readers have seen, which are the ones listed in `content/feed.json`.
 
+## The spare
+
+The Editor keeps one spare story, checked and ready, for a morning when the day's story is missing (the schedule failed) or the fact-checker held it (DECISIONS.md, D-021). At 05:40 the fact-checker puts the spare out in its place, so readers still get a checked story at 7:00.
+
+- **Where:** `content/spare/spare.json`. There is only ever one.
+- **When to write one:** after the day's story is saved, run `node scripts/spare.mjs status`. If it says there is no spare, write one. If it says the fact-checker held the spare, delete `content/spare/spare.json` and write a new one on a different concept. Otherwise leave the spare alone. The day's story always comes first.
+- **Shape:** exactly like an issue, but with no `id` or `date`, which are given when it is used, and with `written` set to today's UK date. Everything else in this guide applies: voice, length, accuracy, three or more sources, the Looking-Glass and the quiz.
+- **Topic:** any of the fifteen. When the spare is used it keeps its own topic, and the rotation carries on by number after it. Choose a topic that isn't due in the next few days, so readers don't get the same topic twice in a row.
+- **Timeless:** it may wait weeks, so nothing in it may depend on when it is read: no "this week", "last month" or anniversaries, and no claims about the current state of something that could change.
+- **Recall:** ask about any released story (it can't know which stories will be 3 to 10 issues back when it is used), or set `recall` to `null`.
+- **New concept:** the spare's concept counts as used. `scripts/build-feed.mjs` rejects a daily story that repeats it, and the spare may not repeat an earlier story's concept, person or event.
+- **Don't edit it once written.** The fact-checker's verdict records the spare exactly as checked; any change makes it unchecked again. Only the fact-checker corrects a spare.
+- **Save it** with `node scripts/save.mjs --agent editor -m "Spare: Title"`. The fact-checker checks it on its next run, after the day's story.
+
 ## Corrections
 
 Edit the issue's JSON, run the build script, and commit with `Correction to No. N: what changed`. Readers get the fix next time they open the story. To have a published story checked again from scratch, start the fact-checker with the message "Re-check No. N".

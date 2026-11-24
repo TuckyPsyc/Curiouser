@@ -4,8 +4,8 @@ Curiouser is run by a handful of scheduled agents, each with one narrow job, and
 
 | Agent | Job | When (UK time) | Instructions | May change |
 |---|---|---|---|---|
-| Editor | Writes the day's story as a draft | Daily, 04:47 | Its scheduled task, plus `CONTENT_GUIDE.md` | `content/issues/` |
-| Fact-checker | Checks the draft independently, then releases or holds it | Daily, 05:40 | `agents/fact-checker.md` | `content/issues/`, `content/checks/` |
+| Editor | Writes the day's story as a draft, and keeps one spare story (D-021) | Daily, 04:47 | Its scheduled task, plus `CONTENT_GUIDE.md` | `content/issues/`, `content/spare/` |
+| Fact-checker | Checks the draft and the spare independently, releases or holds the draft, and puts the spare out when today's story is missing or held | Daily, 05:40 | `agents/fact-checker.md` | `content/issues/`, `content/spare/`, `content/checks/` |
 | Producer | Writes the script for a 60-second video of yesterday's checked story; GitHub renders it | Daily, 06:07 | `agents/producer.md` | `videos/NNNN.json` |
 | Analyst | Reports honestly on what can be counted | Mondays, 06:23 | `agents/analyst.md` | `reports/` |
 | Marketing | Studies what earns attention elsewhere, invents ideas, and sets the Producer's style through `marketing/playbook.md` | Sundays, 07:37 | `agents/marketing.md` | `marketing/` |
@@ -18,8 +18,8 @@ All of them run on `claude-opus-5-5`. Why these times: DECISIONS.md, D-016.
 
 ## The morning
 
-1. **04:47** The Editor writes `content/issues/NNNN.json` and saves it. It is a draft: readers can't see it.
-2. **05:40** The fact-checker re-researches every claim, opens every link, and writes its verdict to `content/checks/NNNN.json`. `pass` or `fixed` releases the story. `held` keeps it back, and the previous story stays in place.
+1. **04:47** The Editor writes `content/issues/NNNN.json` and saves it. It is a draft: readers can't see it. If there is no spare story, or the last one was held, it then writes one to `content/spare/spare.json`.
+2. **05:40** The fact-checker re-researches every claim, opens every link, and writes its verdict to `content/checks/NNNN.json`. `pass` or `fixed` releases the story. `held` keeps it back. If today's story was held or never written, the fact-checker puts out the checked spare in its place (D-021); without one, the previous story stays in place. It then checks the spare if it is new.
 3. **06:07** The Producer writes the script for a video of yesterday's story, if the fact-checker passed it. GitHub renders the video and puts it on the desk within about five minutes.
 4. **06:46** The Courier starts the desk, which then does two things by the clock. If the story still has no verdict (it was due by 06:30), the desk raises a ticket and Carl's phone buzzes; closing that ticket publishes the story unchecked, and nothing else can. And it sends its morning note, signed by Fenton, with everything waiting for Carl in one place. The Courier then copies the fresh status page into Fenton's Briefing.
 5. **07:00** The app shows the newest released story.

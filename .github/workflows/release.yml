@@ -6,6 +6,8 @@ name: Release a story
 #   1. He closes an "unchecked" release ticket as completed (one tap in the
 #      GitHub app). Only the repository owner closing a ticket this workflow's
 #      robot opened counts; anything else is logged and ignored.
+#      Closing a "missing" ticket as completed instead puts out the checked
+#      spare story (scripts/spare.mjs, DECISIONS.md D-021).
 #   2. He runs this workflow by hand: Actions → Release a story → Run workflow.
 #      That is also how to publish a story the fact-checker held.
 #
@@ -72,7 +74,16 @@ jobs:
             say "Issue closed by '$SENDER' as '$REASON'. Owner: '$OWNER'. Opened by: '$AUTHOR'. Labels: '$LABELS'. Ticket: kind='$kind' story='$id'."
             if [[ ",$LABELS," != *",release-ticket,"* ]]; then say "Not a release ticket. Nothing to do."
             elif [ "$AUTHOR" != "github-actions[bot]" ]; then say "Not releasing: this ticket wasn't opened by the desk."
-            elif [ "$kind" != "unchecked" ] || [ -z "$id" ]; then say "Not releasing: only an 'unchecked' ticket publishes when closed (this one is '$kind')."
+            elif [ "$kind" = "missing" ]; then
+              # A "missing" ticket closed as completed puts out the checked spare (DECISIONS.md, D-021).
+              if [ "$REASON" != "completed" ]; then say "Not using the spare: the ticket was closed as '$REASON', not as completed."
+              elif [ "$SENDER" != "$OWNER" ]; then say "Not using the spare: closed by '$SENDER', and only $OWNER can decide that."
+              else
+                go=true; story="spare"
+                if [[ ",$LABELS," == *",rehearsal,"* ]]; then branch=rehearsal; fi
+                say "Putting out the spare on '$branch' on $OWNER's say-so."
+              fi
+            elif [ "$kind" != "unchecked" ] || [ -z "$id" ]; then say "Not releasing: only an 'unchecked' or 'missing' ticket publishes when closed (this one is '$kind')."
             elif [ "$REASON" != "completed" ]; then say "Not releasing: the ticket was closed as '$REASON', not as completed."
             elif [ "$SENDER" != "$OWNER" ]; then say "Not releasing: closed by '$SENDER', and only $OWNER can release a story."
             else
@@ -106,7 +117,13 @@ jobs:
 
       - name: Release the story
         id: release
-        run: node scripts/release.mjs $STORY 2>&1 | tee release.log
+        run: |
+          set -o pipefail
+          if [ "$STORY" = "spare" ]; then
+            node scripts/spare.mjs use --note "Put out by the editor-in-chief from the missing-story ticket." 2>&1 | tee release.log
+          else
+            node scripts/release.mjs $STORY 2>&1 | tee release.log
+          fi
 
       - name: Save it
         id: save
@@ -118,7 +135,8 @@ jobs:
             echo "Nothing changed." | tee -a release.log
             exit 0
           fi
-          git commit --quiet -m "Release No. ${{ steps.release.outputs.id }} unchecked (editor-in-chief)"
+          if [ "$STORY" = "spare" ]; then msg="Spare used as No. ${{ steps.release.outputs.id }} (editor-in-chief)"; else msg="Release No. ${{ steps.release.outputs.id }} unchecked (editor-in-chief)"; fi
+          git commit --quiet -m "$msg"
           for attempt in 1 2 3; do
             if git push --quiet origin "HEAD:$BRANCH"; then echo "Pushed." | tee -a release.log; exit 0; fi
             echo "Push $attempt rejected; fetching the latest and trying again."
@@ -136,7 +154,11 @@ jobs:
           if [ "$OUTCOME" = "success" ]; then
             msg="Done. $(tail -n 2 release.log | head -n 1) It reaches readers' phones within about five minutes."
           else
-            msg="This didn't work, and the story is still unpublished. What the release step said: $(tail -n 3 release.log | tr '\n' ' ') To try again: Actions → Release a story → Run workflow."
+            if [ "$STORY" = "spare" ]; then
+              msg="The spare wasn't put out. What the step said: $(tail -n 3 release.log 2>/dev/null | tr '\n' ' ')"
+            else
+              msg="This didn't work, and the story is still unpublished. What the release step said: $(tail -n 3 release.log | tr '\n' ' ') To try again: Actions → Release a story → Run workflow."
+            fi
           fi
           gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body "$msg"
 
