@@ -1,0 +1,138 @@
+{
+  "id": 21,
+  "date": "2026-11-24",
+  "topic": "Science",
+  "title": "The Ice Cream That Froze Too Fast",
+  "concept": "The Mpemba effect",
+  "teaser": "In 1963 a Tanzanian schoolboy put hot milk in a freezer and it set first. His teacher called it 'Mpemba's physics'. Physicists still argue.",
+  "readingMinutes": 3,
+  "story": [
+    "In 1963, at Magamba Secondary School in what is now Tanzania, the boys had a routine for making ice cream. They boiled milk, mixed in sugar, let it cool to nearly room temperature, then put it in the freezing chamber of the refrigerator. Space in the freezer was short. One day a classmate skipped the boiling and poured his mixture straight into an ice tray. Erasto Mpemba, a teenager afraid of losing the last tray, put his boiled mixture in while it was still hot.",
+    "An hour and a half later, as Mpemba later wrote, 'my tray of milk had frozen into ice-cream while his was still only a thick liquid.' A few years on, having learned Newton's law of cooling, he asked his science teacher how that could be. The reply, as later reported, was that it was 'Mpemba's physics and not the universal physics'. His classmates turned it into a joke: a wrong sum became 'Mpemba's mathematics'.",
+    "Then Denis Osborne, a physicist at University College in Dar es Salaam, visited the school. Mpemba asked him about two beakers of water of equal volume, one at 35°C and one at 100°C, placed in a refrigerator: why would the hotter one freeze first? Osborne had no explanation, but he had a technician repeat the experiments, and the results seemed to show that Mpemba was right. In 1969 the two published a paper in the journal Physics Education. It opens: 'My name is Erasto B. Mpemba, and I am going to tell you about my discovery, which was due to misusing a refrigerator.'",
+    "The claim they described is now called the Mpemba effect: under some conditions, water that starts out hotter can freeze sooner than identical water that starts out cooler. It sounds impossible, because the hot water has to pass through every temperature the cool water starts at. Yet it was not new. Aristotle wrote about it around 350 BC, and Francis Bacon and René Descartes both repeated the idea. Mpemba's contribution was to ask the question loudly enough, and with enough confidence, that physicists set out to measure it.",
+    "Mpemba went on to study wildlife management and became a principal game officer in Tanzania's Ministry of Natural Resources and Tourism. He died around 2020. The effect that carries his name is still argued over, because freezing turns out to depend on a tangle of things that are hard to control: the container, the freezer, dissolved gases, and exactly where the thermometer sits.",
+    "Mpemba's story is a reminder that an observation which contradicts the textbook deserves a test, not a joke, and that a fair test can be much harder than it looks."
+  ],
+  "takeaway": "The Mpemba effect: the claim that, in some conditions, water that starts hotter can freeze sooner than the same water starting cooler. A Tanzanian schoolboy's ice cream made it famous in 1969, but whether it really happens with water is still disputed.",
+  "recall": {
+    "question": "In 1881 Simon Newcomb noticed that the first pages of logarithm tables wore out faster than the last. What pattern was he seeing, and what is it called?",
+    "answer": "Benford's law: in many sets of real-world numbers the first digit is far more often small than large, with 1 leading about 30 per cent of the time and 9 under 5 per cent.",
+    "fromIssue": 15
+  },
+  "rabbitHole": {
+    "title": "Warm water, cold logic",
+    "intro": "Who believed this before Mpemba, why is it so hard to pin down, and where has the effect turned up somewhere other than a freezer? Down we go.",
+    "levels": [
+      {
+        "heading": "Older than Mpemba",
+        "body": [
+          "The popular version is that a schoolboy discovered something new. In fact the idea is ancient, but it came without measurements. In his Meteorologica, Aristotle wrote that 'the fact that the water has previously been warmed contributes to its freezing quickly: for so it cools sooner.' His example came from the Black Sea region of Pontus, where people fishing through the ice poured warm water round their reeds so it would freeze quicker and fix them in place.",
+          "Francis Bacon, in his Novum Organum of 1620, wrote that 'slightly warm water will freeze more easily than water which is altogether cold', but gave no details of any experiment. Descartes went further, claiming that 'water which has been kept hot for a long time freezes faster than any other sort', and blamed evaporation. For two thousand years the claim was passed down far more often than it was tested."
+        ]
+      },
+      {
+        "heading": "Four suspects",
+        "body": [
+          "If hot water really can win the race, something must change in it on the way down. Four explanations come up again and again. Evaporation: hot water loses more of its mass as vapour, leaving less to freeze, and some models suggest this alone could produce the effect. Dissolved gases: heating drives gas out of water, which may change how it cools and freezes. Convection: warm water circulates more vigorously, changing how heat leaves the container. Supercooling: water can stay liquid below 0°C, and how far it does so depends on impurities and the container.",
+          "These causes are tangled together, which is one reason experiments disagree. Even the finishing line is unclear. Does 'frozen' mean the first crystal of ice, a layer of a given thickness, or a solid block? One study found no effect on the time for freezing to begin, but a hint of one for the time to form a 25 mm layer of ice, which its authors put down to supercooling."
+        ]
+      },
+      {
+        "heading": "A bead in a laser landscape",
+        "body": [
+          "The idea found a second life far from any kitchen. In 2017 Zhiyue Lu and Oren Raz published a theory in the Proceedings of the National Academy of Sciences showing how, in principle, a hotter system could relax to a cold state faster than a cooler one. A 2019 paper went further, predicting a 'strong' version of the effect.",
+          "In 2020 Avinash Kumar and John Bechhoefer of Simon Fraser University in Canada tested it in Nature. Instead of water freezing, they watched a tiny glass bead in water, held by optical tweezers in a carefully shaped energy landscape. With the right settings, they reported cooling 'exponentially faster than that observed using typical parameters'. They argued the Mpemba effect is 'not simply a scientific curiosity concerning how water freezes into ice' but an example of a wider family of odd relaxation behaviour. That does not settle the question for ice cream."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Cool?",
+        "author": "E. B. Mpemba and D. G. Osborne (1969)",
+        "note": "The original Physics Education paper, opening with Mpemba's own account of the ice cream.",
+        "url": "https://doi.org/10.1088/0031-9120/4/3/312"
+      },
+      {
+        "title": "Nonequilibrium thermodynamics of the Markovian Mpemba effect and its inverse",
+        "author": "Zhiyue Lu and Oren Raz (2017)",
+        "note": "The PNAS paper that gave the effect a general theoretical footing.",
+        "url": "https://doi.org/10.1073/pnas.1701264114"
+      },
+      {
+        "title": "Exponentially faster cooling in a colloidal system",
+        "author": "Avinash Kumar and John Bechhoefer (2020)",
+        "note": "The Nature experiment with a glass bead and optical tweezers.",
+        "url": "https://www.nature.com/articles/s41586-020-2560-x"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Hot water does not cool faster",
+    "body": [
+      "There is a serious case that, for water, the effect is an artefact. In 2016 Henry Burridge of Imperial College London and Paul Linden of the University of Cambridge cooled samples starting at different temperatures under identical conditions and reviewed earlier studies. Their hotter samples took longer to reach 0°C, not less. Results that seemed to show the effect, they argued, could come from small errors: getting the height of the thermometer wrong by just 1 cm could produce misleading data. Only Mpemba and Osborne's own results showed a clear trend in the effect's favour. 'We conclude, somewhat sadly,' they wrote, 'that there is no evidence to support meaningful observations of the Mpemba effect.'",
+      "Their own tests stopped at 0°C, deliberately leaving aside the freezing that follows, where supercooling could still play a part, and Chemistry World reported a 'frosty reception' for the claim that the effect has no basis. For water, the question is open."
+    ],
+    "confidence": "Contested",
+    "verdict": "Where that leaves you: don't put hot water in the freezer expecting a head start, but treat the question as open rather than closed, and notice how much a single thermometer's position can decide."
+  },
+  "quiz": [
+    {
+      "question": "How did Erasto Mpemba first notice the effect that now bears his name?",
+      "options": [
+        "His hot milk-and-sugar mixture froze into ice cream before a classmate's cooler one",
+        "He saw a frozen pond thaw faster on the side warmed by a hot spring",
+        "He measured two beakers of water in a university laboratory in Dar es Salaam",
+        "His teacher set the class an experiment on Newton's law of cooling"
+      ],
+      "answer": 0,
+      "explain": "Short of freezer space, he put his boiled mixture in while hot. An hour and a half later it was ice cream; his classmate's was still a thick liquid."
+    },
+    {
+      "question": "What does the Mpemba effect claim?",
+      "options": [
+        "In some conditions, water that starts hotter can freeze sooner than identical water that starts cooler",
+        "Water freezes faster when sugar or milk is added to it",
+        "Boiling water always freezes faster than cold water in any freezer",
+        "Water expands when it freezes, so ice floats"
+      ],
+      "answer": 0,
+      "explain": "It is a claim about a race between two identical samples that differ only in starting temperature, and only under some conditions."
+    }
+  ],
+  "sources": [
+    {
+      "title": "E. B. Mpemba and D. G. Osborne, 'Cool?', Physics Education 4(3), 172–175, 1969",
+      "url": "https://doi.org/10.1088/0031-9120/4/3/312"
+    },
+    {
+      "title": "Alissa Greenberg, 'The ice cream that changed physics', PBS NOVA (1 September 2022)",
+      "url": "https://www.pbs.org/wgbh/nova/article/why-hot-water-freezes-faster"
+    },
+    {
+      "title": "Philip Ball, 'Does hot water freeze first?', Physics World (29 March 2006)",
+      "url": "https://physicsworld.com/?p=52999"
+    },
+    {
+      "title": "Adam Mann, 'Controversy Continues Over Whether Hot Water Freezes Faster Than Cold', Quanta Magazine (29 June 2022)",
+      "url": "https://www.quantamagazine.org/does-hot-water-freeze-faster-than-cold-physicists-keep-asking-20220629/"
+    },
+    {
+      "title": "H. C. Burridge and P. F. Linden, 'Questioning the Mpemba effect: hot water does not cool more quickly than cold', Scientific Reports 6, 37665, 2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5121640/"
+    },
+    {
+      "title": "Z. Lu and O. Raz, 'Nonequilibrium thermodynamics of the Markovian Mpemba effect and its inverse', PNAS 114, 5083–5088, 2017",
+      "url": "https://doi.org/10.1073/pnas.1701264114"
+    },
+    {
+      "title": "A. Kumar and J. Bechhoefer, 'Exponentially faster cooling in a colloidal system', Nature 584, 64–68, 2020",
+      "url": "https://www.nature.com/articles/s41586-020-2560-x"
+    },
+    {
+      "title": "'Mpemba effect in hot water after doubt cast on its existence', Chemistry World",
+      "url": "https://www.chemistryworld.com/news/mpemba-effect-in-hot-water-after-doubt-cast-on-its-existence/2500087.article"
+    }
+  ]
+}
