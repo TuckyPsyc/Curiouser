@@ -1,0 +1,27 @@
+{
+  "issue": 21,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-24T05:44:10Z",
+  "summary": "One small change: I cut the line saying Mpemba died around 2020, because sources disagree on when he died (around 2020, or 14 May 2023). Everything else checked out, including every quotation.",
+  "claims": { "checked": 56, "confirmed": 55, "corrected": 0, "removed": 1 },
+  "links": { "checked": 11, "working": 11, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Contested", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 5",
+      "before": "Ministry of Natural Resources and Tourism. He died around 2020. The effect",
+      "after": "Ministry of Natural Resources and Tourism. The effect",
+      "why": "Mpemba's death date is uncertain: PBS NOVA and an account from Christine Osborne say around 2020, while Wikipedia, citing TRT, gives 14 May 2023. A peripheral detail that can't be verified, so cut cleanly.",
+      "source": "https://en.wikipedia.org/wiki/Erasto_B._Mpemba"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "Mpemba's own account (Physics Education, 1969, reprinted 1979) confirms the ice tray, the 'thick liquid' and 'Mpemba's physics and not the universal physics' quotations, the opening sentence, and that Osborne had a technician repeat the tests. The original prints 'Erasto B Mpemba' with no full stop after the initial; the story's added full stop is house style, not a misquotation.",
+    "The Bacon and Descartes wordings match the translations quoted in Burridge and Linden (2016); Wikipedia uses different translations of the same passages.",
+    "The story quotes about 45 words in all from the 1969 Mpemba and Osborne paper, close to the guide's limit of about 40 words from one copyrighted work, in three short quotations.",
+    "'Mpemba's mathematics' was the teacher's joke as well as the class's: in Mpemba's account the teacher said it when he made a mistake with logarithms. NOVA says the teacher and classmates both used it, so the story's wording is fair."
+  ]
+}

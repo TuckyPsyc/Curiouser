@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-23T05:49:19.669Z",
+  "updated": "2026-11-24T05:44:21.016Z",
   "issues": [
+    {
+      "id": 21,
+      "date": "2026-11-24",
+      "topic": "Science",
+      "title": "The Ice Cream That Froze Too Fast",
+      "concept": "The Mpemba effect",
+      "teaser": "In 1963 a Tanzanian schoolboy put hot milk in a freezer and it set first. His teacher called it ‘Mpemba’s physics’. Physicists still argue.",
+      "readingMinutes": 3
+    },
     {
       "id": 20,
       "date": "2026-11-23",
