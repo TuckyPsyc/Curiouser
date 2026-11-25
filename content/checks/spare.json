@@ -1,0 +1,50 @@
+{
+  "issue": "spare",
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-25T05:55:00Z",
+  "sha256": "0c1787f158e6b2cdad0b4cf9153dbea3f168dc53c10e5f3d916002cd532fe708",
+  "summary": "Two small corrections: MacTutor's 11-decimal value of pi came from a different, faster series, not the slow series with its correction, and MacTutor calls the continued-fraction explanation the most convincing rather than saying most historians favour it. Everything else checked out, including the arithmetic.",
+  "claims": {
+    "checked": 50,
+    "confirmed": 48,
+    "corrected": 2,
+    "removed": 0
+  },
+  "links": {
+    "checked": 9,
+    "working": 9,
+    "replaced": 0,
+    "removed": 0
+  },
+  "lookingGlass": {
+    "rating": "Well supported",
+    "fair": true
+  },
+  "quiz": {
+    "sound": true
+  },
+  "changes": [
+    {
+      "where": "story, paragraph 4",
+      "before": "from twenty-one terms of such a series.",
+      "after": "from twenty-one terms of a second, faster series for pi.",
+      "why": "MacTutor says 3.14159265359 comes from taking 21 terms of the series pi = sqrt(12)(1 - 1/(3x3) + 1/(5x3^2) - ...), not the one-minus-a-third series with a correction. I confirmed both by calculation.",
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Madhava/"
+    },
+    {
+      "where": "rabbit hole, level 1, paragraph 3",
+      "before": "The reconstruction most historians favour, reported in MacTutor's biography, is that",
+      "after": "The reconstruction MacTutor's biography finds most convincing is that",
+      "why": "MacTutor says 'the most convincing' explanation is the continued-fraction one; it does not say most historians favour it.",
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Madhava/"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "I checked the arithmetic myself: 21 terms give 3.1892 and 1,000 give 3.1406; with the third correction, 21 terms are within about 3 x 10^-10 of pi; a million plain terms are still out by about 10^-6.",
+    "Sources give Whish's paper as 1832, 1834 or 1835; the story's 'the 1830s' is safe. MacTutor dates the Yuktibhasa around 1550, while Wikipedia and Ramasubramanian say around 1530, as the story does.",
+    "The Katz and Bressoud lines are paraphrased, not quoted, and match the published wording closely.",
+    "Nothing in the spare depends on when it is read."
+  ]
+}

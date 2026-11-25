@@ -1,0 +1,57 @@
+{
+  "issue": 22,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-25T05:55:00Z",
+  "summary": "Three small changes in the rabbit hole: one line wrongly put words in Timur's mouth, one overstated a reviewer's objection, and I cut a book's publication year that sources disagree on. The story itself, including every quotation, checked out.",
+  "claims": {
+    "checked": 58,
+    "confirmed": 55,
+    "corrected": 2,
+    "removed": 1
+  },
+  "links": {
+    "checked": 11,
+    "working": 11,
+    "replaced": 0,
+    "removed": 0
+  },
+  "lookingGlass": {
+    "rating": "Contested",
+    "fair": true
+  },
+  "quiz": {
+    "sound": true
+  },
+  "changes": [
+    {
+      "where": "rabbit hole, level 2, paragraph 3",
+      "before": "and Timur himself is made to supply the moral: their rule became formidable, he says, because they did not have luxury or comfort.",
+      "after": "and he explains their strength in his own terms: their rule became formidable, he writes, because they did not have luxury or comfort.",
+      "why": "In van den Bent's paper (p. 178) this line is Ibn Khaldun's own explanation of the Mongols' strength, not something Timur says.",
+      "source": "https://pure.uva.nl/ws/files/44279516/None_of_the_Kings_on_Earth_is_Their_Equal_in_a_abiyya_The_Mongols_in_Ibn_Khald_n_s_Works.pdf"
+    },
+    {
+      "where": "rabbit hole, level 3, paragraph 3",
+      "before": "and questioned whether the metaethnic boundary does the work claimed for it.",
+      "after": "and was not sure how to tell a metaethnic community from any other group.",
+      "why": "Kling's objection is to the concept's precision: he writes that he is not certain how one distinguishes a metaethnic community from a part of humanity that is not metaethnic. He does not argue that the frontier fails to do its work.",
+      "source": "https://www.econlib.org/library/Columns/y2016/KlingTurchin.html"
+    },
+    {
+      "where": "rabbit hole, level 3, paragraph 1",
+      "before": "In 'War and Peace and War' (2006) the",
+      "after": "In 'War and Peace and War' the",
+      "why": "Sources disagree on the year: Kling's review says the book was published in 2005, and catalogue records give August or September 2005 and 2006 for the Pi Press hardback. A peripheral detail, cut cleanly.",
+      "source": "https://openlibrary.org/works/OL1812348W"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The greeting and the 'not Chosroes, nor Caesar' line match van den Bent's translation word for word. Saudi Aramco World translates the greeting differently ('sultan of the universe and the ruler of the world').",
+    "'Timur, who liked to argue' rests on Ibn Khaldun's own description of him as 'addicted to debate and argumentation', quoted in Saudi Aramco World. The Maghrib request and the few days spent writing are from the same article.",
+    "The accounts of the meeting differ on length: van den Bent says about a month, Saudi Aramco World 35 days, Britannica some seven weeks. The story says so.",
+    "Al-Azmeh's book is described by its publisher as rejecting both modernising readings and readings that freeze Ibn Khaldun in stereotyped Islamic philosophy, so the Looking-Glass's one-line summary of him alongside Mahdi is fair but simplified.",
+    "Turchin's own wording is that the cultural gap across a metaethnic line is 'sometimes' so extreme that people deny each other's humanity; the rabbit hole's 'peoples who find each other barely human' is a little stronger than that."
+  ]
+}

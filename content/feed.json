@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-24T05:44:21.016Z",
+  "updated": "2026-11-25T05:55:03.307Z",
   "issues": [
+    {
+      "id": 22,
+      "date": "2026-11-25",
+      "topic": "History",
+      "title": "The Judge Over the Damascus Wall",
+      "concept": "Asabiyya",
+      "teaser": "In 1401 an old judge was lowered by ropes out of besieged Damascus to meet Timur, and explained to the conqueror why conquerors fade.",
+      "readingMinutes": 3
+    },
     {
       "id": 21,
       "date": "2026-11-24",
