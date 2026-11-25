@@ -1,0 +1,135 @@
+{
+  "written": "2026-11-25",
+  "topic": "Mathematics",
+  "title": "The Tail He Put Back",
+  "concept": "Madhava's correction term",
+  "teaser": "Around 1400, a Kerala astronomer found the series for pi that Europe would meet 270 years later, then fixed its worst flaw.",
+  "readingMinutes": 3,
+  "story": [
+    "Somewhere near the coast of what is now Kerala, around the year 1400, an astronomer named Madhava of Sangamagrama wanted better numbers. Predicting an eclipse, or keeping a calendar honest, meant tables of sines, and tables of sines meant arithmetic done by hand to as many places as patience allowed. Geometry gave a few exact values. Everything between them had to be approximated.",
+    "What Madhava arrived at was a way of writing those quantities as sums that never end. For the circle, the sum runs one minus a third plus a fifth minus a seventh, on and on, with the answer approaching a quarter of pi. He had the matching sums for sine and cosine too. In Europe the same expressions turned up much later: Newton wrote the sine and cosine series in a manuscript of 1669 that was not printed until 1711, and the series for the arctangent was found by James Gregory in 1671 and Gottfried Leibniz in 1673. Madhava was ahead of them by well over two centuries.",
+    "There is a catch, and anyone who tries the sum by hand meets it at once. It converges with painful slowness. Stop after twenty-one terms and you have 3.189, which is wrong in the first decimal place. Grind through a thousand terms and you have 3.1406, still wrong in the third. As a practical recipe for an astronomer with ink and palm leaf, it is close to worthless.",
+    "Madhava's answer is the part worth keeping. Instead of adding more terms, he estimated the ones he was throwing away. He gave a correction term, a small expression in the number of terms taken, to be added back in place of the whole infinite tail. Three forms of it are recorded in the Kerala texts, each sharper than the last. With the sharpest of them, those same twenty-one terms land within a billionth of pi. MacTutor's biography of Madhava reports that he reached the value 3.14159265359, right in eleven decimal places, from twenty-one terms of such a series.",
+    "None of his mathematical writing survives. The series are known because his successors in Kerala set them down and explained them: Nilakantha Somayaji in the Tantrasangraha, completed in 1500 or 1501, and in his long commentary on the Aryabhatiya; and Jyesthadeva, around 1530, in the Yuktibhasa, written in Malayalam prose and containing derivations rather than bare results. An Englishman, C. M. Whish, wrote them up for European readers in the 1830s. His paper was then almost entirely neglected for over a century.",
+    "The series is the famous half of the story and the correction is the useful one. Knowing how wrong you still are is often worth more than another thousand terms of being wrong."
+  ],
+  "takeaway": "A slow sum can be made fast by estimating the part you discard. Madhava's correction term adds back the infinite tail of a series in one small expression, turning a useless formula into a usable one.",
+  "recall": {
+    "question": "Milman Parry went to Yugoslavia in the 1930s to listen to singers who could perform enormous poems without a text. What did he conclude the singers were doing, and what is it called?",
+    "answer": "Oral-formulaic composition: they were not reciting a memorised poem but rebuilding it each time from stock phrases that fit the metre, which is how Homer's epics were probably made.",
+    "fromIssue": 11
+  },
+  "rabbitHole": {
+    "title": "How to throw away an infinity",
+    "intro": "The series everyone quotes is the slow one. Here is what Madhava did about that, how we know he did it, and why the credit is still argued over.",
+    "levels": [
+      {
+        "heading": "The arithmetic of the tail",
+        "body": [
+          "Write the sum as a quarter of pi equals one minus a third plus a fifth, and stop after n terms. The error is roughly the size of the next term, and the next term shrinks like one over 2n, which is why the thing crawls. To gain one more decimal place you need about ten times as many terms.",
+          "Madhava's move was to model the error itself. The Kerala sources give three successive corrections to be applied after n terms: one over 4n; then n divided by 4n squared plus one; then n squared plus one, divided by 4n cubed plus 5n. Each is a better guess at the discarded tail than the last, and the third is accurate enough that two dozen terms outperform a million naive ones.",
+          "Where did the three come from? The reconstruction most historians favour, reported in MacTutor's biography, is that they are the first three convergents of a continued fraction derived from the ratio 62832 to 20000, which is 3.1416. If that is right, the corrections were not guessed but engineered."
+        ]
+      },
+      {
+        "heading": "A result with no original",
+        "body": [
+          "All of Madhava's mathematical texts are lost; some of his astronomical writing survives. Everything we attribute to him comes through later members of the Kerala school, who name him as the source. No surviving work of his states the series explicitly.",
+          "Nilakantha Somayaji, who finished the Tantrasangraha in 1500 or 1501, gives series expansions for the trigonometric functions, and his vast commentary on the Aryabhatiya argues for infinite series and for the irrationality of pi. Jyesthadeva's Yuktibhasa, around 1530, goes further and supplies the derivations, including a proof of Madhava's arctangent series. It is written in Malayalam rather than Sanskrit, which is unusual for a technical work of its time, and the mathematical half of it was not printed until 1948.",
+          "One text, the Mahajyanayana prakara, was once claimed as Madhava's own. Most historians now take it for a sixteenth-century work by a follower. Attribution in this tradition is a matter of reading what students wrote about their teachers."
+        ]
+      },
+      {
+        "heading": "The quarrel about credit",
+        "body": [
+          "C. M. Whish announced the Kerala series to Europe in the Transactions of the Royal Asiatic Society in the 1830s. The historian David Pingree observed that the account was heralded as the Indians' discovery of the calculus, and then ignored by Western historians. Serious study resumed only in the twentieth century, when C. T. Rajagopal and his collaborators went back to the manuscripts.",
+          "Some scholars go further and suggest the results reached Europe before Newton and Leibniz. A. K. Bag proposed in 1979 that merchants and Jesuit missionaries in Kerala could have carried them. George Gheverghese Joseph has argued that the standard of proof demanded for transmission eastwards to westwards is set higher than for traffic the other way, a problem he calls invisibility.",
+          "The routes and dates make transmission possible. What is missing is a document showing it happened: no manuscript yet found demonstrates the transfer. The honest position is that two groups of people, separated by an ocean and a couple of centuries, found the same mathematics, and that one of them got there first."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Madhava of Sangamagrama",
+        "author": "J. J. O'Connor and E. F. Robertson (2000)",
+        "note": "The MacTutor biography: concise, with the correction terms set out.",
+        "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Madhava/"
+      },
+      {
+        "title": "Ideas of Calculus in Islam and India",
+        "author": "Victor J. Katz (1995)",
+        "note": "Mathematics Magazine 68(3), 163-174. Weighs what these traditions had against what calculus became."
+      },
+      {
+        "title": "The history and historiography of the discovery of calculus in India",
+        "author": "K. Ramasubramanian (2022)",
+        "note": "An International Congress of Mathematicians chapter on the results and the argument about them.",
+        "url": "https://doi.org/10.4171/icm2022/77"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "Series are not calculus",
+    "body": [
+      "The narrow claim is solid: these series were written in Kerala long before they appeared in Europe. The larger claim often built on it, that India had calculus first, is where the objection bites. Victor Katz, surveying the Islamic and Indian work, grants that it holds some of the basic ideas of calculus, but adds that neither tradition appears to have seen the necessity of connecting the disparate ideas. What was missing is the unifying machinery: the derivative and the integral as general operations, and the realisation that they undo one another.",
+      "On transmission, the sceptics have the stronger position for now. David Bressoud's conclusion is that there is no evidence the Indian work on series was known beyond India until the nineteenth century, and no manuscript has turned up since to show otherwise."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: credit Madhava with the series and the correction, which are his, and treat claims that he invented the calculus, or that Newton inherited it, as unproven."
+  },
+  "quiz": [
+    {
+      "question": "What was wrong with the series Madhava found for pi, taken on its own?",
+      "options": [
+        "It converged so slowly that many terms gave only a few correct digits",
+        "It gave the wrong answer however many terms were added",
+        "It worked only for angles smaller than a right angle",
+        "It required a value of pi to be known in advance"
+      ],
+      "answer": 0,
+      "explain": "Twenty-one terms give 3.189 and a thousand give 3.1406. The error shrinks roughly like one over the number of terms, so each extra digit costs ten times the work."
+    },
+    {
+      "question": "What does Madhava's correction term do?",
+      "options": [
+        "It estimates the infinite tail of discarded terms and adds it back",
+        "It rounds the final answer to the nearest known fraction",
+        "It converts the series for pi into a series for sine",
+        "It removes the errors made in copying the tables by hand"
+      ],
+      "answer": 0,
+      "explain": "Rather than adding more terms, he gave a small expression standing in for everything left out, which is why about two dozen terms could land within a billionth of pi."
+    }
+  ],
+  "sources": [
+    {
+      "title": "J. J. O'Connor and E. F. Robertson, 'Madhava of Sangamagrama', MacTutor History of Mathematics Archive, University of St Andrews",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Madhava/"
+    },
+    {
+      "title": "'Madhava series', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Madhava_series"
+    },
+    {
+      "title": "'Yuktibhasa', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Yuktibh%C4%81%E1%B9%A3%C4%81"
+    },
+    {
+      "title": "'Kerala school of astronomy and mathematics', Wikipedia (quoting D. Pingree, 1992, V. J. Katz, 1995, and D. Bressoud, 2002)",
+      "url": "https://en.wikipedia.org/wiki/Kerala_school_of_astronomy_and_mathematics"
+    },
+    {
+      "title": "'Nilakantha Somayaji', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Nilakantha_Somayaji"
+    },
+    {
+      "title": "K. Ramasubramanian, 'The history and historiography of the discovery of calculus in India', Proceedings of the International Congress of Mathematicians 2022",
+      "url": "https://doi.org/10.4171/icm2022/77"
+    },
+    {
+      "title": "'The politics of writing histories of non-Western mathematics' (report of a talk by George Gheverghese Joseph), Mathematical Association of America",
+      "url": "https://www.maa.org/node/10740"
+    }
+  ]
+}
