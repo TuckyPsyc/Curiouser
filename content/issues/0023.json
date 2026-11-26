@@ -1,0 +1,151 @@
+{
+  "id": 23,
+  "date": "2026-11-26",
+  "topic": "Philosophy",
+  "title": "Ten Coins in the Wrong Pocket",
+  "concept": "The Gettier problem",
+  "teaser": "In 1963 a little-published philosopher in Detroit sent a three-page paper to a journal and broke the textbook definition of knowledge.",
+  "readingMinutes": 3,
+  "story": [
+    "In the early 1960s Edmund Gettier was teaching philosophy at Wayne State University in Detroit. He had been born in Baltimore in 1927, taken a doctorate at Cornell in 1961, and joined Wayne State in 1957 as an instructor. His colleagues there included Alvin Plantinga and Hector-Neri Castañeda. Gettier did a great deal of thinking, often on napkins he covered in logical symbols over coffee, and very little publishing.",
+    "The question he took on is one of the oldest in philosophy: what is the difference between knowing something and merely believing it? One answer, set out by several philosophers in the 1950s, had three parts. You know a thing if it is true, you believe it, and you are justified in believing it. A. J. Ayer, in 1956, put the third part as having 'the right to be sure'; Roderick Chisholm, in 1957, as having adequate evidence.",
+    "Gettier's reply, published in the journal Analysis in June 1963, was three pages long. Its first case goes like this. Smith and Jones have both applied for a job. The company president has assured Smith that Jones will get it, and Smith counted ten coins in Jones's pocket ten minutes ago. So Smith concludes that the man who will get the job has ten coins in his pocket. But unknown to Smith, he himself will get the job, and he happens to have ten coins in his own pocket. His belief is true, and it is justified. Yet he plainly did not know it: he was counting the wrong man's coins.",
+    "That is the Gettier problem. A belief can be true and well justified and still not be knowledge, because the justification and the truth have come apart and been reconnected by luck. Gettier's second case makes the same point. Smith has good reason to think Jones owns a Ford, and so infers 'Either Jones owns a Ford, or Brown is in Barcelona', picking the city at random. Jones is in fact driving a rented car. Brown, by coincidence, is in Barcelona.",
+    "According to his colleague Bob Sleigh, Analysis had accepted the paper on condition that Gettier expand what he first sent, which was little more than the definition and the counterexamples. He was disinclined to add anything, and did so reluctantly. Hundreds of articles followed, trying to find the missing ingredient. David Lewis once observed that philosophical theories are never refuted conclusively: 'Or hardly ever. Gödel and Gettier may have done it.' Gettier moved to the University of Massachusetts Amherst in 1967, and as far as his colleague Phil Bricker knew, never engaged seriously with the attempts to solve his problem. He turned to logic, published only two papers and one review in his whole career, and died in March 2021 aged 93.",
+    "The cases still bite because they describe something ordinary: being right for reasons that had nothing to do with why you were right. A good result is not always proof of good judgement."
+  ],
+  "takeaway": "The Gettier problem: a belief can be true and well justified and still not count as knowledge, when the reasons and the truth are linked only by luck. Edmund Gettier showed it in a three-page paper in 1963.",
+  "recall": {
+    "question": "Lin Yutang's 1947 MingKwai typewriter had keys that stood for shapes, and showed matching characters in a 'Magic Eye' for the typist to choose from. What idea did it pioneer?",
+    "answer": "The input method: the keys you press are not the characters you get but clues for finding them, which you then pick from a short list, as people now do when typing Chinese on a phone.",
+    "fromIssue": 18
+  },
+  "rabbitHole": {
+    "title": "Luck, mirages and fake barns",
+    "intro": "Gettier is usually said to have toppled a definition two thousand years old. The real history is stranger, the cases older, and the repairs less successful than you might expect.",
+    "levels": [
+      {
+        "heading": "The tradition that wasn't",
+        "body": [
+          "The popular version says that Gettier overturned the definition of knowledge Plato gave, which philosophers had accepted ever since. Gettier himself claimed less. In a footnote he wrote only that Plato 'seems to be considering' such a definition at Theaetetus 201, and 'perhaps accepting one' at Meno 98. The definitions he actually quoted came from Ayer and Chisholm, writing a few years before him.",
+          "The Stanford Encyclopedia of Philosophy calls it 'a bit of a convenient fiction' that the so-called traditional analysis was ever widely accepted; it was 'primarily articulated in the 20th century by its attackers'. The philosopher Julien Dutant, in a 2015 paper titled 'The Legend of the Justified True Belief Analysis', traces how Chisholm first suggested the analysis in the 1950s and only later called it traditional, and how by 1967 the legend had set. Dutant argues that the older view was quite different: that knowing meant having a belief bearing 'a discernible mark of truth', something closer to certainty than to good evidence."
+        ]
+      },
+      {
+        "heading": "A mirage in the eighth century",
+        "body": [
+          "Cases with Gettier's shape were found long before 1963. Around 770 CE the Buddhist philosopher Dharmottara described a traveller on a hot day who sees what looks like water ahead. It is a mirage. But when he reaches the spot, he finds water under a rock. His belief that there was water there turned out true, but only by luck. In the twelfth century the Indian philosopher Śrīharṣa discussed similar cases.",
+          "In fourteenth-century Italy, Peter of Mantua imagined someone who sees Plato running nearby and takes him for Socrates, and so believes that Socrates is running. Socrates is in fact running, in Rome, which the observer knows nothing about.",
+          "Bertrand Russell gave the best-known modern example before Gettier: a clock that has stopped but happens to show the right time gives you a true belief about the time, and not knowledge."
+        ]
+      },
+      {
+        "heading": "Fixes and fake barns",
+        "body": [
+          "The obvious repair is a fourth condition. In both of Gettier's cases Smith reasons through something false: that Jones will get the job, that Jones owns a Ford. So perhaps knowledge is justified true belief that does not rest on any falsehood. This is often called the 'no false lemmas' fix.",
+          "It fails against a case first given by Carl Ginet and published by Alvin Goldman in 1976. Henry is driving through a county full of barn facades, fronts with nothing behind them, though he has no idea of this. He looks at a barn and believes it is a barn. He happens to be looking at the only real one in the county. He has reasoned through nothing false, yet his belief is right by luck, and on the usual reading he does not know.",
+          "Many more conditions have been proposed: ruling out luck, ruling out defeating evidence, requiring the right causal link between fact and belief. The Internet Encyclopedia of Philosophy's survey concludes that there is no consensus that any attempt has fully succeeded."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "Is Justified True Belief Knowledge?",
+        "author": "Edmund L. Gettier (1963)",
+        "note": "Analysis 23(6), 121-123. The whole thing takes five minutes to read.",
+        "url": "https://courses.grainger.illinois.edu/PHYS419/sp2021/Gettier.pdf"
+      },
+      {
+        "title": "The Legend of the Justified True Belief Analysis",
+        "author": "Julien Dutant (2015)",
+        "note": "Philosophical Perspectives 29, 95-145. The case that the 'traditional' definition was never traditional.",
+        "url": "https://philarchive.org/archive/DUTTLO-3"
+      },
+      {
+        "title": "Knowledge and Its Limits",
+        "author": "Timothy Williamson (2000)",
+        "note": "The influential argument that knowledge cannot be broken down into belief plus extra conditions at all."
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "myth",
+    "heading": "Not just a Western philosophers' hunch",
+    "body": [
+      "A popular objection holds that Gettier's verdict is a cultural quirk. In 2001 Jonathan Weinberg, Shaun Nichols and Stephen Stich reported that most university students with Western backgrounds agreed the Gettier character did not know, but most with East Asian or South Asian backgrounds did not share that judgement.",
+      "It has not held up. The original samples were small: 23 East Asian and 23 South Asian participants. A team including Stich himself then tested people in the United States, Brazil, India and Japan, and found the same judgement in all four. A larger follow-up surveyed more than 2,000 people at 24 sites in 23 countries and 17 languages; at 23 of the 24 sites a large majority judged that the character in a Gettier case did not know. Many philosophers still argue over what knowledge is. Whether lucky true belief falls short of it is much less in doubt."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: treat being right and knowing as different things, and be wary of claims that the difference is only a Western philosophers' notion."
+  },
+  "quiz": [
+    {
+      "question": "In Gettier's first case, why doesn't Smith know that the man who will get the job has ten coins in his pocket?",
+      "options": [
+        "His belief is true only because he himself gets the job and happens to have ten coins, while he counted Jones's",
+        "The company president lied to him about who would get the job, and Jones had no coins",
+        "He guessed the number of coins without counting any",
+        "Nobody gets the job, so his belief is false"
+      ],
+      "answer": 0,
+      "explain": "Smith counted ten coins in Jones's pocket, but the belief comes out true because of Smith's own coins. True and justified, but right by luck."
+    },
+    {
+      "question": "Which situation best fits the Gettier problem?",
+      "options": [
+        "You check a stopped clock that happens to show the right time, and believe the time it shows",
+        "You believe it will rain because you saw a forecast, and it stays dry",
+        "You guess a coin toss with no reason at all, and are wrong",
+        "You read the time from a working clock and are right"
+      ],
+      "answer": 0,
+      "explain": "Your belief is true and you had a reasonable basis for it, but it is right only by luck, just as Smith's was about the coins and the job."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Edmund L. Gettier, 'Is Justified True Belief Knowledge?', Analysis 23(6), 121-123, 1963",
+      "url": "https://courses.grainger.illinois.edu/PHYS419/sp2021/Gettier.pdf"
+    },
+    {
+      "title": "Phil Bricker, 'In Memoriam: Edmund L. Gettier III (1927-2021)', UMass Amherst Department of Philosophy",
+      "url": "https://www.umass.edu/philosophy/memoriam-edmund-l-gettier-iii-1927-2021"
+    },
+    {
+      "title": "Bob Sleigh, 'Ed Gettier remembrance', UMass Amherst Department of Philosophy",
+      "url": "https://www.umass.edu/philosophy/ed-gettier-remembrance-bob-sleigh"
+    },
+    {
+      "title": "Bredo Johnsen, 'Ed Gettier remembrance', UMass Amherst Department of Philosophy",
+      "url": "https://www.umass.edu/philosophy/ed-gettier-remembrance-bredo-johnsen"
+    },
+    {
+      "title": "Justin Weinberg, 'Edmund Gettier (1927-2021)', Daily Nous, 12 April 2021",
+      "url": "https://dailynous.com/2021/04/12/edmund-gettier-1927-2021/"
+    },
+    {
+      "title": "'The Analysis of Knowledge', Stanford Encyclopedia of Philosophy (revised 2026)",
+      "url": "https://plato.stanford.edu/entries/knowledge-analysis/"
+    },
+    {
+      "title": "'Gettier Problems', Internet Encyclopedia of Philosophy",
+      "url": "https://iep.utm.edu/gettier/"
+    },
+    {
+      "title": "Julien Dutant, 'The Legend of the Justified True Belief Analysis', Philosophical Perspectives 29, 95-145, 2015 (author's draft)",
+      "url": "https://philarchive.org/archive/DUTTLO-3"
+    },
+    {
+      "title": "Edouard Machery, Stephen Stich, David Rose et al., 'Gettier Across Cultures', Noûs, 645-664 (first published 2015; author's copy)",
+      "url": "https://www.stephenstich.com/_files/ugd/0ad9d7_3940f0aae17342468149cfe5c61b4e95.pdf"
+    },
+    {
+      "title": "Edouard Machery, Stephen Stich, David Rose et al., 'The Gettier Intuition from South America to Asia', Journal of Indian Council of Philosophical Research 34(3), 517-541, 2017",
+      "url": "https://philarchive.org/archive/MACTGI-5"
+    },
+    {
+      "title": "'Edmund Gettier', Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Edmund_Gettier"
+    }
+  ]
+}
