@@ -1,0 +1,27 @@
+{
+  "issue": 23,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-26T05:49:00Z",
+  "summary": "One small correction: the teaser said Gettier sent a three-page paper, but Bob Sleigh says the journal first asked him to expand a shorter one, so it now says he published it. Everything else, including every quotation, checked out.",
+  "claims": { "checked": 62, "confirmed": 61, "corrected": 1, "removed": 0 },
+  "links": { "checked": 11, "working": 11, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "teaser",
+      "before": "sent a three-page paper to a journal and broke",
+      "after": "published a three-page paper in a journal and broke",
+      "why": "According to Bob Sleigh, what Gettier first sent Analysis was little more than the definition and the counterexamples, and he expanded it on the journal's condition. The published paper is three pages (Analysis 23.6, pp. 121-123), as the story itself says in paragraph 5.",
+      "source": "https://www.umass.edu/philosophy/ed-gettier-remembrance-bob-sleigh"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The two further-reading links are the same as two of the sources, so 11 distinct links were opened; all loaded and support what the story uses them for.",
+    "The David Lewis quotation matches Bricker's memorial and Stephen Hetherington's Knowledge and the Gettier Problem (Cambridge), both citing Lewis 1983.",
+    "In 'Gettier Across Cultures' the Indian (Bengali-speaking) participants showed the Gettier judgement on one of the two test cases but less clearly on the other; the authors still conclude all four groups share it, so the Looking-Glass is fair.",
+    "Bricker notes Gettier may also have had a third paper published only in Spanish, which he never found; 'two papers and one review' follows Bricker's count."
+  ]
+}

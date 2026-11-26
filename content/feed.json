@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-25T05:55:03.307Z",
+  "updated": "2026-11-26T05:50:05.622Z",
   "issues": [
+    {
+      "id": 23,
+      "date": "2026-11-26",
+      "topic": "Philosophy",
+      "title": "Ten Coins in the Wrong Pocket",
+      "concept": "The Gettier problem",
+      "teaser": "In 1963 a little-published philosopher in Detroit published a three-page paper in a journal and broke the textbook definition of knowledge.",
+      "readingMinutes": 3
+    },
     {
       "id": 22,
       "date": "2026-11-25",
