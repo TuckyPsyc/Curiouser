@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-26T05:50:05.622Z",
+  "updated": "2026-11-27T05:51:06.637Z",
   "issues": [
+    {
+      "id": 24,
+      "date": "2026-11-27",
+      "topic": "Psychology",
+      "title": "Cleverer Than Their Grandparents",
+      "concept": "The Flynn effect",
+      "teaser": "A political philosopher in Dunedin showed in 1984 that Americans’ scores on intelligence tests had been climbing for decades, then that the world’s had too.",
+      "readingMinutes": 3
+    },
     {
       "id": 23,
       "date": "2026-11-26",

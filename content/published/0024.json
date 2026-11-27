@@ -1,0 +1,132 @@
+{
+  "id": 24,
+  "date": "2026-11-27",
+  "topic": "Psychology",
+  "title": "Cleverer Than Their Grandparents",
+  "concept": "The Flynn effect",
+  "teaser": "A political philosopher in Dunedin showed in 1984 that Americans’ scores on intelligence tests had been climbing for decades, then that the world’s had too.",
+  "readingMinutes": 3,
+  "story": [
+    "In 1963 a 29-year-old American academic took his wife Emily and their young family to New Zealand. James Flynn had been born in Washington DC in 1934, during the Great Depression, and had taken a PhD at the University of Chicago in 1958. At home his politics had cost him. He had been active in the Congress of Racial Equality and was roughed up at one of its demonstrations, and he had been forced out of Lake Forest College, near Chicago, after a lecture on social medicine, peace activism and his membership of the Socialist Party. He taught first at Canterbury, and in 1967 became the founding professor of political studies at the University of Otago in Dunedin.",
+    "He described himself as primarily a moral philosopher who merely had a holiday in psychology. His first publication on intelligence, the book Race, IQ and Jensen, came out in 1980, 22 years after his doctorate. From 1981 he began investigating US Armed Forces mental records. In 1984 he published a paper in Psychological Bulletin under a plain title: ‘The mean IQ of Americans: Massive gains 1932 to 1978’. The gains, as one tribute put it, applied to every intelligence test in the United States. In 1987 a second paper, ‘Massive IQ gains in 14 nations’, found the same across more than a dozen other countries.",
+    "This is the Flynn effect: average scores on intelligence tests rose steadily from one generation to the next through the twentieth century, typically by around three IQ points a decade. Robert Sternberg put the total at about two standard deviations of gain in mean IQ around the world over the century. A test that was supposed to measure something fixed about a person was, measured across a population, moving quickly.",
+    "Flynn drew a pointed conclusion. In the 1987 paper he wrote that ‘psychologists should stop saying that IQ tests measure intelligence’. He did not conclude that people had simply become cleverer.",
+    "He did not discover the rise, and he did not name it after himself. According to his collaborator Bill Dickens, it was Charles Murray who coined the term ‘the Flynn effect’, out of respect for Flynn’s careful work. The psychologist Ian Deary remembered the 1984 and 1987 papers appearing: ‘they shook the field, and still do to this day.’ Flynn kept up his politics in New Zealand as a founding member of the New Labour Party and the Alliance, and went on writing about intelligence into his eighties. He died in Dunedin on 11 December 2020, aged 86.",
+    "A score can look like a fixed fact about a person and still shift a long way within a few generations. Before reading a test result as a measure of what someone simply is, it is worth asking what the same test would have said about their grandparents."
+  ],
+  "takeaway": "The Flynn effect: average scores on IQ tests rose by around three points a decade through the twentieth century, in the United States and in more than a dozen other countries, as James Flynn showed in 1984 and 1987.",
+  "recall": {
+    "question": "At Bangaon in 1971, Dilip Mahalanabis had cholera patients’ families give them a solution from cups. What treatment was it, and why does it work?",
+    "answer": "Oral rehydration therapy: drinking a measured solution of water, salt and sugar, because the sugar helps the gut absorb salt and, with it, water.",
+    "fromIssue": 20
+  },
+  "rabbitHole": {
+    "title": "Smarter, or just differently trained?",
+    "intro": "The easy reading of the Flynn effect is that each generation is cleverer than the last. Flynn spent the rest of his life arguing for something more interesting.",
+    "levels": [
+      {
+        "heading": "Not cleverer, exactly",
+        "body": [
+          "The popular version says that humanity is getting brighter. Flynn himself would not say so. The International Society for Intelligence Research, in its tribute to him, notes that he dismissed the idea that humans were getting smarter, while conceding that they had improved in their problem-solving skills and reasoning.",
+          "That tension runs through the subtitle of his 1987 paper, ‘What IQ tests really measure’, and through his blunt advice to colleagues that they should stop saying IQ tests measure intelligence. Ian Deary summed up the programme: Flynn showed that IQ-type scores increased over the middle part of the twentieth century, and then set about trying to explain why.",
+          "The careful version is easy to misreport. Flynn was not claiming that earlier generations were less able. As the tribute summarises him, he accepted real improvement in problem-solving and reasoning while rejecting the simpler story that people had become more intelligent. He spent the rest of his career on what the rise did mean, in books such as What Is Intelligence? in 2007 and Are We Getting Smarter? in 2012."
+        ]
+      },
+      {
+        "heading": "How genes can hide the environment",
+        "body": [
+          "The rises posed a puzzle. The IQs of identical twins are highly correlated, which seems to say that genes matter a great deal. How could the environment then matter enough to move whole populations within a few decades?",
+          "Flynn’s answer, worked out with Bill Dickens, was that genes and environment normally work together within a lifetime, which hides environmental effects; across lifetimes the two separate. That is how Robert Sternberg summarised it. Richard Nisbett put the result this way: they showed that environments have a far greater impact on intelligence than the high correlation between identical twins’ IQs suggests.",
+          "Flynn, a lifelong runner who in his late seventies held the Otago masters record for his age group over 10,000 metres, liked a sporting comparison. ‘There are runners I cannot beat even when I train more than they do,’ he wrote. ‘But I can run rings around every couch potato within 20 years of my age.’ Natural differences and training can both be real at once."
+        ]
+      },
+      {
+        "heading": "The opponent he admired",
+        "body": [
+          "Flynn came to intelligence research by answering the psychologist Arthur Jensen, in Race, IQ and Jensen in 1980. The surprise was how the argument was conducted. Jensen called the book ‘virtually in a class by itself for objectivity, thoroughness, and scholarly integrity.’",
+          "Flynn returned the compliment. In his last paper for the journal Intelligence he wrote that Jensen was irreplaceable ‘in the sense that you often learn more from a thinker who challenges opinions you tend to take for granted.’",
+          "The field he had shaken honoured him too. The International Society for Intelligence Research made him a Distinguished Contributor in 2007 and gave him its lifetime achievement award in 2017. He became a Distinguished Associate of the Psychometrics Centre at Cambridge and a Distinguished Visiting Fellow at Stanford’s Hoover Institution, all while remaining, by his own description, a moral philosopher on holiday."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "The mean IQ of Americans: Massive gains 1932 to 1978",
+        "author": "James R. Flynn (1984)",
+        "note": "Psychological Bulletin 95(1), 29-51. The paper that set it off."
+      },
+      {
+        "title": "Massive IQ gains in 14 nations: What IQ tests really measure",
+        "author": "James R. Flynn (1987)",
+        "note": "Psychological Bulletin 101(2), 171-191. The international evidence, and Flynn’s argument about what it means."
+      },
+      {
+        "title": "What Is Intelligence? Beyond the Flynn Effect",
+        "author": "James R. Flynn (2007)",
+        "note": "Flynn’s own book-length attempt to explain the gains."
+      },
+      {
+        "title": "Flynn effect and its reversal are both environmentally caused",
+        "author": "Bernt Bratsberg and Ole Rogeberg (2018)",
+        "note": "PNAS 115(26), 6674-6678. Norway’s rise and fall in scores, compared between brothers.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6042097/"
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "counter",
+    "heading": "The rise has stalled, and in places reversed",
+    "body": [
+      "The strongest limit on the Flynn effect is that it has not lasted everywhere. Norway has tested most young men when they are called up for military service. Bernt Bratsberg and Ole Rogeberg used the scores of 736,808 Norwegian men born between 1962 and 1991. Average IQ rose from 99.5 for those born in 1962 to 102.3 for those born in 1975, then fell back to 99.4 for the 1989 cohort.",
+      "Some researchers had blamed declines of this kind mainly on genes, through immigration or on which parents have more children. Bratsberg and Rogeberg compared brothers within the same families, and found the fall there too, at about the same rate. They concluded that genes played at most a minor role, and that both the rise and the fall were environmental. So the reversal limits the effect without undoing Flynn’s main point: test scores can move a long way for reasons outside the genes."
+    ],
+    "confidence": "Well supported",
+    "verdict": "Where that leaves you: trust that IQ scores rose sharply across the twentieth century, but don’t assume the rise continues everywhere, or that its causes are fully understood."
+  },
+  "quiz": [
+    {
+      "question": "What did James Flynn’s 1984 paper report?",
+      "options": [
+        "Average IQ scores had risen substantially between 1932 and 1978",
+        "Average IQ scores had fallen steadily since the 1930s",
+        "Scores had stayed the same, proving the tests were reliable",
+        "Only military recruits’ scores had changed, not anyone else’s"
+      ],
+      "answer": 0,
+      "explain": "His 1984 paper was titled ‘The mean IQ of Americans: Massive gains 1932 to 1978’, and the gains applied to every intelligence test in the United States."
+    },
+    {
+      "question": "Which finding is an example of the Flynn effect?",
+      "options": [
+        "People born in 1970 score higher on average than people born in 1930 did on the same test",
+        "Identical twins have more similar IQ scores than other brothers and sisters",
+        "A student scores higher after taking the same test a second time",
+        "Children of high-scoring parents tend to score highly too"
+      ],
+      "answer": 0,
+      "explain": "The Flynn effect is the rise in average test scores from one generation to the next, typically around three IQ points a decade through the twentieth century."
+    }
+  ],
+  "sources": [
+    {
+      "title": "‘Vale Professor Jim Flynn’, University of Otago, 18 December 2020",
+      "url": "https://www.otago.ac.nz/news/newsroom/vale-professor-jim-flynn"
+    },
+    {
+      "title": "John Gibb, ‘Legendary teacher, giant amongst scholars’, Otago Daily Times",
+      "url": "https://www.odt.co.nz/node/2111479"
+    },
+    {
+      "title": "Russell T. Warne, ‘A tribute to Professor James R. Flynn’, International Society for Intelligence Research, December 2020",
+      "url": "https://isironline.org/2020/12/a-tribute-to-professor-james-flynn/"
+    },
+    {
+      "title": "‘Professor James Flynn’, The Psychometrics Centre, University of Cambridge",
+      "url": "https://www.psychometrics.cam.ac.uk/node/1091"
+    },
+    {
+      "title": "Bernt Bratsberg and Ole Rogeberg, ‘Flynn effect and its reversal are both environmentally caused’, PNAS 115(26), 6674-6678, 2018",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6042097/"
+    }
+  ]
+}

@@ -4,14 +4,14 @@
   "topic": "Psychology",
   "title": "Cleverer Than Their Grandparents",
   "concept": "The Flynn effect",
-  "teaser": "A political philosopher in Dunedin showed in 1984 that Americans' scores on intelligence tests had been climbing for decades, and the world's had too.",
+  "teaser": "A political philosopher in Dunedin showed in 1984 that Americans' scores on intelligence tests had been climbing for decades, then that the world's had too.",
   "readingMinutes": 3,
   "story": [
     "In 1963 a 29-year-old American academic took his wife Emily and their young family to New Zealand. James Flynn had been born in Washington DC in 1934, during the Great Depression, and had taken a PhD at the University of Chicago in 1958. At home his politics had cost him. He had been active in the Congress of Racial Equality and was roughed up at one of its demonstrations, and he had been forced out of Lake Forest College, near Chicago, after a lecture on social medicine, peace activism and his membership of the Socialist Party. He taught first at Canterbury, and in 1967 became the founding professor of political studies at the University of Otago in Dunedin.",
     "He described himself as primarily a moral philosopher who merely had a holiday in psychology. His first publication on intelligence, the book Race, IQ and Jensen, came out in 1980, 22 years after his doctorate. From 1981 he began investigating US Armed Forces mental records. In 1984 he published a paper in Psychological Bulletin under a plain title: 'The mean IQ of Americans: Massive gains 1932 to 1978'. The gains, as one tribute put it, applied to every intelligence test in the United States. In 1987 a second paper, 'Massive IQ gains in 14 nations', found the same across more than a dozen other countries.",
     "This is the Flynn effect: average scores on intelligence tests rose steadily from one generation to the next through the twentieth century, typically by around three IQ points a decade. Robert Sternberg put the total at about two standard deviations of gain in mean IQ around the world over the century. A test that was supposed to measure something fixed about a person was, measured across a population, moving quickly.",
     "Flynn drew a pointed conclusion. In the 1987 paper he wrote that 'psychologists should stop saying that IQ tests measure intelligence'. He did not conclude that people had simply become cleverer.",
-    "He did not discover the rise, and he did not name it after himself. According to his Otago colleague Robert Patman, it was Charles Murray who coined the term 'the Flynn effect', out of respect for Flynn's careful work. The psychologist Ian Deary remembered the 1984 and 1987 papers appearing: 'they shook the field, and still do to this day.' Flynn kept up his politics in New Zealand as a founding member of the New Labour Party and the Alliance, and went on writing about intelligence into his eighties. He died in Dunedin on 11 December 2020, aged 86.",
+    "He did not discover the rise, and he did not name it after himself. According to his collaborator Bill Dickens, it was Charles Murray who coined the term 'the Flynn effect', out of respect for Flynn's careful work. The psychologist Ian Deary remembered the 1984 and 1987 papers appearing: 'they shook the field, and still do to this day.' Flynn kept up his politics in New Zealand as a founding member of the New Labour Party and the Alliance, and went on writing about intelligence into his eighties. He died in Dunedin on 11 December 2020, aged 86.",
     "A score can look like a fixed fact about a person and still shift a long way within a few generations. Before reading a test result as a measure of what someone simply is, it is worth asking what the same test would have said about their grandparents."
   ],
   "takeaway": "The Flynn effect: average scores on IQ tests rose by around three points a decade through the twentieth century, in the United States and in more than a dozen other countries, as James Flynn showed in 1984 and 1987.",
@@ -58,7 +58,7 @@
       {
         "title": "Massive IQ gains in 14 nations: What IQ tests really measure",
         "author": "James R. Flynn (1987)",
-        "note": "Psychological Bulletin 101(3), 171-191. The international evidence, and Flynn's argument about what it means."
+        "note": "Psychological Bulletin 101(2), 171-191. The international evidence, and Flynn's argument about what it means."
       },
       {
         "title": "What Is Intelligence? Beyond the Flynn Effect",

@@ -1,0 +1,42 @@
+{
+  "issue": 24,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-27T05:50:47Z",
+  "summary": "Three small corrections: the line about Charles Murray coining 'the Flynn effect' comes from Bill Dickens's tribute, not Robert Patman's; the teaser now separates the 1984 American findings from the 1987 international ones; and the 1987 paper's issue number is 2, not 3. Everything else, including every quotation, checked out.",
+  "claims": { "checked": 62, "confirmed": 59, "corrected": 3, "removed": 0 },
+  "links": { "checked": 5, "working": 5, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Well supported", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 5",
+      "before": "According to his Otago colleague Robert Patman, it was Charles Murray",
+      "after": "According to his collaborator Bill Dickens, it was Charles Murray",
+      "why": "On the University of Otago's tribute page, the sentence 'It was Charles Murray who coined the term \"The Flynn Effect\"...' sits in Bill Dickens's tribute. Patman's tribute comes after it and doesn't mention Murray.",
+      "source": "https://www.otago.ac.nz/news/newsroom/vale-professor-jim-flynn"
+    },
+    {
+      "where": "teaser",
+      "before": "had been climbing for decades, and the world's had too.",
+      "after": "had been climbing for decades, then that the world's had too.",
+      "why": "The 1984 paper covered the United States only. The gains in other nations came in the 1987 paper, as the story itself says in paragraph 2.",
+      "source": "https://isironline.org/2020/12/a-tribute-to-professor-james-flynn/"
+    },
+    {
+      "where": "rabbit hole, further reading (Flynn 1987)",
+      "before": "Psychological Bulletin 101(3), 171-191.",
+      "after": "Psychological Bulletin 101(2), 171-191.",
+      "why": "The paper appeared in volume 101, issue 2 (March 1987), DOI 10.1037/0033-2909.101.2.171. The ISIR tribute's reference list gives issue 3, which seems to be where the error came from.",
+      "source": "https://bvbvf1.bib-bvb.de/vufind/PrimoRecord/cdi_proquest_journals_614306784"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "The further-reading link (PNAS, Bratsberg and Rogeberg) is also one of the sources, so 5 distinct links were opened. All of them loaded and support what the story uses them for.",
+    "Flynn's quotation about Jensen being 'irreplaceable' comes from Richard Haier's tribute on the Otago page, which says it opened 'his last publication in Intelligence'. 'Psychologists should stop saying that IQ tests measure intelligence' is quoted by the ISIR tribute as Flynn 1987, p. 188, and it matches the paper's abstract. I couldn't open the full 1987 paper to read the sentence myself.",
+    "Bratsberg and Rogeberg's within-brother decline matches the across-family decline in their selection-corrected model. In their simpler family model the within-family decline is about two-thirds smaller. The Looking-Glass's 'at about the same rate' follows their preferred model and their own conclusion.",
+    "The Otago Daily Times says Flynn holds the Otago masters 10,000 m record for the 75-79 age group, set in November 2009 when he was 75. 'In his late seventies held' is true but loose.",
+    "The ISIR tribute gives Flynn's birth date as 28 April 1934, which fits 'aged 29' in 1963 and 'aged 86' at his death."
+  ]
+}
