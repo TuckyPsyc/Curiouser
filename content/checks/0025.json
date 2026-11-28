@@ -1,0 +1,37 @@
+{
+  "issue": 25,
+  "verdict": "fixed",
+  "by": "fact-checker",
+  "at": "2026-11-28T05:50:08Z",
+  "summary": "Two small corrections: the Comoros are nearly 3,000 km from East London, not 2,000, so the distance is cut, and it was the newspaper, not the bedsheet, that was soaked in formaldehyde. Everything else checked out, including all the quotations.",
+  "claims": { "checked": 58, "confirmed": 56, "corrected": 1, "removed": 1 },
+  "links": { "checked": 13, "working": 13, "replaced": 0, "removed": 0 },
+  "lookingGlass": { "rating": "Settled", "fair": true },
+  "quiz": { "sound": true },
+  "changes": [
+    {
+      "where": "story, paragraph 2",
+      "before": "wrapped it in newspaper and a bedsheet soaked in formaldehyde.",
+      "after": "wrapped it in formaldehyde-soaked newspaper and a bedsheet.",
+      "why": "The source says they 'swaddled the fish in formaldehyde-soaked newspaper and a bedsheet': the newspaper was soaked, not the sheet.",
+      "source": "https://www.historytoday.com/archive/months-past/discovery-living-fossil"
+    },
+    {
+      "where": "rabbit hole, level 2, paragraph 2",
+      "before": "the answer came from the Comoro Islands, some 2,000 kilometres from East London.",
+      "after": "the answer came from the Comoro Islands.",
+      "why": "The NHM's '2,000km away' names no starting point. East London to Anjouan is about 2,850 km by great circle, and another account gives 1,600 km, so the figure is cut rather than replaced.",
+      "source": "https://www.nhm.ac.uk/discover/coelacanths-the-fish-that-outdid-the-loch-ness-monster.html"
+    }
+  ],
+  "problems": [],
+  "notes": [
+    "Accounts differ on the colour: the NHM says steel blue; History Today and Courtenay-Latimer's own words say pale mauve-blue. Both are in reputable sources.",
+    "'Most marvellous fish' is her wording as quoted by Scientific American's blog; other accounts quote 'the most beautiful fish I had ever seen'.",
+    "The age of the youngest fossils is given as 65, 66 or 70 million years in different sources; the NHM says 66.",
+    "In 1938 the institution was Rhodes University College; 'Rhodes University' is a common and harmless shorthand.",
+    "The Nature paper's exact issue date could not be opened (the PDF was blocked). Time reported the 'authenticated' find on 3 April 1939 as 'last week', which fits a March announcement.",
+    "Linda Hall Library says the armed forces flew Smith in a helicopter; other accounts say a military aircraft. The story says only that they flew him, which is right either way.",
+    "The Britannica link redirects from www.britannica.com to britannica.com; it shows the same page."
+  ]
+}

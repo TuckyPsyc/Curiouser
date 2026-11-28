@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-27T05:51:06.637Z",
+  "updated": "2026-11-28T05:50:22.119Z",
   "issues": [
+    {
+      "id": 25,
+      "date": "2026-11-28",
+      "topic": "Nature",
+      "title": "The Blue Fish on the Dock",
+      "concept": "The Lazarus taxon",
+      "teaser": "Just before Christmas 1938, a young museum curator in East London, South Africa, picked a fish off a trawler that was supposed to have died out with the dinosaurs.",
+      "readingMinutes": 3
+    },
     {
       "id": 24,
       "date": "2026-11-27",
