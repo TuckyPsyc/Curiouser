@@ -89,7 +89,7 @@ export function TeaParty({ issue }: { issue: Issue }) {
           { backgroundColor: p.accent, opacity: pressed ? 0.8 : 1 },
         ]}
       >
-        <Text style={[styles.buttonText, { color: p.onAccent }]}>Send to the tea table</Text>
+        <Text style={[styles.buttonText, { color: p.onAccent }]}>Share the tea</Text>
       </Pressable>
       <Text style={[styles.hint, { color: p.muted }]}>
         {note ?? 'Opens WhatsApp, Messages or wherever your friends are.'}
