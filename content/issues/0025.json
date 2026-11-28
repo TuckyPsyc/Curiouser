@@ -1,0 +1,155 @@
+{
+  "id": 25,
+  "date": "2026-11-28",
+  "topic": "Nature",
+  "title": "The Blue Fish on the Dock",
+  "concept": "The Lazarus taxon",
+  "teaser": "Just before Christmas 1938, a young museum curator in East London, South Africa, picked a fish off a trawler that was supposed to have died out with the dinosaurs.",
+  "readingMinutes": 3,
+  "story": [
+    "On 22 December 1938 Captain Hendrik Goosen brought the trawler Nerine back into East London, on the south-eastern coast of South Africa. He had been casting his nets at 40 fathoms near the mouth of the Chalumna River. Waiting for anything unusual in the catch was Marjorie Courtenay-Latimer, who had been curator of the town's small museum since 1931, with no training or experience for the job.",
+    "Among the fish she found one about five feet long, steel blue with white flecks and an iridescent sheen, with four limb-like fins. She later called it the most marvellous fish she had ever seen. The museum's chairman was less impressed: 'You're making such a fuss about it, but it's nothing but a rock cod'. With no help from anyone who had refrigeration, she turned to a local taxidermist, and together they wrapped it in newspaper and a bedsheet soaked in formaldehyde.",
+    "She sent a sketch and a description to James Leonard Brierley Smith, a chemistry lecturer at Rhodes University in Grahamstown who was also a keen student of fishes. His reply was cautious but excited: 'From your drawing and description the fish resembles forms which have been extinct for many a long year.' By the time he reached East London in February 1939, the fish had been mounted and its internal organs thrown away. Even so, his first sight of it 'hit me like a white-hot blast'. In his later book Old Fourlegs he wrote: 'I stood as if stricken to stone.'",
+    "It was a coelacanth. In Nature that March, Smith announced 'a Crossopterygian fish of a type believed to have become extinct by the close of the Mesozoic period', and named it Latimeria chalumnae, after the curator and the river. The youngest coelacanth fossils known are about 66 million years old. In the rocks the group simply stopped, and everyone had read the silence as extinction.",
+    "Palaeontologists now have a name for this: a Lazarus taxon. The term, coined by Karl Flessa and David Jablonski, describes organisms that seem to vanish from the fossil record and then turn up again after their presumed extinction, later in the rocks or alive today. The coelacanth is the most famous example. The name is a joke with a serious point. Nothing came back from the dead. The fish had been living all along in the western Indian Ocean, unseen by science.",
+    "A gap in the record is not the same thing as an absence in the world. Whether the question is a fossil, a species or anything else nobody has looked for in the right place, it pays to ask whether something is gone, or only unrecorded."
+  ],
+  "takeaway": "A Lazarus taxon is a group that vanishes from the fossil record and then reappears, as the coelacanth did when one was netted off South Africa in 1938, some 66 million years after its youngest known fossils.",
+  "recall": {
+    "question": "Bronisław Malinowski described Trobriand islanders passing shell necklaces one way round a circle of islands and armshells the other. What is the system called, and what is it for?",
+    "answer": "The kula ring, an exchange that exists to build prestige and lasting partnerships rather than to trade goods.",
+    "fromIssue": 17
+  },
+  "rabbitHole": {
+    "title": "Where the dead fish were hiding",
+    "intro": "The coelacanth was a surprise to science, but not to everyone. Follow it from the meaning of the name to a market in Indonesia.",
+    "levels": [
+      {
+        "heading": "Back from the dead, or just missed?",
+        "body": [
+          "The popular version of a Lazarus taxon is a creature that came back from extinction. The evidence says something humbler. The fossil record is patchy, and a group can be alive for millions of years without leaving remains that anyone digs up.",
+          "As the palaeontologist and writer Riley Black explains, the term was originally coined for organisms, from a single species up to an entire group, that seem to disappear during one of Earth's 'Big Five' mass extinctions only to pop up again in the fossil record. Not every Lazarus taxon is still alive. Diademodontids, an early group of relatives of mammals, reappear in Triassic rock in South Africa after a gap of 21 million years.",
+          "Others are living. The dawn redwood, Metasequoia, is counted as a Lazarus taxon too. In each case the lesson is the same: a missing record is evidence of absence only if you would have expected to find something."
+        ]
+      },
+      {
+        "heading": "The fishermen who already knew",
+        "body": [
+          "Smith wanted a second coelacanth, ideally one with its insides intact. He had leaflets printed offering a reward of 100 pounds each for the first two specimens recovered, and distributed them along the east African coast.",
+          "He had to wait until 1952, and the answer came from the Comoro Islands, some 2,000 kilometres from East London. A fisherman there, Ahmadi Abdulla, claimed the reward. According to the Natural History Museum in London, the islanders knew the fish as gombessa, and two or three had been caught each year when night fishing. South Africa's armed forces flew Smith to the Comoros, and he saw the fish on 29 December 1952.",
+          "The Comoros fish was at first named as a new genus and species, Malania anjouanae, but it proved not to be separable from Latimeria. The 'lost' fish had a home population all along, known to the people who fished there, if not to the museums."
+        ]
+      },
+      {
+        "heading": "A second species, at the market",
+        "body": [
+          "The story repeated itself, half a world away. In 1997 Arnaz Mehta Erdmann and her husband Mark Erdmann, an ichthyologist, spotted a large brown fish in an outdoor market on the Indonesian island of Sulawesi. Unlike the steel-blue fish from East London, it was brown, but it too was a coelacanth.",
+          "Local fishermen called it raja laut, 'king of the sea'. A second fish was caught the following year, and the French scientist Laurent Pouyaud named it as a new species, Latimeria menadoensis. That makes two living species of coelacanth, one off eastern Africa and one in Indonesia.",
+          "It also shows how much the oceans can hide. A large fish, sold openly at a market, had gone unnoticed by science for decades after the first coelacanth made headlines."
+        ]
+      }
+    ],
+    "furtherReading": [
+      {
+        "title": "A Living Fish of Mesozoic Type",
+        "author": "J. L. B. Smith (1939)",
+        "note": "Nature 143, 455-456. The announcement itself.",
+        "url": "https://www.nature.com/articles/143455a0"
+      },
+      {
+        "title": "Old Fourlegs: The Story of the Coelacanth",
+        "author": "J. L. B. Smith (1956)",
+        "note": "Smith's own account of the hunt, published in the United States as The Search Beneath the Sea."
+      },
+      {
+        "title": "A Fish Caught in Time: The Search for the Coelacanth",
+        "author": "Samantha Weinberg (1999)",
+        "note": "A popular history of the discovery and the people around it."
+      }
+    ]
+  },
+  "lookingGlass": {
+    "kind": "myth",
+    "heading": "Not a fish frozen in time",
+    "body": [
+      "The coelacanth is often called a living fossil, unchanged since the age of dinosaurs. That popular claim doesn't hold up. The genome of the African coelacanth, published in Nature in 2013, did find that its protein-coding genes are evolving more slowly than those of every other fish and land vertebrate the team compared. But slower is not stopped.",
+      "In 2021 researchers at the University of Toronto, writing in Molecular Biology and Evolution, reported that coelacanths had gained 62 new genes through encounters with other species around 10 million years ago, apparently from transposons, so-called selfish genes. 'The coelacanth may have evolved a bit more slowly but it is certainly not a fossil,' said Isaac Yellan, the graduate student who led the study. None of this troubles the idea of a Lazarus taxon, which is about gaps in the fossil record, not about whether a group has changed."
+    ],
+    "confidence": "Settled",
+    "verdict": "Where that leaves you: treat a group's disappearance from the fossil record as a gap in the evidence that may be filled, and treat 'living fossil' as a loose label, not a claim that evolution has stopped."
+  },
+  "quiz": [
+    {
+      "question": "What did Marjorie Courtenay-Latimer do with the strange fish from the trawler Nerine?",
+      "options": [
+        "Had it preserved by a local taxidermist and sent a sketch to J. L. B. Smith",
+        "Put it in the town's cold store until Smith arrived to dissect it",
+        "Returned it to the sea after drawing it",
+        "Sent the whole fish by train to the Natural History Museum in London"
+      ],
+      "answer": 0,
+      "explain": "No one would refrigerate it, so she turned to a taxidermist and wrote to Smith at Rhodes University. By the time he arrived, its organs had been thrown away."
+    },
+    {
+      "question": "Which of these is an example of a Lazarus taxon?",
+      "options": [
+        "A group that disappears from the fossil record, then reappears later or is found alive today",
+        "A species brought back from extinction by cloning",
+        "An animal that survives by playing dead when attacked",
+        "A species that has not changed at all for millions of years"
+      ],
+      "answer": 0,
+      "explain": "The coelacanth's youngest fossils are about 66 million years old, yet one was netted off South Africa in 1938. It had been alive all along, just unrecorded."
+    }
+  ],
+  "sources": [
+    {
+      "title": "'Coelacanths: the fish that outdid the Loch Ness Monster', Natural History Museum, London",
+      "url": "https://www.nhm.ac.uk/discover/coelacanths-the-fish-that-outdid-the-loch-ness-monster.html"
+    },
+    {
+      "title": "'Discovery of a Living Fossil', History Today",
+      "url": "https://www.historytoday.com/archive/months-past/discovery-living-fossil"
+    },
+    {
+      "title": "William B. Ashworth Jr., 'Marjorie Courtenay-Latimer', Scientist of the Day, Linda Hall Library",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/marjorie-courtenay-latimer/"
+    },
+    {
+      "title": "William B. Ashworth Jr., 'J. L. B. Smith', Scientist of the Day, Linda Hall Library, 2023",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/j-l-b-smith/"
+    },
+    {
+      "title": "'Old Fourlegs: a fishy tale', Rhodes University, 2013",
+      "url": "https://www.ru.ac.za/latestnews/archives/2013/oldfourlegs-afishytale.html"
+    },
+    {
+      "title": "David Bressan, 'December 22, 1938: \"Old Four Legs\"', Scientific American blogs",
+      "url": "https://www.scientificamerican.com/blog/history-of-geology/december-22-1938-old-four-legs/"
+    },
+    {
+      "title": "J. L. B. Smith, 'A Living Fish of Mesozoic Type', Nature 143, 455-456, 1939",
+      "url": "https://www.nature.com/articles/143455a0"
+    },
+    {
+      "title": "Riley Black, 'Sciencespeak: Lazarus Taxon', National Geographic, 2015",
+      "url": "https://www.nationalgeographic.com/science/article/sciencespeak-lazarus-taxon"
+    },
+    {
+      "title": "'Coelacanth genome surfaces', Wellcome Sanger Institute, 17 April 2013",
+      "url": "https://www.sanger.ac.uk/news_item/2013-04-17-coelacanth-genome-surfaces/"
+    },
+    {
+      "title": "Jovana Drinjakovic, 'So-called living fossil fish actually evolved dozens of new genes', University of Toronto, 10 February 2021",
+      "url": "https://www.utoronto.ca/news/so-called-living-fossil-fish-actually-evolved-dozens-new-genes-u-t-researchers-find"
+    },
+    {
+      "title": "Britannica, 'Malania anjouanae'",
+      "url": "https://www.britannica.com/animal/Malania-anjouanae"
+    },
+    {
+      "title": "Lucas Brouwers, 'Coelacanths are not living fossils. Like the rest of us, they evolve', Scientific American blogs",
+      "url": "https://www.scientificamerican.com/blog/thoughtomics/coelacanths-evolve-indian-ocean-is-home-to-distinct-populations/"
+    }
+  ]
+}
